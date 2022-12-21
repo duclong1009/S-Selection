@@ -1,0 +1,243 @@
+2022-12-22 01:09:56,101 fflow.py initialize [line:259] INFO Using Logger in `utils.logger.basic_logger`
+2022-12-22 01:09:56,101 fflow.py initialize [line:260] INFO Initializing fedtask: pill_classification
+2022-12-22 01:09:57,029 fflow.py initialize [line:276] INFO Using model `resnet18` in `benchmark.pill_classification.model.resnet18` as the globally shared model.
+2022-12-22 01:09:57,034 fflow.py initialize [line:304] INFO Using sampler `threshold_sampler` in `sampler.threshold_sampler` as the globally shared model.
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 01:10:03,669 fflow.py initialize [line:324] INFO Initializing Clients: 10 clients of `algorithm.fedprox.Client` being created.
+2022-12-22 01:10:03,670 fflow.py initialize [line:345] INFO Initializing Server: 1 server of `algorithm.fedprox.Server` being created.
+2022-12-22 01:10:03,670 fflow.py initialize [line:358] INFO Ready to start.
+2022-12-22 01:10:03,670 fedbase.py run [line:61] INFO --------------Round 1--------------
+2022-12-22 01:10:11,058 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.0130
+2022-12-22 01:10:11,063 basic_logger.py show_current_output [line:134] INFO test_loss                     4.5173
+2022-12-22 01:10:11,064 basic_logger.py time_end [line:74] INFO Eval Time Cost:               7.3931s
+2022-12-22 01:10:11,069 fedbase.py iterate [line:103] INFO Selected clients : [1, 2, 7, 3, 5]
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 01:11:35,796 basic_logger.py time_end [line:74] INFO Time Cost:                    92.1251s
+2022-12-22 01:11:35,796 fedbase.py run [line:61] INFO --------------Round 2--------------
+2022-12-22 01:11:41,390 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.2130
+2022-12-22 01:11:41,393 basic_logger.py show_current_output [line:134] INFO test_loss                     3.4260
+2022-12-22 01:11:41,394 basic_logger.py time_end [line:74] INFO Eval Time Cost:               5.5973s
+2022-12-22 01:11:41,408 fedbase.py iterate [line:103] INFO Selected clients : [3, 0, 2, 7, 9]
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 01:13:08,072 basic_logger.py time_end [line:74] INFO Time Cost:                    92.2758s
+2022-12-22 01:13:08,072 fedbase.py run [line:61] INFO --------------Round 3--------------
+Init dataloader
+2022-12-22 01:13:12,393 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.3870
+2022-12-22 01:13:12,396 basic_logger.py show_current_output [line:134] INFO test_loss                     2.4227
+2022-12-22 01:13:12,396 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.3236s
+2022-12-22 01:13:12,404 fedbase.py iterate [line:103] INFO Selected clients : [1, 2, 9, 5, 7]
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 01:14:40,391 basic_logger.py time_end [line:74] INFO Time Cost:                    92.3183s
+2022-12-22 01:14:40,391 fedbase.py run [line:61] INFO --------------Round 4--------------
+2022-12-22 01:14:45,365 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.5299
+2022-12-22 01:14:45,366 basic_logger.py show_current_output [line:134] INFO test_loss                     1.8225
+2022-12-22 01:14:45,366 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.9744s
+2022-12-22 01:14:45,381 fedbase.py iterate [line:103] INFO Selected clients : [1, 4, 3, 0, 7]
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 01:15:59,241 basic_logger.py time_end [line:74] INFO Time Cost:                    78.8498s
+2022-12-22 01:15:59,242 fedbase.py run [line:61] INFO --------------Round 5--------------
+2022-12-22 01:16:03,458 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.5390
+2022-12-22 01:16:03,461 basic_logger.py show_current_output [line:134] INFO test_loss                     1.6735
+2022-12-22 01:16:03,461 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.2191s
+2022-12-22 01:16:03,484 fedbase.py iterate [line:103] INFO Selected clients : [7, 1, 4, 6, 3]
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 01:17:13,709 basic_logger.py time_end [line:74] INFO Time Cost:                    74.4675s
+2022-12-22 01:17:13,710 fedbase.py run [line:61] INFO --------------Round 6--------------
+2022-12-22 01:17:17,554 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.6156
+2022-12-22 01:17:17,554 basic_logger.py show_current_output [line:134] INFO test_loss                     1.4460
+2022-12-22 01:17:17,555 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.8448s
+2022-12-22 01:17:17,560 fedbase.py iterate [line:103] INFO Selected clients : [5, 3, 9, 8, 7]
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 01:18:47,833 basic_logger.py time_end [line:74] INFO Time Cost:                    94.1228s
+2022-12-22 01:18:47,833 fedbase.py run [line:61] INFO --------------Round 7--------------
+2022-12-22 01:18:51,847 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.6403
+2022-12-22 01:18:51,848 basic_logger.py show_current_output [line:134] INFO test_loss                     1.2622
+2022-12-22 01:18:51,848 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.0148s
+2022-12-22 01:18:51,864 fedbase.py iterate [line:103] INFO Selected clients : [7, 2, 4, 9, 6]
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 01:20:16,484 basic_logger.py time_end [line:74] INFO Time Cost:                    88.6510s
+2022-12-22 01:20:16,485 fedbase.py run [line:61] INFO --------------Round 8--------------
+2022-12-22 01:20:24,008 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.6805
+2022-12-22 01:20:24,009 basic_logger.py show_current_output [line:134] INFO test_loss                     1.1256
+2022-12-22 01:20:24,009 basic_logger.py time_end [line:74] INFO Eval Time Cost:               7.5242s
+2022-12-22 01:20:24,019 fedbase.py iterate [line:103] INFO Selected clients : [3, 5, 1, 4, 8]
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader

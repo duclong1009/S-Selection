@@ -8,8 +8,8 @@ import torch
 from utils import fmodule
 
 class Server(BasicServer):
-    def __init__(self, option, model, clients, test_data = None):
-        super(Server, self).__init__(option, model, clients, test_data)
+    def __init__(self, option, model, clients, test_data = None,device='cpu'):
+        super(Server, self).__init__(option, model, clients, test_data,device)
         self.init_algo_para({'mu':0.1})
 
 class Client(BasicClient):

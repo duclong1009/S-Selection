@@ -34,8 +34,7 @@ class Sampler(_BaseSampler):
     
     def sample_using_cached(self,cached_score,threshold):
         list_idx = range(len(cached_score))
-        if self.threshold > 0:
-            # score_cached = cached_score
+        if threshold > 0:
             selected_idx = np.array(list_idx)[np.where(
                         np.array(cached_score) > threshold)]
         else: 

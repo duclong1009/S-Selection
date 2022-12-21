@@ -1,0 +1,88 @@
+wandb: Currently logged in as: longnd (aiotlab). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.13.7 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.13.5
+wandb: Run data is saved locally in /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/run-20221222_010611-fuo8od5x
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run fedalgo1_ratio_0.6_C_0.5_
+wandb: ⭐️ View project at https://wandb.ai/aiotlab/Abnormal_Data_FL
+wandb: 🚀 View run at https://wandb.ai/aiotlab/Abnormal_Data_FL/runs/fuo8od5x
+2022-12-22 01:06:13,056 fflow.py initialize [line:259] INFO Using Logger in `utils.logger.basic_logger`
+2022-12-22 01:06:13,056 fflow.py initialize [line:260] INFO Initializing fedtask: pill_classification
+2022-12-22 01:06:13,599 fflow.py initialize [line:276] INFO Using model `resnet18` in `benchmark.pill_classification.model.resnet18` as the globally shared model.
+2022-12-22 01:06:13,606 fflow.py initialize [line:304] INFO Using sampler `threshold_sampler` in `sampler.threshold_sampler` as the globally shared model.
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 01:06:20,286 fflow.py initialize [line:324] INFO Initializing Clients: 10 clients of `algorithm.fedalgo1.Client` being created.
+2022-12-22 01:06:20,287 fflow.py initialize [line:345] INFO Initializing Server: 1 server of `algorithm.fedalgo1.Server` being created.
+2022-12-22 01:06:20,287 fflow.py initialize [line:358] INFO Ready to start.
+2022-12-22 01:06:20,287 fedbase.py run [line:61] INFO --------------Round 1--------------
+2022-12-22 01:06:22,711 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.0130
+2022-12-22 01:06:22,711 basic_logger.py show_current_output [line:134] INFO test_loss                     4.5173
+2022-12-22 01:06:22,711 basic_logger.py time_end [line:74] INFO Eval Time Cost:               2.4237s
+2022-12-22 01:06:22,712 fedalgo1.py iterate [line:20] INFO Selected clients : [1, 2, 7, 3, 5]
+> /home/ace15032jo/Projects/SampleSelection_easyFL/algorithm/fedalgo1.py(183)reply()
+-> current_dataset = CustomDataset(self.train_data, selected_idx)
+(Pdb) 2022-12-22 01:08:19,856 main.py main [line:27] ERROR Exception Logged
+Traceback (most recent call last):
+  File "/home/ace15032jo/Projects/SampleSelection_easyFL/main.py", line 24, in main
+    server.run()
+  File "/home/ace15032jo/Projects/SampleSelection_easyFL/algorithm/fedbase.py", line 74, in run
+    self.iterate()
+  File "/home/ace15032jo/Projects/SampleSelection_easyFL/algorithm/fedalgo1.py", line 23, in iterate
+    received_information = self.communicate(self.selected_clients)
+  File "/home/ace15032jo/Projects/SampleSelection_easyFL/algorithm/fedalgo1.py", line 95, in communicate
+    response_from_client_id = self.communicate_with(client_id)
+  File "/home/ace15032jo/Projects/SampleSelection_easyFL/algorithm/fedalgo1.py", line 74, in communicate_with
+    return self.clients[client_id].reply(svr_pkg)
+  File "/home/ace15032jo/Projects/SampleSelection_easyFL/algorithm/fedalgo1.py", line 183, in reply
+    current_dataset = CustomDataset(self.train_data, selected_idx)
+  File "/home/ace15032jo/Projects/SampleSelection_easyFL/algorithm/fedalgo1.py", line 183, in reply
+    current_dataset = CustomDataset(self.train_data, selected_idx)
+  File "/apps/centos7/python/3.10.4_gcc11.2.0/lib/python3.10/bdb.py", line 90, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/apps/centos7/python/3.10.4_gcc11.2.0/lib/python3.10/bdb.py", line 115, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+Traceback (most recent call last):
+  File "/home/ace15032jo/Projects/SampleSelection_easyFL/main.py", line 24, in main
+    server.run()
+  File "/home/ace15032jo/Projects/SampleSelection_easyFL/algorithm/fedbase.py", line 74, in run
+    self.iterate()
+  File "/home/ace15032jo/Projects/SampleSelection_easyFL/algorithm/fedalgo1.py", line 23, in iterate
+    received_information = self.communicate(self.selected_clients)
+  File "/home/ace15032jo/Projects/SampleSelection_easyFL/algorithm/fedalgo1.py", line 95, in communicate
+    response_from_client_id = self.communicate_with(client_id)
+  File "/home/ace15032jo/Projects/SampleSelection_easyFL/algorithm/fedalgo1.py", line 74, in communicate_with
+    return self.clients[client_id].reply(svr_pkg)
+  File "/home/ace15032jo/Projects/SampleSelection_easyFL/algorithm/fedalgo1.py", line 183, in reply
+    current_dataset = CustomDataset(self.train_data, selected_idx)
+  File "/home/ace15032jo/Projects/SampleSelection_easyFL/algorithm/fedalgo1.py", line 183, in reply
+    current_dataset = CustomDataset(self.train_data, selected_idx)
+  File "/apps/centos7/python/3.10.4_gcc11.2.0/lib/python3.10/bdb.py", line 90, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/apps/centos7/python/3.10.4_gcc11.2.0/lib/python3.10/bdb.py", line 115, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ace15032jo/Projects/SampleSelection_easyFL/main.py", line 33, in <module>
+    main()
+  File "/home/ace15032jo/Projects/SampleSelection_easyFL/main.py", line 28, in main
+    raise RuntimeError
+RuntimeError
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: - 0.010 MB of 0.010 MB uploaded (0.000 MB deduped)wandb: \ 0.010 MB of 0.013 MB uploaded (0.000 MB deduped)wandb: | 0.017 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: 
+wandb: Run history:
+wandb: Accuracy/Testing Accuracy ▁
+wandb:         Loss/Testing Loss ▁
+wandb: 
+wandb: Run summary:
+wandb: Accuracy/Testing Accuracy 0.01299
+wandb:         Loss/Testing Loss 4.51729
+wandb: 
+wandb: Synced fedalgo1_ratio_0.6_C_0.5_: https://wandb.ai/aiotlab/Abnormal_Data_FL/runs/fuo8od5x
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20221222_010611-fuo8od5x/logs

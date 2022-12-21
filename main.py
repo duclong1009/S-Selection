@@ -11,7 +11,7 @@ def main():
         wandb.init(
             project="Abnormal_Data_FL",
             entity="aiotlab",
-            group=f"Test",
+            group= option["group_name"],
             name=f"{ss_name}",
             config=option,
         )

@@ -1,0 +1,192 @@
+2022-12-22 01:23:25,573 INFO    StreamThr :73386 [internal.py:wandb_internal():88] W&B internal server running at pid: 73386, started at: 2022-12-22 01:23:25.572421
+2022-12-22 01:23:25,574 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: status
+2022-12-22 01:23:25,576 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: status
+2022-12-22 01:23:25,580 DEBUG   SenderThread:73386 [sender.py:send():303] send: header
+2022-12-22 01:23:25,580 INFO    WriterThread:73386 [datastore.py:open_for_write():75] open: /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/run-20221222_012325-2pnynoes/run-2pnynoes.wandb
+2022-12-22 01:23:25,595 DEBUG   SenderThread:73386 [sender.py:send():303] send: run
+2022-12-22 01:23:26,001 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: check_version
+2022-12-22 01:23:26,004 INFO    SenderThread:73386 [dir_watcher.py:__init__():216] watching files in: /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/run-20221222_012325-2pnynoes/files
+2022-12-22 01:23:26,005 INFO    SenderThread:73386 [sender.py:_start_run_threads():928] run started: 2pnynoes with start time 1671639805.571943
+2022-12-22 01:23:26,005 DEBUG   SenderThread:73386 [sender.py:send():303] send: summary
+2022-12-22 01:23:26,006 INFO    SenderThread:73386 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-22 01:23:26,006 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: check_version
+2022-12-22 01:23:26,085 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: run_start
+2022-12-22 01:23:26,093 DEBUG   HandlerThread:73386 [system_info.py:__init__():31] System info init
+2022-12-22 01:23:26,093 DEBUG   HandlerThread:73386 [system_info.py:__init__():46] System info init done
+2022-12-22 01:23:26,093 INFO    HandlerThread:73386 [system_monitor.py:start():150] Starting system monitor
+2022-12-22 01:23:26,093 INFO    SystemMonitor:73386 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2022-12-22 01:23:26,093 INFO    HandlerThread:73386 [system_monitor.py:probe():168] Collecting system info
+2022-12-22 01:23:26,093 INFO    SystemMonitor:73386 [interfaces.py:start():168] Started cpu
+2022-12-22 01:23:26,094 INFO    SystemMonitor:73386 [interfaces.py:start():168] Started disk
+2022-12-22 01:23:26,094 INFO    SystemMonitor:73386 [interfaces.py:start():168] Started gpu
+2022-12-22 01:23:26,094 INFO    SystemMonitor:73386 [interfaces.py:start():168] Started memory
+2022-12-22 01:23:26,095 INFO    SystemMonitor:73386 [interfaces.py:start():168] Started network
+2022-12-22 01:23:26,121 DEBUG   HandlerThread:73386 [system_info.py:probe():195] Probing system
+2022-12-22 01:23:26,123 DEBUG   HandlerThread:73386 [system_info.py:_probe_git():180] Probing git
+2022-12-22 01:23:26,133 DEBUG   HandlerThread:73386 [system_info.py:_probe_git():188] Probing git done
+2022-12-22 01:23:26,133 DEBUG   HandlerThread:73386 [system_info.py:probe():241] Probing system done
+2022-12-22 01:23:26,133 DEBUG   HandlerThread:73386 [system_monitor.py:probe():177] {'os': 'Linux-3.10.0-862.el7.x86_64-x86_64-with-glibc2.17', 'python': '3.10.4', 'heartbeatAt': '2022-12-21T16:23:26.121117', 'startedAt': '2022-12-21T16:23:25.553742', 'docker': None, 'cuda': None, 'args': ('--session_name', '', '--group_name', 'NIID_10client', '--idx_path', 'Dataset_scenarios/NIID_10clients_random.json', '--proportion', '0.5', '--algorithm', 'fedalgo1', '--score', 'all_gnorm_threshold', '--ratio', '0.8'), 'state': 'running', 'program': '/home/ace15032jo/Projects/SampleSelection_easyFL/main.py', 'codePath': 'main.py', 'git': {'remote': 'https://github.com/duclong1009/SampleSelection_easyFL.git', 'commit': '12f2aca97fc04ef625a909491ac04c2031a79577'}, 'email': None, 'root': '/home/ace15032jo/Projects/SampleSelection_easyFL', 'host': 'g0007.abci.local', 'username': 'ace15032jo', 'executable': '/home/ace15032jo/venv/pytorch+horovod/bin/python', 'cpu_count': 40, 'cpu_count_logical': 80, 'cpu_freq': {'current': 3096.6627624999996, 'min': 1000.0, 'max': 3700.0}, 'cpu_freq_per_core': [{'current': 3399.902, 'min': 1000.0, 'max': 3700.0}, {'current': 3043.359, 'min': 1000.0, 'max': 3700.0}, {'current': 2799.023, 'min': 1000.0, 'max': 3700.0}, {'current': 3090.234, 'min': 1000.0, 'max': 3700.0}, {'current': 3046.289, 'min': 1000.0, 'max': 3700.0}, {'current': 3196.728, 'min': 1000.0, 'max': 3700.0}, {'current': 3037.207, 'min': 1000.0, 'max': 3700.0}, {'current': 3129.345, 'min': 1000.0, 'max': 3700.0}, {'current': 3019.775, 'min': 1000.0, 'max': 3700.0}, {'current': 2734.277, 'min': 1000.0, 'max': 3700.0}, {'current': 3111.767, 'min': 1000.0, 'max': 3700.0}, {'current': 3091.992, 'min': 1000.0, 'max': 3700.0}, {'current': 3211.669, 'min': 1000.0, 'max': 3700.0}, {'current': 3120.703, 'min': 1000.0, 'max': 3700.0}, {'current': 3100.927, 'min': 1000.0, 'max': 3700.0}, {'current': 3157.91, 'min': 1000.0, 'max': 3700.0}, {'current': 3264.843, 'min': 1000.0, 'max': 3700.0}, {'current': 3370.166, 'min': 1000.0, 'max': 3700.0}, {'current': 3120.117, 'min': 1000.0, 'max': 3700.0}, {'current': 3379.394, 'min': 1000.0, 'max': 3700.0}, {'current': 3314.208, 'min': 1000.0, 'max': 3700.0}, {'current': 3256.494, 'min': 1000.0, 'max': 3700.0}, {'current': 3162.89, 'min': 1000.0, 'max': 3700.0}, {'current': 3049.511, 'min': 1000.0, 'max': 3700.0}, {'current': 2873.437, 'min': 1000.0, 'max': 3700.0}, {'current': 2965.869, 'min': 1000.0, 'max': 3700.0}, {'current': 3123.779, 'min': 1000.0, 'max': 3700.0}, {'current': 3162.011, 'min': 1000.0, 'max': 3700.0}, {'current': 3051.708, 'min': 1000.0, 'max': 3700.0}, {'current': 3095.507, 'min': 1000.0, 'max': 3700.0}, {'current': 2495.947, 'min': 1000.0, 'max': 3700.0}, {'current': 3308.203, 'min': 1000.0, 'max': 3700.0}, {'current': 2142.48, 'min': 1000.0, 'max': 3700.0}, {'current': 3310.546, 'min': 1000.0, 'max': 3700.0}, {'current': 3199.951, 'min': 1000.0, 'max': 3700.0}, {'current': 3043.652, 'min': 1000.0, 'max': 3700.0}, {'current': 2957.373, 'min': 1000.0, 'max': 3700.0}, {'current': 3064.892, 'min': 1000.0, 'max': 3700.0}, {'current': 3155.273, 'min': 1000.0, 'max': 3700.0}, {'current': 2326.464, 'min': 1000.0, 'max': 3700.0}, {'current': 3377.929, 'min': 1000.0, 'max': 3700.0}, {'current': 2910.937, 'min': 1000.0, 'max': 3700.0}, {'current': 3216.064, 'min': 1000.0, 'max': 3700.0}, {'current': 3068.554, 'min': 1000.0, 'max': 3700.0}, {'current': 3003.369, 'min': 1000.0, 'max': 3700.0}, {'current': 3378.222, 'min': 1000.0, 'max': 3700.0}, {'current': 2991.796, 'min': 1000.0, 'max': 3700.0}, {'current': 3312.304, 'min': 1000.0, 'max': 3700.0}, {'current': 3189.843, 'min': 1000.0, 'max': 3700.0}, {'current': 2923.828, 'min': 1000.0, 'max': 3700.0}, {'current': 3188.378, 'min': 1000.0, 'max': 3700.0}, {'current': 3166.992, 'min': 1000.0, 'max': 3700.0}, {'current': 2977.294, 'min': 1000.0, 'max': 3700.0}, {'current': 3043.945, 'min': 1000.0, 'max': 3700.0}, {'current': 3298.828, 'min': 1000.0, 'max': 3700.0}, {'current': 3147.802, 'min': 1000.0, 'max': 3700.0}, {'current': 3193.066, 'min': 1000.0, 'max': 3700.0}, {'current': 3302.49, 'min': 1000.0, 'max': 3700.0}, {'current': 3121.142, 'min': 1000.0, 'max': 3700.0}, {'current': 3125.683, 'min': 1000.0, 'max': 3700.0}, {'current': 3037.646, 'min': 1000.0, 'max': 3700.0}, {'current': 3384.667, 'min': 1000.0, 'max': 3700.0}, {'current': 3386.279, 'min': 1000.0, 'max': 3700.0}, {'current': 3002.197, 'min': 1000.0, 'max': 3700.0}, {'current': 2959.57, 'min': 1000.0, 'max': 3700.0}, {'current': 3030.615, 'min': 1000.0, 'max': 3700.0}, {'current': 2921.044, 'min': 1000.0, 'max': 3700.0}, {'current': 3049.951, 'min': 1000.0, 'max': 3700.0}, {'current': 2930.273, 'min': 1000.0, 'max': 3700.0}, {'current': 2623.535, 'min': 1000.0, 'max': 3700.0}, {'current': 3385.546, 'min': 1000.0, 'max': 3700.0}, {'current': 3134.326, 'min': 1000.0, 'max': 3700.0}, {'current': 3390.527, 'min': 1000.0, 'max': 3700.0}, {'current': 3339.111, 'min': 1000.0, 'max': 3700.0}, {'current': 3251.953, 'min': 1000.0, 'max': 3700.0}, {'current': 3214.892, 'min': 1000.0, 'max': 3700.0}, {'current': 2523.925, 'min': 1000.0, 'max': 3700.0}, {'current': 3246.093, 'min': 1000.0, 'max': 3700.0}, {'current': 3145.166, 'min': 1000.0, 'max': 3700.0}, {'current': 2961.914, 'min': 1000.0, 'max': 3700.0}], 'disk': {'total': 15.992786407470703, 'used': 11.753894805908203}, 'gpu': 'Tesla V100-SXM2-16GB', 'gpu_count': 1, 'gpu_devices': [{'name': 'Tesla V100-SXM2-16GB', 'memory_total': 17179869184}], 'memory': {'total': 376.2051773071289}}
+2022-12-22 01:23:26,133 INFO    HandlerThread:73386 [system_monitor.py:probe():178] Finished collecting system info
+2022-12-22 01:23:26,133 INFO    HandlerThread:73386 [system_monitor.py:probe():181] Publishing system info
+2022-12-22 01:23:26,133 DEBUG   HandlerThread:73386 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2022-12-22 01:23:26,134 DEBUG   HandlerThread:73386 [system_info.py:_save_pip():67] Saving pip packages done
+2022-12-22 01:23:26,136 INFO    HandlerThread:73386 [system_monitor.py:probe():183] Finished publishing system info
+2022-12-22 01:23:26,141 DEBUG   SenderThread:73386 [sender.py:send():303] send: files
+2022-12-22 01:23:26,142 INFO    SenderThread:73386 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2022-12-22 01:23:26,147 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-22 01:23:26,148 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: stop_status
+2022-12-22 01:23:26,326 DEBUG   SenderThread:73386 [sender.py:send():303] send: telemetry
+2022-12-22 01:23:26,574 DEBUG   SenderThread:73386 [sender.py:send():303] send: telemetry
+2022-12-22 01:23:26,735 INFO    Thread-16 :73386 [upload_job.py:push():143] Uploaded file /tmp/11453680.1.gpu/tmp7qxjp0b9wandb/1yoog9yg-wandb-metadata.json
+2022-12-22 01:23:27,007 INFO    Thread-13 :73386 [dir_watcher.py:_on_file_created():275] file/dir created: /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/run-20221222_012325-2pnynoes/files/requirements.txt
+2022-12-22 01:23:27,008 INFO    Thread-13 :73386 [dir_watcher.py:_on_file_created():275] file/dir created: /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/run-20221222_012325-2pnynoes/files/output.log
+2022-12-22 01:23:27,008 INFO    Thread-13 :73386 [dir_watcher.py:_on_file_created():275] file/dir created: /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/run-20221222_012325-2pnynoes/files/wandb-summary.json
+2022-12-22 01:23:27,008 INFO    Thread-13 :73386 [dir_watcher.py:_on_file_created():275] file/dir created: /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/run-20221222_012325-2pnynoes/files/wandb-metadata.json
+2022-12-22 01:23:29,008 INFO    Thread-13 :73386 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/run-20221222_012325-2pnynoes/files/output.log
+2022-12-22 01:23:33,011 INFO    Thread-13 :73386 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/run-20221222_012325-2pnynoes/files/output.log
+2022-12-22 01:23:35,011 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-22 01:23:35,012 DEBUG   SenderThread:73386 [sender.py:send():303] send: history
+2022-12-22 01:23:35,012 DEBUG   SenderThread:73386 [sender.py:send():303] send: summary
+2022-12-22 01:23:35,018 INFO    Thread-13 :73386 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/run-20221222_012325-2pnynoes/files/wandb-summary.json
+2022-12-22 01:23:35,018 INFO    SenderThread:73386 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-22 01:23:37,020 INFO    Thread-13 :73386 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/run-20221222_012325-2pnynoes/files/output.log
+2022-12-22 01:23:41,354 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-22 01:23:41,355 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: stop_status
+2022-12-22 01:23:56,541 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-22 01:23:56,542 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: stop_status
+2022-12-22 01:23:57,032 INFO    Thread-13 :73386 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/run-20221222_012325-2pnynoes/files/config.yaml
+2022-12-22 01:24:11,728 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-22 01:24:11,728 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: stop_status
+2022-12-22 01:24:26,095 DEBUG   SystemMonitor:73386 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2022-12-22 01:24:26,099 DEBUG   SenderThread:73386 [sender.py:send():303] send: stats
+2022-12-22 01:24:26,913 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-22 01:24:26,913 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: stop_status
+2022-12-22 01:24:42,094 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-22 01:24:42,094 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: stop_status
+2022-12-22 01:24:56,100 DEBUG   SenderThread:73386 [sender.py:send():303] send: stats
+2022-12-22 01:24:57,297 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-22 01:24:57,297 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: stop_status
+2022-12-22 01:25:12,476 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-22 01:25:12,476 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: stop_status
+2022-12-22 01:25:15,941 DEBUG   SenderThread:73386 [sender.py:send():303] send: exit
+2022-12-22 01:25:15,941 INFO    SenderThread:73386 [sender.py:send_exit():442] handling exit code: 1
+2022-12-22 01:25:15,941 INFO    SenderThread:73386 [sender.py:send_exit():444] handling runtime: 109
+2022-12-22 01:25:15,943 INFO    SenderThread:73386 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-22 01:25:15,943 INFO    SenderThread:73386 [sender.py:send_exit():450] send defer
+2022-12-22 01:25:15,944 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: defer
+2022-12-22 01:25:15,944 INFO    HandlerThread:73386 [handler.py:handle_request_defer():162] handle defer: 0
+2022-12-22 01:25:15,944 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: defer
+2022-12-22 01:25:15,944 INFO    SenderThread:73386 [sender.py:send_request_defer():459] handle sender defer: 0
+2022-12-22 01:25:15,944 INFO    SenderThread:73386 [sender.py:transition_state():463] send defer: 1
+2022-12-22 01:25:15,944 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: defer
+2022-12-22 01:25:15,944 INFO    HandlerThread:73386 [handler.py:handle_request_defer():162] handle defer: 1
+2022-12-22 01:25:15,944 INFO    HandlerThread:73386 [system_monitor.py:finish():160] Stopping system monitor
+2022-12-22 01:25:15,945 DEBUG   SystemMonitor:73386 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2022-12-22 01:25:15,945 DEBUG   SystemMonitor:73386 [system_monitor.py:_start():141] Publishing last batch of metrics
+2022-12-22 01:25:15,946 INFO    HandlerThread:73386 [interfaces.py:finish():173] Joined cpu
+2022-12-22 01:25:15,946 INFO    HandlerThread:73386 [interfaces.py:finish():173] Joined disk
+2022-12-22 01:25:16,046 INFO    HandlerThread:73386 [interfaces.py:finish():173] Joined gpu
+2022-12-22 01:25:16,046 INFO    HandlerThread:73386 [interfaces.py:finish():173] Joined memory
+2022-12-22 01:25:16,046 INFO    HandlerThread:73386 [interfaces.py:finish():173] Joined network
+2022-12-22 01:25:16,047 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: defer
+2022-12-22 01:25:16,047 INFO    SenderThread:73386 [sender.py:send_request_defer():459] handle sender defer: 1
+2022-12-22 01:25:16,047 INFO    SenderThread:73386 [sender.py:transition_state():463] send defer: 2
+2022-12-22 01:25:16,047 DEBUG   SenderThread:73386 [sender.py:send():303] send: stats
+2022-12-22 01:25:16,048 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: defer
+2022-12-22 01:25:16,048 INFO    HandlerThread:73386 [handler.py:handle_request_defer():162] handle defer: 2
+2022-12-22 01:25:16,048 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: defer
+2022-12-22 01:25:16,048 INFO    SenderThread:73386 [sender.py:send_request_defer():459] handle sender defer: 2
+2022-12-22 01:25:16,048 INFO    SenderThread:73386 [sender.py:transition_state():463] send defer: 3
+2022-12-22 01:25:16,048 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: defer
+2022-12-22 01:25:16,048 INFO    HandlerThread:73386 [handler.py:handle_request_defer():162] handle defer: 3
+2022-12-22 01:25:16,048 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: defer
+2022-12-22 01:25:16,048 INFO    SenderThread:73386 [sender.py:send_request_defer():459] handle sender defer: 3
+2022-12-22 01:25:16,048 INFO    SenderThread:73386 [sender.py:transition_state():463] send defer: 4
+2022-12-22 01:25:16,048 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: defer
+2022-12-22 01:25:16,048 INFO    HandlerThread:73386 [handler.py:handle_request_defer():162] handle defer: 4
+2022-12-22 01:25:16,049 DEBUG   SenderThread:73386 [sender.py:send():303] send: summary
+2022-12-22 01:25:16,050 INFO    SenderThread:73386 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-22 01:25:16,050 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: defer
+2022-12-22 01:25:16,050 INFO    SenderThread:73386 [sender.py:send_request_defer():459] handle sender defer: 4
+2022-12-22 01:25:16,050 INFO    SenderThread:73386 [sender.py:transition_state():463] send defer: 5
+2022-12-22 01:25:16,050 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: defer
+2022-12-22 01:25:16,050 INFO    HandlerThread:73386 [handler.py:handle_request_defer():162] handle defer: 5
+2022-12-22 01:25:16,051 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: defer
+2022-12-22 01:25:16,051 INFO    SenderThread:73386 [sender.py:send_request_defer():459] handle sender defer: 5
+2022-12-22 01:25:16,051 INFO    SenderThread:73386 [sender.py:transition_state():463] send defer: 6
+2022-12-22 01:25:16,051 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: defer
+2022-12-22 01:25:16,051 INFO    HandlerThread:73386 [handler.py:handle_request_defer():162] handle defer: 6
+2022-12-22 01:25:16,051 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: defer
+2022-12-22 01:25:16,051 INFO    SenderThread:73386 [sender.py:send_request_defer():459] handle sender defer: 6
+2022-12-22 01:25:16,082 INFO    Thread-13 :73386 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/run-20221222_012325-2pnynoes/files/wandb-summary.json
+2022-12-22 01:25:16,942 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: poll_exit
+2022-12-22 01:25:17,084 INFO    Thread-13 :73386 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/run-20221222_012325-2pnynoes/files/output.log
+2022-12-22 01:25:17,932 INFO    SenderThread:73386 [sender.py:transition_state():463] send defer: 7
+2022-12-22 01:25:17,933 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: poll_exit
+2022-12-22 01:25:17,933 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: defer
+2022-12-22 01:25:17,933 INFO    HandlerThread:73386 [handler.py:handle_request_defer():162] handle defer: 7
+2022-12-22 01:25:17,933 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: defer
+2022-12-22 01:25:17,933 INFO    SenderThread:73386 [sender.py:send_request_defer():459] handle sender defer: 7
+2022-12-22 01:25:17,933 INFO    SenderThread:73386 [dir_watcher.py:finish():362] shutting down directory watcher
+2022-12-22 01:25:17,943 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: poll_exit
+2022-12-22 01:25:18,086 INFO    SenderThread:73386 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/run-20221222_012325-2pnynoes/files/output.log
+2022-12-22 01:25:18,086 INFO    SenderThread:73386 [dir_watcher.py:finish():392] scan: /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/run-20221222_012325-2pnynoes/files
+2022-12-22 01:25:18,086 INFO    SenderThread:73386 [dir_watcher.py:finish():406] scan save: /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/run-20221222_012325-2pnynoes/files/wandb-metadata.json wandb-metadata.json
+2022-12-22 01:25:18,086 INFO    SenderThread:73386 [dir_watcher.py:finish():406] scan save: /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/run-20221222_012325-2pnynoes/files/config.yaml config.yaml
+2022-12-22 01:25:18,086 INFO    SenderThread:73386 [dir_watcher.py:finish():406] scan save: /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/run-20221222_012325-2pnynoes/files/requirements.txt requirements.txt
+2022-12-22 01:25:18,090 INFO    SenderThread:73386 [dir_watcher.py:finish():406] scan save: /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/run-20221222_012325-2pnynoes/files/wandb-summary.json wandb-summary.json
+2022-12-22 01:25:18,090 INFO    SenderThread:73386 [dir_watcher.py:finish():406] scan save: /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/run-20221222_012325-2pnynoes/files/output.log output.log
+2022-12-22 01:25:18,095 INFO    SenderThread:73386 [sender.py:transition_state():463] send defer: 8
+2022-12-22 01:25:18,095 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: poll_exit
+2022-12-22 01:25:18,098 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: defer
+2022-12-22 01:25:18,098 INFO    HandlerThread:73386 [handler.py:handle_request_defer():162] handle defer: 8
+2022-12-22 01:25:18,098 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: defer
+2022-12-22 01:25:18,098 INFO    SenderThread:73386 [sender.py:send_request_defer():459] handle sender defer: 8
+2022-12-22 01:25:18,098 INFO    SenderThread:73386 [file_pusher.py:finish():168] shutting down file pusher
+2022-12-22 01:25:18,656 INFO    Thread-20 :73386 [upload_job.py:push():143] Uploaded file /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/run-20221222_012325-2pnynoes/files/output.log
+2022-12-22 01:25:18,663 INFO    Thread-17 :73386 [upload_job.py:push():143] Uploaded file /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/run-20221222_012325-2pnynoes/files/config.yaml
+2022-12-22 01:25:18,670 INFO    Thread-19 :73386 [upload_job.py:push():143] Uploaded file /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/run-20221222_012325-2pnynoes/files/wandb-summary.json
+2022-12-22 01:25:18,717 INFO    Thread-18 :73386 [upload_job.py:push():143] Uploaded file /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/run-20221222_012325-2pnynoes/files/requirements.txt
+2022-12-22 01:25:18,917 INFO    Thread-12 (_thread_body):73386 [sender.py:transition_state():463] send defer: 9
+2022-12-22 01:25:18,918 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: defer
+2022-12-22 01:25:18,918 INFO    HandlerThread:73386 [handler.py:handle_request_defer():162] handle defer: 9
+2022-12-22 01:25:18,918 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: defer
+2022-12-22 01:25:18,919 INFO    SenderThread:73386 [sender.py:send_request_defer():459] handle sender defer: 9
+2022-12-22 01:25:18,919 INFO    SenderThread:73386 [file_pusher.py:join():173] waiting for file pusher
+2022-12-22 01:25:18,919 INFO    SenderThread:73386 [sender.py:transition_state():463] send defer: 10
+2022-12-22 01:25:18,919 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: defer
+2022-12-22 01:25:18,919 INFO    HandlerThread:73386 [handler.py:handle_request_defer():162] handle defer: 10
+2022-12-22 01:25:18,919 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: defer
+2022-12-22 01:25:18,919 INFO    SenderThread:73386 [sender.py:send_request_defer():459] handle sender defer: 10
+2022-12-22 01:25:18,944 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: poll_exit
+2022-12-22 01:25:19,483 INFO    SenderThread:73386 [sender.py:transition_state():463] send defer: 11
+2022-12-22 01:25:19,483 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: poll_exit
+2022-12-22 01:25:19,483 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: defer
+2022-12-22 01:25:19,484 INFO    HandlerThread:73386 [handler.py:handle_request_defer():162] handle defer: 11
+2022-12-22 01:25:19,484 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: defer
+2022-12-22 01:25:19,484 INFO    SenderThread:73386 [sender.py:send_request_defer():459] handle sender defer: 11
+2022-12-22 01:25:19,484 INFO    SenderThread:73386 [sender.py:transition_state():463] send defer: 12
+2022-12-22 01:25:19,484 DEBUG   SenderThread:73386 [sender.py:send():303] send: final
+2022-12-22 01:25:19,484 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: defer
+2022-12-22 01:25:19,484 DEBUG   SenderThread:73386 [sender.py:send():303] send: footer
+2022-12-22 01:25:19,484 INFO    HandlerThread:73386 [handler.py:handle_request_defer():162] handle defer: 12
+2022-12-22 01:25:19,485 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: defer
+2022-12-22 01:25:19,485 INFO    SenderThread:73386 [sender.py:send_request_defer():459] handle sender defer: 12
+2022-12-22 01:25:19,485 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: poll_exit
+2022-12-22 01:25:19,485 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: poll_exit
+2022-12-22 01:25:19,486 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: poll_exit
+2022-12-22 01:25:19,486 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: server_info
+2022-12-22 01:25:19,486 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: poll_exit
+2022-12-22 01:25:19,486 DEBUG   SenderThread:73386 [sender.py:send_request():317] send_request: server_info
+2022-12-22 01:25:19,488 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: get_summary
+2022-12-22 01:25:19,488 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: sampled_history
+2022-12-22 01:25:19,840 INFO    MainThread:73386 [wandb_run.py:_footer_history_summary_info():3377] rendering history
+2022-12-22 01:25:19,840 INFO    MainThread:73386 [wandb_run.py:_footer_history_summary_info():3409] rendering summary
+2022-12-22 01:25:19,841 INFO    MainThread:73386 [wandb_run.py:_footer_sync_info():3333] logging synced files
+2022-12-22 01:25:19,841 DEBUG   HandlerThread:73386 [handler.py:handle_request():139] handle_request: shutdown
+2022-12-22 01:25:19,841 INFO    HandlerThread:73386 [handler.py:finish():814] shutting down handler
+2022-12-22 01:25:20,486 INFO    WriterThread:73386 [datastore.py:close():279] close: /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/run-20221222_012325-2pnynoes/run-2pnynoes.wandb
+2022-12-22 01:25:20,840 INFO    SenderThread:73386 [sender.py:finish():1331] shutting down sender
+2022-12-22 01:25:20,841 INFO    SenderThread:73386 [file_pusher.py:finish():168] shutting down file pusher
+2022-12-22 01:25:20,841 INFO    SenderThread:73386 [file_pusher.py:join():173] waiting for file pusher
+2022-12-22 01:25:20,846 INFO    MainThread:73386 [internal.py:handle_exit():78] Internal process exited

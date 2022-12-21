@@ -1,0 +1,524 @@
+2022-12-21 22:06:52,376 fflow.py initialize [line:259] INFO Using Logger in `utils.logger.basic_logger`
+2022-12-21 22:06:52,376 fflow.py initialize [line:260] INFO Initializing fedtask: pill_classification
+2022-12-21 22:06:52,772 fflow.py initialize [line:276] INFO Using model `resnet18` in `benchmark.pill_classification.model.resnet18` as the globally shared model.
+2022-12-21 22:06:52,777 fflow.py initialize [line:304] INFO Using sampler `threshold_sampler` in `sampler.threshold_sampler` as the globally shared model.
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 22:06:57,268 fflow.py initialize [line:324] INFO Initializing Clients: 10 clients of `algorithm.fedalgo3.Client` being created.
+2022-12-21 22:06:57,269 fflow.py initialize [line:345] INFO Initializing Server: 1 server of `algorithm.fedalgo3.Server` being created.
+2022-12-21 22:06:57,269 fflow.py initialize [line:358] INFO Ready to start.
+2022-12-21 22:06:57,270 fedbase.py run [line:61] INFO --------------Round 1--------------
+2022-12-21 22:07:01,748 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.0130
+2022-12-21 22:07:01,748 basic_logger.py show_current_output [line:134] INFO test_loss                     4.5173
+2022-12-21 22:07:01,749 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.4789s
+2022-12-21 22:07:01,753 fedalgo3.py iterate [line:34] INFO Selected clients : [1, 2, 7, 3, 5]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 22:10:13,115 basic_logger.py time_end [line:74] INFO Time Cost:                    195.8450s
+2022-12-21 22:10:13,115 fedbase.py run [line:61] INFO --------------Round 2--------------
+Total samples which participate training : 3230 samples
+2022-12-21 22:10:17,060 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.2429
+2022-12-21 22:10:17,060 basic_logger.py show_current_output [line:134] INFO test_loss                     3.1936
+2022-12-21 22:10:17,060 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.9450s
+2022-12-21 22:10:17,062 fedalgo3.py iterate [line:34] INFO Selected clients : [3, 0, 2, 7, 9]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 22:13:21,371 basic_logger.py time_end [line:74] INFO Time Cost:                    188.2559s
+2022-12-21 22:13:21,371 fedbase.py run [line:61] INFO --------------Round 3--------------
+Total samples which participate training : 3235 samples
+2022-12-21 22:13:25,652 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.4117
+2022-12-21 22:13:25,655 basic_logger.py show_current_output [line:134] INFO test_loss                     2.1608
+2022-12-21 22:13:25,655 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.2834s
+2022-12-21 22:13:25,665 fedalgo3.py iterate [line:34] INFO Selected clients : [1, 2, 9, 5, 7]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 22:16:27,914 basic_logger.py time_end [line:74] INFO Time Cost:                    186.5428s
+2022-12-21 22:16:27,915 fedbase.py run [line:61] INFO --------------Round 4--------------
+Total samples which participate training : 3190 samples
+2022-12-21 22:16:32,145 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.5519
+2022-12-21 22:16:32,149 basic_logger.py show_current_output [line:134] INFO test_loss                     1.5817
+2022-12-21 22:16:32,149 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.2342s
+2022-12-21 22:16:32,164 fedalgo3.py iterate [line:34] INFO Selected clients : [1, 4, 3, 0, 7]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+Total samples which participate training : 2790 samples
+2022-12-21 22:19:12,940 basic_logger.py time_end [line:74] INFO Time Cost:                    165.0247s
+2022-12-21 22:19:12,940 fedbase.py run [line:61] INFO --------------Round 5--------------
+2022-12-21 22:19:15,826 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.5896
+2022-12-21 22:19:15,826 basic_logger.py show_current_output [line:134] INFO test_loss                     1.4471
+2022-12-21 22:19:15,826 basic_logger.py time_end [line:74] INFO Eval Time Cost:               2.8860s
+2022-12-21 22:19:15,833 fedalgo3.py iterate [line:34] INFO Selected clients : [7, 1, 4, 6, 3]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 22:21:52,850 basic_logger.py time_end [line:74] INFO Time Cost:                    159.9100s
+2022-12-21 22:21:52,851 fedbase.py run [line:61] INFO --------------Round 6--------------
+Total samples which participate training : 2710 samples
+2022-12-21 22:21:56,495 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.6390
+2022-12-21 22:21:56,495 basic_logger.py show_current_output [line:134] INFO test_loss                     1.2826
+2022-12-21 22:21:56,495 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.6445s
+2022-12-21 22:21:56,497 fedalgo3.py iterate [line:34] INFO Selected clients : [5, 3, 9, 8, 7]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 22:24:28,264 basic_logger.py time_end [line:74] INFO Time Cost:                    155.4129s
+2022-12-21 22:24:28,264 fedbase.py run [line:61] INFO --------------Round 7--------------
+Total samples which participate training : 2730 samples
+2022-12-21 22:24:32,342 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.6545
+2022-12-21 22:24:32,342 basic_logger.py show_current_output [line:134] INFO test_loss                     1.1742
+2022-12-21 22:24:32,342 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.0778s
+2022-12-21 22:24:32,348 fedalgo3.py iterate [line:34] INFO Selected clients : [7, 2, 4, 9, 6]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 22:27:25,908 basic_logger.py time_end [line:74] INFO Time Cost:                    177.6434s
+2022-12-21 22:27:25,908 fedbase.py run [line:61] INFO --------------Round 8--------------
+Total samples which participate training : 3055 samples
+2022-12-21 22:27:29,536 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7039
+2022-12-21 22:27:29,536 basic_logger.py show_current_output [line:134] INFO test_loss                     1.0306
+2022-12-21 22:27:29,536 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.6277s
+2022-12-21 22:27:29,539 fedalgo3.py iterate [line:34] INFO Selected clients : [3, 5, 1, 4, 8]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+Total samples which participate training : 2620 samples
+2022-12-21 22:29:55,577 basic_logger.py time_end [line:74] INFO Time Cost:                    149.6688s
+2022-12-21 22:29:55,578 fedbase.py run [line:61] INFO --------------Round 9--------------
+2022-12-21 22:29:58,330 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7091
+2022-12-21 22:29:58,334 basic_logger.py show_current_output [line:134] INFO test_loss                     0.9766
+2022-12-21 22:29:58,334 basic_logger.py time_end [line:74] INFO Eval Time Cost:               2.7563s
+2022-12-21 22:29:58,343 fedalgo3.py iterate [line:34] INFO Selected clients : [6, 9, 3, 4, 8]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 22:32:19,109 basic_logger.py time_end [line:74] INFO Time Cost:                    143.5315s
+2022-12-21 22:32:19,110 fedbase.py run [line:61] INFO --------------Round 10--------------
+Total samples which participate training : 2545 samples
+2022-12-21 22:32:22,747 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7377
+2022-12-21 22:32:22,748 basic_logger.py show_current_output [line:134] INFO test_loss                     0.9230
+2022-12-21 22:32:22,748 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.6382s
+2022-12-21 22:32:22,754 fedalgo3.py iterate [line:34] INFO Selected clients : [6, 8, 7, 2, 3]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 22:35:09,486 basic_logger.py time_end [line:74] INFO Time Cost:                    170.3759s
+2022-12-21 22:35:09,486 fedbase.py run [line:61] INFO --------------Round 11--------------
+Total samples which participate training : 2950 samples
+2022-12-21 22:35:13,071 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7442
+2022-12-21 22:35:13,072 basic_logger.py show_current_output [line:134] INFO test_loss                     0.8688
+2022-12-21 22:35:13,072 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.5860s
+2022-12-21 22:35:13,079 fedalgo3.py iterate [line:34] INFO Selected clients : [6, 5, 8, 3, 1]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 22:37:31,400 basic_logger.py time_end [line:74] INFO Time Cost:                    141.9139s
+2022-12-21 22:37:31,401 fedbase.py run [line:61] INFO --------------Round 12--------------
+Total samples which participate training : 2450 samples
+2022-12-21 22:37:34,991 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7455
+2022-12-21 22:37:34,995 basic_logger.py show_current_output [line:134] INFO test_loss                     0.8571
+2022-12-21 22:37:34,995 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.5939s
+2022-12-21 22:37:35,001 fedalgo3.py iterate [line:34] INFO Selected clients : [5, 4, 0, 2, 6]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+Total samples which participate training : 2790 samples
+2022-12-21 22:40:10,377 basic_logger.py time_end [line:74] INFO Time Cost:                    158.9763s
+2022-12-21 22:40:10,378 fedbase.py run [line:61] INFO --------------Round 13--------------
+2022-12-21 22:40:14,454 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7091
+2022-12-21 22:40:14,454 basic_logger.py show_current_output [line:134] INFO test_loss                     0.9981
+2022-12-21 22:40:14,454 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.0764s
+2022-12-21 22:40:14,467 fedalgo3.py iterate [line:34] INFO Selected clients : [0, 3, 4, 7, 8]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+Total samples which participate training : 2630 samples
+2022-12-21 22:42:42,745 basic_logger.py time_end [line:74] INFO Time Cost:                    152.3674s
+2022-12-21 22:42:42,746 fedbase.py run [line:61] INFO --------------Round 14--------------
+2022-12-21 22:42:46,241 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7104
+2022-12-21 22:42:46,241 basic_logger.py show_current_output [line:134] INFO test_loss                     1.0207
+2022-12-21 22:42:46,241 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.4955s
+2022-12-21 22:42:46,248 fedalgo3.py iterate [line:34] INFO Selected clients : [0, 5, 7, 2, 4]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 22:45:32,166 basic_logger.py time_end [line:74] INFO Time Cost:                    169.4207s
+2022-12-21 22:45:32,167 fedbase.py run [line:61] INFO --------------Round 15--------------
+Total samples which participate training : 3025 samples
+2022-12-21 22:45:36,303 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.6896
+2022-12-21 22:45:36,303 basic_logger.py show_current_output [line:134] INFO test_loss                     1.1010
+2022-12-21 22:45:36,303 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.1364s
+2022-12-21 22:45:36,309 fedalgo3.py iterate [line:34] INFO Selected clients : [5, 2, 6, 8, 0]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+Total samples which participate training : 2645 samples
+2022-12-21 22:48:07,022 basic_logger.py time_end [line:74] INFO Time Cost:                    154.8548s
+2022-12-21 22:48:07,022 fedbase.py run [line:61] INFO --------------Round 16--------------
+2022-12-21 22:48:11,567 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.6935
+2022-12-21 22:48:11,568 basic_logger.py show_current_output [line:134] INFO test_loss                     1.0649
+2022-12-21 22:48:11,569 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.5460s
+2022-12-21 22:48:11,575 fedalgo3.py iterate [line:34] INFO Selected clients : [5, 6, 7, 9, 4]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 22:50:39,575 basic_logger.py time_end [line:74] INFO Time Cost:                    152.5528s
+2022-12-21 22:50:39,576 fedbase.py run [line:61] INFO --------------Round 17--------------
+Total samples which participate training : 2605 samples
+2022-12-21 22:50:43,269 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7377
+2022-12-21 22:50:43,270 basic_logger.py show_current_output [line:134] INFO test_loss                     0.8853
+2022-12-21 22:50:43,270 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.6942s
+2022-12-21 22:50:43,283 fedalgo3.py iterate [line:34] INFO Selected clients : [4, 3, 2, 7, 5]
+Total samples which participate training : 3215 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 22:53:43,279 basic_logger.py time_end [line:74] INFO Time Cost:                    183.7035s
+2022-12-21 22:53:43,280 fedbase.py run [line:61] INFO --------------Round 18--------------
+2022-12-21 22:53:47,515 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7623
+2022-12-21 22:53:47,519 basic_logger.py show_current_output [line:134] INFO test_loss                     0.8456
+2022-12-21 22:53:47,520 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.2397s
+2022-12-21 22:53:47,526 fedalgo3.py iterate [line:34] INFO Selected clients : [6, 2, 1, 4, 7]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 22:56:40,564 basic_logger.py time_end [line:74] INFO Time Cost:                    177.2838s
+2022-12-21 22:56:40,564 fedbase.py run [line:61] INFO --------------Round 19--------------
+Total samples which participate training : 3010 samples
+2022-12-21 22:56:44,611 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7506
+2022-12-21 22:56:44,611 basic_logger.py show_current_output [line:134] INFO test_loss                     0.8446
+2022-12-21 22:56:44,612 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.0472s
+2022-12-21 22:56:44,624 fedalgo3.py iterate [line:34] INFO Selected clients : [1, 0, 2, 3, 8]
+Total samples which participate training : 2980 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 22:59:32,416 basic_logger.py time_end [line:74] INFO Time Cost:                    171.8521s
+2022-12-21 22:59:32,417 fedbase.py run [line:61] INFO --------------Round 20--------------
+2022-12-21 22:59:36,584 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7519
+2022-12-21 22:59:36,585 basic_logger.py show_current_output [line:134] INFO test_loss                     0.8535
+2022-12-21 22:59:36,585 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.1679s
+2022-12-21 22:59:36,592 fedalgo3.py iterate [line:34] INFO Selected clients : [4, 5, 1, 9, 7]
+Total samples which participate training : 2790 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 23:02:11,039 basic_logger.py time_end [line:74] INFO Time Cost:                    158.6215s
+2022-12-21 23:02:11,039 fedbase.py run [line:61] INFO --------------Round 21--------------
+2022-12-21 23:02:14,935 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7675
+2022-12-21 23:02:14,935 basic_logger.py show_current_output [line:134] INFO test_loss                     0.7942
+2022-12-21 23:02:14,935 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.8960s
+2022-12-21 23:02:14,941 fedalgo3.py iterate [line:34] INFO Selected clients : [3, 4, 8, 0, 9]
+Total samples which participate training : 2625 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 23:04:40,352 basic_logger.py time_end [line:74] INFO Time Cost:                    149.3127s
+2022-12-21 23:04:40,352 fedbase.py run [line:61] INFO --------------Round 22--------------
+2022-12-21 23:04:44,438 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7195
+2022-12-21 23:04:44,438 basic_logger.py show_current_output [line:134] INFO test_loss                     0.9645
+2022-12-21 23:04:44,438 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.0861s
+2022-12-21 23:04:44,441 fedalgo3.py iterate [line:34] INFO Selected clients : [4, 6, 5, 1, 7]
+Total samples which participate training : 2560 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 23:07:10,068 basic_logger.py time_end [line:74] INFO Time Cost:                    149.7151s
+2022-12-21 23:07:10,068 fedbase.py run [line:61] INFO --------------Round 23--------------
+2022-12-21 23:07:14,054 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7597
+2022-12-21 23:07:14,055 basic_logger.py show_current_output [line:134] INFO test_loss                     0.8168
+2022-12-21 23:07:14,055 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.9869s
+2022-12-21 23:07:14,063 fedalgo3.py iterate [line:34] INFO Selected clients : [7, 9, 4, 3, 2]
+Total samples which participate training : 3325 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 23:10:20,920 basic_logger.py time_end [line:74] INFO Time Cost:                    190.8521s
+2022-12-21 23:10:20,921 fedbase.py run [line:61] INFO --------------Round 24--------------
+2022-12-21 23:10:25,020 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7805
+2022-12-21 23:10:25,020 basic_logger.py show_current_output [line:134] INFO test_loss                     0.7815
+2022-12-21 23:10:25,020 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.0992s
+2022-12-21 23:10:25,021 fedalgo3.py iterate [line:34] INFO Selected clients : [7, 9, 0, 4, 6]
+Total samples which participate training : 2565 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 23:12:45,445 basic_logger.py time_end [line:74] INFO Time Cost:                    144.5238s
+2022-12-21 23:12:45,445 fedbase.py run [line:61] INFO --------------Round 25--------------
+2022-12-21 23:12:49,443 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7377
+2022-12-21 23:12:49,443 basic_logger.py show_current_output [line:134] INFO test_loss                     0.9185
+2022-12-21 23:12:49,443 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.9981s
+2022-12-21 23:12:49,450 fedalgo3.py iterate [line:34] INFO Selected clients : [3, 6, 0, 9, 4]
+Total samples which participate training : 2600 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 23:15:11,625 basic_logger.py time_end [line:74] INFO Time Cost:                    146.1793s
+2022-12-21 23:15:11,625 fedbase.py run [line:61] INFO --------------Round 26--------------
+2022-12-21 23:15:15,344 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7286
+2022-12-21 23:15:15,344 basic_logger.py show_current_output [line:134] INFO test_loss                     0.9707
+2022-12-21 23:15:15,344 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.7192s
+2022-12-21 23:15:15,358 fedalgo3.py iterate [line:34] INFO Selected clients : [0, 4, 3, 9, 2]
+Total samples which participate training : 3170 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 23:18:09,789 basic_logger.py time_end [line:74] INFO Time Cost:                    178.1641s
+2022-12-21 23:18:09,790 fedbase.py run [line:61] INFO --------------Round 27--------------
+2022-12-21 23:18:13,526 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7377
+2022-12-21 23:18:13,529 basic_logger.py show_current_output [line:134] INFO test_loss                     0.9921
+2022-12-21 23:18:13,529 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.7393s
+2022-12-21 23:18:13,531 fedalgo3.py iterate [line:34] INFO Selected clients : [7, 4, 8, 2, 0]
+Total samples which participate training : 2930 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 23:20:56,480 basic_logger.py time_end [line:74] INFO Time Cost:                    166.6901s
+2022-12-21 23:20:56,480 fedbase.py run [line:61] INFO --------------Round 28--------------
+2022-12-21 23:21:00,204 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.6740
+2022-12-21 23:21:00,206 basic_logger.py show_current_output [line:134] INFO test_loss                     1.1282
+2022-12-21 23:21:00,206 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.7258s
+2022-12-21 23:21:00,222 fedalgo3.py iterate [line:34] INFO Selected clients : [3, 7, 1, 4, 2]
+Total samples which participate training : 3280 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 23:24:05,033 basic_logger.py time_end [line:74] INFO Time Cost:                    188.5527s
+2022-12-21 23:24:05,034 fedbase.py run [line:61] INFO --------------Round 29--------------
+2022-12-21 23:24:09,119 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7584
+2022-12-21 23:24:09,120 basic_logger.py show_current_output [line:134] INFO test_loss                     0.8734
+2022-12-21 23:24:09,120 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.0865s
+2022-12-21 23:24:09,133 fedalgo3.py iterate [line:34] INFO Selected clients : [9, 3, 4, 2, 1]
+Total samples which participate training : 3275 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 23:27:10,461 basic_logger.py time_end [line:74] INFO Time Cost:                    185.4274s
+2022-12-21 23:27:10,462 fedbase.py run [line:61] INFO --------------Round 30--------------
+2022-12-21 23:27:15,243 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7662
+2022-12-21 23:27:15,243 basic_logger.py show_current_output [line:134] INFO test_loss                     0.8294
+2022-12-21 23:27:15,243 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.7814s
+2022-12-21 23:27:15,251 fedalgo3.py iterate [line:34] INFO Selected clients : [1, 0, 9, 3, 6]
+Total samples which participate training : 2615 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 23:29:42,571 basic_logger.py time_end [line:74] INFO Time Cost:                    152.1093s
+2022-12-21 23:29:42,571 fedbase.py run [line:61] INFO --------------Round 31--------------
+2022-12-21 23:29:46,309 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7078
+2022-12-21 23:29:46,310 basic_logger.py show_current_output [line:134] INFO test_loss                     1.0407
+2022-12-21 23:29:46,310 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.7384s
+2022-12-21 23:29:46,317 fedalgo3.py iterate [line:34] INFO Selected clients : [6, 3, 2, 9, 4]
+Total samples which participate training : 3090 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 23:32:39,053 basic_logger.py time_end [line:74] INFO Time Cost:                    176.4811s
+2022-12-21 23:32:39,053 fedbase.py run [line:61] INFO --------------Round 32--------------
+2022-12-21 23:32:42,703 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7468
+2022-12-21 23:32:42,706 basic_logger.py show_current_output [line:134] INFO test_loss                     0.8878
+2022-12-21 23:32:42,706 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.6526s
+2022-12-21 23:32:42,712 fedalgo3.py iterate [line:34] INFO Selected clients : [9, 0, 2, 7, 5]
+Total samples which participate training : 3085 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 23:35:34,634 basic_logger.py time_end [line:74] INFO Time Cost:                    175.5805s
+2022-12-21 23:35:34,634 fedbase.py run [line:61] INFO --------------Round 33--------------
+2022-12-21 23:35:39,017 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.6818
+2022-12-21 23:35:39,017 basic_logger.py show_current_output [line:134] INFO test_loss                     1.1402
+2022-12-21 23:35:39,017 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.3829s
+2022-12-21 23:35:39,032 fedalgo3.py iterate [line:34] INFO Selected clients : [9, 8, 0, 2, 5]
+Total samples which participate training : 2875 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 23:38:20,433 basic_logger.py time_end [line:74] INFO Time Cost:                    165.7984s
+2022-12-21 23:38:20,433 fedbase.py run [line:61] INFO --------------Round 34--------------
+2022-12-21 23:38:24,492 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7130
+2022-12-21 23:38:24,493 basic_logger.py show_current_output [line:134] INFO test_loss                     1.0621
+2022-12-21 23:38:24,493 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.0596s
+2022-12-21 23:38:24,500 fedalgo3.py iterate [line:34] INFO Selected clients : [6, 8, 0, 3, 7]
+Total samples which participate training : 2460 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 23:40:44,326 basic_logger.py time_end [line:74] INFO Time Cost:                    143.8930s
+2022-12-21 23:40:44,327 fedbase.py run [line:61] INFO --------------Round 35--------------
+2022-12-21 23:40:47,376 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.6818
+2022-12-21 23:40:47,376 basic_logger.py show_current_output [line:134] INFO test_loss                     1.1677
+2022-12-21 23:40:47,377 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.0497s
+2022-12-21 23:40:47,384 fedalgo3.py iterate [line:34] INFO Selected clients : [4, 8, 6, 2, 3]
+Total samples which participate training : 2885 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 23:43:27,734 basic_logger.py time_end [line:74] INFO Time Cost:                    163.4066s
+2022-12-21 23:43:27,734 fedbase.py run [line:61] INFO --------------Round 36--------------
+2022-12-21 23:43:31,964 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7273
+2022-12-21 23:43:31,965 basic_logger.py show_current_output [line:134] INFO test_loss                     0.9573
+2022-12-21 23:43:31,965 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.2308s
+2022-12-21 23:43:31,973 fedalgo3.py iterate [line:34] INFO Selected clients : [1, 4, 7, 0, 9]
+Total samples which participate training : 2750 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 23:46:05,114 basic_logger.py time_end [line:74] INFO Time Cost:                    157.3801s
+2022-12-21 23:46:05,115 fedbase.py run [line:61] INFO --------------Round 37--------------
+2022-12-21 23:46:08,683 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7013
+2022-12-21 23:46:08,683 basic_logger.py show_current_output [line:134] INFO test_loss                     1.1050
+2022-12-21 23:46:08,684 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.5687s
+2022-12-21 23:46:08,687 fedalgo3.py iterate [line:34] INFO Selected clients : [3, 1, 6, 4, 2]
+Total samples which participate training : 3045 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 23:48:59,970 basic_logger.py time_end [line:74] INFO Time Cost:                    174.8554s
+2022-12-21 23:48:59,971 fedbase.py run [line:61] INFO --------------Round 38--------------
+2022-12-21 23:49:03,138 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7429
+2022-12-21 23:49:03,139 basic_logger.py show_current_output [line:134] INFO test_loss                     0.9633
+2022-12-21 23:49:03,139 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.1685s
+2022-12-21 23:49:03,153 fedalgo3.py iterate [line:34] INFO Selected clients : [8, 3, 6, 7, 4]
+Total samples which participate training : 2550 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 23:51:23,745 basic_logger.py time_end [line:74] INFO Time Cost:                    143.7739s
+2022-12-21 23:51:23,745 fedbase.py run [line:61] INFO --------------Round 39--------------
+2022-12-21 23:51:26,928 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7545
+2022-12-21 23:51:26,929 basic_logger.py show_current_output [line:134] INFO test_loss                     0.9010
+2022-12-21 23:51:26,929 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.1836s
+2022-12-21 23:51:26,930 fedalgo3.py iterate [line:34] INFO Selected clients : [0, 9, 8, 3, 7]
+Total samples which participate training : 2690 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 23:53:54,506 basic_logger.py time_end [line:74] INFO Time Cost:                    150.7608s
+2022-12-21 23:53:54,507 fedbase.py run [line:61] INFO --------------Round 40--------------
+2022-12-21 23:53:57,750 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.6987
+2022-12-21 23:53:57,750 basic_logger.py show_current_output [line:134] INFO test_loss                     1.1626
+2022-12-21 23:53:57,751 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.2438s
+2022-12-21 23:53:57,755 fedalgo3.py iterate [line:34] INFO Selected clients : [6, 3, 2, 5, 1]
+Total samples which participate training : 2995 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 23:56:47,489 basic_logger.py time_end [line:74] INFO Time Cost:                    172.9826s
+2022-12-21 23:56:47,490 fedbase.py run [line:61] INFO --------------Round 41--------------
+2022-12-21 23:56:50,721 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7429
+2022-12-21 23:56:50,721 basic_logger.py show_current_output [line:134] INFO test_loss                     0.9527
+2022-12-21 23:56:50,721 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.2312s
+2022-12-21 23:56:50,730 fedalgo3.py iterate [line:34] INFO Selected clients : [6, 4, 2, 1, 9]
+Total samples which participate training : 3005 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 23:59:41,244 basic_logger.py time_end [line:74] INFO Time Cost:                    173.7545s
+2022-12-21 23:59:41,245 fedbase.py run [line:61] INFO --------------Round 42--------------
+2022-12-21 23:59:46,362 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7558
+2022-12-21 23:59:46,363 basic_logger.py show_current_output [line:134] INFO test_loss                     0.9244
+2022-12-21 23:59:46,363 basic_logger.py time_end [line:74] INFO Eval Time Cost:               5.1178s
+2022-12-21 23:59:46,363 fedalgo3.py iterate [line:34] INFO Selected clients : [4, 9, 3, 7, 0]
+Total samples which participate training : 2835 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 00:02:20,837 basic_logger.py time_end [line:74] INFO Time Cost:                    159.5920s
+2022-12-22 00:02:20,837 fedbase.py run [line:61] INFO --------------Round 43--------------
+2022-12-22 00:02:24,393 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7078
+2022-12-22 00:02:24,393 basic_logger.py show_current_output [line:134] INFO test_loss                     1.0668
+2022-12-22 00:02:24,393 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.5556s
+2022-12-22 00:02:24,394 fedalgo3.py iterate [line:34] INFO Selected clients : [3, 7, 5, 2, 6]
+Total samples which participate training : 3045 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 00:05:14,570 basic_logger.py time_end [line:74] INFO Time Cost:                    173.7323s
+2022-12-22 00:05:14,570 fedbase.py run [line:61] INFO --------------Round 44--------------
+2022-12-22 00:05:18,694 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7468
+2022-12-22 00:05:18,695 basic_logger.py show_current_output [line:134] INFO test_loss                     0.9678
+2022-12-22 00:05:18,695 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.1250s
+2022-12-22 00:05:18,702 fedalgo3.py iterate [line:34] INFO Selected clients : [0, 4, 2, 9, 1]
+Total samples which participate training : 3085 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 00:08:12,152 basic_logger.py time_end [line:74] INFO Time Cost:                    177.5816s
+2022-12-22 00:08:12,153 fedbase.py run [line:61] INFO --------------Round 45--------------
+2022-12-22 00:08:16,424 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7052
+2022-12-22 00:08:16,427 basic_logger.py show_current_output [line:134] INFO test_loss                     1.1123
+2022-12-22 00:08:16,428 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.2749s
+2022-12-22 00:08:16,441 fedalgo3.py iterate [line:34] INFO Selected clients : [3, 1, 9, 0, 6]
+Total samples which participate training : 2615 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 00:10:41,904 basic_logger.py time_end [line:74] INFO Time Cost:                    149.7516s
+2022-12-22 00:10:41,905 fedbase.py run [line:61] INFO --------------Round 46--------------
+2022-12-22 00:10:45,744 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7026
+2022-12-22 00:10:45,744 basic_logger.py show_current_output [line:134] INFO test_loss                     1.1905
+2022-12-22 00:10:45,744 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.8392s
+2022-12-22 00:10:45,746 fedalgo3.py iterate [line:34] INFO Selected clients : [1, 9, 7, 6, 4]
+Total samples which participate training : 2670 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 00:13:14,897 basic_logger.py time_end [line:74] INFO Time Cost:                    152.9925s
+2022-12-22 00:13:14,898 fedbase.py run [line:61] INFO --------------Round 47--------------
+2022-12-22 00:13:18,454 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7325
+2022-12-22 00:13:18,454 basic_logger.py show_current_output [line:134] INFO test_loss                     0.9858
+2022-12-22 00:13:18,454 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.5565s
+2022-12-22 00:13:18,460 fedalgo3.py iterate [line:34] INFO Selected clients : [7, 3, 2, 6, 4]
+Total samples which participate training : 3095 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 00:16:13,040 basic_logger.py time_end [line:74] INFO Time Cost:                    178.1424s
+2022-12-22 00:16:13,041 fedbase.py run [line:61] INFO --------------Round 48--------------
+2022-12-22 00:16:17,287 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7403
+2022-12-22 00:16:17,291 basic_logger.py show_current_output [line:134] INFO test_loss                     0.9457
+2022-12-22 00:16:17,291 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.2504s
+2022-12-22 00:16:17,297 fedalgo3.py iterate [line:34] INFO Selected clients : [7, 9, 4, 2, 5]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+Total samples which participate training : 3175 samples
+2022-12-22 00:19:10,852 basic_logger.py time_end [line:74] INFO Time Cost:                    177.8106s
+2022-12-22 00:19:10,852 fedbase.py run [line:61] INFO --------------Round 49--------------
+2022-12-22 00:19:14,827 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7442
+2022-12-22 00:19:14,828 basic_logger.py show_current_output [line:134] INFO test_loss                     0.9235
+2022-12-22 00:19:14,828 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.9756s
+2022-12-22 00:19:14,835 fedalgo3.py iterate [line:34] INFO Selected clients : [7, 6, 1, 4, 2]
+Total samples which participate training : 3010 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 00:22:02,818 basic_logger.py time_end [line:74] INFO Time Cost:                    171.9656s
+2022-12-22 00:22:02,818 fedbase.py run [line:61] INFO --------------Round 50--------------
+2022-12-22 00:22:06,974 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7455
+2022-12-22 00:22:06,974 basic_logger.py show_current_output [line:134] INFO test_loss                     0.9418
+2022-12-22 00:22:06,974 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.1561s
+2022-12-22 00:22:06,987 fedalgo3.py iterate [line:34] INFO Selected clients : [0, 6, 8, 1, 5]
+Total samples which participate training : 2260 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 00:24:15,606 basic_logger.py time_end [line:74] INFO Time Cost:                    132.7877s
+2022-12-22 00:24:15,606 fedbase.py run [line:61] INFO --------------Round 51--------------
+2022-12-22 00:24:19,306 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7260
+2022-12-22 00:24:19,312 basic_logger.py show_current_output [line:134] INFO test_loss                     1.0850
+2022-12-22 00:24:19,313 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.7060s
+2022-12-22 00:24:19,318 fedalgo3.py iterate [line:34] INFO Selected clients : [8, 1, 9, 7, 6]
+Total samples which participate training : 2525 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 00:26:40,369 basic_logger.py time_end [line:74] INFO Time Cost:                    144.7624s
+2022-12-22 00:26:40,369 fedbase.py run [line:61] INFO --------------Round 52--------------
+2022-12-22 00:26:43,825 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7390
+2022-12-22 00:26:43,826 basic_logger.py show_current_output [line:134] INFO test_loss                     0.9443
+2022-12-22 00:26:43,826 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.4564s
+2022-12-22 00:26:43,827 fedalgo3.py iterate [line:34] INFO Selected clients : [9, 3, 1, 6, 2]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+Total samples which participate training : 3105 samples
+2022-12-22 00:29:39,589 basic_logger.py time_end [line:74] INFO Time Cost:                    179.2195s
+2022-12-22 00:29:39,589 fedbase.py run [line:61] INFO --------------Round 53--------------
+2022-12-22 00:29:43,775 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7545
+2022-12-22 00:29:43,777 basic_logger.py show_current_output [line:134] INFO test_loss                     0.9043
+2022-12-22 00:29:43,778 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.1879s
+2022-12-22 00:29:43,785 fedalgo3.py iterate [line:34] INFO Selected clients : [0, 9, 3, 5, 7]
+Total samples which participate training : 2785 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 00:32:22,585 basic_logger.py time_end [line:74] INFO Time Cost:                    162.9954s
+2022-12-22 00:32:22,585 fedbase.py run [line:61] INFO --------------Round 54--------------
+2022-12-22 00:32:25,344 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7195
+2022-12-22 00:32:25,345 basic_logger.py show_current_output [line:134] INFO test_loss                     1.1744
+2022-12-22 00:32:25,345 basic_logger.py time_end [line:74] INFO Eval Time Cost:               2.7592s
+2022-12-22 00:32:25,376 fedalgo3.py iterate [line:34] INFO Selected clients : [1, 2, 7, 4, 9]
+Total samples which participate training : 3240 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 00:35:27,751 basic_logger.py time_end [line:74] INFO Time Cost:                    185.1650s
+2022-12-22 00:35:27,751 fedbase.py run [line:61] INFO --------------Round 55--------------
+2022-12-22 00:35:31,829 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7506
+2022-12-22 00:35:31,830 basic_logger.py show_current_output [line:134] INFO test_loss                     0.9551
+2022-12-22 00:35:31,830 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.0788s
+2022-12-22 00:35:31,836 fedalgo3.py iterate [line:34] INFO Selected clients : [6, 3, 4, 0, 1]
+Total samples which participate training : 2555 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 00:37:54,753 basic_logger.py time_end [line:74] INFO Time Cost:                    147.0014s
+2022-12-22 00:37:54,753 fedbase.py run [line:61] INFO --------------Round 56--------------
+2022-12-22 00:37:58,747 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.6935
+2022-12-22 00:37:58,751 basic_logger.py show_current_output [line:134] INFO test_loss                     1.1833
+2022-12-22 00:37:58,751 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.9979s
+2022-12-22 00:37:58,765 fedalgo3.py iterate [line:34] INFO Selected clients : [9, 0, 3, 4, 1]
+Total samples which participate training : 2785 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 00:40:31,746 basic_logger.py time_end [line:74] INFO Time Cost:                    156.9926s
+2022-12-22 00:40:31,746 fedbase.py run [line:61] INFO --------------Round 57--------------
+2022-12-22 00:40:35,988 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.6688
+2022-12-22 00:40:35,988 basic_logger.py show_current_output [line:134] INFO test_loss                     1.3500
+2022-12-22 00:40:35,988 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.2418s
+2022-12-22 00:40:35,994 fedalgo3.py iterate [line:34] INFO Selected clients : [0, 3, 5, 7, 9]
+Total samples which participate training : 2785 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 00:43:11,055 basic_logger.py time_end [line:74] INFO Time Cost:                    159.3082s
+2022-12-22 00:43:11,055 fedbase.py run [line:61] INFO --------------Round 58--------------
+2022-12-22 00:43:14,772 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7013
+2022-12-22 00:43:14,773 basic_logger.py show_current_output [line:134] INFO test_loss                     1.1919
+2022-12-22 00:43:14,774 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.7185s
+2022-12-22 00:43:14,787 fedalgo3.py iterate [line:34] INFO Selected clients : [7, 2, 5, 8, 6]
+Total samples which participate training : 2800 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 00:45:53,078 basic_logger.py time_end [line:74] INFO Time Cost:                    162.0225s
+2022-12-22 00:45:53,078 fedbase.py run [line:61] INFO --------------Round 59--------------
+2022-12-22 00:45:57,010 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7351
+2022-12-22 00:45:57,011 basic_logger.py show_current_output [line:134] INFO test_loss                     1.0320
+2022-12-22 00:45:57,011 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.9328s
+2022-12-22 00:45:57,027 fedalgo3.py iterate [line:34] INFO Selected clients : [7, 3, 2, 0, 8]
+Total samples which participate training : 3030 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 00:48:49,153 basic_logger.py time_end [line:74] INFO Time Cost:                    176.0748s
+2022-12-22 00:48:49,153 fedbase.py run [line:61] INFO --------------Round 60--------------
+2022-12-22 00:48:51,391 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7312
+2022-12-22 00:48:51,391 basic_logger.py show_current_output [line:134] INFO test_loss                     1.1294
+2022-12-22 00:48:51,391 basic_logger.py time_end [line:74] INFO Eval Time Cost:               2.2375s
+2022-12-22 00:48:51,392 fedalgo3.py iterate [line:34] INFO Selected clients : [3, 9, 0, 2, 8]
+Total samples which participate training : 3025 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 00:51:42,617 basic_logger.py time_end [line:74] INFO Time Cost:                    173.4629s
+2022-12-22 00:51:42,617 fedbase.py run [line:61] INFO --------------Round 61--------------
+2022-12-22 00:51:45,600 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7000
+2022-12-22 00:51:45,604 basic_logger.py show_current_output [line:134] INFO test_loss                     1.1862
+2022-12-22 00:51:45,604 basic_logger.py time_end [line:74] INFO Eval Time Cost:               2.9875s
+2022-12-22 00:51:45,611 fedalgo3.py iterate [line:34] INFO Selected clients : [4, 5, 6, 1, 0]
+Total samples which participate training : 2405 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 00:54:02,562 basic_logger.py time_end [line:74] INFO Time Cost:                    139.9454s
+2022-12-22 00:54:02,563 fedbase.py run [line:61] INFO --------------Round 62--------------
+2022-12-22 00:54:06,553 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7078
+2022-12-22 00:54:06,553 basic_logger.py show_current_output [line:134] INFO test_loss                     1.1392
+2022-12-22 00:54:06,553 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.9903s
+2022-12-22 00:54:06,559 fedalgo3.py iterate [line:34] INFO Selected clients : [2, 8, 3, 0, 1]
+Total samples which participate training : 2980 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 00:56:54,408 basic_logger.py time_end [line:74] INFO Time Cost:                    171.8448s
+2022-12-22 00:56:54,408 fedbase.py run [line:61] INFO --------------Round 63--------------
+2022-12-22 00:56:58,540 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7091
+2022-12-22 00:56:58,540 basic_logger.py show_current_output [line:134] INFO test_loss                     1.1391
+2022-12-22 00:56:58,540 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.1319s
+2022-12-22 00:56:58,550 fedalgo3.py iterate [line:34] INFO Selected clients : [8, 2, 0, 5, 7]
+Total samples which participate training : 2880 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 00:59:40,214 basic_logger.py time_end [line:74] INFO Time Cost:                    165.8058s
+2022-12-22 00:59:40,215 fedbase.py run [line:61] INFO --------------Round 64--------------
+2022-12-22 00:59:44,275 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7117
+2022-12-22 00:59:44,278 basic_logger.py show_current_output [line:134] INFO test_loss                     1.1108
+2022-12-22 00:59:44,278 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.0630s
+2022-12-22 00:59:44,289 fedalgo3.py iterate [line:34] INFO Selected clients : [2, 6, 0, 1, 9]
+Total samples which participate training : 2915 samples
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-22 01:02:29,831 basic_logger.py time_end [line:74] INFO Time Cost:                    169.6165s
+2022-12-22 01:02:29,832 fedbase.py run [line:61] INFO --------------Round 65--------------
+2022-12-22 01:02:33,451 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.7429
+2022-12-22 01:02:33,451 basic_logger.py show_current_output [line:134] INFO test_loss                     0.9706
+2022-12-22 01:02:33,451 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.6197s

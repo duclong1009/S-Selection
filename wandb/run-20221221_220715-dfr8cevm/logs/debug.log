@@ -1,0 +1,25 @@
+2022-12-21 22:07:15,977 INFO    MainThread:249810 [wandb_setup.py:_flush():68] Configure stats pid to 249810
+2022-12-21 22:07:15,978 INFO    MainThread:249810 [wandb_setup.py:_flush():68] Loading settings from /home/ace15032jo/.config/wandb/settings
+2022-12-21 22:07:15,978 INFO    MainThread:249810 [wandb_setup.py:_flush():68] Loading settings from /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/settings
+2022-12-21 22:07:15,978 INFO    MainThread:249810 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-12-21 22:07:15,978 INFO    MainThread:249810 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'main.py', 'program': '/home/ace15032jo/Projects/SampleSelection_easyFL/main.py'}
+2022-12-21 22:07:15,978 INFO    MainThread:249810 [wandb_init.py:_log_setup():476] Logging user logs to /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/run-20221221_220715-dfr8cevm/logs/debug.log
+2022-12-21 22:07:15,978 INFO    MainThread:249810 [wandb_init.py:_log_setup():477] Logging internal logs to /home/ace15032jo/Projects/SampleSelection_easyFL/wandb/run-20221221_220715-dfr8cevm/logs/debug-internal.log
+2022-12-21 22:07:15,978 INFO    MainThread:249810 [wandb_init.py:init():516] calling init triggers
+2022-12-21 22:07:15,978 INFO    MainThread:249810 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {'bins': 1000, 'task': 'pill_classification', 'idx_path': 'Dataset_scenarios/NIID_10clients_random.json', 'algorithm': 'fedavg', 'model': 'resnet18', 'use_pretrained': True, 'sample': 'uniform', 'aggregate': 'uniform', 'sampler': 'threshold_sampler', 'score': 'all_gnorm_threshold', 'threshold': 0, 'ratio': 1.0, 'use_sampler': True, 'num_classes': 77, 'num_rounds': 200, 'proportion': 0.5, 'learning_rate_decay': 0.998, 'lr_scheduler': -1, 'early_stop': -1, 'num_epochs': 5, 'num_steps': -1, 'learning_rate': 0.01, 'batch_size': 32.0, 'optimizer': 'SGD', 'momentum': 0.9, 'weight_decay': 0, 'seed': 0, 'gpu': None, 'server_with_cpu': False, 'log_interval': 1, 'eval_interval': 1, 'cross_validation': False, 'train_on_all': False, 'num_workers': 0, 'test_batch_size': 512, 'algo_para': None, 'log_wandb': True, 'logger': 'basic_logger', 'group_name': 'NIID_10client', 'session_name': 'fedavg_ratio_1.0_C_0.5_', 'log_result_path': 'Saved_Results', 'log_level': 'INFO', 'log_file': False, 'no_log_console': False, 'no_overwrite': False}
+2022-12-21 22:07:15,978 INFO    MainThread:249810 [wandb_init.py:init():569] starting backend
+2022-12-21 22:07:15,978 INFO    MainThread:249810 [wandb_init.py:init():573] setting up manager
+2022-12-21 22:07:15,983 INFO    MainThread:249810 [backend.py:_multiprocessing_setup():102] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-12-21 22:07:15,988 INFO    MainThread:249810 [wandb_init.py:init():580] backend started and connected
+2022-12-21 22:07:15,997 INFO    MainThread:249810 [wandb_init.py:init():658] updated telemetry
+2022-12-21 22:07:16,010 INFO    MainThread:249810 [wandb_init.py:init():693] communicating run to backend with 60 second timeout
+2022-12-21 22:07:16,416 INFO    MainThread:249810 [wandb_run.py:_on_init():2000] communicating current version
+2022-12-21 22:07:16,450 INFO    MainThread:249810 [wandb_run.py:_on_init():2004] got version response upgrade_message: "wandb version 0.13.7 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2022-12-21 22:07:16,450 INFO    MainThread:249810 [wandb_init.py:init():728] starting run threads in backend
+2022-12-21 22:07:16,565 INFO    MainThread:249810 [wandb_run.py:_console_start():1980] atexit reg
+2022-12-21 22:07:16,566 INFO    MainThread:249810 [wandb_run.py:_redirect():1838] redirect: SettingsConsole.WRAP_RAW
+2022-12-21 22:07:16,566 INFO    MainThread:249810 [wandb_run.py:_redirect():1903] Wrapping output streams.
+2022-12-21 22:07:16,566 INFO    MainThread:249810 [wandb_run.py:_redirect():1925] Redirects installed.
+2022-12-21 22:07:16,566 INFO    MainThread:249810 [wandb_init.py:init():765] run started, returning control to user process

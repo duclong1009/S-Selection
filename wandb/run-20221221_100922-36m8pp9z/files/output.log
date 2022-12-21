@@ -1,0 +1,36 @@
+2022-12-21 10:09:29,388 fflow.py initialize [line:255] INFO Using Logger in `utils.logger.basic_logger`
+2022-12-21 10:09:29,389 fflow.py initialize [line:256] INFO Initializing fedtask: pill_classification
+2022-12-21 10:09:29,571 fflow.py initialize [line:272] INFO Using model `resnet18` in `benchmark.pill_classification.model.resnet18` as the globally shared model.
+2022-12-21 10:09:29,573 fflow.py initialize [line:298] INFO Using sampler `threshold_sampler` in `sampler.threshold_sampler` as the globally shared model.
+Using cache found in /home/aiotlabws/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 10:09:35,824 fflow.py initialize [line:318] INFO Initializing Clients: 10 clients of `algorithm.fedavg.Client` being created.
+2022-12-21 10:09:35,826 fflow.py initialize [line:339] INFO Initializing Server: 1 server of `algorithm.fedavg.Server` being created.
+2022-12-21 10:09:35,826 fflow.py initialize [line:352] INFO Ready to start.
+2022-12-21 10:09:35,827 fedbase.py run [line:61] INFO --------------Round 1--------------
+2022-12-21 10:09:39,655 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.0130
+2022-12-21 10:09:39,655 basic_logger.py show_current_output [line:134] INFO test_loss                     4.5173
+2022-12-21 10:09:39,655 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.8284s
+2022-12-21 10:09:39,656 fedbase.py iterate [line:105] INFO Selected clients : [1, 2]
+Client 1 init its dataloader
+Client 2 init its dataloader
+Using cache found in /home/aiotlabws/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 10:10:42,475 main.py main [line:25] ERROR Exception Logged
+Traceback (most recent call last):
+  File "main.py", line 22, in main
+    server.run()
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedbase.py", line 80, in run
+    if self.round % self.option["log_interval"] == 0:
+AttributeError: 'Server' object has no attribute 'round'
+Traceback (most recent call last):
+  File "main.py", line 22, in main
+    server.run()
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedbase.py", line 80, in run
+    if self.round % self.option["log_interval"] == 0:
+AttributeError: 'Server' object has no attribute 'round'
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "main.py", line 31, in <module>
+    main()
+  File "main.py", line 26, in main
+    raise RuntimeError
+RuntimeError

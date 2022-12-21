@@ -1,0 +1,144 @@
+2022-12-21 14:11:17,069 fflow.py initialize [line:259] INFO Using Logger in `utils.logger.basic_logger`
+2022-12-21 14:11:17,071 fflow.py initialize [line:260] INFO Initializing fedtask: pill_classification
+2022-12-21 14:11:17,127 fflow.py initialize [line:276] INFO Using model `resnet18` in `benchmark.pill_classification.model.resnet18` as the globally shared model.
+2022-12-21 14:11:17,130 fflow.py initialize [line:304] INFO Using sampler `threshold_sampler` in `sampler.threshold_sampler` as the globally shared model.
+Using cache found in /home/aiotlabws/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 14:11:24,997 fflow.py initialize [line:324] INFO Initializing Clients: 10 clients of `algorithm.fedalgo3.Client` being created.
+2022-12-21 14:11:24,999 fflow.py initialize [line:345] INFO Initializing Server: 1 server of `algorithm.fedalgo3.Server` being created.
+2022-12-21 14:11:25,000 fflow.py initialize [line:358] INFO Ready to start.
+2022-12-21 14:11:25,000 fedbase.py run [line:61] INFO --------------Round 1--------------
+2022-12-21 14:11:47,512 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.0130
+2022-12-21 14:11:47,516 basic_logger.py show_current_output [line:134] INFO test_loss                     4.5173
+2022-12-21 14:11:47,518 basic_logger.py time_end [line:74] INFO Eval Time Cost:               22.5168s
+2022-12-21 14:11:47,521 fedalgo3.py iterate [line:35] INFO Selected clients : [1, 2]
+Using cache found in /home/aiotlabws/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 14:21:54,856 basic_logger.py time_end [line:74] INFO Time Cost:                    629.8548s
+2022-12-21 14:21:54,879 fedbase.py run [line:61] INFO --------------Round 2--------------
+Total samples which participate training : 1495 samples
+2022-12-21 14:22:07,910 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.2701
+2022-12-21 14:22:07,911 basic_logger.py show_current_output [line:134] INFO test_loss                     3.3426
+2022-12-21 14:22:07,912 basic_logger.py time_end [line:74] INFO Eval Time Cost:               13.0314s
+2022-12-21 14:22:07,915 fedalgo3.py iterate [line:35] INFO Selected clients : [3, 0]
+> /mnt/disk2/ndlong/easyFL/algorithm/fedalgo3.py(24)aggregate_histogram()
+     23         breakpoint()
+---> 24         n_bins = math.ceil(self.max_score / self.score_range)
+     25         final_histogram = np.zeros((n_bins))
+Using cache found in /home/aiotlabws/.cache/torch/hub/pytorch_vision_v0.10.0
+Total samples which participate training : 1090 samples
+2022-12-21 14:33:18,392 basic_logger.py time_end [line:74] INFO Time Cost:                    683.5108s
+2022-12-21 14:33:18,393 fedbase.py run [line:61] INFO --------------Round 3--------------
+2022-12-21 14:33:34,605 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.2805
+2022-12-21 14:33:34,607 basic_logger.py show_current_output [line:134] INFO test_loss                     3.2596
+2022-12-21 14:33:34,607 basic_logger.py time_end [line:74] INFO Eval Time Cost:               16.2136s
+2022-12-21 14:33:34,608 fedalgo3.py iterate [line:35] INFO Selected clients : [1, 2]
+> /mnt/disk2/ndlong/easyFL/algorithm/fedalgo3.py(24)aggregate_histogram()
+     23         breakpoint()
+---> 24         n_bins = math.ceil(self.max_score / self.score_range)
+     25         final_histogram = np.zeros((n_bins))
+Using cache found in /home/aiotlabws/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 14:46:58,837 basic_logger.py time_end [line:74] INFO Time Cost:                    820.4439s
+2022-12-21 14:46:58,838 fedbase.py run [line:61] INFO --------------Round 4--------------
+Total samples which participate training : 1495 samples
+2022-12-21 14:47:11,092 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.4597
+2022-12-21 14:47:11,094 basic_logger.py show_current_output [line:134] INFO test_loss                     2.1294
+2022-12-21 14:47:11,095 basic_logger.py time_end [line:74] INFO Eval Time Cost:               12.2561s
+2022-12-21 14:47:11,098 fedalgo3.py iterate [line:35] INFO Selected clients : [1, 4]
+Program interrupted. (Use 'cont' to resume).
+--Return--
+tensor([[[0.4...41, 0.6980]]])
+> /mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torchvision/transforms/functional.py(150)to_tensor()
+    149     if isinstance(img, torch.ByteTensor):
+--> 150         return img.to(dtype=default_float_dtype).div(255)
+    151     else:
+2022-12-21 14:50:12,704 main.py main [line:24] ERROR Exception Logged
+Traceback (most recent call last):
+  File "main.py", line 24, in main
+    server.run()
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedbase.py", line 74, in run
+    self.iterate()
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo3.py", line 36, in iterate
+    n_samples = received_information["n_samples"]
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo3.py", line 131, in communicate
+    packages_received_from_clients.append(response_from_client_id)
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo3.py", line 101, in communicate_with
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo3.py", line 233, in reply
+    cpkg = self.pack(self.model, len(selected_idx))
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedbase.py", line 419, in train
+    for data, labels,idxs in self.data_loader:
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 521, in __next__
+    data = self._next_data()
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 561, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/mnt/disk2/ndlong/easyFL/benchmark/toolkits.py", line 1087, in __getitem__
+    self.dataset[self.idxs[item]][1],
+  File "/mnt/disk2/ndlong/easyFL/benchmark/toolkits.py", line 1086, in __getitem__
+    self.dataset[self.idxs[item]][0],
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torchvision/datasets/folder.py", line 234, in __getitem__
+    sample = self.transform(sample)
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torchvision/transforms/transforms.py", line 61, in __call__
+    img = t(img)
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torchvision/transforms/transforms.py", line 98, in __call__
+    return F.to_tensor(pic)
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torchvision/transforms/functional.py", line 150, in to_tensor
+    return img.to(dtype=default_float_dtype).div(255)
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/IPython/core/debugger.py", line 147, in BdbQuit_excepthook
+    raise ValueError(
+ValueError: `BdbQuit_excepthook` is deprecated since version 5.1
+Original exception was:
+Traceback (most recent call last):
+  File "main.py", line 24, in main
+    server.run()
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedbase.py", line 74, in run
+    self.iterate()
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo3.py", line 36, in iterate
+    n_samples = received_information["n_samples"]
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo3.py", line 131, in communicate
+    packages_received_from_clients.append(response_from_client_id)
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo3.py", line 101, in communicate_with
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo3.py", line 233, in reply
+    cpkg = self.pack(self.model, len(selected_idx))
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedbase.py", line 419, in train
+    for data, labels,idxs in self.data_loader:
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 521, in __next__
+    data = self._next_data()
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 561, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/mnt/disk2/ndlong/easyFL/benchmark/toolkits.py", line 1087, in __getitem__
+    self.dataset[self.idxs[item]][1],
+  File "/mnt/disk2/ndlong/easyFL/benchmark/toolkits.py", line 1086, in __getitem__
+    self.dataset[self.idxs[item]][0],
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torchvision/datasets/folder.py", line 234, in __getitem__
+    sample = self.transform(sample)
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torchvision/transforms/transforms.py", line 61, in __call__
+    img = t(img)
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torchvision/transforms/transforms.py", line 98, in __call__
+    return F.to_tensor(pic)
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torchvision/transforms/functional.py", line 150, in to_tensor
+    return img.to(dtype=default_float_dtype).div(255)
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "main.py", line 33, in <module>
+    main()
+  File "main.py", line 24, in main
+    server.run()
+RuntimeError

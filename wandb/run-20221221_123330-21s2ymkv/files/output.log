@@ -1,0 +1,37 @@
+2022-12-21 12:33:36,686 fflow.py initialize [line:255] INFO Using Logger in `utils.logger.basic_logger`
+2022-12-21 12:33:36,692 fflow.py initialize [line:256] INFO Initializing fedtask: pill_classification
+2022-12-21 12:33:36,836 fflow.py initialize [line:272] INFO Using model `resnet18` in `benchmark.pill_classification.model.resnet18` as the globally shared model.
+2022-12-21 12:33:36,844 fflow.py initialize [line:298] INFO Using sampler `threshold_sampler` in `sampler.threshold_sampler` as the globally shared model.
+Using cache found in /home/aiotlabws/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 12:33:48,030 fflow.py initialize [line:318] INFO Initializing Clients: 10 clients of `algorithm.fedalgo3.Client` being created.
+2022-12-21 12:33:48,033 fflow.py initialize [line:339] INFO Initializing Server: 1 server of `algorithm.fedalgo3.Server` being created.
+2022-12-21 12:33:48,034 fflow.py initialize [line:352] INFO Ready to start.
+2022-12-21 12:33:48,034 fedbase.py run [line:61] INFO --------------Round 1--------------
+2022-12-21 12:34:27,027 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.0130
+2022-12-21 12:34:27,029 basic_logger.py show_current_output [line:134] INFO test_loss                     4.5173
+2022-12-21 12:34:27,029 basic_logger.py time_end [line:74] INFO Eval Time Cost:               38.9949s
+2022-12-21 12:34:27,030 fedalgo3.py iterate [line:35] INFO Selected clients : [1, 2]
+2022-12-21 12:47:28,416 main.py main [line:27] ERROR Exception Logged
+Traceback (most recent call last):
+  File "main.py", line 24, in main
+    server.run()
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedbase.py", line 74, in run
+    self.iterate()
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo3.py", line 46, in iterate
+    aggreagted_histogram = self.aggregate_histogram(list_score)
+AttributeError: 'Server' object has no attribute 'config'
+Traceback (most recent call last):
+  File "main.py", line 24, in main
+    server.run()
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedbase.py", line 74, in run
+    self.iterate()
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo3.py", line 46, in iterate
+    aggreagted_histogram = self.aggregate_histogram(list_score)
+AttributeError: 'Server' object has no attribute 'config'
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "main.py", line 33, in <module>
+    main()
+  File "main.py", line 28, in main
+    raise RuntimeError
+RuntimeError

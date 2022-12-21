@@ -7,79 +7,89 @@ import utils.fflow as flw
 import utils.system_simulator as ss
 import math
 import collections
-import torch.multiprocessing as mp
+import wandb
 
 class BasicServer:
-    def __init__(self, option, model, clients, test_data=None):
+    def __init__(self, option, model, clients, test_data=None,device='cpu'):
+        self.device=device
         # basic configuration
-        self.task = option['task']
-        self.name = option['algorithm']
+        self.task = option["task"]
+        self.name = option["algorithm"]
         self.model = model
-        self.device = self.model.get_device()
         self.test_data = test_data
-        self.eval_interval = option['eval_interval']
-        self.num_threads = option['num_threads']
+        self.eval_interval = option["eval_interval"]
+
         # server calculator
-        self.calculator = fmodule.TaskCalculator(self.device, optimizer_name = option['optimizer'])
+        self.calculator = fmodule.TaskCalculator(
+            self.device, optimizer_name=option["optimizer"]
+        )
         # clients configuration
         self.clients = clients
         self.num_clients = len(self.clients)
         self.local_data_vols = [c.datavol for c in self.clients]
         self.total_data_vol = sum(self.local_data_vols)
-        for cid, c in enumerate(self.clients): c.client_id = cid
+        for cid, c in enumerate(self.clients):
+            c.client_id = cid
         self.selected_clients = []
         self.dropped_clients = []
-        for c in self.clients:c.set_server(self)
+        for c in self.clients:
+            c.set_server(self)
+
         # hyper-parameters during training process
-        self.num_rounds = option['num_rounds']
-        self.decay_rate = option['learning_rate_decay']
-        self.clients_per_round = max(int(self.num_clients * option['proportion']), 1)
-        self.lr_scheduler_type = option['lr_scheduler']
-        self.lr = option['learning_rate']
-        self.sample_option = option['sample']
-        self.aggregation_option = option['aggregate']
-        # systemic option
-        self.tolerance_for_latency = 1000
-        self.tolerance_for_availability = 0
-        self.asynchronous = False
+        self.num_rounds = option["num_rounds"]
+        self.decay_rate = option["learning_rate_decay"]
+        self.clients_per_round = max(int(self.num_clients * option["proportion"]), 1)
+        self.lr_scheduler_type = option["lr_scheduler"]
+        self.lr = option["learning_rate"]
+        self.sample_option = option["sample"]
+        self.aggregation_option = option["aggregate"]
         # algorithm-dependent parameters
         self.algo_para = {}
         self.current_round = 1
         # all options
         self.option = option
+        self.log_file = {}
 
     def run(self):
         """
         Start the federated learning symtem where the global model is trained iteratively.
         """
-        flw.logger.time_start('Total Time Cost')
-        for round in range(1, self.num_rounds+1):
+        flw.logger.time_start("Total Time Cost")
+        for round in range(1, self.num_rounds + 1):
             self.current_round = round
             # using logger to evaluate the model
             flw.logger.info("--------------Round {}--------------".format(round))
-            flw.logger.time_start('Time Cost')
+            flw.logger.time_start("Time Cost")
             if flw.logger.check_if_log(round, self.eval_interval):
-                flw.logger.time_start('Eval Time Cost')
+                flw.logger.time_start("Eval Time Cost")
                 flw.logger.log_once()
-                flw.logger.time_end('Eval Time Cost')
+                flw.logger.time_end("Eval Time Cost")
             # check if early stopping
-            if flw.logger.early_stop(): break
+            if self.option["log_wandb"]:
+                wandb.log(utils.fmodule.LOG_WANDB)
+                utils.fmodule.LOG_WANDB = {}
+            if flw.logger.early_stop():
+                break
             # federated train
             self.iterate()
             # decay learning rate
             self.global_lr_scheduler(round)
-            flw.logger.time_end('Time Cost')
+            if round % self.option["log_interval"] == 0:
+                self.log_file[f"Round {round}"] = utils.fmodule.LOG_DICT
+                utils.fmodule.save_json(self.log_file, f'{self.option["log_result_path"]}/{self.option["group_name"]}',self.option["session_name"])
+                utils.fmodule.LOG_DICT = {}
+            flw.logger.time_end("Time Cost")
+            
         flw.logger.info("--------------Final Evaluation--------------")
-        flw.logger.time_start('Eval Time Cost')
+        flw.logger.time_start("Eval Time Cost")
         flw.logger.log_once()
-        flw.logger.time_end('Eval Time Cost')
+        flw.logger.time_end("Eval Time Cost")
         flw.logger.info("=================End==================")
-        flw.logger.time_end('Total Time Cost')
+        flw.logger.time_end("Total Time Cost")
         # save results as .json file
         flw.logger.save_output_as_json()
         return
 
-    @ss.time_step
     def iterate(self):
         """
         The standard iteration of each federated round that contains three
@@ -89,15 +99,15 @@ class BasicServer:
         """
         # sample clients: MD sampling as default
         self.selected_clients = self.sample()
+        utils.fmodule.LOG_DICT["selectd_client"] = self.selected_clients
+        flw.logger.info(f"Selected clients : {self.selected_clients}")
         # training
-        models = self.communicate(self.selected_clients)['model']
+        models = self.communicate(self.selected_clients)["model"]
         # aggregate: pk = 1/K as default where K=len(selected_clients)
         self.model = self.aggregate(models)
         return
 
-    @ss.with_dropout
-    @ss.with_clock
-    def communicate(self, selected_clients, asynchronous=False):
+    def communicate(self, selected_clients):
         """
         The whole simulating communication procedure with the selected clients.
         This part supports for simulating the client dropping out.
@@ -109,27 +119,22 @@ class BasicServer:
         packages_received_from_clients = []
         client_package_buffer = {}
         communicate_clients = list(set(selected_clients))
-        for cid in communicate_clients:client_package_buffer[cid] = None
-        if self.num_threads <= 1:
-            # computing iteratively
-            for client_id in communicate_clients:
-                response_from_client_id = self.communicate_with(client_id)
-                packages_received_from_clients.append(response_from_client_id)
-        else:
-            # computing in parallel with torch.multiprocessing
-            pool = mp.Pool(self.num_threads)
-            for client_id in communicate_clients:
-                self.clients[client_id].update_device(next(utils.fmodule.dev_manager))
-                packages_received_from_clients.append(pool.apply_async(self.communicate_with, args=(int(client_id),)))
-            pool.close()
-            pool.join()
-            packages_received_from_clients = list(map(lambda x: x.get(), packages_received_from_clients))
-        for i,cid in enumerate(communicate_clients): client_package_buffer[cid] = packages_received_from_clients[i]
-        packages_received_from_clients = [client_package_buffer[cid] for cid in selected_clients if client_package_buffer[cid]]
+        for cid in communicate_clients:
+            client_package_buffer[cid] = None
+        for client_id in communicate_clients:
+            response_from_client_id = self.communicate_with(client_id)
+            packages_received_from_clients.append(response_from_client_id)
+
+        for i, cid in enumerate(communicate_clients):
+            client_package_buffer[cid] = packages_received_from_clients[i]
+        packages_received_from_clients = [
+            client_package_buffer[cid]
+            for cid in selected_clients
+            if client_package_buffer[cid]
+        ]
         self.received_clients = selected_clients
         return self.unpack(packages_received_from_clients)
 
-    @ss.with_latency
     def communicate_with(self, client_id):
         """
         Pack the information that is needed for client_id to improve the global model
@@ -153,7 +158,7 @@ class BasicServer:
             a dict that only contains the global model as default.
         """
         return {
-            "model" : copy.deepcopy(self.model),
+            "model": copy.deepcopy(self.model),
         }
 
     def unpack(self, packages_received_from_clients):
@@ -164,8 +169,9 @@ class BasicServer:
         :return:
             res: collections.defaultdict that contains several lists of the clients' reply
         """
-        if len(packages_received_from_clients)==0: return collections.defaultdict(list)
-        res = {pname:[] for pname in packages_received_from_clients[0]}
+        if len(packages_received_from_clients) == 0:
+            return collections.defaultdict(list)
+        res = {pname: [] for pname in packages_received_from_clients[0]}
         for cpkg in packages_received_from_clients:
             for pname, pval in cpkg.items():
                 res[pname].append(pval)
@@ -181,16 +187,15 @@ class BasicServer:
             return
         elif self.lr_scheduler_type == 0:
             """eta_{round+1} = DecayRate * eta_{round}"""
-            self.lr*=self.decay_rate
+            self.lr *= self.decay_rate
             for c in self.clients:
                 c.set_learning_rate(self.lr)
         elif self.lr_scheduler_type == 1:
             """eta_{round+1} = eta_0/(round+1)"""
-            self.lr = self.option['learning_rate']*1.0/(current_round+1)
+            self.lr = self.option["learning_rate"] * 1.0 / (current_round + 1)
             for c in self.clients:
                 c.set_learning_rate(self.lr)
 
-    @ss.with_availability
     def sample(self):
         """Sample the clients.
         :param
@@ -199,17 +204,22 @@ class BasicServer:
         """
         all_clients = [cid for cid in range(self.num_clients)]
         # full sampling with unlimited communication resources of the server
-        if self.sample_option == 'full':
+        if self.sample_option == "full":
             return all_clients
         # sample clients
-        elif self.sample_option == 'uniform':
+        elif self.sample_option == "uniform":
             # original sample proposed by fedavg
-            selected_clients = list(np.random.choice(all_clients, self.clients_per_round, replace=False))
-        elif self.sample_option =='md':
+            selected_clients = list(
+                np.random.choice(all_clients, self.clients_per_round, replace=False)
+            )
+        elif self.sample_option == "md":
             # the default setting that is introduced by FedProx, where the clients are sampled with the probability in proportion to their local data sizes
-            p = np.array(self.local_data_vols)/self.total_data_vol
-            selected_clients = list(np.random.choice(all_clients, self.clients_per_round, replace=True, p=p))
-        return selected_clients
+            p = np.array(self.local_data_vols) / self.total_data_vol
+            selected_clients = list(
+                np.random.choice(all_clients, self.clients_per_round, replace=True, p=p)
+            )
+            
+        return [int(i) for i in selected_clients]
 
     def aggregate(self, models: list, *args, **kwargs):
         """
@@ -226,25 +236,39 @@ class BasicServer:
         ==========================================================================================================================
         N/K * Σpk * model_k             |1/K * Σmodel_k             |(1-Σpk) * w_old + Σpk * model_k  |Σ(pk/Σpk) * model_k
         """
-        if len(models) == 0: return self.model
-        if self.aggregation_option == 'weighted_scale':
-            p = [1.0 * self.local_data_vols[cid] / self.total_data_vol for cid in self.received_clients]
+        if len(models) == 0:
+            return self.model
+        if self.aggregation_option == "weighted_scale":
+            p = [
+                1.0 * self.local_data_vols[cid] / self.total_data_vol
+                for cid in self.received_clients
+            ]
             K = len(models)
             N = self.num_clients
-            return fmodule._model_sum([model_k * pk for model_k, pk in zip(models, p)]) * N / K
-        elif self.aggregation_option == 'uniform':
+            return (
+                fmodule._model_sum([model_k * pk for model_k, pk in zip(models, p)])
+                * N
+                / K
+            )
+        elif self.aggregation_option == "uniform":
             return fmodule._model_average(models)
-        elif self.aggregation_option == 'weighted_com':
-            p = [1.0 * self.local_data_vols[cid] / self.total_data_vol for cid in self.received_clients]
+        elif self.aggregation_option == "weighted_com":
+            p = [
+                1.0 * self.local_data_vols[cid] / self.total_data_vol
+                for cid in self.received_clients
+            ]
             w = fmodule._model_sum([model_k * pk for model_k, pk in zip(models, p)])
-            return (1.0-sum(p))*self.model + w
+            return (1.0 - sum(p)) * self.model + w
         else:
-            p = [1.0 * self.local_data_vols[cid] / self.total_data_vol for cid in self.received_clients]
+            p = [
+                1.0 * self.local_data_vols[cid] / self.total_data_vol
+                for cid in self.received_clients
+            ]
             sump = sum(p)
-            p = [pk/sump for pk in p]
+            p = [pk / sump for pk in p]
             return fmodule._model_sum([model_k * pk for model_k, pk in zip(models, p)])
 
-    def test_on_clients(self, dataflag='valid'):
+    def test_on_clients(self, dataflag="valid"):
         """
         Validate accuracies and losses on clients' local datasets
         :param
@@ -267,9 +291,12 @@ class BasicServer:
         :return:
             metrics: specified by the task during running time (e.g. metric = [mean_accuracy, mean_loss] when the task is classification)
         """
-        if model is None: model=self.model
+        if model is None:
+            model = self.model
         if self.test_data:
-            return self.calculator.test(model, self.test_data, batch_size = self.option['test_batch_size'])
+            return self.calculator.test(
+                model.to(self.device), self.test_data, batch_size=self.option["test_batch_size"]
+            )
         else:
             return None
 
@@ -286,13 +313,15 @@ class BasicServer:
             which requires the length of `option['algo_para']` is equal to the length of `algo_paras`
         """
         self.algo_para = algo_para
-        if len(self.algo_para)==0: return
+        if len(self.algo_para) == 0:
+            return
         # initialize algorithm-dependent hyperparameters from the input options
-        if self.option['algo_para'] is not None:
+        if self.option["algo_para"] is not None:
             # assert len(self.algo_para) == len(self.option['algo_para'])
             keys = list(self.algo_para.keys())
-            for i,pv in enumerate(self.option['algo_para']):
-                if i==len(self.option['algo_para']): break
+            for i, pv in enumerate(self.option["algo_para"]):
+                if i == len(self.option["algo_para"]):
+                    break
                 para_name = keys[i]
                 self.algo_para[para_name] = type(self.algo_para[para_name])(pv)
         # register the algorithm-dependent hyperparameters as the attributes of the server and all the clients
@@ -302,52 +331,53 @@ class BasicServer:
                 c.__setattr__(para_name, value)
         return
 
-    def get_tolerance_for_latency(self):
-        return self.tolerance_for_latency
-
     def wait_time(self, t=1):
         ss.clock.step(t)
         return
 
-    @property
-    def available_clients(self):
-        """
-        Return all the available clients at current round.
-        :param
-        :return: a list of indices of currently available clients
-        """
-        return [cid for cid in range(self.num_clients) if self.clients[cid].is_available()]
-
-class BasicClient():
-    def __init__(self, option, name='', train_data=None, valid_data=None):
+from torch.utils.data import DataLoader
+class BasicClient:
+    def __init__(self, option, name="", train_data=None, valid_data=None, device="cpu"):
         self.name = name
         self.id = None
+        self.device = device
         # create local dataset
         self.train_data = train_data
         self.valid_data = valid_data
-        if option['train_on_all']:
+        if option["train_on_all"]:
             self.train_data = self.train_data + self.valid_data
         self.datavol = len(self.train_data)
         self.data_loader = None
         # local calculator
-        self.device = next(fmodule.dev_manager)
-        self.calculator = fmodule.TaskCalculator(self.device, option['optimizer'])
+        self.calculator = fmodule.TaskCalculator(self.device, option["optimizer"])
         # hyper-parameters for training
-        self.optimizer_name = option['optimizer']
-        self.learning_rate = option['learning_rate']
-        self.batch_size = len(self.train_data) if option['batch_size']<0 else option['batch_size']
-        self.batch_size = int(self.batch_size) if self.batch_size>=1 else int(len(self.train_data)*self.batch_size)
-        self.momentum = option['momentum']
-        self.weight_decay = option['weight_decay']
-        if option['num_steps']>0:
-            self.num_steps = option['num_steps']
-            self.epochs = 1.0 * self.num_steps/(math.ceil(len(self.train_data)/self.batch_size))
+        self.optimizer_name = option["optimizer"]
+        self.learning_rate = option["learning_rate"]
+        self.batch_size = (
+            len(self.train_data) if option["batch_size"] < 0 else option["batch_size"]
+        )
+        self.batch_size = (
+            int(self.batch_size)
+            if self.batch_size >= 1
+            else int(len(self.train_data) * self.batch_size)
+        )
+        self.momentum = option["momentum"]
+        self.weight_decay = option["weight_decay"]
+        if option["num_steps"] > 0:
+            self.num_steps = option["num_steps"]
+            self.epochs = (
+                1.0
+                * self.num_steps
+                / (math.ceil(len(self.train_data) / self.batch_size))
+            )
         else:
-            self.epochs = option['num_epochs']
-            self.num_steps = self.epochs * math.ceil(len(self.train_data) / self.batch_size)
+            self.epochs = option["num_epochs"]
+            self.num_steps = self.epochs * math.ceil(
+                len(self.train_data) / self.batch_size
+            )
         self.model = None
-        self.test_batch_size = option['test_batch_size']
-        self.loader_num_workers = option['num_workers']
+        self.test_batch_size = option["test_batch_size"]
+        self.loader_num_workers = option["num_workers"]
         self.current_steps = 0
         # system setting
         # 1) availability
@@ -361,8 +391,6 @@ class BasicClient():
         # server
         self.server = None
 
-    @ss.with_completeness
-    @fmodule.with_multi_gpus
     def train(self, model):
         """
         Standard local training procedure. Train the transmitted model with local training dataset.
@@ -370,20 +398,43 @@ class BasicClient():
             model: the global model
         :return
         """
+        if self.data_loader == None:
+            print(f"Client {self.id} init its dataloader")
+            self.data_loader = DataLoader(
+            self.train_data,
+            batch_size=self.batch_size,
+            num_workers=self.loader_num_workers,
+            shuffle=True,
+        )
         model.train()
-        optimizer = self.calculator.get_optimizer(model, lr = self.learning_rate, weight_decay=self.weight_decay, momentum=self.momentum)
-        for iter in range(self.num_steps):
-            # get a batch of data
-            batch_data = self.get_batch_data()
-            model.zero_grad()
-            # calculate the loss of the model on batched dataset through task-specified calculator
-            loss = self.calculator.train_one_step(model, batch_data)['loss']
-            loss.backward()
-            optimizer.step()
+        optimizer = self.calculator.get_optimizer(
+            model,
+            lr=self.learning_rate,
+            weight_decay=self.weight_decay,
+            momentum=self.momentum,
+        )
+        list_training_loss = []
+        for epoch in range(self.epochs):
+            training_loss = 0
+            for data, labels,idxs in self.data_loader:
+                data, labels = data.float().to(self.device), labels.long().to(
+                    self.device
+                )
+                optimizer.zero_grad()
+                outputs = model(data)
+                loss = self.calculator.criterion(outputs,labels)
+                loss.backward()
+                optimizer.step()
+                training_loss += loss.item()
+            # training_loss.append(training_loss / len(current_dataloader))
+            list_training_loss.append(training_loss / len(self.data_loader))
+        if not "training_loss" in utils.fmodule.LOG_DICT.keys():
+            utils.fmodule.LOG_DICT["training_loss"] = {}
+        utils.fmodule.LOG_DICT["training_loss"][f"client_{self.id}"] = list_training_loss
+        utils.fmodule.LOG_WANDB["mean_training_loss"] = sum(list_training_loss)/len(list_training_loss)
         return
 
-    @ fmodule.with_multi_gpus
-    def test(self, model, dataflag='valid'):
+    def test(self, model, dataflag="valid"):
         """
         Evaluate the model with local data (e.g. training data or validating data).
         :param
@@ -392,7 +443,7 @@ class BasicClient():
         :return:
             metric: specified by the task during running time (e.g. metric = [mean_accuracy, mean_loss] when the task is classification)
         """
-        dataset = self.train_data if dataflag=='train' else self.valid_data
+        dataset = self.train_data if dataflag == "train" else self.valid_data
         return self.calculator.test(model, dataset, self.test_batch_size)
 
     def unpack(self, received_pkg):
@@ -404,7 +455,7 @@ class BasicClient():
             the unpacked information that can be rewritten
         """
         # unpack the received package
-        return received_pkg['model']
+        return received_pkg["model"]
 
     def reply(self, svr_pkg):
         """
@@ -434,7 +485,7 @@ class BasicClient():
             package: a dict that contains the necessary information for the server
         """
         return {
-            "model" : model,
+            "model": model,
         }
 
     def is_available(self):
@@ -461,7 +512,7 @@ class BasicClient():
         :param model:
         :return:
         """
-        return self.test(model,'train')['loss']
+        return self.test(model, "train")["loss"]
 
     def valid_loss(self, model):
         """
@@ -469,7 +520,7 @@ class BasicClient():
         :param model:
         :return:
         """
-        return self.test(model)['loss']
+        return self.test(model)["loss"]
 
     def set_model(self, model):
         """
@@ -484,16 +535,18 @@ class BasicClient():
             self.server = server
 
     def set_local_epochs(self, epochs=None):
-        if epochs is None: return
+        if epochs is None:
+            return
         self.epochs = epochs
-        self.num_steps = self.epochs * math.ceil(len(self.train_data)/self.batch_size)
+        self.num_steps = self.epochs * math.ceil(len(self.train_data) / self.batch_size)
         return
 
     def set_batch_size(self, batch_size=None):
-        if batch_size is None: return
+        if batch_size is None:
+            return
         self.batch_size = batch_size
 
-    def set_learning_rate(self, lr = None):
+    def set_learning_rate(self, lr=None):
         """
         set the learning rate of local training
         :param lr:
@@ -517,11 +570,19 @@ class BasicClient():
         try:
             batch_data = next(self.data_loader)
         except:
-            self.data_loader = iter(self.calculator.get_data_loader(self.train_data, batch_size=self.batch_size, num_workers=self.loader_num_workers))
+            print("Init dataloader")
+            self.data_loader = iter(
+                self.calculator.get_data_loader(
+                    self.train_data,
+                    batch_size=self.batch_size,
+                    num_workers=self.loader_num_workers,
+                )
+            )
             batch_data = next(self.data_loader)
         # clear local DataLoader when finishing local training
-        self.current_steps = (self.current_steps+1) % self.num_steps
-        if self.current_steps == 0:self.data_loader = None
+        self.current_steps = (self.current_steps + 1) % self.num_steps
+        if self.current_steps == 0:
+            self.data_loader = None
         return batch_data
 
     def update_device(self, dev):

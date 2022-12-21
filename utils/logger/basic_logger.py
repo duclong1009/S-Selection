@@ -7,7 +7,7 @@ try:
     import ujson as json
 except:
     import json
-
+import utils.fmodule
 class Logger(logging.Logger):
 
     _LEVEL = {
@@ -202,18 +202,22 @@ class Logger(logging.Logger):
         test_metric = self.server.test()
         for met_name, met_val in test_metric.items():
             self.output['test_' + met_name].append(met_val)
-        # calculate weighted averaging of metrics on training datasets across clients
-        train_metrics = self.server.test_on_clients('train')
-        for met_name, met_val in train_metrics.items():
-            self.output['train_' + met_name + '_dist'].append(met_val)
-            self.output['train_' + met_name].append(1.0 * sum([client_vol * client_met for client_vol, client_met in zip(self.server.local_data_vols, met_val)]) / self.server.total_data_vol)
-        # calculate weighted averaging and other statistics of metrics on validation datasets across clients
-        valid_metrics = self.server.test_on_clients('valid')
-        for met_name, met_val in valid_metrics.items():
-            self.output['valid_'+met_name+'_dist'].append(met_val)
-            self.output['valid_' + met_name].append(1.0 * sum([client_vol * client_met for client_vol, client_met in zip(self.server.local_data_vols, met_val)]) / self.server.total_data_vol)
-            self.output['mean_valid_' + met_name].append(np.mean(met_val))
-            self.output['std_valid_' + met_name].append(np.std(met_val))
+        utils.fmodule.LOG_WANDB["Accuracy/Testing Accuracy"] = test_metric["accuracy"]
+        utils.fmodule.LOG_WANDB["Loss/Testing Loss"] = test_metric["loss"]
+        
+        # breakpoint()
+        # # calculate weighted averaging of metrics on training datasets across clients
+        # train_metrics = self.server.test_on_clients('train')
+        # for met_name, met_val in train_metrics.items():
+        #     self.output['train_' + met_name + '_dist'].append(met_val)
+        #     self.output['train_' + met_name].append(1.0 * sum([client_vol * client_met for client_vol, client_met in zip(self.server.local_data_vols, met_val)]) / self.server.total_data_vol)
+        # # calculate weighted averaging and other statistics of metrics on validation datasets across clients
+        # valid_metrics = self.server.test_on_clients('valid')
+        # for met_name, met_val in valid_metrics.items():
+        #     self.output['valid_'+met_name+'_dist'].append(met_val)
+        #     self.output['valid_' + met_name].append(1.0 * sum([client_vol * client_met for client_vol, client_met in zip(self.server.local_data_vols, met_val)]) / self.server.total_data_vol)
+        #     self.output['mean_valid_' + met_name].append(np.mean(met_val))
+        #     self.output['std_valid_' + met_name].append(np.std(met_val))
         # output to stdout
         self.show_current_output()
 

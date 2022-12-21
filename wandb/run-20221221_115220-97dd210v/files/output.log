@@ -1,0 +1,85 @@
+2022-12-21 11:52:27,289 fflow.py initialize [line:255] INFO Using Logger in `utils.logger.basic_logger`
+2022-12-21 11:52:27,289 fflow.py initialize [line:256] INFO Initializing fedtask: pill_classification
+2022-12-21 11:52:27,370 fflow.py initialize [line:272] INFO Using model `resnet18` in `benchmark.pill_classification.model.resnet18` as the globally shared model.
+2022-12-21 11:52:27,386 fflow.py initialize [line:298] INFO Using sampler `threshold_sampler` in `sampler.threshold_sampler` as the globally shared model.
+Using cache found in /home/aiotlabws/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 11:52:34,641 fflow.py initialize [line:318] INFO Initializing Clients: 10 clients of `algorithm.fedalgo3.Client` being created.
+2022-12-21 11:52:34,647 fflow.py initialize [line:339] INFO Initializing Server: 1 server of `algorithm.fedalgo3.Server` being created.
+2022-12-21 11:52:34,648 fflow.py initialize [line:352] INFO Ready to start.
+2022-12-21 11:52:34,652 fedbase.py run [line:61] INFO --------------Round 1--------------
+2022-12-21 11:52:52,441 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.0130
+2022-12-21 11:52:52,446 basic_logger.py show_current_output [line:134] INFO test_loss                     4.5173
+2022-12-21 11:52:52,448 basic_logger.py time_end [line:74] INFO Eval Time Cost:               17.7947s
+2022-12-21 11:52:52,455 fedalgo3.py iterate [line:22] INFO Selected clients : [1, 2]
+Using cache found in /home/aiotlabws/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 12:04:43,297 basic_logger.py time_end [line:74] INFO Time Cost:                    728.6443s
+2022-12-21 12:04:43,298 fedbase.py run [line:61] INFO --------------Round 2--------------
+Total samples which participate training : 1495 samples
+2022-12-21 12:04:58,045 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.2701
+2022-12-21 12:04:58,046 basic_logger.py show_current_output [line:134] INFO test_loss                     3.3426
+2022-12-21 12:04:58,046 basic_logger.py time_end [line:74] INFO Eval Time Cost:               14.7481s
+2022-12-21 12:04:58,047 fedalgo3.py iterate [line:22] INFO Selected clients : [3, 0]
+2022-12-21 12:08:52,274 main.py main [line:27] ERROR Exception Logged
+Traceback (most recent call last):
+  File "main.py", line 24, in main
+    server.run()
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedbase.py", line 74, in run
+    self.iterate()
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo3.py", line 23, in iterate
+    utils.fmodule.LOG_DICT["selected_clients"] = self.selected_clients
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo3.py", line 110, in communicate
+    selected_clients: the clients to communicate with
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo3.py", line 82, in communicate_with
+    :return
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo3.py", line 198, in reply
+    selected_idx = utils.fmodule.Sampler.sample_using_cached(
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedbase.py", line 419, in train
+    for data, labels,idxs in self.data_loader:
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 521, in __next__
+    data = self._next_data()
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 561, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    return self.collate_fn(data)
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/_utils/collate.py", line 84, in default_collate
+    return [default_collate(samples) for samples in transposed]
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/_utils/collate.py", line 84, in <listcomp>
+    return [default_collate(samples) for samples in transposed]
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/_utils/collate.py", line 56, in default_collate
+    return torch.stack(batch, 0, out=out)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "main.py", line 24, in main
+    server.run()
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedbase.py", line 74, in run
+    self.iterate()
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo3.py", line 23, in iterate
+    utils.fmodule.LOG_DICT["selected_clients"] = self.selected_clients
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo3.py", line 110, in communicate
+    selected_clients: the clients to communicate with
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo3.py", line 82, in communicate_with
+    :return
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo3.py", line 198, in reply
+    selected_idx = utils.fmodule.Sampler.sample_using_cached(
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedbase.py", line 419, in train
+    for data, labels,idxs in self.data_loader:
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 521, in __next__
+    data = self._next_data()
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 561, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    return self.collate_fn(data)
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/_utils/collate.py", line 84, in default_collate
+    return [default_collate(samples) for samples in transposed]
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/_utils/collate.py", line 84, in <listcomp>
+    return [default_collate(samples) for samples in transposed]
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/site-packages/torch/utils/data/_utils/collate.py", line 56, in default_collate
+    return torch.stack(batch, 0, out=out)
+KeyboardInterrupt
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "main.py", line 33, in <module>
+    main()
+  File "main.py", line 28, in main
+    raise RuntimeError
+RuntimeError

@@ -1,5 +1,7 @@
 import torch
 from torch import nn
+import os
+import json
 
 dev_list = []
 dev_manager = None
@@ -8,7 +10,19 @@ Optim = None
 Model = None
 SvrModel = None
 CltModel = None
+Sampler = None
+LOG_DICT = {}
+LOG_WANDB = {}
 
+def save_json(json_dict, folder_path, name):
+    if not os.path.exists(folder_path):
+        os.makedirs(folder_path)
+        
+    with open(f"{folder_path}/{name}.json", "w") as f:
+        json.dump(json_dict, f)
+        
+def reset_log(log_dict):
+    log_dict = {}
 class FModule(nn.Module):
     def __init__(self):
         super().__init__()

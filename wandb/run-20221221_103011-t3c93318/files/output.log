@@ -1,0 +1,67 @@
+2022-12-21 10:30:17,935 fflow.py initialize [line:255] INFO Using Logger in `utils.logger.basic_logger`
+2022-12-21 10:30:17,935 fflow.py initialize [line:256] INFO Initializing fedtask: pill_classification
+2022-12-21 10:30:17,997 fflow.py initialize [line:272] INFO Using model `resnet18` in `benchmark.pill_classification.model.resnet18` as the globally shared model.
+2022-12-21 10:30:17,999 fflow.py initialize [line:298] INFO Using sampler `threshold_sampler` in `sampler.threshold_sampler` as the globally shared model.
+Using cache found in /home/aiotlabws/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 10:30:24,337 fflow.py initialize [line:318] INFO Initializing Clients: 10 clients of `algorithm.fedalgo1.Client` being created.
+2022-12-21 10:30:24,338 fflow.py initialize [line:339] INFO Initializing Server: 1 server of `algorithm.fedalgo1.Server` being created.
+2022-12-21 10:30:24,339 fflow.py initialize [line:352] INFO Ready to start.
+2022-12-21 10:30:24,339 fedbase.py run [line:61] INFO --------------Round 1--------------
+2022-12-21 10:30:29,139 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.0130
+2022-12-21 10:30:29,139 basic_logger.py show_current_output [line:134] INFO test_loss                     4.5173
+2022-12-21 10:30:29,140 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.8005s
+2022-12-21 10:30:29,140 fedalgo1.py iterate [line:21] INFO Selected clients : [1, 2]
+Using cache found in /home/aiotlabws/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 10:36:48,639 main.py main [line:27] ERROR Exception Logged
+Traceback (most recent call last):
+  File "main.py", line 24, in main
+    server.run()
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedbase.py", line 83, in run
+    utils.fmodule.save_json(self.log_file, f'{self.option["log_result_path"]}/{self.option["group_name"]}',self.option["session_name"])
+  File "/mnt/disk2/ndlong/easyFL/utils/fmodule.py", line 22, in save_json
+    json.dump(json_dict, f)
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type ndarray is not JSON serializable
+Traceback (most recent call last):
+  File "main.py", line 24, in main
+    server.run()
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedbase.py", line 83, in run
+    utils.fmodule.save_json(self.log_file, f'{self.option["log_result_path"]}/{self.option["group_name"]}',self.option["session_name"])
+  File "/mnt/disk2/ndlong/easyFL/utils/fmodule.py", line 22, in save_json
+    json.dump(json_dict, f)
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/mnt/disk1/anaconda3/envs/longnd/lib/python3.8/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type ndarray is not JSON serializable
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "main.py", line 33, in <module>
+    main()
+  File "main.py", line 28, in main
+    raise RuntimeError
+RuntimeError
+Total samples which participate training : 1495 samples

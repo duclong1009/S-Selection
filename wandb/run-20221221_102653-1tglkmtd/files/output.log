@@ -1,0 +1,57 @@
+2022-12-21 10:27:00,998 fflow.py initialize [line:255] INFO Using Logger in `utils.logger.basic_logger`
+2022-12-21 10:27:00,998 fflow.py initialize [line:256] INFO Initializing fedtask: pill_classification
+2022-12-21 10:27:01,068 fflow.py initialize [line:272] INFO Using model `resnet18` in `benchmark.pill_classification.model.resnet18` as the globally shared model.
+2022-12-21 10:27:01,069 fflow.py initialize [line:298] INFO Using sampler `threshold_sampler` in `sampler.threshold_sampler` as the globally shared model.
+Using cache found in /home/aiotlabws/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-21 10:27:07,505 fflow.py initialize [line:318] INFO Initializing Clients: 10 clients of `algorithm.fedalgo1.Client` being created.
+2022-12-21 10:27:07,507 fflow.py initialize [line:339] INFO Initializing Server: 1 server of `algorithm.fedalgo1.Server` being created.
+2022-12-21 10:27:07,508 fflow.py initialize [line:352] INFO Ready to start.
+2022-12-21 10:27:07,508 fedbase.py run [line:61] INFO --------------Round 1--------------
+2022-12-21 10:27:11,387 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.0130
+2022-12-21 10:27:11,388 basic_logger.py show_current_output [line:134] INFO test_loss                     4.5173
+2022-12-21 10:27:11,388 basic_logger.py time_end [line:74] INFO Eval Time Cost:               3.8801s
+2022-12-21 10:27:11,389 fedalgo1.py iterate [line:21] INFO Selected clients : [1, 2]
+2022-12-21 10:27:28,399 main.py main [line:27] ERROR Exception Logged
+Traceback (most recent call last):
+  File "main.py", line 24, in main
+    server.run()
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedbase.py", line 77, in run
+    self.iterate()
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo1.py", line 22, in iterate
+    threshold_score = self.cal_threshold(self.selected_clients)
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo1.py", line 129, in cal_threshold
+    self.calculate_importance(selected_clinets)
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo1.py", line 115, in calculate_importance
+    cpkqs = [self.communicate_score_with(id) for id, c in enumerate(self.clients)]
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo1.py", line 115, in <listcomp>
+    cpkqs = [self.communicate_score_with(id) for id, c in enumerate(self.clients)]
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo1.py", line 126, in communicate_score_with
+    return self.clients[client_id].reply_score(svr_pkg)
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo1.py", line 154, in reply_score
+    if not utils.fmodule.LOG_DICT["score_list"]  is None:
+KeyError: 'score_list'
+Traceback (most recent call last):
+  File "main.py", line 24, in main
+    server.run()
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedbase.py", line 77, in run
+    self.iterate()
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo1.py", line 22, in iterate
+    threshold_score = self.cal_threshold(self.selected_clients)
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo1.py", line 129, in cal_threshold
+    self.calculate_importance(selected_clinets)
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo1.py", line 115, in calculate_importance
+    cpkqs = [self.communicate_score_with(id) for id, c in enumerate(self.clients)]
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo1.py", line 115, in <listcomp>
+    cpkqs = [self.communicate_score_with(id) for id, c in enumerate(self.clients)]
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo1.py", line 126, in communicate_score_with
+    return self.clients[client_id].reply_score(svr_pkg)
+  File "/mnt/disk2/ndlong/easyFL/algorithm/fedalgo1.py", line 154, in reply_score
+    if not utils.fmodule.LOG_DICT["score_list"]  is None:
+KeyError: 'score_list'
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "main.py", line 33, in <module>
+    main()
+  File "main.py", line 28, in main
+    raise RuntimeError
+RuntimeError

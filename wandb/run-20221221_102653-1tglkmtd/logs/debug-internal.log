@@ -1,0 +1,182 @@
+2022-12-21 10:26:53,324 INFO    StreamThr :19375 [internal.py:wandb_internal():88] W&B internal server running at pid: 19375, started at: 2022-12-21 10:26:53.323547
+2022-12-21 10:26:53,328 DEBUG   HandlerThread:19375 [handler.py:handle_request():139] handle_request: status
+2022-12-21 10:26:53,329 DEBUG   SenderThread:19375 [sender.py:send_request():317] send_request: status
+2022-12-21 10:26:53,331 DEBUG   SenderThread:19375 [sender.py:send():303] send: header
+2022-12-21 10:26:53,331 INFO    WriterThread:19375 [datastore.py:open_for_write():75] open: /mnt/disk2/ndlong/easyFL/wandb/run-20221221_102653-1tglkmtd/run-1tglkmtd.wandb
+2022-12-21 10:26:53,368 DEBUG   SenderThread:19375 [sender.py:send():303] send: run
+2022-12-21 10:26:55,358 DEBUG   HandlerThread:19375 [handler.py:handle_request():139] handle_request: check_version
+2022-12-21 10:26:55,362 INFO    SenderThread:19375 [dir_watcher.py:__init__():216] watching files in: /mnt/disk2/ndlong/easyFL/wandb/run-20221221_102653-1tglkmtd/files
+2022-12-21 10:26:55,363 INFO    SenderThread:19375 [sender.py:_start_run_threads():928] run started: 1tglkmtd with start time 1671593213.322699
+2022-12-21 10:26:55,363 DEBUG   SenderThread:19375 [sender.py:send():303] send: summary
+2022-12-21 10:26:55,363 INFO    SenderThread:19375 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-21 10:26:55,363 DEBUG   SenderThread:19375 [sender.py:send_request():317] send_request: check_version
+2022-12-21 10:26:55,861 DEBUG   HandlerThread:19375 [handler.py:handle_request():139] handle_request: run_start
+2022-12-21 10:26:55,865 DEBUG   HandlerThread:19375 [system_info.py:__init__():31] System info init
+2022-12-21 10:26:55,866 DEBUG   HandlerThread:19375 [system_info.py:__init__():46] System info init done
+2022-12-21 10:26:55,866 INFO    HandlerThread:19375 [system_monitor.py:start():150] Starting system monitor
+2022-12-21 10:26:55,866 INFO    SystemMonitor:19375 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2022-12-21 10:26:55,866 INFO    HandlerThread:19375 [system_monitor.py:probe():168] Collecting system info
+2022-12-21 10:26:55,866 INFO    SystemMonitor:19375 [interfaces.py:start():168] Started cpu
+2022-12-21 10:26:55,867 INFO    SystemMonitor:19375 [interfaces.py:start():168] Started disk
+2022-12-21 10:26:55,867 INFO    SystemMonitor:19375 [interfaces.py:start():168] Started gpu
+2022-12-21 10:26:55,868 INFO    SystemMonitor:19375 [interfaces.py:start():168] Started memory
+2022-12-21 10:26:55,868 INFO    SystemMonitor:19375 [interfaces.py:start():168] Started network
+2022-12-21 10:26:55,894 DEBUG   HandlerThread:19375 [system_info.py:probe():195] Probing system
+2022-12-21 10:26:55,896 DEBUG   HandlerThread:19375 [system_info.py:_probe_git():180] Probing git
+2022-12-21 10:26:55,914 DEBUG   HandlerThread:19375 [system_info.py:_probe_git():188] Probing git done
+2022-12-21 10:26:55,915 DEBUG   HandlerThread:19375 [system_info.py:probe():241] Probing system done
+2022-12-21 10:26:55,915 DEBUG   HandlerThread:19375 [system_monitor.py:probe():177] {'os': 'Linux-5.4.0-135-generic-x86_64-with-glibc2.10', 'python': '3.8.12', 'heartbeatAt': '2022-12-21T03:26:55.895154', 'startedAt': '2022-12-21T03:26:53.309695', 'docker': None, 'cuda': None, 'args': ('--idx_path', 'Dataset_scenarios/NIID_10clients_random.json', '--proportion', '0.2', '--algorithm', 'fedalgo1', '--score', 'all_gnorm_threshold', '--ratio', '0.8'), 'state': 'running', 'program': 'main.py', 'codePath': 'main.py', 'git': {'remote': 'https://github.com/WwZzz/easyFL.git', 'commit': '6bd3ffb594442c0103064dbec84eb204254f6dd6'}, 'email': 'duclong10092000@gmail.com', 'root': '/mnt/disk2/ndlong/easyFL', 'host': 'aiotlabws', 'username': 'aiotlabws', 'executable': '/mnt/disk1/anaconda3/envs/longnd/bin/python', 'cpu_count': 20, 'cpu_count_logical': 40, 'cpu_freq': {'current': 2.56485, 'min': 1000.0, 'max': 3200.0}, 'cpu_freq_per_core': [{'current': 2.2, 'min': 1000.0, 'max': 3200.0}, {'current': 2.699, 'min': 1000.0, 'max': 3200.0}, {'current': 2.636, 'min': 1000.0, 'max': 3200.0}, {'current': 2.699, 'min': 1000.0, 'max': 3200.0}, {'current': 2.507, 'min': 1000.0, 'max': 3200.0}, {'current': 2.248, 'min': 1000.0, 'max': 3200.0}, {'current': 2.529, 'min': 1000.0, 'max': 3200.0}, {'current': 2.467, 'min': 1000.0, 'max': 3200.0}, {'current': 2.446, 'min': 1000.0, 'max': 3200.0}, {'current': 2.402, 'min': 1000.0, 'max': 3200.0}, {'current': 1.744, 'min': 1000.0, 'max': 3200.0}, {'current': 2.396, 'min': 1000.0, 'max': 3200.0}, {'current': 2.535, 'min': 1000.0, 'max': 3200.0}, {'current': 2.565, 'min': 1000.0, 'max': 3200.0}, {'current': 2.31, 'min': 1000.0, 'max': 3200.0}, {'current': 2.275, 'min': 1000.0, 'max': 3200.0}, {'current': 2.536, 'min': 1000.0, 'max': 3200.0}, {'current': 2.7, 'min': 1000.0, 'max': 3200.0}, {'current': 2.572, 'min': 1000.0, 'max': 3200.0}, {'current': 2.673, 'min': 1000.0, 'max': 3200.0}, {'current': 2.2, 'min': 1000.0, 'max': 3200.0}, {'current': 2.699, 'min': 1000.0, 'max': 3200.0}, {'current': 2.607, 'min': 1000.0, 'max': 3200.0}, {'current': 2.699, 'min': 1000.0, 'max': 3200.0}, {'current': 2.532, 'min': 1000.0, 'max': 3200.0}, {'current': 2.31, 'min': 1000.0, 'max': 3200.0}, {'current': 2.697, 'min': 1000.0, 'max': 3200.0}, {'current': 2.376, 'min': 1000.0, 'max': 3200.0}, {'current': 2.429, 'min': 1000.0, 'max': 3200.0}, {'current': 2.285, 'min': 1000.0, 'max': 3200.0}, {'current': 1.713, 'min': 1000.0, 'max': 3200.0}, {'current': 2.432, 'min': 1000.0, 'max': 3200.0}, {'current': 2.59, 'min': 1000.0, 'max': 3200.0}, {'current': 2.586, 'min': 1000.0, 'max': 3200.0}, {'current': 2.304, 'min': 1000.0, 'max': 3200.0}, {'current': 2.38, 'min': 1000.0, 'max': 3200.0}, {'current': 2.5, 'min': 1000.0, 'max': 3200.0}, {'current': 2.699, 'min': 1000.0, 'max': 3200.0}, {'current': 2.583, 'min': 1000.0, 'max': 3200.0}, {'current': 2.676, 'min': 1000.0, 'max': 3200.0}], 'disk': {'total': 195.3759765625, 'used': 161.70127868652344}, 'gpu': 'NVIDIA GeForce RTX 2080 Ti', 'gpu_count': 2, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 2080 Ti', 'memory_total': 11554717696}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25447170048}], 'memory': {'total': 188.55243301391602}}
+2022-12-21 10:26:55,915 INFO    HandlerThread:19375 [system_monitor.py:probe():178] Finished collecting system info
+2022-12-21 10:26:55,915 INFO    HandlerThread:19375 [system_monitor.py:probe():181] Publishing system info
+2022-12-21 10:26:55,915 DEBUG   HandlerThread:19375 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2022-12-21 10:26:55,916 DEBUG   HandlerThread:19375 [system_info.py:_save_pip():67] Saving pip packages done
+2022-12-21 10:26:55,916 DEBUG   HandlerThread:19375 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2022-12-21 10:26:56,365 INFO    Thread-13 :19375 [dir_watcher.py:_on_file_created():275] file/dir created: /mnt/disk2/ndlong/easyFL/wandb/run-20221221_102653-1tglkmtd/files/wandb-summary.json
+2022-12-21 10:26:56,365 INFO    Thread-13 :19375 [dir_watcher.py:_on_file_created():275] file/dir created: /mnt/disk2/ndlong/easyFL/wandb/run-20221221_102653-1tglkmtd/files/requirements.txt
+2022-12-21 10:26:56,365 INFO    Thread-13 :19375 [dir_watcher.py:_on_file_created():275] file/dir created: /mnt/disk2/ndlong/easyFL/wandb/run-20221221_102653-1tglkmtd/files/conda-environment.yaml
+2022-12-21 10:27:09,007 DEBUG   HandlerThread:19375 [system_info.py:_save_conda():86] Saving conda packages done
+2022-12-21 10:27:09,009 INFO    HandlerThread:19375 [system_monitor.py:probe():183] Finished publishing system info
+2022-12-21 10:27:09,048 DEBUG   HandlerThread:19375 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-21 10:27:09,051 DEBUG   SenderThread:19375 [sender.py:send_request():317] send_request: stop_status
+2022-12-21 10:27:09,371 INFO    Thread-13 :19375 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/disk2/ndlong/easyFL/wandb/run-20221221_102653-1tglkmtd/files/conda-environment.yaml
+2022-12-21 10:27:09,371 INFO    Thread-13 :19375 [dir_watcher.py:_on_file_created():275] file/dir created: /mnt/disk2/ndlong/easyFL/wandb/run-20221221_102653-1tglkmtd/files/wandb-metadata.json
+2022-12-21 10:27:09,413 DEBUG   SenderThread:19375 [sender.py:send():303] send: telemetry
+2022-12-21 10:27:09,413 DEBUG   SenderThread:19375 [sender.py:send():303] send: telemetry
+2022-12-21 10:27:09,419 DEBUG   SenderThread:19375 [sender.py:send():303] send: files
+2022-12-21 10:27:09,419 INFO    SenderThread:19375 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2022-12-21 10:27:10,313 INFO    Thread-16 :19375 [upload_job.py:push():143] Uploaded file /tmp/tmp9bbkzjv9wandb/28of3gsw-wandb-metadata.json
+2022-12-21 10:27:10,372 INFO    Thread-13 :19375 [dir_watcher.py:_on_file_created():275] file/dir created: /mnt/disk2/ndlong/easyFL/wandb/run-20221221_102653-1tglkmtd/files/output.log
+2022-12-21 10:27:11,390 DEBUG   HandlerThread:19375 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-21 10:27:11,392 DEBUG   SenderThread:19375 [sender.py:send():303] send: history
+2022-12-21 10:27:11,392 DEBUG   SenderThread:19375 [sender.py:send():303] send: summary
+2022-12-21 10:27:11,395 INFO    SenderThread:19375 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-21 10:27:12,376 INFO    Thread-13 :19375 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/disk2/ndlong/easyFL/wandb/run-20221221_102653-1tglkmtd/files/output.log
+2022-12-21 10:27:12,376 INFO    Thread-13 :19375 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/disk2/ndlong/easyFL/wandb/run-20221221_102653-1tglkmtd/files/wandb-summary.json
+2022-12-21 10:27:14,379 INFO    Thread-13 :19375 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/disk2/ndlong/easyFL/wandb/run-20221221_102653-1tglkmtd/files/output.log
+2022-12-21 10:27:20,868 DEBUG   HandlerThread:19375 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-21 10:27:20,868 DEBUG   SenderThread:19375 [sender.py:send_request():317] send_request: stop_status
+2022-12-21 10:27:25,402 INFO    Thread-13 :19375 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/disk2/ndlong/easyFL/wandb/run-20221221_102653-1tglkmtd/files/config.yaml
+2022-12-21 10:27:28,457 DEBUG   SenderThread:19375 [sender.py:send():303] send: exit
+2022-12-21 10:27:28,457 INFO    SenderThread:19375 [sender.py:send_exit():442] handling exit code: 1
+2022-12-21 10:27:28,457 INFO    SenderThread:19375 [sender.py:send_exit():444] handling runtime: 32
+2022-12-21 10:27:28,457 INFO    SenderThread:19375 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-21 10:27:28,457 INFO    SenderThread:19375 [sender.py:send_exit():450] send defer
+2022-12-21 10:27:28,458 DEBUG   HandlerThread:19375 [handler.py:handle_request():139] handle_request: defer
+2022-12-21 10:27:28,458 INFO    HandlerThread:19375 [handler.py:handle_request_defer():162] handle defer: 0
+2022-12-21 10:27:28,458 DEBUG   SenderThread:19375 [sender.py:send_request():317] send_request: defer
+2022-12-21 10:27:28,458 INFO    SenderThread:19375 [sender.py:send_request_defer():459] handle sender defer: 0
+2022-12-21 10:27:28,458 INFO    SenderThread:19375 [sender.py:transition_state():463] send defer: 1
+2022-12-21 10:27:28,459 DEBUG   HandlerThread:19375 [handler.py:handle_request():139] handle_request: defer
+2022-12-21 10:27:28,459 INFO    HandlerThread:19375 [handler.py:handle_request_defer():162] handle defer: 1
+2022-12-21 10:27:28,459 INFO    HandlerThread:19375 [system_monitor.py:finish():160] Stopping system monitor
+2022-12-21 10:27:28,464 DEBUG   SystemMonitor:19375 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2022-12-21 10:27:28,464 DEBUG   SystemMonitor:19375 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2022-12-21 10:27:28,465 DEBUG   SystemMonitor:19375 [system_monitor.py:_start():141] Publishing last batch of metrics
+2022-12-21 10:27:28,502 INFO    HandlerThread:19375 [interfaces.py:finish():173] Joined cpu
+2022-12-21 10:27:28,503 INFO    HandlerThread:19375 [interfaces.py:finish():173] Joined disk
+2022-12-21 10:27:29,009 INFO    HandlerThread:19375 [interfaces.py:finish():173] Joined gpu
+2022-12-21 10:27:29,009 INFO    HandlerThread:19375 [interfaces.py:finish():173] Joined memory
+2022-12-21 10:27:29,009 INFO    HandlerThread:19375 [interfaces.py:finish():173] Joined network
+2022-12-21 10:27:29,010 DEBUG   SenderThread:19375 [sender.py:send_request():317] send_request: defer
+2022-12-21 10:27:29,011 INFO    SenderThread:19375 [sender.py:send_request_defer():459] handle sender defer: 1
+2022-12-21 10:27:29,012 INFO    SenderThread:19375 [sender.py:transition_state():463] send defer: 2
+2022-12-21 10:27:29,012 DEBUG   SenderThread:19375 [sender.py:send():303] send: stats
+2022-12-21 10:27:29,014 DEBUG   HandlerThread:19375 [handler.py:handle_request():139] handle_request: defer
+2022-12-21 10:27:29,014 INFO    HandlerThread:19375 [handler.py:handle_request_defer():162] handle defer: 2
+2022-12-21 10:27:29,014 DEBUG   SenderThread:19375 [sender.py:send_request():317] send_request: defer
+2022-12-21 10:27:29,014 INFO    SenderThread:19375 [sender.py:send_request_defer():459] handle sender defer: 2
+2022-12-21 10:27:29,014 INFO    SenderThread:19375 [sender.py:transition_state():463] send defer: 3
+2022-12-21 10:27:29,014 DEBUG   HandlerThread:19375 [handler.py:handle_request():139] handle_request: defer
+2022-12-21 10:27:29,015 INFO    HandlerThread:19375 [handler.py:handle_request_defer():162] handle defer: 3
+2022-12-21 10:27:29,015 DEBUG   SenderThread:19375 [sender.py:send_request():317] send_request: defer
+2022-12-21 10:27:29,015 INFO    SenderThread:19375 [sender.py:send_request_defer():459] handle sender defer: 3
+2022-12-21 10:27:29,015 INFO    SenderThread:19375 [sender.py:transition_state():463] send defer: 4
+2022-12-21 10:27:29,019 DEBUG   HandlerThread:19375 [handler.py:handle_request():139] handle_request: defer
+2022-12-21 10:27:29,019 INFO    HandlerThread:19375 [handler.py:handle_request_defer():162] handle defer: 4
+2022-12-21 10:27:29,019 DEBUG   SenderThread:19375 [sender.py:send():303] send: summary
+2022-12-21 10:27:29,020 INFO    SenderThread:19375 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-21 10:27:29,020 DEBUG   SenderThread:19375 [sender.py:send_request():317] send_request: defer
+2022-12-21 10:27:29,020 INFO    SenderThread:19375 [sender.py:send_request_defer():459] handle sender defer: 4
+2022-12-21 10:27:29,020 INFO    SenderThread:19375 [sender.py:transition_state():463] send defer: 5
+2022-12-21 10:27:29,021 DEBUG   HandlerThread:19375 [handler.py:handle_request():139] handle_request: defer
+2022-12-21 10:27:29,021 INFO    HandlerThread:19375 [handler.py:handle_request_defer():162] handle defer: 5
+2022-12-21 10:27:29,021 DEBUG   SenderThread:19375 [sender.py:send_request():317] send_request: defer
+2022-12-21 10:27:29,021 INFO    SenderThread:19375 [sender.py:send_request_defer():459] handle sender defer: 5
+2022-12-21 10:27:29,021 INFO    SenderThread:19375 [sender.py:transition_state():463] send defer: 6
+2022-12-21 10:27:29,022 DEBUG   HandlerThread:19375 [handler.py:handle_request():139] handle_request: defer
+2022-12-21 10:27:29,022 INFO    HandlerThread:19375 [handler.py:handle_request_defer():162] handle defer: 6
+2022-12-21 10:27:29,022 DEBUG   SenderThread:19375 [sender.py:send_request():317] send_request: defer
+2022-12-21 10:27:29,022 INFO    SenderThread:19375 [sender.py:send_request_defer():459] handle sender defer: 6
+2022-12-21 10:27:29,408 INFO    Thread-13 :19375 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/disk2/ndlong/easyFL/wandb/run-20221221_102653-1tglkmtd/files/wandb-summary.json
+2022-12-21 10:27:29,450 DEBUG   HandlerThread:19375 [handler.py:handle_request():139] handle_request: poll_exit
+2022-12-21 10:27:29,505 INFO    SenderThread:19375 [sender.py:transition_state():463] send defer: 7
+2022-12-21 10:27:29,505 DEBUG   SenderThread:19375 [sender.py:send_request():317] send_request: poll_exit
+2022-12-21 10:27:29,506 DEBUG   HandlerThread:19375 [handler.py:handle_request():139] handle_request: defer
+2022-12-21 10:27:29,506 INFO    HandlerThread:19375 [handler.py:handle_request_defer():162] handle defer: 7
+2022-12-21 10:27:29,506 DEBUG   SenderThread:19375 [sender.py:send_request():317] send_request: defer
+2022-12-21 10:27:29,507 INFO    SenderThread:19375 [sender.py:send_request_defer():459] handle sender defer: 7
+2022-12-21 10:27:29,507 INFO    SenderThread:19375 [dir_watcher.py:finish():362] shutting down directory watcher
+2022-12-21 10:27:30,409 INFO    Thread-13 :19375 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/disk2/ndlong/easyFL/wandb/run-20221221_102653-1tglkmtd/files/output.log
+2022-12-21 10:27:30,409 INFO    SenderThread:19375 [dir_watcher.py:finish():392] scan: /mnt/disk2/ndlong/easyFL/wandb/run-20221221_102653-1tglkmtd/files
+2022-12-21 10:27:30,410 INFO    SenderThread:19375 [dir_watcher.py:finish():406] scan save: /mnt/disk2/ndlong/easyFL/wandb/run-20221221_102653-1tglkmtd/files/wandb-summary.json wandb-summary.json
+2022-12-21 10:27:30,410 INFO    SenderThread:19375 [dir_watcher.py:finish():406] scan save: /mnt/disk2/ndlong/easyFL/wandb/run-20221221_102653-1tglkmtd/files/wandb-metadata.json wandb-metadata.json
+2022-12-21 10:27:30,410 INFO    SenderThread:19375 [dir_watcher.py:finish():406] scan save: /mnt/disk2/ndlong/easyFL/wandb/run-20221221_102653-1tglkmtd/files/requirements.txt requirements.txt
+2022-12-21 10:27:30,415 INFO    SenderThread:19375 [dir_watcher.py:finish():406] scan save: /mnt/disk2/ndlong/easyFL/wandb/run-20221221_102653-1tglkmtd/files/conda-environment.yaml conda-environment.yaml
+2022-12-21 10:27:30,416 INFO    SenderThread:19375 [dir_watcher.py:finish():406] scan save: /mnt/disk2/ndlong/easyFL/wandb/run-20221221_102653-1tglkmtd/files/config.yaml config.yaml
+2022-12-21 10:27:30,421 INFO    SenderThread:19375 [dir_watcher.py:finish():406] scan save: /mnt/disk2/ndlong/easyFL/wandb/run-20221221_102653-1tglkmtd/files/output.log output.log
+2022-12-21 10:27:30,422 INFO    SenderThread:19375 [sender.py:transition_state():463] send defer: 8
+2022-12-21 10:27:30,435 DEBUG   HandlerThread:19375 [handler.py:handle_request():139] handle_request: defer
+2022-12-21 10:27:30,436 INFO    HandlerThread:19375 [handler.py:handle_request_defer():162] handle defer: 8
+2022-12-21 10:27:30,436 DEBUG   SenderThread:19375 [sender.py:send_request():317] send_request: defer
+2022-12-21 10:27:30,436 INFO    SenderThread:19375 [sender.py:send_request_defer():459] handle sender defer: 8
+2022-12-21 10:27:30,437 INFO    SenderThread:19375 [file_pusher.py:finish():168] shutting down file pusher
+2022-12-21 10:27:30,451 DEBUG   HandlerThread:19375 [handler.py:handle_request():139] handle_request: poll_exit
+2022-12-21 10:27:30,451 DEBUG   SenderThread:19375 [sender.py:send_request():317] send_request: poll_exit
+2022-12-21 10:27:31,452 DEBUG   HandlerThread:19375 [handler.py:handle_request():139] handle_request: poll_exit
+2022-12-21 10:27:31,452 DEBUG   SenderThread:19375 [sender.py:send_request():317] send_request: poll_exit
+2022-12-21 10:27:31,761 INFO    Thread-18 :19375 [upload_job.py:push():143] Uploaded file /mnt/disk2/ndlong/easyFL/wandb/run-20221221_102653-1tglkmtd/files/requirements.txt
+2022-12-21 10:27:31,765 INFO    Thread-20 :19375 [upload_job.py:push():143] Uploaded file /mnt/disk2/ndlong/easyFL/wandb/run-20221221_102653-1tglkmtd/files/config.yaml
+2022-12-21 10:27:31,768 INFO    Thread-17 :19375 [upload_job.py:push():143] Uploaded file /mnt/disk2/ndlong/easyFL/wandb/run-20221221_102653-1tglkmtd/files/wandb-summary.json
+2022-12-21 10:27:31,795 INFO    Thread-21 :19375 [upload_job.py:push():143] Uploaded file /mnt/disk2/ndlong/easyFL/wandb/run-20221221_102653-1tglkmtd/files/output.log
+2022-12-21 10:27:31,824 INFO    Thread-19 :19375 [upload_job.py:push():143] Uploaded file /mnt/disk2/ndlong/easyFL/wandb/run-20221221_102653-1tglkmtd/files/conda-environment.yaml
+2022-12-21 10:27:32,025 INFO    Thread-12 :19375 [sender.py:transition_state():463] send defer: 9
+2022-12-21 10:27:32,026 DEBUG   HandlerThread:19375 [handler.py:handle_request():139] handle_request: defer
+2022-12-21 10:27:32,026 INFO    HandlerThread:19375 [handler.py:handle_request_defer():162] handle defer: 9
+2022-12-21 10:27:32,026 DEBUG   SenderThread:19375 [sender.py:send_request():317] send_request: defer
+2022-12-21 10:27:32,026 INFO    SenderThread:19375 [sender.py:send_request_defer():459] handle sender defer: 9
+2022-12-21 10:27:32,026 INFO    SenderThread:19375 [file_pusher.py:join():173] waiting for file pusher
+2022-12-21 10:27:32,026 INFO    SenderThread:19375 [sender.py:transition_state():463] send defer: 10
+2022-12-21 10:27:32,026 DEBUG   HandlerThread:19375 [handler.py:handle_request():139] handle_request: defer
+2022-12-21 10:27:32,027 INFO    HandlerThread:19375 [handler.py:handle_request_defer():162] handle defer: 10
+2022-12-21 10:27:32,027 DEBUG   SenderThread:19375 [sender.py:send_request():317] send_request: defer
+2022-12-21 10:27:32,027 INFO    SenderThread:19375 [sender.py:send_request_defer():459] handle sender defer: 10
+2022-12-21 10:27:32,239 INFO    SenderThread:19375 [sender.py:transition_state():463] send defer: 11
+2022-12-21 10:27:32,240 DEBUG   HandlerThread:19375 [handler.py:handle_request():139] handle_request: defer
+2022-12-21 10:27:32,240 INFO    HandlerThread:19375 [handler.py:handle_request_defer():162] handle defer: 11
+2022-12-21 10:27:32,241 DEBUG   SenderThread:19375 [sender.py:send_request():317] send_request: defer
+2022-12-21 10:27:32,241 INFO    SenderThread:19375 [sender.py:send_request_defer():459] handle sender defer: 11
+2022-12-21 10:27:32,241 INFO    SenderThread:19375 [sender.py:transition_state():463] send defer: 12
+2022-12-21 10:27:32,242 DEBUG   HandlerThread:19375 [handler.py:handle_request():139] handle_request: defer
+2022-12-21 10:27:32,242 DEBUG   SenderThread:19375 [sender.py:send():303] send: final
+2022-12-21 10:27:32,242 INFO    HandlerThread:19375 [handler.py:handle_request_defer():162] handle defer: 12
+2022-12-21 10:27:32,242 DEBUG   SenderThread:19375 [sender.py:send():303] send: footer
+2022-12-21 10:27:32,242 DEBUG   SenderThread:19375 [sender.py:send_request():317] send_request: defer
+2022-12-21 10:27:32,242 INFO    SenderThread:19375 [sender.py:send_request_defer():459] handle sender defer: 12
+2022-12-21 10:27:32,243 DEBUG   HandlerThread:19375 [handler.py:handle_request():139] handle_request: poll_exit
+2022-12-21 10:27:32,244 DEBUG   SenderThread:19375 [sender.py:send_request():317] send_request: poll_exit
+2022-12-21 10:27:32,245 DEBUG   HandlerThread:19375 [handler.py:handle_request():139] handle_request: poll_exit
+2022-12-21 10:27:32,245 DEBUG   SenderThread:19375 [sender.py:send_request():317] send_request: poll_exit
+2022-12-21 10:27:32,246 DEBUG   HandlerThread:19375 [handler.py:handle_request():139] handle_request: server_info
+2022-12-21 10:27:32,246 DEBUG   SenderThread:19375 [sender.py:send_request():317] send_request: server_info
+2022-12-21 10:27:32,250 DEBUG   HandlerThread:19375 [handler.py:handle_request():139] handle_request: get_summary
+2022-12-21 10:27:32,251 DEBUG   HandlerThread:19375 [handler.py:handle_request():139] handle_request: sampled_history
+2022-12-21 10:27:32,966 INFO    MainThread:19375 [wandb_run.py:_footer_history_summary_info():3377] rendering history
+2022-12-21 10:27:32,967 INFO    MainThread:19375 [wandb_run.py:_footer_history_summary_info():3409] rendering summary
+2022-12-21 10:27:32,967 INFO    MainThread:19375 [wandb_run.py:_footer_sync_info():3333] logging synced files
+2022-12-21 10:27:32,968 DEBUG   HandlerThread:19375 [handler.py:handle_request():139] handle_request: shutdown
+2022-12-21 10:27:32,968 INFO    HandlerThread:19375 [handler.py:finish():814] shutting down handler
+2022-12-21 10:27:33,242 INFO    WriterThread:19375 [datastore.py:close():279] close: /mnt/disk2/ndlong/easyFL/wandb/run-20221221_102653-1tglkmtd/run-1tglkmtd.wandb
+2022-12-21 10:27:33,966 INFO    SenderThread:19375 [sender.py:finish():1331] shutting down sender
+2022-12-21 10:27:33,966 INFO    SenderThread:19375 [file_pusher.py:finish():168] shutting down file pusher
+2022-12-21 10:27:33,966 INFO    SenderThread:19375 [file_pusher.py:join():173] waiting for file pusher
+2022-12-21 10:27:33,971 INFO    MainThread:19375 [internal.py:handle_exit():78] Internal process exited

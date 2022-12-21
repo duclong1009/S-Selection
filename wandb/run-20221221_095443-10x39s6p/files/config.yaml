@@ -1,0 +1,148 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.13.5
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: true
+    python_version: 3.8.12
+    start_time: 1671591284.008211
+    t:
+      1:
+      - 1
+      - 55
+      2:
+      - 1
+      - 41
+      - 55
+      3:
+      - 13
+      - 16
+      - 23
+      4: 3.8.12
+      5: 0.13.5
+      8:
+      - 2
+      - 5
+aggregate:
+  desc: null
+  value: uniform
+algo_para:
+  desc: null
+  value: null
+algorithm:
+  desc: null
+  value: fedavg
+batch_size:
+  desc: null
+  value: 32.0
+cross_validation:
+  desc: null
+  value: false
+early_stop:
+  desc: null
+  value: -1
+eval_interval:
+  desc: null
+  value: 1
+gpu:
+  desc: null
+  value: null
+idx_path:
+  desc: null
+  value: Dataset_scenarios/NIID_10clients_random.json
+learning_rate:
+  desc: null
+  value: 0.01
+learning_rate_decay:
+  desc: null
+  value: 0.998
+log_file:
+  desc: null
+  value: false
+log_level:
+  desc: null
+  value: INFO
+log_wandb:
+  desc: null
+  value: true
+logger:
+  desc: null
+  value: basic_logger
+lr_scheduler:
+  desc: null
+  value: -1
+model:
+  desc: null
+  value: resnet18
+momentum:
+  desc: null
+  value: 0.9
+no_log_console:
+  desc: null
+  value: false
+no_overwrite:
+  desc: null
+  value: false
+num_classes:
+  desc: null
+  value: 77
+num_epochs:
+  desc: null
+  value: 5
+num_rounds:
+  desc: null
+  value: 200
+num_steps:
+  desc: null
+  value: -1
+num_workers:
+  desc: null
+  value: 0
+optimizer:
+  desc: null
+  value: SGD
+proportion:
+  desc: null
+  value: 0.2
+ratio:
+  desc: null
+  value: 0.8
+sample:
+  desc: null
+  value: uniform
+sampler:
+  desc: null
+  value: threshold_sampler
+score:
+  desc: null
+  value: all_gnorm_threshold
+seed:
+  desc: null
+  value: 0
+server_with_cpu:
+  desc: null
+  value: false
+task:
+  desc: null
+  value: pill_classification
+test_batch_size:
+  desc: null
+  value: 512
+threshold:
+  desc: null
+  value: 0
+train_on_all:
+  desc: null
+  value: false
+use_pretrained:
+  desc: null
+  value: true
+use_sampler:
+  desc: null
+  value: true
+weight_decay:
+  desc: null
+  value: 0

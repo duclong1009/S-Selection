@@ -50,7 +50,7 @@ class Server(BasicServer):
         
         for i, cid in enumerate(self.selected_clients):
             self.local_data_vols[cid] = n_samples[i]
-        self.total_data_vol = sum(n_samples)
+        self.total_data_vol = sum(self.local_data_vols)
         print(
             f"Total samples which participate training : {self.total_data_vol} samples"
         )

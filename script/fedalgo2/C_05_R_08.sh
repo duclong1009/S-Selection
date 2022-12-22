@@ -14,4 +14,4 @@ module load python/3.10/3.10.4
 python3 -m venv ~/venv/pytorch+horovod
 source ~/venv/pytorch+horovod/bin/activate
 
-python main.py --session_name "" --group_name "NIID_10client" --idx_path Dataset_scenarios/NIID_10clients_random.json --proportion 0.5 --algorithm fedalgo2 --score all_gnorm_threshold --ratio 0.8
+python main.py --session_name "" --group_name "NIID_10client_Gr" --idx_path Dataset_scenarios/NIID_10clients_random.json --proportion 0.5 --algorithm fedalgo2 --score all_gnorm_threshold --ratio 0.8 --aggregate "weighted_com"

@@ -124,9 +124,11 @@ class Server(BasicServer):
     def cal_threshold(self, selected_clinets):
         extra_rate = 0
         for client_id in selected_clinets:
+            print(self.option["noisy_rate_clients"])
+        for client_id in selected_clinets:
             extra_rate += self.option["noisy_rate_clients"][client_id]
-        breakpoint()
-        ratio = self.option["ratio"] + extra_rate
+        ratio = self.option["ratio"] - extra_rate * 0.3
+        print(f"New ratio to keep {self.option['ratio']} ===> {ratio}")
         utils.fmodule.Sampler.set_ratio(ratio)
         self.calculate_importance(selected_clinets)
         list_n_, interval_histogram = np.histogram(

@@ -104,7 +104,7 @@ class BasicServer:
         # training
         models = self.communicate(self.selected_clients)["model"]
         # aggregate: pk = 1/K as default where K=len(selected_clients)
-        self.model = self.aggregate(models)
+        self.model = self.aggregate(models,self.local_data_vols)
         return
 
     def communicate(self, selected_clients):
@@ -221,7 +221,7 @@ class BasicServer:
             
         return [int(i) for i in selected_clients]
 
-    def aggregate(self, models: list, *args, **kwargs):
+    def aggregate(self, models: list, list_vols: list, *args, **kwargs):
         """
         Aggregate the locally improved models.
         :param
@@ -238,9 +238,11 @@ class BasicServer:
         """
         if len(models) == 0:
             return self.model
+        total_vols = sum(list_vols)
+
         if self.aggregation_option == "weighted_scale":
             p = [
-                1.0 * self.local_data_vols[cid] / self.total_data_vol
+                1.0 * list_vols[cid] / total_vols
                 for cid in self.received_clients
             ]
             K = len(models)
@@ -252,16 +254,17 @@ class BasicServer:
             )
         elif self.aggregation_option == "uniform":
             return fmodule._model_average(models)
+            
         elif self.aggregation_option == "weighted_com":
             p = [
-                1.0 * self.local_data_vols[cid] / self.total_data_vol
+                1.0 * list_vols[cid] / total_vols
                 for cid in self.received_clients
             ]
             w = fmodule._model_sum([model_k * pk for model_k, pk in zip(models, p)])
             return (1.0 - sum(p)) * self.model + w
         else:
             p = [
-                1.0 * self.local_data_vols[cid] / self.total_data_vol
+                1.0 * list_vols[cid] / total_vols
                 for cid in self.received_clients
             ]
             sump = sum(p)

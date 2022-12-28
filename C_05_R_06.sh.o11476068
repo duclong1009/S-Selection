@@ -1,0 +1,62 @@
+wandb: Currently logged in as: longnd (aiotlab). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.13.7 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.13.5
+wandb: Run data is saved locally in /home/ace15032jo/Projects/repo2/SampleSelection_easyFL/wandb/run-20221223_082442-834iluxk
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run fedalgo1_fedprox_ratio_0.6_C_0.5_
+wandb: ⭐️ View project at https://wandb.ai/aiotlab/Abnormal_Data_FL
+wandb: 🚀 View run at https://wandb.ai/aiotlab/Abnormal_Data_FL/runs/834iluxk
+2022-12-23 08:24:44,293 fflow.py initialize [line:259] INFO Using Logger in `utils.logger.basic_logger`
+2022-12-23 08:24:44,293 fflow.py initialize [line:260] INFO Initializing fedtask: pill_classification
+2022-12-23 08:24:44,779 fflow.py initialize [line:276] INFO Using model `resnet18` in `benchmark.pill_classification.model.resnet18` as the globally shared model.
+2022-12-23 08:24:44,786 fflow.py initialize [line:304] INFO Using sampler `threshold_sampler` in `sampler.threshold_sampler` as the globally shared model.
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2022-12-23 08:24:49,799 fflow.py initialize [line:324] INFO Initializing Clients: 10 clients of `algorithm.fedalgo1_fedprox.Client` being created.
+2022-12-23 08:24:49,800 fflow.py initialize [line:345] INFO Initializing Server: 1 server of `algorithm.fedalgo1_fedprox.Server` being created.
+2022-12-23 08:24:49,800 fflow.py initialize [line:358] INFO Ready to start.
+2022-12-23 08:24:49,801 fedbase.py run [line:61] INFO --------------Round 1--------------
+2022-12-23 08:24:54,289 basic_logger.py show_current_output [line:134] INFO test_accuracy                 0.0130
+2022-12-23 08:24:54,290 basic_logger.py show_current_output [line:134] INFO test_loss                     4.5173
+2022-12-23 08:24:54,290 basic_logger.py time_end [line:74] INFO Eval Time Cost:               4.4897s
+2022-12-23 08:24:54,296 fedalgo1_fedprox.py iterate [line:20] INFO Selected clients : [1, 2, 7, 3, 5]
+2022-12-23 08:28:36,065 main.py main [line:27] ERROR Exception Logged
+Traceback (most recent call last):
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/main.py", line 24, in main
+    server.run()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedbase.py", line 74, in run
+    self.iterate()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedalgo1_fedprox.py", line 33, in iterate
+    self.model = self.aggregate(models)
+TypeError: BasicServer.aggregate() missing 1 required positional argument: 'list_vols'
+Total samples which participate training : 1940 samples
+Traceback (most recent call last):
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/main.py", line 24, in main
+    server.run()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedbase.py", line 74, in run
+    self.iterate()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedalgo1_fedprox.py", line 33, in iterate
+    self.model = self.aggregate(models)
+TypeError: BasicServer.aggregate() missing 1 required positional argument: 'list_vols'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/main.py", line 33, in <module>
+    main()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/main.py", line 28, in main
+    raise RuntimeError
+RuntimeError
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: 
+wandb: Run history:
+wandb: Accuracy/Testing Accuracy ▁
+wandb:         Loss/Testing Loss ▁
+wandb: 
+wandb: Run summary:
+wandb: Accuracy/Testing Accuracy 0.01299
+wandb:         Loss/Testing Loss 4.51729
+wandb: 
+wandb: Synced fedalgo1_fedprox_ratio_0.6_C_0.5_: https://wandb.ai/aiotlab/Abnormal_Data_FL/runs/834iluxk
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20221223_082442-834iluxk/logs

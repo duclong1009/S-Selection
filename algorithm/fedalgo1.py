@@ -23,15 +23,15 @@ class Server(BasicServer):
         received_information = self.communicate(self.selected_clients)
         n_samples = received_information["n_samples"]
         models = received_information["model"]
+        list_vols = copy.deepcopy(self.local_data_vols)
         for i, cid in enumerate(self.selected_clients):
-            self.local_data_vols[cid] = n_samples[i]
-        self.total_data_vol = sum(self.local_data_vols)
+            list_vols[cid] = n_samples[i]
+        # self.total_data_vol = sum(self.local_data_vols)
         print(
-            f"Total samples which participate training : {self.total_data_vol} samples"
+            f"Total samples which participate training : {sum(n_samples)} samples"
         )
         # aggregate: pk = 1/K as default where K=len(selected_clients)
-        self.model = self.aggregate(models)
-
+        self.model = self.aggregate(models,list_vols)
     def communicate(self, selected_clients, threshold_score):
         """
         The whole simulating communication procedure with the selected clients.
@@ -127,7 +127,7 @@ class Server(BasicServer):
     def cal_threshold(self, selected_clinets):
         self.calculate_importance(selected_clinets)
         list_n_, interval_histogram = np.histogram(
-            np.array(self.received_score), bins=1000
+            np.array(self.received_score), bins= self.option["bins"]
         )
         threshold_value = utils.fmodule.Sampler.cal_threshold(
             (list_n_, interval_histogram)

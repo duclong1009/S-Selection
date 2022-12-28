@@ -82,7 +82,7 @@ def read_option():
         "--learning_rate_decay",
         help="learning rate decay for the training process;",
         type=float,
-        default=0.998,
+        default=0,
     )
     parser.add_argument(
         "--lr_scheduler",

@@ -126,9 +126,17 @@ class Server(BasicServer):
         return self.clients[client_id].reply_score(svr_pkg)
 
     def cal_threshold(self, selected_clinets):
+        extra_rate = 0
+        for client_id in selected_clinets:
+            print(self.option["noisy_rate_clients"])
+        for client_id in selected_clinets:
+            extra_rate += self.option["noisy_rate_clients"][client_id]
+        ratio = self.option["ratio"] - extra_rate * 0.3
+        print(f"New ratio to keep {self.option['ratio']} ===> {ratio}")
+        utils.fmodule.Sampler.set_ratio(ratio)
         self.calculate_importance(selected_clinets)
         list_n_, interval_histogram = np.histogram(
-            np.array(self.received_score), bins= self.option["bins"]
+            np.array(self.received_score), bins=1000
         )
         threshold_value = utils.fmodule.Sampler.cal_threshold(
             (list_n_, interval_histogram)

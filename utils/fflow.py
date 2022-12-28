@@ -40,7 +40,7 @@ def read_option():
     )
     parser.add_argument("--model", help="name of model;", type=str, default="resnet18")
     parser.add_argument("--use_pretrained", action="store_false")
-
+    parser.add_argument('--noisy_rate_clients', nargs='+', type=float)
     # methods of server side for sampling and aggregating
     parser.add_argument(
         "--sample",

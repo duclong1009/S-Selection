@@ -236,7 +236,6 @@ class BasicServer:
         ==========================================================================================================================
         N/K * Σpk * model_k             |1/K * Σmodel_k             |(1-Σpk) * w_old + Σpk * model_k  |Σ(pk/Σpk) * model_k
         """
-        total_sample = sum(vols_list)
         if len(models) == 0:
             return self.model
         total_vols = sum(list_vols)

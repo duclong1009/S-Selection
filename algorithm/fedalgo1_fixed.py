@@ -22,6 +22,7 @@ class Server(BasicServer):
         self.threshold_score = threshold_score
         received_information = self.communicate(self.selected_clients)
         n_samples = received_information["n_samples"]
+        print("Number samples of this round: ",n_samples)
         models = received_information["model"]
         list_vols = copy.deepcopy(self.local_data_vols)
         for i, cid in enumerate(self.selected_clients):

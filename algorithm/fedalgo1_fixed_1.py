@@ -19,7 +19,10 @@ class Server(BasicServer):
         utils.fmodule.LOG_DICT["selectd_client"] = self.selected_clients
         flw.logger.info(f"Selected clients : {self.selected_clients}")
         threshold_score = self.cal_threshold(self.selected_clients)
-        self.threshold_score = threshold_score
+        if self.current_round > 1:
+            self.threshold_score = threshold_score
+        else:
+            self.threshold_score = 0
         received_information = self.communicate(self.selected_clients)
         n_samples = received_information["n_samples"]
         print("Number samples of this round: ",n_samples)
@@ -127,9 +130,17 @@ class Server(BasicServer):
         return self.clients[client_id].reply_score(svr_pkg)
 
     def cal_threshold(self, selected_clinets):
+        extra_rate = 0
+        for client_id in selected_clinets:
+            print(self.option["noisy_rate_clients"])
+        for client_id in selected_clinets:
+            extra_rate += self.option["noisy_rate_clients"][client_id]
+        ratio = self.option["ratio"] - extra_rate * 0.3
+        print(f"New ratio to keep {self.option['ratio']} ===> {ratio}")
+        utils.fmodule.Sampler.set_ratio(ratio)
         self.calculate_importance(selected_clinets)
         list_n_, interval_histogram = np.histogram(
-            np.array(self.received_score), bins= self.option["bins"]
+            np.array(self.received_score), bins=1000
         )
         threshold_value = utils.fmodule.Sampler.cal_threshold(
             (list_n_, interval_histogram)

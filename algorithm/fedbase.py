@@ -101,10 +101,12 @@ class BasicServer:
         self.selected_clients = self.sample()
         utils.fmodule.LOG_DICT["selectd_client"] = self.selected_clients
         flw.logger.info(f"Selected clients : {self.selected_clients}")
+        f"Total samples which participate training :{sum([self.local_data_vols[i] for i in self.selected_clients])} samples"
+
         # training
         models = self.communicate(self.selected_clients)["model"]
         # aggregate: pk = 1/K as default where K=len(selected_clients)
-        self.model = self.aggregate(models)
+        self.model = self.aggregate(models,  self.local_data_vols)
         return
 
     def communicate(self, selected_clients):
@@ -241,7 +243,7 @@ class BasicServer:
             return self.model
         if self.aggregation_option == "weighted_scale":
             p = [
-                1.0 * vols_list[id] / self.total_data_vol
+                1.0 * vols_list[cid] / total_sample
                 for id,cid in enumerate(self.received_clients)
             ]
             K = len(models)
@@ -255,14 +257,14 @@ class BasicServer:
             return fmodule._model_average(models)
         elif self.aggregation_option == "weighted_com":
             p = [
-                1.0 * vols_list[id] / self.total_data_vol
+                1.0 * vols_list[cid] / total_sample
                 for id,cid in enumerate(self.received_clients)
             ]
             w = fmodule._model_sum([model_k * pk for model_k, pk in zip(models, p)])
             return (1.0 - sum(p)) * self.model + w
         else:
             p = [
-                1.0 * vols_list[id] / total_sample
+                1.0 * vols_list[cid] / total_sample
                 for id,cid in enumerate(self.received_clients)
             ]
             sump = sum(p)

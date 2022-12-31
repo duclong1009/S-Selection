@@ -27,10 +27,13 @@ class Server(BasicServer):
         #     self.local_data_vols[cid] = n_samples[i]
         # self.total_data_vol = sum(n_samples)
         print(
-            f"Total samples which participate training : {self.total_data_vol} samples"
+            f"Total samples which participate training : {n_samples}/{sum([self.local_data_vols[i] for i in self.selected_clients])} samples"
         )
         # aggregate: pk = 1/K as default where K=len(selected_clients)
-        self.model = self.aggregate(models, [n_samples[i] for i in self.selected_clients])
+        vol_list = copy.deepcopy(self.local_data_vols)
+        for i,cid in enumerate(n_samples):
+            vol_list[self.selected_clients[i]] = cid
+        self.model = self.aggregate(models, vol_list)
 
     def communicate(self, selected_clients, threshold_score):
         """

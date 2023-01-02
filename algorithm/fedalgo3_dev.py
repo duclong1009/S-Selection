@@ -54,7 +54,7 @@ class Server(BasicServer):
     def modify_ratio(self,):
         f_round = self.f_round()
         f_goodness = self.f_goodness()
-        f_total = 1.0 * f_round + 1.0 * f_goodness
+        f_total = 5.0 * f_round + 1.0 * f_goodness
         extra_ignored_rate = min(f_total, 0.2)
         self.option["ratio"] -= extra_ignored_rate
         print(f"Update ratio round {self.current_round}: {self.option['ratio'] + extra_ignored_rate} >>>>  {self.option['ratio']}")

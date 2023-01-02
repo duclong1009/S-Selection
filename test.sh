@@ -1,1 +1,1 @@
-CUDA_VISIBLE_DEVICES=1 python main.py --idx_path Dataset_scenarios/NIID_10clients_random.json --proportion 0.2 --algorithm fedalgo3_dev --score all_gnorm_threshold --ratio 0.8 --log_wandb --noisy_rate_clients 0.3 0.2 0.2 0.1 0.1 0.1 0 0 0 0
+CUDA_VISIBLE_DEVICES=1 python main.py --idx_path Dataset_scenarios/NIID_Biasnoisy_10clients.json --proportion 0.5 --algorithm fedalgo3 --score all_gnorm_threshold --ratio 0.9 --noisy_rate_clients 0.3 0.2 0.2 0.1 0.1 0.1 0 0 0 0 --o 1 --u 2.61 

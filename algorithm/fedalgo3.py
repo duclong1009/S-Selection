@@ -48,14 +48,14 @@ class Server(BasicServer):
         if self.score_range == 0:
             self.score_range = self.max_score / self.option["bins"]
         
+        list_vols = copy.deepcopy(self.local_data_vols)
         for i, cid in enumerate(self.selected_clients):
-            self.local_data_vols[cid] = n_samples[i]
-        self.total_data_vol = sum(n_samples)
+            list_vols[cid] = n_samples[i]
         print(
-            f"Total samples which participate training : {self.total_data_vol} samples"
+            f"Total samples which participate training : {sum(n_samples)} samples"
         )
         # aggregate: pk = 1/K as default where K=len(selected_clients)
-        self.model = self.aggregate(models)
+        self.model = self.aggregate(models, list_vols)
         self.have_cache.update(self.selected_clients)
 
     def communicate(self, selected_clients):

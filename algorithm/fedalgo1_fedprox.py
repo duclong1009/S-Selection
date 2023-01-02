@@ -7,7 +7,7 @@ import copy
 import torch.nn as nn
 import numpy as np
 from torch.utils.data import DataLoader
-
+import torch
 
 class Server(BasicServer):
     def __init__(self, option, model, clients, test_data=None, device="cpu"):
@@ -23,6 +23,7 @@ class Server(BasicServer):
         received_information = self.communicate(self.selected_clients)
         n_samples = received_information["n_samples"]
         models = received_information["model"]
+<<<<<<< HEAD
         print(
             f"Total samples which participate training : {n_samples}/{sum([self.local_data_vols[i] for i in self.selected_clients])} samples"
         )
@@ -31,6 +32,16 @@ class Server(BasicServer):
         for i,cid in enumerate(n_samples):
             vol_list[self.selected_clients[i]] = cid
         self.model = self.aggregate(models,vol_list)
+=======
+        list_vols = copy.deepcopy(self.local_data_vols)
+        for i, cid in enumerate(self.selected_clients):
+            list_vols[cid] = n_samples[i]
+        print(
+            f"Total samples which participate training : {sum(n_samples)} samples"
+        )
+        # aggregate: pk = 1/K as default where K=len(selected_clients)
+        self.model = self.aggregate(models,list_vols)
+>>>>>>> origin/dev_algo1
 
     def communicate(self, selected_clients, threshold_score):
         """

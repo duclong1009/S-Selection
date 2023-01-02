@@ -33,11 +33,14 @@ class Server(BasicServer):
 
         threshold = self.cal_threshold(list_tmp)
         self.threshold_score = threshold
-        vol_list = copy.deepcopy(self.local_data_vols)
-        for i,cid in enumerate(n_samples):
-            vol_list[self.selected_clients[i]] = cid
+        list_vols = copy.deepcopy(self.local_data_vols)
+        for i, cid in enumerate(self.selected_clients):
+            list_vols[cid] = n_samples[i]
+        print(
+            f"Total samples which participate training : {sum(n_samples)} samples"
+        )
         # aggregate: pk = 1/K as default where K=len(selected_clients)
-        self.model = self.aggregate(models,vol_list)
+        self.model = self.aggregate(models,list_vols)
 
     def communicate(self, selected_clients):
         """

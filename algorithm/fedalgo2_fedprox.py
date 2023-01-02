@@ -7,34 +7,42 @@ import copy
 import torch.nn as nn
 import numpy as np
 from torch.utils.data import DataLoader
-
+import torch
 
 class Server(BasicServer):
     def __init__(self, option, model, clients, test_data=None, device="cpu"):
         super(Server, self).__init__(option, model, clients, test_data, device)
         self.sampler = utils.fmodule.Sampler
+        self.threshold_score = 0
+        self.init_algo_para({'mu':0.1})
 
     def iterate(self):
         self.selected_clients = self.sample()
-        utils.fmodule.LOG_DICT["selectd_client"] = self.selected_clients
+        utils.fmodule.LOG_DICT["selected_clients"] = self.selected_clients
         flw.logger.info(f"Selected clients : {self.selected_clients}")
-        threshold_score = self.cal_threshold(self.selected_clients)
-        self.threshold_score = threshold_score
+        # threshold_score = self.cal_threshold(self.selected_clients)
+        # self.threshold_score = threshold_score
         received_information = self.communicate(self.selected_clients)
         n_samples = received_information["n_samples"]
-        print("Number samples of this round: ",n_samples)
         models = received_information["model"]
+        list_score = received_information["score_list"]
+        list_tmp = []
+        for i_ in list_score:
+            list_tmp += list(i_)
+        self.received_score = list_score
+
+        threshold = self.cal_threshold(list_tmp)
+        self.threshold_score = threshold
         list_vols = copy.deepcopy(self.local_data_vols)
         for i, cid in enumerate(self.selected_clients):
             list_vols[cid] = n_samples[i]
-        # self.total_data_vol = sum(self.local_data_vols)
         print(
-            f"Total samples which participate training : {sum(n_samples)}/{sum([self.local_data_vols[i] for i in self.selected_clients])} samples"
+            f"Total samples which participate training : {sum(n_samples)} samples"
         )
         # aggregate: pk = 1/K as default where K=len(selected_clients)
         self.model = self.aggregate(models,list_vols)
-        
-    def communicate(self, selected_clients, threshold_score):
+
+    def communicate(self, selected_clients):
         """
         The whole simulating communication procedure with the selected clients.
         This part supports for simulating the client dropping out.
@@ -71,13 +79,13 @@ class Server(BasicServer):
             client_package: the reply from the client and will be 'None' if losing connection
         """
         # package the necessary information
-        svr_pkg = self.pack_threshold(client_id)
+        svr_pkg = self.pack_model_threshold(client_id)
         # listen for the client's response
         return self.clients[client_id].reply(svr_pkg)
 
-    def pack_threshold(self, client_id):
-        utils.fmodule.LOG_DICT["threshold_score"] = self.threshold_score 
-        return {"threshold": self.threshold_score}
+    def pack_model_threshold(self, client_id):
+        utils.fmodule.LOG_DICT["threshold_score"] = self.threshold_score
+        return {"model": copy.deepcopy(self.model), "threshold": self.threshold_score}
 
     def communicate(self, selected_clients):
         """
@@ -108,14 +116,6 @@ class Server(BasicServer):
 
         return self.unpack(packages_received_from_clients)
 
-    def calculate_importance(self, selected_clients):
-
-        score_list = []
-        total_samples = 0
-        communicate_clients = list(set(selected_clients))
-        cpkqs = [self.communicate_score_with(id) for id, c in enumerate(self.clients)]
-        self.received_score = self.unpack_score(cpkqs)
-
     def unpack_score(self, cpkqs):
         list_ = []
         for l in cpkqs:
@@ -126,11 +126,8 @@ class Server(BasicServer):
         svr_pkg = self.pack(client_id)
         return self.clients[client_id].reply_score(svr_pkg)
 
-    def cal_threshold(self, selected_clinets):
-        self.calculate_importance(selected_clinets)
-        list_n_, interval_histogram = np.histogram(
-            np.array(self.received_score), bins= self.option["bins"]
-        )
+    def cal_threshold(self, received_score):
+        list_n_, interval_histogram = np.histogram(np.array(received_score), bins=1000)
         threshold_value = utils.fmodule.Sampler.cal_threshold(
             (list_n_, interval_histogram)
         )
@@ -152,9 +149,6 @@ class Client(BasicClient):
         model = self.unpack(svr_pkg)
         self.model = copy.deepcopy(model)
         self.calculate_importance(copy.deepcopy(model))
-        if not "score_list" in utils.fmodule.LOG_DICT.keys():
-            utils.fmodule.LOG_DICT["score_list"] = {}
-        utils.fmodule.LOG_DICT["score_list"][f"client_{self.id}"] = list(self.score_cached)
         cpkg = self.pack_score(self.score_cached)
 
         return cpkg
@@ -162,8 +156,8 @@ class Client(BasicClient):
     def pack_score(self, score_list):
         return {"score": score_list}
 
-    def unpack_threshold(self, svr_pkg):
-        return svr_pkg["threshold"]
+    def unpack_model_threshold(self, svr_pkg):
+        return svr_pkg["model"], svr_pkg["threshold"]
 
     def reply(self, svr_pkg):
         """
@@ -178,9 +172,16 @@ class Client(BasicClient):
         :return:
             client_pkg: the package to be send to the server
         """
-        threshold = self.unpack_threshold(svr_pkg)
-        selected_idx = utils.fmodule.Sampler.sample_using_cached(self.score_cached,threshold)
-        # selected_idx = range(len(self.train_data))
+        model, threshold = self.unpack_model_threshold(svr_pkg)
+        self.model = model
+        self.calculate_importance(model)
+        if not "score_list" in utils.fmodule.LOG_DICT.keys():
+            utils.fmodule.LOG_DICT["score_list"] = {}
+        utils.fmodule.LOG_DICT["score_list"][f"client_{self.id}"] = list(self.score_cached)
+        
+        selected_idx = utils.fmodule.Sampler.sample_using_cached(
+            self.score_cached, threshold
+        )
         current_dataset = CustomDataset(self.train_data, selected_idx)
         self.data_loader = DataLoader(
             current_dataset,
@@ -194,4 +195,58 @@ class Client(BasicClient):
         return cpkg
 
     def pack(self, model, n_trained_samples):
-        return {"model": model, "n_samples": n_trained_samples}
+        return {
+            "model": model,
+            "n_samples": n_trained_samples,
+            "score_list": self.score_cached,
+        }
+
+    def train(self, model):
+        """
+        Standard local training procedure. Train the transmitted model with local training dataset.
+        :param
+            model: the global model
+        :return
+        """
+        if self.data_loader == None:
+            print(f"Client {self.id} init its dataloader")
+            self.data_loader = DataLoader(
+            self.train_data,
+            batch_size=self.batch_size,
+            num_workers=self.loader_num_workers,
+            shuffle=True,
+        )
+        model.train()
+        optimizer = self.calculator.get_optimizer(
+            model,
+            lr=self.learning_rate,
+            weight_decay=self.weight_decay,
+            momentum=self.momentum,
+        )
+        list_training_loss = []
+        src_model = copy.deepcopy(model)
+        src_model.freeze_grad()
+        
+        for epoch in range(self.epochs):
+            training_loss = 0
+            for data, labels,idxs in self.data_loader:
+                data, labels = data.float().to(self.device), labels.long().to(
+                    self.device
+                )
+                optimizer.zero_grad()
+                outputs = model(data)
+                loss = self.calculator.criterion(outputs,labels)
+                loss_proximal = 0
+                for pm, ps in zip(model.parameters(), src_model.parameters()):
+                    loss_proximal += torch.sum(torch.pow(pm - ps, 2))
+                loss = loss + 0.5 * self.mu * loss_proximal
+                loss.backward()
+                optimizer.step()
+                training_loss += loss.item()
+            # training_loss.append(training_loss / len(current_dataloader))
+            list_training_loss.append(training_loss / len(self.data_loader))
+        if not "training_loss" in utils.fmodule.LOG_DICT.keys():
+            utils.fmodule.LOG_DICT["training_loss"] = {}
+        utils.fmodule.LOG_DICT["training_loss"][f"client_{self.id}"] = list_training_loss
+        utils.fmodule.LOG_WANDB["mean_training_loss"] = sum(list_training_loss)/len(list_training_loss)
+        return

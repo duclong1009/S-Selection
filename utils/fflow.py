@@ -82,7 +82,7 @@ def read_option():
         "--learning_rate_decay",
         help="learning rate decay for the training process;",
         type=float,
-        default=0.998,
+        default=0,
     )
     parser.add_argument(
         "--lr_scheduler",
@@ -182,7 +182,10 @@ def read_option():
         type=int,
         default=512,
     )
-
+    #algorthim config
+    parser.add_argument("--type_of_goodness", default='mean', type=str)
+    parser.add_argument("--o", default = 1, type=float,)
+    parser.add_argument("--u", default = 1, type=float)
     # algorithm-dependent hyper-parameters
     parser.add_argument(
         "--algo_para",

@@ -9,9 +9,10 @@ import math
 import collections
 import wandb
 
+
 class BasicServer:
-    def __init__(self, option, model, clients, test_data=None,device='cpu'):
-        self.device=device
+    def __init__(self, option, model, clients, test_data=None, device="cpu"):
+        self.device = device
         # basic configuration
         self.task = option["task"]
         self.name = option["algorithm"]
@@ -76,10 +77,14 @@ class BasicServer:
             self.global_lr_scheduler(round)
             if round % self.option["log_interval"] == 0:
                 self.log_file[f"Round {round}"] = utils.fmodule.LOG_DICT
-                utils.fmodule.save_json(self.log_file, f'{self.option["log_result_path"]}/{self.option["group_name"]}',self.option["session_name"])
+                utils.fmodule.save_json(
+                    self.log_file,
+                    f'{self.option["log_result_path"]}/{self.option["group_name"]}',
+                    self.option["session_name"],
+                )
                 utils.fmodule.LOG_DICT = {}
             flw.logger.time_end("Time Cost")
-            
+
         flw.logger.info("--------------Final Evaluation--------------")
         flw.logger.time_start("Eval Time Cost")
         flw.logger.log_once()
@@ -106,7 +111,7 @@ class BasicServer:
         # training
         models = self.communicate(self.selected_clients)["model"]
         # aggregate: pk = 1/K as default where K=len(selected_clients)
-        self.model = self.aggregate(models,  self.local_data_vols)
+        self.model = self.aggregate(models, self.local_data_vols)
         return
 
     def communicate(self, selected_clients):
@@ -220,10 +225,10 @@ class BasicServer:
             selected_clients = list(
                 np.random.choice(all_clients, self.clients_per_round, replace=True, p=p)
             )
-            
+
         return [int(i) for i in selected_clients]
 
-    def aggregate(self, models: list, vols_list: list,*args, **kwargs):
+    def aggregate(self, models: list, list_vols: list, *args, **kwargs):
         """
         Aggregate the locally improved models.
         :param
@@ -238,14 +243,12 @@ class BasicServer:
         ==========================================================================================================================
         N/K * Σpk * model_k             |1/K * Σmodel_k             |(1-Σpk) * w_old + Σpk * model_k  |Σ(pk/Σpk) * model_k
         """
-        total_sample = sum(vols_list)
         if len(models) == 0:
             return self.model
+        total_vols = sum(list_vols)
+
         if self.aggregation_option == "weighted_scale":
-            p = [
-                1.0 * vols_list[cid] / total_sample
-                for id,cid in enumerate(self.received_clients)
-            ]
+            p = [1.0 * list_vols[cid] / total_vols for cid in self.received_clients]
             K = len(models)
             N = self.num_clients
             return (
@@ -255,18 +258,13 @@ class BasicServer:
             )
         elif self.aggregation_option == "uniform":
             return fmodule._model_average(models)
+
         elif self.aggregation_option == "weighted_com":
-            p = [
-                1.0 * vols_list[cid] / total_sample
-                for id,cid in enumerate(self.received_clients)
-            ]
+            p = [1.0 * list_vols[cid] / total_vols for cid in self.received_clients]
             w = fmodule._model_sum([model_k * pk for model_k, pk in zip(models, p)])
             return (1.0 - sum(p)) * self.model + w
         else:
-            p = [
-                1.0 * vols_list[cid] / total_sample
-                for id,cid in enumerate(self.received_clients)
-            ]
+            p = [1.0 * list_vols[cid] / total_vols for cid in self.received_clients]
             sump = sum(p)
             p = [pk / sump for pk in p]
             return fmodule._model_sum([model_k * pk for model_k, pk in zip(models, p)])
@@ -298,7 +296,9 @@ class BasicServer:
             model = self.model
         if self.test_data:
             return self.calculator.test(
-                model.to(self.device), self.test_data, batch_size=self.option["test_batch_size"]
+                model.to(self.device),
+                self.test_data,
+                batch_size=self.option["test_batch_size"],
             )
         else:
             return None
@@ -338,7 +338,10 @@ class BasicServer:
         ss.clock.step(t)
         return
 
+
 from torch.utils.data import DataLoader
+
+
 class BasicClient:
     def __init__(self, option, name="", train_data=None, valid_data=None, device="cpu"):
         self.name = name
@@ -347,6 +350,7 @@ class BasicClient:
         # create local dataset
         self.train_data = train_data
         self.valid_data = valid_data
+        self.option = option
         if option["train_on_all"]:
             self.train_data = self.train_data + self.valid_data
         self.datavol = len(self.train_data)
@@ -404,11 +408,11 @@ class BasicClient:
         if self.data_loader == None:
             print(f"Client {self.id} init its dataloader")
             self.data_loader = DataLoader(
-            self.train_data,
-            batch_size=self.batch_size,
-            num_workers=self.loader_num_workers,
-            shuffle=True,
-        )
+                self.train_data,
+                batch_size=self.batch_size,
+                num_workers=self.loader_num_workers,
+                shuffle=True,
+            )
         model.train()
         optimizer = self.calculator.get_optimizer(
             model,
@@ -419,13 +423,13 @@ class BasicClient:
         list_training_loss = []
         for epoch in range(self.epochs):
             training_loss = 0
-            for data, labels,idxs in self.data_loader:
+            for data, labels, idxs in self.data_loader:
                 data, labels = data.float().to(self.device), labels.long().to(
                     self.device
                 )
                 optimizer.zero_grad()
                 outputs = model(data)
-                loss = self.calculator.criterion(outputs,labels)
+                loss = self.calculator.criterion(outputs, labels)
                 loss.backward()
                 optimizer.step()
                 training_loss += loss.item()
@@ -433,8 +437,12 @@ class BasicClient:
             list_training_loss.append(training_loss / len(self.data_loader))
         if not "training_loss" in utils.fmodule.LOG_DICT.keys():
             utils.fmodule.LOG_DICT["training_loss"] = {}
-        utils.fmodule.LOG_DICT["training_loss"][f"client_{self.id}"] = list_training_loss
-        utils.fmodule.LOG_WANDB["mean_training_loss"] = sum(list_training_loss)/len(list_training_loss)
+        utils.fmodule.LOG_DICT["training_loss"][
+            f"client_{self.id}"
+        ] = list_training_loss
+        utils.fmodule.LOG_WANDB["mean_training_loss"] = sum(list_training_loss) / len(
+            list_training_loss
+        )
         return
 
     def test(self, model, dataflag="valid"):

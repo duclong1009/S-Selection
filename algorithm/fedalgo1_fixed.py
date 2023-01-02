@@ -22,16 +22,18 @@ class Server(BasicServer):
         self.threshold_score = threshold_score
         received_information = self.communicate(self.selected_clients)
         n_samples = received_information["n_samples"]
+        print("Number samples of this round: ",n_samples)
         models = received_information["model"]
+        list_vols = copy.deepcopy(self.local_data_vols)
+        for i, cid in enumerate(self.selected_clients):
+            list_vols[cid] = n_samples[i]
+        # self.total_data_vol = sum(self.local_data_vols)
         print(
-            f"Total samples which participate training : {n_samples}/{sum([self.local_data_vols[i] for i in self.selected_clients])} samples"
+            f"Total samples which participate training : {sum(n_samples)}/{sum([self.local_data_vols[i] for i in self.selected_clients])} samples"
         )
         # aggregate: pk = 1/K as default where K=len(selected_clients)
-        vol_list = copy.deepcopy(self.local_data_vols)
-        for i,cid in enumerate(n_samples):
-            vol_list[self.selected_clients[i]] = cid
-        self.model = self.aggregate(models, [n_samples[i] for i in self.selected_clients])
-
+        self.model = self.aggregate(models,list_vols)
+        
     def communicate(self, selected_clients, threshold_score):
         """
         The whole simulating communication procedure with the selected clients.

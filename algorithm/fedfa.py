@@ -49,7 +49,7 @@ class Client(BasicClient):
         self.momentum = option['gamma']
 
     def reply(self, svr_pkg):
-        model = self.unpack(svr_pkg)
+        model = self.unpack_model(svr_pkg)
         metrics = self.test(model,'train')
         acc, loss = metrics['accuracy'], metrics['loss']
         self.train(model)

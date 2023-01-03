@@ -56,7 +56,7 @@ class Client(BasicClient):
         super(Client, self).__init__(option, name, train_data, valid_data)
 
     def reply(self, svr_pkg):
-        model = self.unpack(svr_pkg)
+        model = self.unpack_model(svr_pkg)
         model_0 = copy.deepcopy(model)
         self.train(model)
         model_q = model_0 - model

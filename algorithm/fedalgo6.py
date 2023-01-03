@@ -8,16 +8,39 @@ import torch.nn as nn
 import numpy as np
 from torch.utils.data import DataLoader
 import math
-
+import statistics
 
 class Server(BasicServer):
+    """
+    Su dung heuristic de dieu chinh ratio, su dung history score cua tung client de tinh threshold"
+    
+    """
+
     def __init__(self, option, model, clients, test_data=None, device="cpu"):
         super(Server, self).__init__(option, model, clients, test_data, device)
         self.sampler = utils.fmodule.Sampler
         self.threshold_score = 0
+        #init goodness_cached
+        self.goodness_cached = {}
+        self.saved_histogram = {}
+        for _ in range(len(clients)):
+            self.goodness_cached[_] = 0
+            # self.saved_histogram[_] = []
         self.have_cache = set()
         self.score_range = 0
         self.max_score = 0
+        
+    def f_round(
+        self,
+    ):
+        if self.current_round == 1:
+            return 0
+        probability = (
+            1.0
+            / (self.current_round * self.option['o'] * math.sqrt(2 * math.pi))
+            * (math.exp(-0.5 * ((math.log(self.current_round) - self.option['u']) / self.option['o']) ** 2))
+        )
+        return probability
 
     def aggregate_histogram(self, list_histograms):
         n_bins = math.ceil(self.max_score / self.score_range)
@@ -28,37 +51,65 @@ class Server(BasicServer):
             final_histogram += new_histogram
         return final_histogram, range(n_bins) * np.array(self.score_range)
 
+    def f_goodness(self,):
+        list_goodness = [self.goodness_cached[i] for i in self.selected_clients]
+        mean_goodness = sum(list_goodness)/len(list_goodness)
+        if mean_goodness == 0 :
+            return 0
+        return 1.0/ mean_goodness
+
+    def modify_ratio(self,):
+        have_c = len([cid for cid in self.selected_clients if cid in self.have_cache])
+        f_round = self.f_round()
+        f_goodness = self.f_goodness()
+        f_total = 5.0 * f_round + 2.0 * f_goodness
+        extra_ignored_rate = min(f_total, 0.2) * 1.0 * have_c/ len(self.selected_clients)
+        sample_ratio = self.option["ratio"] - extra_ignored_rate 
+        utils.fmodule.Sampler.set_ratio(sample_ratio)
+        print(f"Update ratio round {self.current_round}: {self.option['ratio']} >>>>  {sample_ratio}")
+    
     def iterate(self):
         self.selected_clients = self.sample()
         utils.fmodule.LOG_DICT["selected_clients"] = self.selected_clients
         flw.logger.info(f"Selected clients : {self.selected_clients}")
+        self.modify_ratio()
+        have_c = [cid for cid in self.selected_clients if cid in self.have_cache]
+        print(f"Number of clients have cached is: {len(have_c)}")
+        if have_c != 0 and self.score_range != 0:
+            self.aggreagted_histogram = self.aggregate_histogram([self.saved_histogram[cid] for cid in self.selected_clients if cid in self.have_cache])
+            threshold = self.cal_threshold(self.aggreagted_histogram)
+            self.threshold_score = threshold
         received_information = self.communicate(self.selected_clients)
+
         n_samples = received_information["n_samples"]
         models = received_information["model"]
         list_score = received_information["score_list"]
         list_max_score = received_information["max_score"]
-        self.max_score = max(list_max_score)
+        list_goodness = received_information["goodness_score"]
+
+        self.update_goodness_cached(list_goodness,self.selected_clients)
+        max_sc = max(list_max_score)
+        self.max_score = max(max_sc,self.max_score)
         self.received_score = list_score
-        
-        if self.score_range != 0:
-            breakpoint()
-            if sum([len(i) for i in list_score]) != 0:
-                aggreagted_histogram = self.aggregate_histogram(list_score)
-                threshold = self.cal_threshold(aggreagted_histogram)
-                self.threshold_score = threshold
+
         if self.score_range == 0:
             self.score_range = self.max_score / self.option["bins"]
-        
+
         list_vols = copy.deepcopy(self.local_data_vols)
         for i, cid in enumerate(self.selected_clients):
+            if len(list_score[i]) != 0:
+                self.have_cache.update([cid])
+                self.saved_histogram[cid] = list_score[i]
             list_vols[cid] = n_samples[i]
-        print(
-            f"Total samples which participate training : {sum(n_samples)}/{sum([self.local_data_vols[i_] for i_ in self.selected_clients])} samples"
-        )
+        print(f"Total samples which participate training : {sum(n_samples)}/{sum([self.local_data_vols[i_] for i_ in self.selected_clients])} samples")
         # aggregate: pk = 1/K as default where K=len(selected_clients)
         self.model = self.aggregate(models, list_vols)
-        self.have_cache.update(self.selected_clients)
-
+        
+        
+    def update_goodness_cached(self, goodness, selected_clients): 
+        for i,id in enumerate(selected_clients):
+            self.goodness_cached[id] = goodness[i]
+            
     def communicate(self, selected_clients):
         """
         The whole simulating communication procedure with the selected clients.
@@ -101,17 +152,19 @@ class Server(BasicServer):
         return self.clients[client_id].reply(svr_pkg)
 
     def pack_model_threshold(self, client_id):
+        local_threshold = self.threshold_score
         if "threshold_score" not in utils.fmodule.LOG_DICT.keys():
             utils.fmodule.LOG_DICT["threshold_score"] = {}
-        
+        if client_id not in self.have_cache:
+            local_threshold = 0
         utils.fmodule.LOG_DICT["threshold_score"][
-                    f"client_{client_id}"
-                ] = self.threshold_score
+            f"client_{client_id}"
+        ] = local_threshold
         return {
-                    "model": copy.deepcopy(self.model),
-                    "threshold": self.threshold_score,
-                    "score_range": self.score_range,
-                }
+            "model": copy.deepcopy(self.model),
+            "threshold": local_threshold,
+            "score_range": self.score_range,
+        }
 
     def communicate(self, selected_clients):
         """
@@ -152,7 +205,8 @@ class Server(BasicServer):
         return self.clients[client_id].reply_score(svr_pkg)
 
     def cal_threshold(self, received_score):
-        list_n_, interval_histogram = np.histogram(np.array(received_score), bins=1000)
+        # breakpoint()
+        list_n_, interval_histogram = received_score
         threshold_value = utils.fmodule.Sampler.cal_threshold(
             (list_n_, interval_histogram)
         )
@@ -170,12 +224,18 @@ class Client(BasicClient):
         )
         self.score_cached = score_list_on_cl
 
+    def cal_goodness(self, list_of_score):
+        list_ = list(list_of_score)
+        if self.option["type_of_goodness"] == "mean":
+            return sum(list_)/ len(list_)
+        elif self.option["type_of_goodness"] == "median":
+            return statistics.median(list_)
+
     def reply_score(self, svr_pkg):
         model = self.unpack_model(svr_pkg)
         self.model = copy.deepcopy(model)
         self.calculate_importance(copy.deepcopy(model))
         cpkg = self.pack_score(self.score_cached)
-
         return cpkg
 
     def pack_score(self, score_list):
@@ -184,7 +244,7 @@ class Client(BasicClient):
     def unpack_model_threshold(self, svr_pkg):
         return svr_pkg["model"], svr_pkg["threshold"], svr_pkg["score_range"]
 
-    def build_histogram(self,list_score, score_range):
+    def build_histogram(self, list_score, score_range):
         import math
 
         n_bins = math.ceil(max(list_score) / score_range)
@@ -218,7 +278,7 @@ class Client(BasicClient):
         if self.score_range != 0:
             historgram_ = self.build_histogram(self.score_cached, self.score_range)
             self.historgram_ = historgram_
-            
+        goodness_score = self.cal_goodness(self.score_cached)
         selected_idx = utils.fmodule.Sampler.sample_using_cached(
             self.score_cached, threshold
         )
@@ -231,16 +291,17 @@ class Client(BasicClient):
         )
         self.threshold = threshold
         self.train(self.model)
-        cpkg = self.pack(self.model, len(selected_idx))
+        cpkg = self.pack(self.model, len(selected_idx),goodness_score)
         return cpkg
 
-    def pack(self, model, n_trained_samples):
+    def pack(self, model, n_trained_samples,goodness_score):
         if self.score_range == 0:
             return {
                 "model": model,
                 "n_samples": n_trained_samples,
                 "score_list": [],
                 "max_score": max(self.score_cached),
+                "goodness_score": goodness_score,
             }
         else:
             return {
@@ -248,4 +309,5 @@ class Client(BasicClient):
                 "n_samples": n_trained_samples,
                 "score_list": self.historgram_,
                 "max_score": max(self.score_cached),
+                "goodness_score": goodness_score,
             }

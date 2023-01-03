@@ -151,11 +151,11 @@ class BasicServer:
             client_package: the reply from the client and will be 'None' if losing connection
         """
         # package the necessary information
-        svr_pkg = self.pack(client_id)
+        svr_pkg = self.pack_model(client_id)
         # listen for the client's response
         return self.clients[client_id].reply(svr_pkg)
 
-    def pack(self, client_id):
+    def pack_model(self, client_id):
         """
         Pack the necessary information for the client's local training.
         Any operations of compression or encryption should be done here.
@@ -457,7 +457,7 @@ class BasicClient:
         dataset = self.train_data if dataflag == "train" else self.valid_data
         return self.calculator.test(model, dataset, self.test_batch_size)
 
-    def unpack(self, received_pkg):
+    def unpack_model(self, received_pkg):
         """
         Unpack the package received from the server
         :param
@@ -481,7 +481,7 @@ class BasicClient:
         :return:
             client_pkg: the package to be send to the server
         """
-        model = self.unpack(svr_pkg)
+        model = self.unpack_model(svr_pkg)
         self.train(model)
         cpkg = self.pack(model)
         return cpkg

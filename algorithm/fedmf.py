@@ -36,7 +36,7 @@ class Server(BasicServer):
         # initialize the user vectors
         for c in self.clients: c.user_embedding = CltModel(self.embedding_size)
 
-    def pack(self, client_id):
+    def pack_model(self, client_id):
         return {
             'encrypted_item_vectors': self.encrypted_item_vectors
         }
@@ -88,12 +88,12 @@ class Client(BasicClient):
         self.local_items_valid = [int(d[1]) for d in self.valid_data]
 
     def reply(self, svr_pkg):
-        item_vectors = self.unpack(svr_pkg)
+        item_vectors = self.unpack_model(svr_pkg)
         gradient = self.train(item_vectors)
         clt_pkg = self.pack(gradient)
         return clt_pkg
 
-    def unpack(self, received_pkg):
+    def unpack_model(self, received_pkg):
         global num_items
         encrypted_item_vectors = received_pkg['encrypted_item_vectors']
         item_vector_np = np.array([[private_key.decrypt(e) for e in vector] for vector in encrypted_item_vectors], dtype=np.float32)

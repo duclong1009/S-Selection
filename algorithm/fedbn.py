@@ -8,7 +8,7 @@ from .fedavg import Server
 from utils import fmodule
 
 class Client(BasicClient):
-    def unpack(self, received_pkg):
+    def unpack_model(self, received_pkg):
         """Preserve the BN layers when receiving the global model from the server. The BN module should be claimed with the keyword 'bn'."""
         global_model = received_pkg['model']
         if self.model==None:

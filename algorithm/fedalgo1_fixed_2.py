@@ -126,7 +126,7 @@ class Server(BasicServer):
         return list_
 
     def communicate_score_with(self, client_id):
-        svr_pkg = self.pack(client_id)
+        svr_pkg = self.pack_model(client_id)
         return self.clients[client_id].reply_score(svr_pkg)
 
     def cal_threshold(self, selected_clinets):
@@ -160,7 +160,7 @@ class Client(BasicClient):
         self.score_cached = score_list_on_cl
 
     def reply_score(self, svr_pkg):
-        model = self.unpack(svr_pkg)
+        model = self.unpack_model(svr_pkg)
         self.model = copy.deepcopy(model)
         self.calculate_importance(copy.deepcopy(model))
         if not "score_list" in utils.fmodule.LOG_DICT.keys():

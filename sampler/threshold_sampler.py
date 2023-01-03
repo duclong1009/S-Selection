@@ -47,7 +47,8 @@ class Sampler(_BaseSampler):
     def set_ratio(self,ratio):
         self.sampler_config["ratio"] = ratio
         
-    def cal_threshold(self, histogram):
+    def cal_threshold(self, histogram,):
+        # breakpoint()
         list_n_ , value_list = histogram
         total_samples = sum(list_n_)
         thresh_list = value_list[:-1]

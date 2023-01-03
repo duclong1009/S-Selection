@@ -11,18 +11,25 @@ import math
 import statistics
 
 class Server(BasicServer):
+    """
+    Su dung heuristic de dieu chinh ratio, su dung score cua round truoc de lam threshold k dung history
+    
+    """
+
     def __init__(self, option, model, clients, test_data=None, device="cpu"):
         super(Server, self).__init__(option, model, clients, test_data, device)
         self.sampler = utils.fmodule.Sampler
         self.threshold_score = 0
         #init goodness_cached
         self.goodness_cached = {}
+        self.saved_histogram = {}
         for _ in range(len(clients)):
             self.goodness_cached[_] = 0
+            # self.saved_histogram[_] = []
         self.have_cache = set()
         self.score_range = 0
         self.max_score = 0
-
+        
     def f_round(
         self,
     ):
@@ -56,42 +63,44 @@ class Server(BasicServer):
         f_goodness = self.f_goodness()
         f_total = 5.0 * f_round + 1.0 * f_goodness
         extra_ignored_rate = min(f_total, 0.2)
-        self.option["ratio"] -= extra_ignored_rate
-        print(f"Update ratio round {self.current_round}: {self.option['ratio'] + extra_ignored_rate} >>>>  {self.option['ratio']}")
+        sample_ratio = self.option["ratio"] - extra_ignored_rate
+        utils.fmodule.Sampler.set_ratio(sample_ratio)
+        print(f"Update ratio round {self.current_round}: {self.option['ratio']} >>>>  {sample_ratio}")
     
     def iterate(self):
-        saved_ratio = copy.deepcopy(self.option["ratio"])
         self.selected_clients = self.sample()
         utils.fmodule.LOG_DICT["selected_clients"] = self.selected_clients
         flw.logger.info(f"Selected clients : {self.selected_clients}")
         self.modify_ratio()
+        if hasattr(self,"aggreagted_histogram"):
+            threshold = self.cal_threshold(self.aggreagted_histogram)
+            self.threshold_score = threshold
         received_information = self.communicate(self.selected_clients)
+
         n_samples = received_information["n_samples"]
         models = received_information["model"]
         list_score = received_information["score_list"]
         list_max_score = received_information["max_score"]
-        # breakpoint()
         list_goodness = received_information["goodness_score"]
+
         self.update_goodness_cached(list_goodness,self.selected_clients)
         self.max_score = max(list_max_score)
         self.received_score = list_score
 
         if self.score_range != 0:
             if sum([len(i) for i in list_score]) != 0:
-                aggreagted_histogram = self.aggregate_histogram(list_score)
-                threshold = self.cal_threshold(aggreagted_histogram)
-                self.threshold_score = threshold
+                self.aggreagted_histogram = self.aggregate_histogram(list_score)
         if self.score_range == 0:
             self.score_range = self.max_score / self.option["bins"]
 
         list_vols = copy.deepcopy(self.local_data_vols)
         for i, cid in enumerate(self.selected_clients):
+            self.saved_histogram = list_score[i]
             list_vols[cid] = n_samples[i]
-        print(f"Total samples which participate training : {sum(n_samples)} samples")
+        print(f"Total samples which participate training : {sum(n_samples)}/{sum([self.local_data_vols[i_] for i_ in self.selected_clients])} samples")
         # aggregate: pk = 1/K as default where K=len(selected_clients)
         self.model = self.aggregate(models, list_vols)
         self.have_cache.update(self.selected_clients)
-        self.option["ratio"] = saved_ratio
         
     def update_goodness_cached(self, goodness, selected_clients): 
         for i,id in enumerate(selected_clients):
@@ -186,7 +195,7 @@ class Server(BasicServer):
         return list_
 
     def communicate_score_with(self, client_id):
-        svr_pkg = self.pack(client_id)
+        svr_pkg = self.pack_model(client_id)
         return self.clients[client_id].reply_score(svr_pkg)
 
     def cal_threshold(self, received_score):
@@ -216,7 +225,7 @@ class Client(BasicClient):
             return statistics.median(list_)
 
     def reply_score(self, svr_pkg):
-        model = self.unpack(svr_pkg)
+        model = self.unpack_model(svr_pkg)
         self.model = copy.deepcopy(model)
         self.calculate_importance(copy.deepcopy(model))
         cpkg = self.pack_score(self.score_cached)

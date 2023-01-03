@@ -13,7 +13,7 @@ class Server(BasicServer):
         self.init_algo_para({'eta':1.0})
         self.cg = self.model.zeros_like()
 
-    def pack(self, client_id):
+    def pack_model(self, client_id):
         return {
             "model": copy.deepcopy(self.model),
             "cg": self.cg,
@@ -80,7 +80,7 @@ class Client(BasicClient):
         return dy, dc
 
     def reply(self, svr_pkg):
-        model, c_g = self.unpack(svr_pkg)
+        model, c_g = self.unpack_model(svr_pkg)
         dy, dc = self.train(model, c_g)
         cpkg = self.pack(dy, dc)
         return cpkg
@@ -91,6 +91,6 @@ class Client(BasicClient):
             "dc": dc,
         }
 
-    def unpack(self, received_pkg):
+    def unpack_model(self, received_pkg):
         # unpack the received package
         return received_pkg['model'], received_pkg['cg']

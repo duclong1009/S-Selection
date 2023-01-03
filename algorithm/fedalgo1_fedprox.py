@@ -159,7 +159,7 @@ class Client(BasicClient):
         self.score_cached = score_list_on_cl
 
     def reply_score(self, svr_pkg):
-        model = self.unpack(svr_pkg)
+        model = self.unpack_model(svr_pkg)
         self.model = copy.deepcopy(model)
         self.calculate_importance(copy.deepcopy(model))
         if not "score_list" in utils.fmodule.LOG_DICT.keys():

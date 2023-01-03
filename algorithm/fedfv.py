@@ -77,7 +77,7 @@ class Client(BasicClient):
         super(Client, self).__init__(option, name, train_data, valid_data)
 
     def reply(self, svr_pkg):
-        model = self.unpack(svr_pkg)
+        model = self.unpack_model(svr_pkg)
         train_loss = self.test(model, 'train')['loss']
         self.train(model)
         cpkg = self.pack(model, train_loss)

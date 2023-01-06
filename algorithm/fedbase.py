@@ -50,6 +50,7 @@ class BasicServer:
         # all options
         self.option = option
         self.log_file = {}
+        self.wandb_file = {}
 
     def run(self):
         """
@@ -68,21 +69,29 @@ class BasicServer:
             # check if early stopping
             if self.option["log_wandb"]:
                 wandb.log(utils.fmodule.LOG_WANDB)
-                utils.fmodule.LOG_WANDB = {}
+                # utils.fmodule.LOG_WANDB = {}
             if flw.logger.early_stop():
                 break
             # federated train
             self.iterate()
             # decay learning rate
             self.global_lr_scheduler(round)
+            self.log_file[f"Round {round}"] = utils.fmodule.LOG_DICT
+            self.wandb_file[f"Round {round}"] = utils.fmodule.LOG_WANDB
+            utils.fmodule.LOG_DICT = {}
+            utils.fmodule.LOG_WANDB = {}
             if round % self.option["log_interval"] == 0:
-                self.log_file[f"Round {round}"] = utils.fmodule.LOG_DICT
                 utils.fmodule.save_json(
                     self.log_file,
                     f'{self.option["log_result_path"]}/{self.option["group_name"]}',
                     self.option["session_name"],
                 )
-                utils.fmodule.LOG_DICT = {}
+                utils.fmodule.save_json(
+                    self.wandb_file,
+                    f'{self.option["log_result_path"]}/{self.option["group_name"]}',
+                    f'{self.option["session_name"]}_wandb',
+                )
+                
             flw.logger.time_end("Time Cost")
 
         flw.logger.info("--------------Final Evaluation--------------")
@@ -225,7 +234,6 @@ class BasicServer:
             selected_clients = list(
                 np.random.choice(all_clients, self.clients_per_round, replace=True, p=p)
             )
-
         return [int(i) for i in selected_clients]
 
     def aggregate(self, models: list, list_vols: list, *args, **kwargs):

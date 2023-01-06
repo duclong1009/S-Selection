@@ -1,0 +1,1002 @@
+{
+    "Round 1": {
+        "Accuracy/Testing Accuracy": 0.012987012987012988,
+        "Loss/Testing Loss": 4.517292786883069,
+        "mean_training_loss": 2.122266716162364
+    },
+    "Round 2": {
+        "Accuracy/Testing Accuracy": 0.18701298701298702,
+        "Loss/Testing Loss": 3.5369480560352278,
+        "mean_training_loss": 1.5361616118748984
+    },
+    "Round 3": {
+        "Accuracy/Testing Accuracy": 0.35064935064935066,
+        "Loss/Testing Loss": 2.58210765479447,
+        "mean_training_loss": 1.0563006013631822
+    },
+    "Round 4": {
+        "Accuracy/Testing Accuracy": 0.4792207792207792,
+        "Loss/Testing Loss": 1.969090546570815,
+        "mean_training_loss": 0.5219202602903048
+    },
+    "Round 5": {
+        "Accuracy/Testing Accuracy": 0.4623376623376623,
+        "Loss/Testing Loss": 1.8350959567280558,
+        "mean_training_loss": 0.40290879011154174
+    },
+    "Round 6": {
+        "Accuracy/Testing Accuracy": 0.5701298701298702,
+        "Loss/Testing Loss": 1.570560114414661,
+        "mean_training_loss": 0.7920522048192866
+    },
+    "Round 7": {
+        "Accuracy/Testing Accuracy": 0.6350649350649351,
+        "Loss/Testing Loss": 1.2981372390474593,
+        "mean_training_loss": 0.4238972826798757
+    },
+    "Round 8": {
+        "Accuracy/Testing Accuracy": 0.6402597402597403,
+        "Loss/Testing Loss": 1.2008396792721439,
+        "mean_training_loss": 0.7412782557308674
+    },
+    "Round 9": {
+        "Accuracy/Testing Accuracy": 0.6688311688311688,
+        "Loss/Testing Loss": 1.0925467104106754,
+        "mean_training_loss": 0.32008789740502835
+    },
+    "Round 10": {
+        "Accuracy/Testing Accuracy": 0.6987012987012987,
+        "Loss/Testing Loss": 1.0154501856147469,
+        "mean_training_loss": 0.09621739841997623
+    },
+    "Round 11": {
+        "Accuracy/Testing Accuracy": 0.7038961038961039,
+        "Loss/Testing Loss": 1.0245316821259338,
+        "mean_training_loss": 0.12416318147019907
+    },
+    "Round 12": {
+        "Accuracy/Testing Accuracy": 0.7,
+        "Loss/Testing Loss": 0.9935494063736556,
+        "mean_training_loss": 2.7661570751241276
+    },
+    "Round 13": {
+        "Accuracy/Testing Accuracy": 0.6753246753246753,
+        "Loss/Testing Loss": 1.0725392614092146,
+        "mean_training_loss": 0.1750641409646381
+    },
+    "Round 14": {
+        "Accuracy/Testing Accuracy": 0.6974025974025974,
+        "Loss/Testing Loss": 0.9584465675539785,
+        "mean_training_loss": 0.09130656336744626
+    },
+    "Round 15": {
+        "Accuracy/Testing Accuracy": 0.7168831168831169,
+        "Loss/Testing Loss": 0.9361582522268419,
+        "mean_training_loss": 0.1048026789995757
+    },
+    "Round 16": {
+        "Accuracy/Testing Accuracy": 0.7376623376623377,
+        "Loss/Testing Loss": 0.8529098880755437,
+        "mean_training_loss": 1.4176515512996248
+    },
+    "Round 17": {
+        "Accuracy/Testing Accuracy": 0.7350649350649351,
+        "Loss/Testing Loss": 0.8501601658858262,
+        "mean_training_loss": 0.1855613102670759
+    },
+    "Round 18": {
+        "Accuracy/Testing Accuracy": 0.6909090909090909,
+        "Loss/Testing Loss": 1.0467854388348468,
+        "mean_training_loss": 0.06376064703799784
+    },
+    "Round 19": {
+        "Accuracy/Testing Accuracy": 0.7506493506493507,
+        "Loss/Testing Loss": 0.8850771547912003,
+        "mean_training_loss": 1.3282604893048604
+    },
+    "Round 20": {
+        "Accuracy/Testing Accuracy": 0.7142857142857143,
+        "Loss/Testing Loss": 0.9772218711964495,
+        "mean_training_loss": 0.41266341560027175
+    },
+    "Round 21": {
+        "Accuracy/Testing Accuracy": 0.7519480519480519,
+        "Loss/Testing Loss": 0.8212560697035356,
+        "mean_training_loss": 0.06785041158528704
+    },
+    "Round 22": {
+        "Accuracy/Testing Accuracy": 0.7532467532467533,
+        "Loss/Testing Loss": 0.8363260306321181,
+        "mean_training_loss": 0.04620829877754053
+    },
+    "Round 23": {
+        "Accuracy/Testing Accuracy": 0.7415584415584415,
+        "Loss/Testing Loss": 0.9091238003272515,
+        "mean_training_loss": 0.07224938300879377
+    },
+    "Round 24": {
+        "Accuracy/Testing Accuracy": 0.7597402597402597,
+        "Loss/Testing Loss": 0.7782517091020361,
+        "mean_training_loss": 0.029030056033087403
+    },
+    "Round 25": {
+        "Accuracy/Testing Accuracy": 0.7597402597402597,
+        "Loss/Testing Loss": 0.7900712909636559,
+        "mean_training_loss": 0.02967424292705561
+    },
+    "Round 26": {
+        "Accuracy/Testing Accuracy": 0.7558441558441559,
+        "Loss/Testing Loss": 0.8750655403384915,
+        "mean_training_loss": 0.03208033530727813
+    },
+    "Round 27": {
+        "Accuracy/Testing Accuracy": 0.7558441558441559,
+        "Loss/Testing Loss": 0.8886004785438637,
+        "mean_training_loss": 0.17793406546115875
+    },
+    "Round 28": {
+        "Accuracy/Testing Accuracy": 0.7402597402597403,
+        "Loss/Testing Loss": 0.9377465966459992,
+        "mean_training_loss": 0.08995060822681376
+    },
+    "Round 29": {
+        "Accuracy/Testing Accuracy": 0.7597402597402597,
+        "Loss/Testing Loss": 0.8636730858257838,
+        "mean_training_loss": 0.09807104919301837
+    },
+    "Round 30": {
+        "Accuracy/Testing Accuracy": 0.7714285714285715,
+        "Loss/Testing Loss": 0.8025379608203839,
+        "mean_training_loss": 0.01861394026169651
+    },
+    "Round 31": {
+        "Accuracy/Testing Accuracy": 0.7623376623376623,
+        "Loss/Testing Loss": 0.8398675779243568,
+        "mean_training_loss": 0.054534557412721604
+    },
+    "Round 32": {
+        "Accuracy/Testing Accuracy": 0.7714285714285715,
+        "Loss/Testing Loss": 0.8025456931683924,
+        "mean_training_loss": 0.009783001932756682
+    },
+    "Round 33": {
+        "Accuracy/Testing Accuracy": 0.7311688311688311,
+        "Loss/Testing Loss": 1.026823658447761,
+        "mean_training_loss": 0.05506477035385997
+    },
+    "Round 34": {
+        "Accuracy/Testing Accuracy": 0.7090909090909091,
+        "Loss/Testing Loss": 1.152624122817795,
+        "mean_training_loss": 0.07058752634777472
+    },
+    "Round 35": {
+        "Accuracy/Testing Accuracy": 0.7168831168831169,
+        "Loss/Testing Loss": 1.059457922291446,
+        "mean_training_loss": 0.07520580649949038
+    },
+    "Round 36": {
+        "Accuracy/Testing Accuracy": 0.7506493506493507,
+        "Loss/Testing Loss": 0.8895164859759344,
+        "mean_training_loss": 0.04791791839034934
+    },
+    "Round 37": {
+        "Accuracy/Testing Accuracy": 0.7415584415584415,
+        "Loss/Testing Loss": 0.9300055386184098,
+        "mean_training_loss": 0.010350991607022781
+    },
+    "Round 38": {
+        "Accuracy/Testing Accuracy": 0.7493506493506493,
+        "Loss/Testing Loss": 0.9371653278152664,
+        "mean_training_loss": 0.12021422421273131
+    },
+    "Round 39": {
+        "Accuracy/Testing Accuracy": 0.7675324675324675,
+        "Loss/Testing Loss": 0.8110747608271512,
+        "mean_training_loss": 0.07042217451686922
+    },
+    "Round 40": {
+        "Accuracy/Testing Accuracy": 0.7584415584415585,
+        "Loss/Testing Loss": 0.8420310206227488,
+        "mean_training_loss": 0.009755677174932012
+    },
+    "Round 41": {
+        "Accuracy/Testing Accuracy": 0.7701298701298701,
+        "Loss/Testing Loss": 0.85264307616593,
+        "mean_training_loss": 0.0219553296062115
+    },
+    "Round 42": {
+        "Accuracy/Testing Accuracy": 0.7805194805194805,
+        "Loss/Testing Loss": 0.8327006134119901,
+        "mean_training_loss": 0.011592685024401075
+    },
+    "Round 43": {
+        "Accuracy/Testing Accuracy": 0.7415584415584415,
+        "Loss/Testing Loss": 0.9659579289423955,
+        "mean_training_loss": 0.05905710868537426
+    },
+    "Round 44": {
+        "Accuracy/Testing Accuracy": 0.7532467532467533,
+        "Loss/Testing Loss": 0.9405293446082573,
+        "mean_training_loss": 0.01353417204104756
+    },
+    "Round 45": {
+        "Accuracy/Testing Accuracy": 0.7259740259740259,
+        "Loss/Testing Loss": 1.0256442001887731,
+        "mean_training_loss": 0.30382318377102674
+    },
+    "Round 46": {
+        "Accuracy/Testing Accuracy": 0.7584415584415585,
+        "Loss/Testing Loss": 0.9296440266943597,
+        "mean_training_loss": 0.164522562891637
+    },
+    "Round 47": {
+        "Accuracy/Testing Accuracy": 0.7766233766233767,
+        "Loss/Testing Loss": 0.8727612126957286,
+        "mean_training_loss": 0.008632866756402348
+    },
+    "Round 48": {
+        "Accuracy/Testing Accuracy": 0.7831168831168831,
+        "Loss/Testing Loss": 0.8627689652628713,
+        "mean_training_loss": 0.006000657621035843
+    },
+    "Round 49": {
+        "Accuracy/Testing Accuracy": 0.7779220779220779,
+        "Loss/Testing Loss": 0.8401349868093219,
+        "mean_training_loss": 0.002979050320573151
+    },
+    "Round 50": {
+        "Accuracy/Testing Accuracy": 0.7805194805194805,
+        "Loss/Testing Loss": 0.856010276466221,
+        "mean_training_loss": 0.09167435445751135
+    },
+    "Round 51": {
+        "Accuracy/Testing Accuracy": 0.7597402597402597,
+        "Loss/Testing Loss": 0.9356672571851061,
+        "mean_training_loss": 0.0048776692784342325
+    },
+    "Round 52": {
+        "Accuracy/Testing Accuracy": 0.7714285714285715,
+        "Loss/Testing Loss": 0.9002316298422876,
+        "mean_training_loss": 0.005150539116737874
+    },
+    "Round 53": {
+        "Accuracy/Testing Accuracy": 0.7753246753246753,
+        "Loss/Testing Loss": 0.8663583325101184,
+        "mean_training_loss": 0.004454243922066925
+    },
+    "Round 54": {
+        "Accuracy/Testing Accuracy": 0.7714285714285715,
+        "Loss/Testing Loss": 0.9820273626934398,
+        "mean_training_loss": 0.03993776226048602
+    },
+    "Round 55": {
+        "Accuracy/Testing Accuracy": 0.7649350649350649,
+        "Loss/Testing Loss": 0.9232236811092922,
+        "mean_training_loss": 0.007768268006232877
+    },
+    "Round 56": {
+        "Accuracy/Testing Accuracy": 0.7480519480519481,
+        "Loss/Testing Loss": 1.0908001698456802,
+        "mean_training_loss": 0.17600235089806743
+    },
+    "Round 57": {
+        "Accuracy/Testing Accuracy": 0.7181818181818181,
+        "Loss/Testing Loss": 1.0912837043985144,
+        "mean_training_loss": 0.04724138269789124
+    },
+    "Round 58": {
+        "Accuracy/Testing Accuracy": 0.7506493506493507,
+        "Loss/Testing Loss": 1.0478306791999124,
+        "mean_training_loss": 0.20629490619668595
+    },
+    "Round 59": {
+        "Accuracy/Testing Accuracy": 0.7467532467532467,
+        "Loss/Testing Loss": 0.9686947390630648,
+        "mean_training_loss": 0.016649414337455083
+    },
+    "Round 60": {
+        "Accuracy/Testing Accuracy": 0.7506493506493507,
+        "Loss/Testing Loss": 0.996160618670575,
+        "mean_training_loss": 0.09117771029276282
+    },
+    "Round 61": {
+        "Accuracy/Testing Accuracy": 0.7337662337662337,
+        "Loss/Testing Loss": 1.0542098794664656,
+        "mean_training_loss": 0.13373288451693952
+    },
+    "Round 62": {
+        "Accuracy/Testing Accuracy": 0.7337662337662337,
+        "Loss/Testing Loss": 1.1447318151399686,
+        "mean_training_loss": 0.03655602081607168
+    },
+    "Round 63": {
+        "Accuracy/Testing Accuracy": 0.6948051948051948,
+        "Loss/Testing Loss": 1.3008100407464163,
+        "mean_training_loss": 0.06203145632663598
+    },
+    "Round 64": {
+        "Accuracy/Testing Accuracy": 0.7142857142857143,
+        "Loss/Testing Loss": 1.2220307439952702,
+        "mean_training_loss": 0.26699285166043984
+    },
+    "Round 65": {
+        "Accuracy/Testing Accuracy": 0.7402597402597403,
+        "Loss/Testing Loss": 1.031967230276628,
+        "mean_training_loss": 0.00953252377997463
+    },
+    "Round 66": {
+        "Accuracy/Testing Accuracy": 0.7545454545454545,
+        "Loss/Testing Loss": 1.0120691801046395,
+        "mean_training_loss": 0.1116493118640322
+    },
+    "Round 67": {
+        "Accuracy/Testing Accuracy": 0.7415584415584415,
+        "Loss/Testing Loss": 1.02976414429677,
+        "mean_training_loss": 0.05336005522224765
+    },
+    "Round 68": {
+        "Accuracy/Testing Accuracy": 0.7545454545454545,
+        "Loss/Testing Loss": 1.0105524149808016,
+        "mean_training_loss": 0.09736872228156579
+    },
+    "Round 69": {
+        "Accuracy/Testing Accuracy": 0.7662337662337663,
+        "Loss/Testing Loss": 0.9127626871133779,
+        "mean_training_loss": 0.016490068759671166
+    },
+    "Round 70": {
+        "Accuracy/Testing Accuracy": 0.7649350649350649,
+        "Loss/Testing Loss": 0.9172221307630662,
+        "mean_training_loss": 0.01533443114083064
+    },
+    "Round 71": {
+        "Accuracy/Testing Accuracy": 0.7584415584415585,
+        "Loss/Testing Loss": 0.9940452297012528,
+        "mean_training_loss": 0.007182736473623663
+    },
+    "Round 72": {
+        "Accuracy/Testing Accuracy": 0.7623376623376623,
+        "Loss/Testing Loss": 0.9571938384662975,
+        "mean_training_loss": 0.007197450236172268
+    },
+    "Round 73": {
+        "Accuracy/Testing Accuracy": 0.7662337662337663,
+        "Loss/Testing Loss": 0.9767344620320704,
+        "mean_training_loss": 0.015359606624294359
+    },
+    "Round 74": {
+        "Accuracy/Testing Accuracy": 0.7493506493506493,
+        "Loss/Testing Loss": 1.041332197189331,
+        "mean_training_loss": 0.05898300086050049
+    },
+    "Round 75": {
+        "Accuracy/Testing Accuracy": 0.7727272727272727,
+        "Loss/Testing Loss": 0.9380763233482063,
+        "mean_training_loss": 0.033745840550937614
+    },
+    "Round 76": {
+        "Accuracy/Testing Accuracy": 0.7766233766233767,
+        "Loss/Testing Loss": 0.9131050647079171,
+        "mean_training_loss": 0.0016163565379639084
+    },
+    "Round 77": {
+        "Accuracy/Testing Accuracy": 0.7935064935064935,
+        "Loss/Testing Loss": 0.886297894762708,
+        "mean_training_loss": 0.03509224591605169
+    },
+    "Round 78": {
+        "Accuracy/Testing Accuracy": 0.7623376623376623,
+        "Loss/Testing Loss": 1.0017465961443914,
+        "mean_training_loss": 0.027582881099691516
+    },
+    "Round 79": {
+        "Accuracy/Testing Accuracy": 0.7701298701298701,
+        "Loss/Testing Loss": 0.9624504970265674,
+        "mean_training_loss": 0.010894432037725653
+    },
+    "Round 80": {
+        "Accuracy/Testing Accuracy": 0.7766233766233767,
+        "Loss/Testing Loss": 0.9342107655166032,
+        "mean_training_loss": 0.0034964292187635833
+    },
+    "Round 81": {
+        "Accuracy/Testing Accuracy": 0.7688311688311689,
+        "Loss/Testing Loss": 0.9713169967973387,
+        "mean_training_loss": 0.0027881929427262787
+    },
+    "Round 82": {
+        "Accuracy/Testing Accuracy": 0.7636363636363637,
+        "Loss/Testing Loss": 0.9844714093517948,
+        "mean_training_loss": 0.12481234849935086
+    },
+    "Round 83": {
+        "Accuracy/Testing Accuracy": 0.7740259740259741,
+        "Loss/Testing Loss": 0.9629866776528296,
+        "mean_training_loss": 0.0025574756326693063
+    },
+    "Round 84": {
+        "Accuracy/Testing Accuracy": 0.7740259740259741,
+        "Loss/Testing Loss": 1.0077829111706127,
+        "mean_training_loss": 0.001282724603758349
+    },
+    "Round 85": {
+        "Accuracy/Testing Accuracy": 0.7519480519480519,
+        "Loss/Testing Loss": 1.0475641154623652,
+        "mean_training_loss": 0.009075782826709513
+    },
+    "Round 86": {
+        "Accuracy/Testing Accuracy": 0.7493506493506493,
+        "Loss/Testing Loss": 1.127873556335251,
+        "mean_training_loss": 0.01547486806431642
+    },
+    "Round 87": {
+        "Accuracy/Testing Accuracy": 0.7610389610389611,
+        "Loss/Testing Loss": 1.041425801871659,
+        "mean_training_loss": 0.0031586983676166525
+    },
+    "Round 88": {
+        "Accuracy/Testing Accuracy": 0.7688311688311689,
+        "Loss/Testing Loss": 1.046357317713948,
+        "mean_training_loss": 0.0031408463077815738
+    },
+    "Round 89": {
+        "Accuracy/Testing Accuracy": 0.7415584415584415,
+        "Loss/Testing Loss": 1.1069464623153984,
+        "mean_training_loss": 0.014664831177259868
+    },
+    "Round 90": {
+        "Accuracy/Testing Accuracy": 0.7389610389610389,
+        "Loss/Testing Loss": 1.0863584667057187,
+        "mean_training_loss": 0.012917786821919052
+    },
+    "Round 91": {
+        "Accuracy/Testing Accuracy": 0.7506493506493507,
+        "Loss/Testing Loss": 1.0889518078271445,
+        "mean_training_loss": 0.004129731915115069
+    },
+    "Round 92": {
+        "Accuracy/Testing Accuracy": 0.7506493506493507,
+        "Loss/Testing Loss": 1.1633374604311857,
+        "mean_training_loss": 0.1716131561239691
+    },
+    "Round 93": {
+        "Accuracy/Testing Accuracy": 0.7636363636363637,
+        "Loss/Testing Loss": 1.0470203065252923,
+        "mean_training_loss": 0.6143914818127926
+    },
+    "Round 94": {
+        "Accuracy/Testing Accuracy": 0.7506493506493507,
+        "Loss/Testing Loss": 1.0343582057333611,
+        "mean_training_loss": 0.09174334593975034
+    },
+    "Round 95": {
+        "Accuracy/Testing Accuracy": 0.7545454545454545,
+        "Loss/Testing Loss": 1.0576153606563419,
+        "mean_training_loss": 0.030605962857800095
+    },
+    "Round 96": {
+        "Accuracy/Testing Accuracy": 0.7753246753246753,
+        "Loss/Testing Loss": 0.9730871852342184,
+        "mean_training_loss": 0.006570793466212659
+    },
+    "Round 97": {
+        "Accuracy/Testing Accuracy": 0.7506493506493507,
+        "Loss/Testing Loss": 0.9555596943025465,
+        "mean_training_loss": 0.006098579796717355
+    },
+    "Round 98": {
+        "Accuracy/Testing Accuracy": 0.7727272727272727,
+        "Loss/Testing Loss": 0.9814764067724153,
+        "mean_training_loss": 0.014994021927794584
+    },
+    "Round 99": {
+        "Accuracy/Testing Accuracy": 0.7727272727272727,
+        "Loss/Testing Loss": 0.9469357177808687,
+        "mean_training_loss": 0.003056269310278973
+    },
+    "Round 100": {
+        "Accuracy/Testing Accuracy": 0.7675324675324675,
+        "Loss/Testing Loss": 0.9372905350350714,
+        "mean_training_loss": 0.0035954519260772747
+    },
+    "Round 101": {
+        "Accuracy/Testing Accuracy": 0.7532467532467533,
+        "Loss/Testing Loss": 0.9906274297020652,
+        "mean_training_loss": 0.0073302730746371185
+    },
+    "Round 102": {
+        "Accuracy/Testing Accuracy": 0.7506493506493507,
+        "Loss/Testing Loss": 1.0270703277030548,
+        "mean_training_loss": 0.006031362192991834
+    },
+    "Round 103": {
+        "Accuracy/Testing Accuracy": 0.7519480519480519,
+        "Loss/Testing Loss": 1.103506798558421,
+        "mean_training_loss": 0.021686826936753563
+    },
+    "Round 104": {
+        "Accuracy/Testing Accuracy": 0.7571428571428571,
+        "Loss/Testing Loss": 1.0564017117797555,
+        "mean_training_loss": 0.04834056611244495
+    },
+    "Round 105": {
+        "Accuracy/Testing Accuracy": 0.7649350649350649,
+        "Loss/Testing Loss": 0.9784439579232946,
+        "mean_training_loss": 0.002722370100060576
+    },
+    "Round 106": {
+        "Accuracy/Testing Accuracy": 0.7714285714285715,
+        "Loss/Testing Loss": 0.9754253644447822,
+        "mean_training_loss": 0.006438943292749556
+    },
+    "Round 107": {
+        "Accuracy/Testing Accuracy": 0.7701298701298701,
+        "Loss/Testing Loss": 0.9622790551804877,
+        "mean_training_loss": 0.004320515199613414
+    },
+    "Round 108": {
+        "Accuracy/Testing Accuracy": 0.7766233766233767,
+        "Loss/Testing Loss": 0.9365005081350153,
+        "mean_training_loss": 0.002625939131738912
+    },
+    "Round 109": {
+        "Accuracy/Testing Accuracy": 0.7792207792207793,
+        "Loss/Testing Loss": 0.9228842421011492,
+        "mean_training_loss": 0.003580112448329792
+    },
+    "Round 110": {
+        "Accuracy/Testing Accuracy": 0.7792207792207793,
+        "Loss/Testing Loss": 0.915631686557423,
+        "mean_training_loss": 0.001411606587690154
+    },
+    "Round 111": {
+        "Accuracy/Testing Accuracy": 0.7792207792207793,
+        "Loss/Testing Loss": 0.925289215360369,
+        "mean_training_loss": 0.0011633796363113152
+    },
+    "Round 112": {
+        "Accuracy/Testing Accuracy": 0.7467532467532467,
+        "Loss/Testing Loss": 0.9958596176915354,
+        "mean_training_loss": 0.004898860611291112
+    },
+    "Round 113": {
+        "Accuracy/Testing Accuracy": 0.7792207792207793,
+        "Loss/Testing Loss": 0.9852086194149859,
+        "mean_training_loss": 0.004079947900474788
+    },
+    "Round 114": {
+        "Accuracy/Testing Accuracy": 0.7623376623376623,
+        "Loss/Testing Loss": 0.9912838545712558,
+        "mean_training_loss": 0.008004713310296402
+    },
+    "Round 115": {
+        "Accuracy/Testing Accuracy": 0.7623376623376623,
+        "Loss/Testing Loss": 1.0269105776563867,
+        "mean_training_loss": 0.00892528841198471
+    },
+    "Round 116": {
+        "Accuracy/Testing Accuracy": 0.7779220779220779,
+        "Loss/Testing Loss": 1.006606336692711,
+        "mean_training_loss": 0.001514740062702913
+    },
+    "Round 117": {
+        "Accuracy/Testing Accuracy": 0.7441558441558441,
+        "Loss/Testing Loss": 1.1279023130218704,
+        "mean_training_loss": 0.01294014612457862
+    },
+    "Round 118": {
+        "Accuracy/Testing Accuracy": 0.7480519480519481,
+        "Loss/Testing Loss": 1.0825801264155994,
+        "mean_training_loss": 0.009733849401144606
+    },
+    "Round 119": {
+        "Accuracy/Testing Accuracy": 0.7610389610389611,
+        "Loss/Testing Loss": 1.0512983764920916,
+        "mean_training_loss": 0.022128176752728625
+    },
+    "Round 120": {
+        "Accuracy/Testing Accuracy": 0.7077922077922078,
+        "Loss/Testing Loss": 1.2429324475201693,
+        "mean_training_loss": 0.2255709327463257
+    },
+    "Round 121": {
+        "Accuracy/Testing Accuracy": 0.7181818181818181,
+        "Loss/Testing Loss": 1.253028189052235,
+        "mean_training_loss": 0.01295087136156661
+    },
+    "Round 122": {
+        "Accuracy/Testing Accuracy": 0.7519480519480519,
+        "Loss/Testing Loss": 1.059005769197043,
+        "mean_training_loss": 0.1390548843939446
+    },
+    "Round 123": {
+        "Accuracy/Testing Accuracy": 0.7701298701298701,
+        "Loss/Testing Loss": 0.9954543845994132,
+        "mean_training_loss": 0.023904258861990747
+    },
+    "Round 124": {
+        "Accuracy/Testing Accuracy": 0.7753246753246753,
+        "Loss/Testing Loss": 0.9476548594313783,
+        "mean_training_loss": 0.0031185705937739265
+    },
+    "Round 125": {
+        "Accuracy/Testing Accuracy": 0.7571428571428571,
+        "Loss/Testing Loss": 1.0197151072613604,
+        "mean_training_loss": 0.0037342130587113874
+    },
+    "Round 126": {
+        "Accuracy/Testing Accuracy": 0.7649350649350649,
+        "Loss/Testing Loss": 1.0031099142966333,
+        "mean_training_loss": 0.0020598998893738576
+    },
+    "Round 127": {
+        "Accuracy/Testing Accuracy": 0.7662337662337663,
+        "Loss/Testing Loss": 1.003563326364988,
+        "mean_training_loss": 0.0024073549123529935
+    },
+    "Round 128": {
+        "Accuracy/Testing Accuracy": 0.7545454545454545,
+        "Loss/Testing Loss": 1.0394870962415423,
+        "mean_training_loss": 0.005408600127128394
+    },
+    "Round 129": {
+        "Accuracy/Testing Accuracy": 0.7688311688311689,
+        "Loss/Testing Loss": 1.0333524151281877,
+        "mean_training_loss": 0.0020530032965134044
+    },
+    "Round 130": {
+        "Accuracy/Testing Accuracy": 0.712987012987013,
+        "Loss/Testing Loss": 1.2459031040018256,
+        "mean_training_loss": 0.16782043920441841
+    },
+    "Round 131": {
+        "Accuracy/Testing Accuracy": 0.7571428571428571,
+        "Loss/Testing Loss": 1.016289009521534,
+        "mean_training_loss": 0.13297107334885944
+    },
+    "Round 132": {
+        "Accuracy/Testing Accuracy": 0.7389610389610389,
+        "Loss/Testing Loss": 1.083229365286889,
+        "mean_training_loss": 0.288101748921998
+    },
+    "Round 133": {
+        "Accuracy/Testing Accuracy": 0.7402597402597403,
+        "Loss/Testing Loss": 1.0450111381419294,
+        "mean_training_loss": 0.0181695204742841
+    },
+    "Round 134": {
+        "Accuracy/Testing Accuracy": 0.7467532467532467,
+        "Loss/Testing Loss": 1.0936154836184018,
+        "mean_training_loss": 0.006660810394800808
+    },
+    "Round 135": {
+        "Accuracy/Testing Accuracy": 0.7558441558441559,
+        "Loss/Testing Loss": 1.0367036469571003,
+        "mean_training_loss": 0.002466204897679675
+    },
+    "Round 136": {
+        "Accuracy/Testing Accuracy": 0.7558441558441559,
+        "Loss/Testing Loss": 1.0344014675586255,
+        "mean_training_loss": 0.0037210934701411486
+    },
+    "Round 137": {
+        "Accuracy/Testing Accuracy": 0.7571428571428571,
+        "Loss/Testing Loss": 1.0335649753545786,
+        "mean_training_loss": 0.0013015090707295504
+    },
+    "Round 138": {
+        "Accuracy/Testing Accuracy": 0.7493506493506493,
+        "Loss/Testing Loss": 1.0138855655471999,
+        "mean_training_loss": 0.0009644368369033776
+    },
+    "Round 139": {
+        "Accuracy/Testing Accuracy": 0.7493506493506493,
+        "Loss/Testing Loss": 1.0223303002196473,
+        "mean_training_loss": 0.001556057886381705
+    },
+    "Round 140": {
+        "Accuracy/Testing Accuracy": 0.7623376623376623,
+        "Loss/Testing Loss": 1.0201427425657,
+        "mean_training_loss": 0.007948144751993057
+    },
+    "Round 141": {
+        "Accuracy/Testing Accuracy": 0.7662337662337663,
+        "Loss/Testing Loss": 1.0007509792005862,
+        "mean_training_loss": 0.004375145025775195
+    },
+    "Round 142": {
+        "Accuracy/Testing Accuracy": 0.7649350649350649,
+        "Loss/Testing Loss": 0.9919932009337784,
+        "mean_training_loss": 0.00625711671585266
+    },
+    "Round 143": {
+        "Accuracy/Testing Accuracy": 0.7766233766233767,
+        "Loss/Testing Loss": 0.967698159465542,
+        "mean_training_loss": 0.0038278328297708776
+    },
+    "Round 144": {
+        "Accuracy/Testing Accuracy": 0.7324675324675325,
+        "Loss/Testing Loss": 1.1667508890102436,
+        "mean_training_loss": 0.02690541469133817
+    },
+    "Round 145": {
+        "Accuracy/Testing Accuracy": 0.7636363636363637,
+        "Loss/Testing Loss": 1.0476181649542473,
+        "mean_training_loss": 0.1208401775918901
+    },
+    "Round 146": {
+        "Accuracy/Testing Accuracy": 0.7012987012987013,
+        "Loss/Testing Loss": 1.374363723048916,
+        "mean_training_loss": 0.04401695814571882
+    },
+    "Round 147": {
+        "Accuracy/Testing Accuracy": 0.7311688311688311,
+        "Loss/Testing Loss": 1.129240462996743,
+        "mean_training_loss": 0.01455560136145275
+    },
+    "Round 148": {
+        "Accuracy/Testing Accuracy": 0.7454545454545455,
+        "Loss/Testing Loss": 1.0635084926307976,
+        "mean_training_loss": 0.0032167106857645864
+    },
+    "Round 149": {
+        "Accuracy/Testing Accuracy": 0.7519480519480519,
+        "Loss/Testing Loss": 0.998821599142892,
+        "mean_training_loss": 0.0019505177924752626
+    },
+    "Round 150": {
+        "Accuracy/Testing Accuracy": 0.7207792207792207,
+        "Loss/Testing Loss": 1.2588888939324911,
+        "mean_training_loss": 0.018702261399869854
+    },
+    "Round 151": {
+        "Accuracy/Testing Accuracy": 0.7532467532467533,
+        "Loss/Testing Loss": 1.068076230333997,
+        "mean_training_loss": 0.0023007734727938304
+    },
+    "Round 152": {
+        "Accuracy/Testing Accuracy": 0.7584415584415585,
+        "Loss/Testing Loss": 1.016368321938948,
+        "mean_training_loss": 0.0013931596314681596
+    },
+    "Round 153": {
+        "Accuracy/Testing Accuracy": 0.7662337662337663,
+        "Loss/Testing Loss": 1.0190454722998978,
+        "mean_training_loss": 0.001830864131548687
+    },
+    "Round 154": {
+        "Accuracy/Testing Accuracy": 0.7649350649350649,
+        "Loss/Testing Loss": 0.9997075412180516,
+        "mean_training_loss": 0.01611858991135915
+    },
+    "Round 155": {
+        "Accuracy/Testing Accuracy": 0.7324675324675325,
+        "Loss/Testing Loss": 1.1578315110949726,
+        "mean_training_loss": 0.1892945756546956
+    },
+    "Round 156": {
+        "Accuracy/Testing Accuracy": 0.7220779220779221,
+        "Loss/Testing Loss": 1.2310416652010632,
+        "mean_training_loss": 0.1384011298221977
+    },
+    "Round 157": {
+        "Accuracy/Testing Accuracy": 0.7051948051948052,
+        "Loss/Testing Loss": 1.3876818176987884,
+        "mean_training_loss": 0.05693039851949403
+    },
+    "Round 158": {
+        "Accuracy/Testing Accuracy": 0.7467532467532467,
+        "Loss/Testing Loss": 1.0876614898830266,
+        "mean_training_loss": 0.0038188829579247304
+    },
+    "Round 159": {
+        "Accuracy/Testing Accuracy": 0.7194805194805195,
+        "Loss/Testing Loss": 1.2590918770084134,
+        "mean_training_loss": 0.08619597545383792
+    },
+    "Round 160": {
+        "Accuracy/Testing Accuracy": 0.7558441558441559,
+        "Loss/Testing Loss": 1.0207987816302808,
+        "mean_training_loss": 0.01051222620850527
+    },
+    "Round 161": {
+        "Accuracy/Testing Accuracy": 0.7649350649350649,
+        "Loss/Testing Loss": 0.9607746972666158,
+        "mean_training_loss": 0.0011976470360353304
+    },
+    "Round 162": {
+        "Accuracy/Testing Accuracy": 0.7584415584415585,
+        "Loss/Testing Loss": 1.0225609962042277,
+        "mean_training_loss": 0.002682544901280811
+    },
+    "Round 163": {
+        "Accuracy/Testing Accuracy": 0.7584415584415585,
+        "Loss/Testing Loss": 0.9898495489900763,
+        "mean_training_loss": 0.006001057487446814
+    },
+    "Round 164": {
+        "Accuracy/Testing Accuracy": 0.7714285714285715,
+        "Loss/Testing Loss": 0.9645590718690451,
+        "mean_training_loss": 0.0515783402636701
+    },
+    "Round 165": {
+        "Accuracy/Testing Accuracy": 0.7649350649350649,
+        "Loss/Testing Loss": 1.0232621598553349,
+        "mean_training_loss": 0.0007485784261147134
+    },
+    "Round 166": {
+        "Accuracy/Testing Accuracy": 0.7311688311688311,
+        "Loss/Testing Loss": 1.1752058471952165,
+        "mean_training_loss": 0.10770176688307209
+    },
+    "Round 167": {
+        "Accuracy/Testing Accuracy": 0.7090909090909091,
+        "Loss/Testing Loss": 1.370480532770033,
+        "mean_training_loss": 0.08554852242630563
+    },
+    "Round 168": {
+        "Accuracy/Testing Accuracy": 0.7532467532467533,
+        "Loss/Testing Loss": 1.0463604434744105,
+        "mean_training_loss": 0.0034989202774963098
+    },
+    "Round 169": {
+        "Accuracy/Testing Accuracy": 0.7454545454545455,
+        "Loss/Testing Loss": 1.1187427743688807,
+        "mean_training_loss": 0.0058243471994309836
+    },
+    "Round 170": {
+        "Accuracy/Testing Accuracy": 0.7532467532467533,
+        "Loss/Testing Loss": 1.0949344916777177,
+        "mean_training_loss": 0.0677099372415493
+    },
+    "Round 171": {
+        "Accuracy/Testing Accuracy": 0.7259740259740259,
+        "Loss/Testing Loss": 1.2778170557765218,
+        "mean_training_loss": 0.01707126946972781
+    },
+    "Round 172": {
+        "Accuracy/Testing Accuracy": 0.7467532467532467,
+        "Loss/Testing Loss": 1.1221311742609197,
+        "mean_training_loss": 0.00852920582498579
+    },
+    "Round 173": {
+        "Accuracy/Testing Accuracy": 0.7493506493506493,
+        "Loss/Testing Loss": 1.0751288438772226,
+        "mean_training_loss": 0.007816559746616374
+    },
+    "Round 174": {
+        "Accuracy/Testing Accuracy": 0.7597402597402597,
+        "Loss/Testing Loss": 1.0265651315837712,
+        "mean_training_loss": 0.007978279364760966
+    },
+    "Round 175": {
+        "Accuracy/Testing Accuracy": 0.7623376623376623,
+        "Loss/Testing Loss": 1.0090424568622143,
+        "mean_training_loss": 0.05371120015257284
+    },
+    "Round 176": {
+        "Accuracy/Testing Accuracy": 0.7584415584415585,
+        "Loss/Testing Loss": 0.9877696554382126,
+        "mean_training_loss": 0.0024762932977050933
+    },
+    "Round 177": {
+        "Accuracy/Testing Accuracy": 0.7662337662337663,
+        "Loss/Testing Loss": 1.0074965106976497,
+        "mean_training_loss": 0.0023043455758230075
+    },
+    "Round 178": {
+        "Accuracy/Testing Accuracy": 0.7493506493506493,
+        "Loss/Testing Loss": 1.0261809729910516,
+        "mean_training_loss": 0.0038549813705398457
+    },
+    "Round 179": {
+        "Accuracy/Testing Accuracy": 0.7636363636363637,
+        "Loss/Testing Loss": 1.0632518833333795,
+        "mean_training_loss": 0.0017744664942208482
+    },
+    "Round 180": {
+        "Accuracy/Testing Accuracy": 0.7636363636363637,
+        "Loss/Testing Loss": 1.0510950388846458,
+        "mean_training_loss": 0.0008554707827547996
+    },
+    "Round 181": {
+        "Accuracy/Testing Accuracy": 0.7259740259740259,
+        "Loss/Testing Loss": 1.2231015227057718,
+        "mean_training_loss": 0.05276588521481149
+    },
+    "Round 182": {
+        "Accuracy/Testing Accuracy": 0.7480519480519481,
+        "Loss/Testing Loss": 1.0401514257703508,
+        "mean_training_loss": 0.001951529214305705
+    },
+    "Round 183": {
+        "Accuracy/Testing Accuracy": 0.7636363636363637,
+        "Loss/Testing Loss": 1.0569736081284362,
+        "mean_training_loss": 0.0012224061293588755
+    },
+    "Round 184": {
+        "Accuracy/Testing Accuracy": 0.7402597402597403,
+        "Loss/Testing Loss": 1.0429240709775454,
+        "mean_training_loss": 0.008233454466282732
+    },
+    "Round 185": {
+        "Accuracy/Testing Accuracy": 0.7389610389610389,
+        "Loss/Testing Loss": 1.1316320688693555,
+        "mean_training_loss": 0.08050430269482044
+    },
+    "Round 186": {
+        "Accuracy/Testing Accuracy": 0.7545454545454545,
+        "Loss/Testing Loss": 1.0519848979912796,
+        "mean_training_loss": 0.0065313037000841595
+    },
+    "Round 187": {
+        "Accuracy/Testing Accuracy": 0.7753246753246753,
+        "Loss/Testing Loss": 1.0303375126479508,
+        "mean_training_loss": 0.0014194177714862714
+    },
+    "Round 188": {
+        "Accuracy/Testing Accuracy": 0.7714285714285715,
+        "Loss/Testing Loss": 1.053437116858247,
+        "mean_training_loss": 0.004292007809884748
+    },
+    "Round 189": {
+        "Accuracy/Testing Accuracy": 0.7337662337662337,
+        "Loss/Testing Loss": 1.158237554810264,
+        "mean_training_loss": 0.004371554609119462
+    },
+    "Round 190": {
+        "Accuracy/Testing Accuracy": 0.7571428571428571,
+        "Loss/Testing Loss": 1.0749150259154183,
+        "mean_training_loss": 0.00605350460514034
+    },
+    "Round 191": {
+        "Accuracy/Testing Accuracy": 0.7207792207792207,
+        "Loss/Testing Loss": 1.3001673506451892,
+        "mean_training_loss": 0.013489892925523841
+    },
+    "Round 192": {
+        "Accuracy/Testing Accuracy": 0.7298701298701299,
+        "Loss/Testing Loss": 1.1269415242331369,
+        "mean_training_loss": 0.019368765505618953
+    },
+    "Round 193": {
+        "Accuracy/Testing Accuracy": 0.7571428571428571,
+        "Loss/Testing Loss": 1.0920979103484711,
+        "mean_training_loss": 0.0022471552013149975
+    },
+    "Round 194": {
+        "Accuracy/Testing Accuracy": 0.7571428571428571,
+        "Loss/Testing Loss": 1.0930895676860561,
+        "mean_training_loss": 0.0028113064671812862
+    },
+    "Round 195": {
+        "Accuracy/Testing Accuracy": 0.7558441558441559,
+        "Loss/Testing Loss": 1.0719528904208888,
+        "mean_training_loss": 0.002910036713767209
+    },
+    "Round 196": {
+        "Accuracy/Testing Accuracy": 0.7493506493506493,
+        "Loss/Testing Loss": 1.1403340711222067,
+        "mean_training_loss": 0.007577928381775003
+    },
+    "Round 197": {
+        "Accuracy/Testing Accuracy": 0.7467532467532467,
+        "Loss/Testing Loss": 1.1163167101996285,
+        "mean_training_loss": 0.0009640652067518156
+    },
+    "Round 198": {
+        "Accuracy/Testing Accuracy": 0.7584415584415585,
+        "Loss/Testing Loss": 1.0997638086219887,
+        "mean_training_loss": 0.0010958644252049884
+    },
+    "Round 199": {
+        "Accuracy/Testing Accuracy": 0.7441558441558441,
+        "Loss/Testing Loss": 1.122194461079387,
+        "mean_training_loss": 0.0014825537506687014
+    },
+    "Round 200": {
+        "Accuracy/Testing Accuracy": 0.7454545454545455,
+        "Loss/Testing Loss": 1.160842944120432,
+        "mean_training_loss": 0.0007096744071951925
+    }
+}

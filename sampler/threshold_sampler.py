@@ -41,20 +41,44 @@ class Sampler(_BaseSampler):
             selected_idx = np.array(list_idx)
         return selected_idx
     
+
+
+    def sample_lower_using_cached(self,cached_score,threshold):
+        list_idx = range(len(cached_score))
+        selected_idx = np.array(list_idx)[np.where(
+                    np.array(cached_score) <= threshold)]
+        return selected_idx
+    
+    
     def set_threshold(self, threshold):
         self.threshold = threshold
     
     def set_ratio(self,ratio):
         self.sampler_config["ratio"] = ratio
-        
-    def cal_threshold(self, histogram,):
-        # breakpoint()
+
+    def cal_upper_threshold(self, histogram,):
         list_n_ , value_list = histogram
         total_samples = sum(list_n_)
         thresh_list = value_list[:-1]
         
         thresh_to_keep = int(self.sampler_config["ratio"] * total_samples)
         check_ = 0
+        # list_n_increase = 
+        for i, val in enumerate(list_n_):
+            check_ += val
+            if check_ >= thresh_to_keep:
+                thresh_value = thresh_list[i]
+                break
+        return thresh_value
+
+    def cal_threshold(self, histogram,):
+        list_n_ , value_list = histogram
+        total_samples = sum(list_n_)
+        thresh_list = value_list[:-1]
+        
+        thresh_to_keep = int(self.sampler_config["ratio"] * total_samples)
+        check_ = 0
+        # list_n_increase = 
         for i, val in enumerate(list_n_[::-1]):
             check_ += val
             if check_ >= thresh_to_keep:

@@ -25,6 +25,7 @@ class Server(BasicServer):
             self.threshold_score = 0
         received_information = self.communicate(self.selected_clients)
         n_samples = received_information["n_samples"]
+        utils.fmodule.LOG_DICT["selected_samples"] = n_samples
         print("Number samples of this round: ",n_samples)
         models = received_information["model"]
         list_vols = copy.deepcopy(self.local_data_vols)
@@ -116,7 +117,7 @@ class Server(BasicServer):
         score_list = []
         total_samples = 0
         communicate_clients = list(set(selected_clients))
-        cpkqs = [self.communicate_score_with(id) for id, c in enumerate(self.clients)]
+        cpkqs = [self.communicate_score_with(cid) for id, cid in enumerate(selected_clients)]
         self.received_score = self.unpack_score(cpkqs)
 
     def unpack_score(self, cpkqs):
@@ -136,6 +137,7 @@ class Server(BasicServer):
         for client_id in selected_clinets:
             extra_rate += self.option["noisy_rate_clients"][client_id]
         ratio = self.option["ratio"] - extra_rate * 0.6 / len(selected_clinets)
+        utils.fmodule.LOG_DICT["sampler_rate"] = ratio
         print(f"New ratio to keep {self.option['ratio']} ===> {ratio}")
         utils.fmodule.Sampler.set_ratio(ratio)
         self.calculate_importance(selected_clinets)
@@ -163,9 +165,9 @@ class Client(BasicClient):
         model = self.unpack_model(svr_pkg)
         self.model = copy.deepcopy(model)
         self.calculate_importance(copy.deepcopy(model))
-        if not "score_list" in utils.fmodule.LOG_DICT.keys():
-            utils.fmodule.LOG_DICT["score_list"] = {}
-        utils.fmodule.LOG_DICT["score_list"][f"client_{self.id}"] = list(self.score_cached)
+        # if not "score_list" in utils.fmodule.LOG_DICT.keys():
+        #     utils.fmodule.LOG_DICT["score_list"] = {}
+        # utils.fmodule.LOG_DICT["score_list"][f"client_{self.id}"] = list(self.score_cached)
         cpkg = self.pack_score(self.score_cached)
 
         return cpkg

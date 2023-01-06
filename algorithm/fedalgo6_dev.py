@@ -10,6 +10,9 @@ from torch.utils.data import DataLoader
 import math
 
 class Server(BasicServer):
+    """
+    Nhu fedalgo1 nhung su dung heuristic tinh h_t
+    """
     def __init__(self, option, model, clients, test_data=None, device="cpu"):
         super(Server, self).__init__(option, model, clients, test_data, device)
         self.sampler = utils.fmodule.Sampler
@@ -25,6 +28,7 @@ class Server(BasicServer):
 
     def f_goodness(self,):
         list_goodness = [self.goodness_cached[i] for i in self.selected_clients]
+        utils.fmodule.LOG_DICT["list_goodness"] = list_goodness
         mean_goodness = sum(list_goodness)/len(list_goodness)
         if mean_goodness == 0 :
             return 0
@@ -48,9 +52,12 @@ class Server(BasicServer):
         # have_c = len([cid for cid in self.selected_clients if cid in self.have_cache])
         f_round = self.f_round()
         f_goodness = self.f_goodness()
-        f_total = 5.0 * f_round + 2.0 * f_goodness
-        extra_ignored_rate = min(f_total, 0.2)
+        utils.fmodule.LOG_DICT["f_round"] = f_round
+        utils.fmodule.LOG_DICT["f_goodness"] = f_goodness
+        f_total = 6.0 * f_round + 0.3 * f_goodness
+        extra_ignored_rate = min(f_total, 0.3)
         sample_ratio = self.option["ratio"] - extra_ignored_rate 
+        utils.fmodule.LOG_DICT["sampler_rate"] = sample_ratio
         utils.fmodule.Sampler.set_ratio(sample_ratio)
         print(f"Update ratio round {self.current_round}: {self.option['ratio']} >>>>  {sample_ratio}")
     
@@ -58,9 +65,8 @@ class Server(BasicServer):
         # breakpoint()
         if aggregated_histogram == None:
             return 0
-        list_n_, interval_histogram = aggregated_histogram
         threshold_value = utils.fmodule.Sampler.cal_threshold(
-            (list_n_, interval_histogram)
+            aggregated_histogram
         )
         return threshold_value
 
@@ -72,11 +78,11 @@ class Server(BasicServer):
         aggregated_histogram = self.communicate_score(self.selected_clients)
         self.aggregated_histogram = aggregated_histogram
         self.modify_ratio()
-        self.threshold = self.cal_threshold(self.aggregated_histogram)
-        
+        self.threshold_score = self.cal_threshold(self.aggregated_histogram)
 
         received_information = self.communicate(self.selected_clients)
         n_samples = received_information["n_samples"]
+        utils.fmodule.LOG_DICT["selected_samples"] = n_samples
         print("Number samples of this round: ",n_samples)
         models = received_information["model"]
         list_vols = copy.deepcopy(self.local_data_vols)
@@ -159,7 +165,7 @@ class Server(BasicServer):
             n_ = list_n_.shape[0]
             new_histogram = list(list_n_) + [0] * (n_bins - n_)
             final_histogram += new_histogram
-        return final_histogram, range(n_bins) * np.array(self.score_range)
+        return final_histogram, range(n_bins + 1) * np.array(self.score_range)
 
 
     def communicate_score_with_client(self, selected_clients):
@@ -232,9 +238,9 @@ class Client(BasicClient):
         self.model = model
         histogram=None
         self.calculate_importance(copy.deepcopy(model))
-        if not "score_list" in utils.fmodule.LOG_DICT.keys():
-            utils.fmodule.LOG_DICT["score_list"] = {}
-        utils.fmodule.LOG_DICT["score_list"][f"client_{self.id}"] = list(self.score_cached)
+        # if not "score_list" in utils.fmodule.LOG_DICT.keys():
+        #     utils.fmodule.LOG_DICT["score_list"] = {}
+        # utils.fmodule.LOG_DICT["score_list"][f"client_{self.id}"] = list(self.score_cached)
         if score_range !=0 :
             histogram = self.build_histogram(self.score_cached, score_range)
         cpkg = self.pack_score(histogram)

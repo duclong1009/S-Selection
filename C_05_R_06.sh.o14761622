@@ -1,0 +1,85 @@
+wandb: Currently logged in as: longnd (aiotlab). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.13.7 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.13.5
+wandb: Run data is saved locally in /home/ace15032jo/Projects/repo2/SampleSelection_easyFL/wandb/run-20230104_211541-3px20dtz
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run fedalgo1_fixed_2_ratio_0.8_C_0.2_
+wandb: ⭐️ View project at https://wandb.ai/aiotlab/Abnormal_Data_FL
+wandb: 🚀 View run at https://wandb.ai/aiotlab/Abnormal_Data_FL/runs/3px20dtz
+2023-01-04 21:15:42,900 fflow.py initialize [line:262] INFO Using Logger in `utils.logger.basic_logger`
+2023-01-04 21:15:42,900 fflow.py initialize [line:263] INFO Initializing fedtask: pill_classification
+2023-01-04 21:15:43,363 fflow.py initialize [line:279] INFO Using model `resnet18` in `benchmark.pill_classification.model.resnet18` as the globally shared model.
+2023-01-04 21:15:43,369 fflow.py initialize [line:307] INFO Using sampler `threshold_sampler` in `sampler.threshold_sampler` as the globally shared model.
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-04 21:15:50,238 fflow.py initialize [line:327] INFO Initializing Clients: 100 clients of `algorithm.fedalgo1_fixed_2.Client` being created.
+2023-01-04 21:15:50,245 fflow.py initialize [line:348] INFO Initializing Server: 1 server of `algorithm.fedalgo1_fixed_2.Server` being created.
+2023-01-04 21:15:50,245 fflow.py initialize [line:361] INFO Ready to start.
+2023-01-04 21:15:50,245 fedbase.py run [line:63] INFO --------------Round 1--------------
+2023-01-04 21:15:54,520 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.0130
+2023-01-04 21:15:54,521 basic_logger.py show_current_output [line:147] INFO test_loss                     4.5173
+2023-01-04 21:15:54,521 basic_logger.py time_end [line:77] INFO Eval Time Cost:               4.2755s
+2023-01-04 21:15:54,528 fedalgo1_fixed_2.py iterate [line:20] INFO Selected clients : [23, 81, 85, 34, 62, 46, 42, 31, 93, 11, 22, 77, 66, 13, 10, 68, 27, 36, 86, 40]
+2023-01-04 21:15:54,530 main.py main [line:27] ERROR Exception Logged
+Traceback (most recent call last):
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/main.py", line 24, in main
+    server.run()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedbase.py", line 76, in run
+    self.iterate()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedalgo1_fixed_2.py", line 21, in iterate
+    threshold_score = self.cal_threshold(self.selected_clients)
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedalgo1_fixed_2.py", line 138, in cal_threshold
+    extra_rate += self.option["noisy_rate_clients"][client_id]
+IndexError: list index out of range
+[0.3, 0.2, 0.2, 0.1, 0.1, 0.1, 0.0, 0.0, 0.0, 0.0]
+[0.3, 0.2, 0.2, 0.1, 0.1, 0.1, 0.0, 0.0, 0.0, 0.0]
+[0.3, 0.2, 0.2, 0.1, 0.1, 0.1, 0.0, 0.0, 0.0, 0.0]
+[0.3, 0.2, 0.2, 0.1, 0.1, 0.1, 0.0, 0.0, 0.0, 0.0]
+[0.3, 0.2, 0.2, 0.1, 0.1, 0.1, 0.0, 0.0, 0.0, 0.0]
+[0.3, 0.2, 0.2, 0.1, 0.1, 0.1, 0.0, 0.0, 0.0, 0.0]
+[0.3, 0.2, 0.2, 0.1, 0.1, 0.1, 0.0, 0.0, 0.0, 0.0]
+[0.3, 0.2, 0.2, 0.1, 0.1, 0.1, 0.0, 0.0, 0.0, 0.0]
+[0.3, 0.2, 0.2, 0.1, 0.1, 0.1, 0.0, 0.0, 0.0, 0.0]
+[0.3, 0.2, 0.2, 0.1, 0.1, 0.1, 0.0, 0.0, 0.0, 0.0]
+[0.3, 0.2, 0.2, 0.1, 0.1, 0.1, 0.0, 0.0, 0.0, 0.0]
+[0.3, 0.2, 0.2, 0.1, 0.1, 0.1, 0.0, 0.0, 0.0, 0.0]
+[0.3, 0.2, 0.2, 0.1, 0.1, 0.1, 0.0, 0.0, 0.0, 0.0]
+[0.3, 0.2, 0.2, 0.1, 0.1, 0.1, 0.0, 0.0, 0.0, 0.0]
+[0.3, 0.2, 0.2, 0.1, 0.1, 0.1, 0.0, 0.0, 0.0, 0.0]
+[0.3, 0.2, 0.2, 0.1, 0.1, 0.1, 0.0, 0.0, 0.0, 0.0]
+[0.3, 0.2, 0.2, 0.1, 0.1, 0.1, 0.0, 0.0, 0.0, 0.0]
+[0.3, 0.2, 0.2, 0.1, 0.1, 0.1, 0.0, 0.0, 0.0, 0.0]
+[0.3, 0.2, 0.2, 0.1, 0.1, 0.1, 0.0, 0.0, 0.0, 0.0]
+[0.3, 0.2, 0.2, 0.1, 0.1, 0.1, 0.0, 0.0, 0.0, 0.0]
+Traceback (most recent call last):
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/main.py", line 24, in main
+    server.run()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedbase.py", line 76, in run
+    self.iterate()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedalgo1_fixed_2.py", line 21, in iterate
+    threshold_score = self.cal_threshold(self.selected_clients)
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedalgo1_fixed_2.py", line 138, in cal_threshold
+    extra_rate += self.option["noisy_rate_clients"][client_id]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/main.py", line 33, in <module>
+    main()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/main.py", line 28, in main
+    raise RuntimeError
+RuntimeError
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: 
+wandb: Run history:
+wandb: Accuracy/Testing Accuracy ▁
+wandb:         Loss/Testing Loss ▁
+wandb: 
+wandb: Run summary:
+wandb: Accuracy/Testing Accuracy 0.01299
+wandb:         Loss/Testing Loss 4.51729
+wandb: 
+wandb: Synced fedalgo1_fixed_2_ratio_0.8_C_0.2_: https://wandb.ai/aiotlab/Abnormal_Data_FL/runs/3px20dtz
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20230104_211541-3px20dtz/logs

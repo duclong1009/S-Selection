@@ -1,0 +1,55 @@
+2023-01-04 19:07:56,280 fflow.py initialize [line:262] INFO Using Logger in `utils.logger.basic_logger`
+2023-01-04 19:07:56,281 fflow.py initialize [line:263] INFO Initializing fedtask: pill_classification
+2023-01-04 19:07:56,671 fflow.py initialize [line:279] INFO Using model `resnet18` in `benchmark.pill_classification.model.resnet18` as the globally shared model.
+2023-01-04 19:07:56,674 fflow.py initialize [line:307] INFO Using sampler `threshold_sampler` in `sampler.threshold_sampler` as the globally shared model.
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-04 19:08:02,531 fflow.py initialize [line:327] INFO Initializing Clients: 10 clients of `algorithm.fedalgo1_fedprox.Client` being created.
+2023-01-04 19:08:02,532 fflow.py initialize [line:348] INFO Initializing Server: 1 server of `algorithm.fedalgo1_fedprox.Server` being created.
+2023-01-04 19:08:02,532 fflow.py initialize [line:361] INFO Ready to start.
+2023-01-04 19:08:02,532 fedbase.py run [line:63] INFO --------------Round 1--------------
+2023-01-04 19:08:06,479 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.0130
+2023-01-04 19:08:06,480 basic_logger.py show_current_output [line:147] INFO test_loss                     4.5173
+2023-01-04 19:08:06,480 basic_logger.py time_end [line:77] INFO Eval Time Cost:               3.9478s
+2023-01-04 19:08:06,489 fedalgo1_fedprox.py iterate [line:20] INFO Selected clients : [1, 2, 7, 3, 5]
+2023-01-04 19:08:06,489 main.py main [line:27] ERROR Exception Logged
+Traceback (most recent call last):
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/main.py", line 24, in main
+    server.run()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedbase.py", line 76, in run
+    self.iterate()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedalgo1_fedprox.py", line 21, in iterate
+    threshold_score = self.cal_threshold(self.selected_clients)
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedalgo1_fedprox.py", line 129, in cal_threshold
+    self.calculate_importance(selected_clinets)
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedalgo1_fedprox.py", line 115, in calculate_importance
+    cpkqs = [self.communicate_score_with(cid) for id, cid in enumerate(selected_clients)]
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedalgo1_fedprox.py", line 115, in <listcomp>
+    cpkqs = [self.communicate_score_with(cid) for id, cid in enumerate(selected_clients)]
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedalgo1_fedprox.py", line 125, in communicate_score_with
+    svr_pkg = self.pack(client_id)
+AttributeError: 'Server' object has no attribute 'pack'
+Traceback (most recent call last):
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/main.py", line 24, in main
+    server.run()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedbase.py", line 76, in run
+    self.iterate()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedalgo1_fedprox.py", line 21, in iterate
+    threshold_score = self.cal_threshold(self.selected_clients)
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedalgo1_fedprox.py", line 129, in cal_threshold
+    self.calculate_importance(selected_clinets)
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedalgo1_fedprox.py", line 115, in calculate_importance
+    cpkqs = [self.communicate_score_with(cid) for id, cid in enumerate(selected_clients)]
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedalgo1_fedprox.py", line 115, in <listcomp>
+    cpkqs = [self.communicate_score_with(cid) for id, cid in enumerate(selected_clients)]
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedalgo1_fedprox.py", line 125, in communicate_score_with
+    svr_pkg = self.pack(client_id)
+AttributeError: 'Server' object has no attribute 'pack'. Did you mean: 'unpack'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/main.py", line 33, in <module>
+    main()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/main.py", line 28, in main
+    raise RuntimeError
+RuntimeError

@@ -14,6 +14,7 @@ class Server(BasicServer):
         super(Server, self).__init__(option, model, clients, test_data, device)
         self.sampler = utils.fmodule.Sampler
         self.init_algo_para({'mu':0.1})
+
     def iterate(self):
         self.selected_clients = self.sample()
         utils.fmodule.LOG_DICT["selectd_client"] = self.selected_clients
@@ -22,8 +23,8 @@ class Server(BasicServer):
         self.threshold_score = threshold_score
         received_information = self.communicate(self.selected_clients)
         n_samples = received_information["n_samples"]
+        utils.fmodule.LOG_DICT["selected_samples"] = n_samples
         models = received_information["model"]
-<<<<<<< HEAD
         print(
             f"Total samples which participate training : {n_samples}/{sum([self.local_data_vols[i] for i in self.selected_clients])} samples"
         )
@@ -32,16 +33,6 @@ class Server(BasicServer):
         for i,cid in enumerate(n_samples):
             vol_list[self.selected_clients[i]] = cid
         self.model = self.aggregate(models,vol_list)
-=======
-        list_vols = copy.deepcopy(self.local_data_vols)
-        for i, cid in enumerate(self.selected_clients):
-            list_vols[cid] = n_samples[i]
-        print(
-            f"Total samples which participate training : {sum(n_samples)} samples"
-        )
-        # aggregate: pk = 1/K as default where K=len(selected_clients)
-        self.model = self.aggregate(models,list_vols)
->>>>>>> origin/dev_algo1
 
     def communicate(self, selected_clients, threshold_score):
         """
@@ -122,7 +113,7 @@ class Server(BasicServer):
         score_list = []
         total_samples = 0
         communicate_clients = list(set(selected_clients))
-        cpkqs = [self.communicate_score_with(id) for id, c in enumerate(self.clients)]
+        cpkqs = [self.communicate_score_with(cid) for id, cid in enumerate(selected_clients)]
         self.received_score = self.unpack_score(cpkqs)
 
     def unpack_score(self, cpkqs):
@@ -132,7 +123,7 @@ class Server(BasicServer):
         return list_
 
     def communicate_score_with(self, client_id):
-        svr_pkg = self.pack(client_id)
+        svr_pkg = self.pack_model(client_id)
         return self.clients[client_id].reply_score(svr_pkg)
 
     def cal_threshold(self, selected_clinets):
@@ -162,9 +153,6 @@ class Client(BasicClient):
         model = self.unpack_model(svr_pkg)
         self.model = copy.deepcopy(model)
         self.calculate_importance(copy.deepcopy(model))
-        if not "score_list" in utils.fmodule.LOG_DICT.keys():
-            utils.fmodule.LOG_DICT["score_list"] = {}
-        utils.fmodule.LOG_DICT["score_list"][f"client_{self.id}"] = list(self.score_cached)
         cpkg = self.pack_score(self.score_cached)
 
         return cpkg

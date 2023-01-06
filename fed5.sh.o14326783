@@ -427,3 +427,17 @@ Traceback (most recent call last):
     raise RuntimeError
 RuntimeError
 wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: 
+wandb: Run history:
+wandb: Accuracy/Testing Accuracy ▁▂▃▄▄▄▅▅▆▆▆▆▇▇▇▆▇▇▇█▇█████████▇███████
+wandb:         Loss/Testing Loss █▇▅▅▄▄▃▄▃▂▃▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:        mean_training_loss ▄▃▂▅▂▃▂▃▂▃▂▂▁▅█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb: Accuracy/Testing Accuracy 0.75455
+wandb:         Loss/Testing Loss 0.83763
+wandb:        mean_training_loss 0.12494
+wandb: 
+wandb: Synced fedalgo5_dev_ratio_1.0_C_0.5_: https://wandb.ai/aiotlab/Abnormal_Data_FL/runs/1qsxclv4
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20230103_172449-1qsxclv4/logs

@@ -17,4 +17,4 @@ source ~/venv/pytorch+horovod/bin/activate
 
 
 # python main.py --session_name "" --group_name "NIID_10client_bias_noisy"  --idx_path Dataset_scenarios/NIID_Biasnoisy_10clients.json --proportion 0.5 --algorithm fedalgo6_dev --score all_gnorm_threshold --ratio 0.9 --noisy_rate_clients 0.3 0.2 0.2 0.1 0.1 0.1 0 0 0 0 --o 1 --u 2.61 
-python main.py --session_name "test_fedprox" --group_name "NIID_10client_bias_noisy"  --idx_path Dataset_scenarios/NIID_Biasnoisy_10clients.json --proportion 0.2 --algorithm fedalgo6_dev_fedprox --score all_gnorm_threshold --ratio 0.9 --noisy_rate_clients 0.3 0.2 0.2 0.1 0.1 0.1 0 0 0 0 --o 1 --u 2.61 --log_wandb
+python main.py --session_name "test_fedprox" --group_name "NIID_10client_bias_noisy"  --idx_path Dataset_scenarios/NIID_Biasnoisy_10clients.json --proportion 0.2 --algorithm fedalgo7 --score all_gnorm_threshold --ratio 0.9 --noisy_rate_clients 0.3 0.2 0.2 0.1 0.1 0.1 0 0 0 0 --o 1 --u 2.61 --log_wandb

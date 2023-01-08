@@ -461,3 +461,6006 @@ Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
 2023-01-06 15:28:13,647 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2740
 2023-01-06 15:28:13,647 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.6429s
 2023-01-06 15:28:13,656 fedbase.py iterate [line:117] INFO Selected clients : [2, 6, 0, 1, 9]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 15:29:43,820 basic_logger.py time_end [line:77] INFO Time Cost:                    95.8157s
+2023-01-06 15:29:43,821 fedbase.py run [line:63] INFO --------------Round 65--------------
+2023-01-06 15:29:48,271 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6961
+2023-01-06 15:29:48,271 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2523
+2023-01-06 15:29:48,272 basic_logger.py time_end [line:77] INFO Eval Time Cost:               4.4504s
+2023-01-06 15:29:48,276 fedbase.py iterate [line:117] INFO Selected clients : [0, 2, 4, 5, 6]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 15:31:17,349 basic_logger.py time_end [line:77] INFO Time Cost:                    93.5279s
+2023-01-06 15:31:17,350 fedbase.py run [line:63] INFO --------------Round 66--------------
+2023-01-06 15:31:23,437 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6896
+2023-01-06 15:31:23,438 basic_logger.py show_current_output [line:147] INFO test_loss                     1.3209
+2023-01-06 15:31:23,438 basic_logger.py time_end [line:77] INFO Eval Time Cost:               6.0885s
+2023-01-06 15:31:23,449 fedbase.py iterate [line:117] INFO Selected clients : [5, 8, 2, 7, 0]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 15:32:53,570 basic_logger.py time_end [line:77] INFO Time Cost:                    96.2204s
+2023-01-06 15:32:53,571 fedbase.py run [line:63] INFO --------------Round 67--------------
+2023-01-06 15:32:58,643 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6948
+2023-01-06 15:32:58,644 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2024
+2023-01-06 15:32:58,645 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.0737s
+2023-01-06 15:32:58,658 fedbase.py iterate [line:117] INFO Selected clients : [5, 8, 4, 7, 6]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 15:34:11,863 basic_logger.py time_end [line:77] INFO Time Cost:                    78.2918s
+2023-01-06 15:34:11,863 fedbase.py run [line:63] INFO --------------Round 68--------------
+2023-01-06 15:34:17,349 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7273
+2023-01-06 15:34:17,349 basic_logger.py show_current_output [line:147] INFO test_loss                     1.0995
+2023-01-06 15:34:17,350 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.4864s
+2023-01-06 15:34:17,362 fedbase.py iterate [line:117] INFO Selected clients : [9, 4, 1, 7, 8]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 15:35:39,541 basic_logger.py time_end [line:77] INFO Time Cost:                    87.6779s
+2023-01-06 15:35:39,542 fedbase.py run [line:63] INFO --------------Round 69--------------
+2023-01-06 15:35:41,701 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7429
+2023-01-06 15:35:41,701 basic_logger.py show_current_output [line:147] INFO test_loss                     0.9754
+2023-01-06 15:35:41,701 basic_logger.py time_end [line:77] INFO Eval Time Cost:               2.1597s
+2023-01-06 15:35:41,702 fedbase.py iterate [line:117] INFO Selected clients : [3, 4, 7, 1, 6]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 15:37:01,361 basic_logger.py time_end [line:77] INFO Time Cost:                    81.8195s
+2023-01-06 15:37:01,362 fedbase.py run [line:63] INFO --------------Round 70--------------
+2023-01-06 15:37:07,060 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7519
+2023-01-06 15:37:07,061 basic_logger.py show_current_output [line:147] INFO test_loss                     0.9380
+2023-01-06 15:37:07,061 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.6990s
+2023-01-06 15:37:07,070 fedbase.py iterate [line:117] INFO Selected clients : [1, 8, 9, 5, 6]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 15:38:21,884 basic_logger.py time_end [line:77] INFO Time Cost:                    80.5224s
+2023-01-06 15:38:21,885 fedbase.py run [line:63] INFO --------------Round 71--------------
+2023-01-06 15:38:24,514 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7506
+2023-01-06 15:38:24,514 basic_logger.py show_current_output [line:147] INFO test_loss                     0.9473
+2023-01-06 15:38:24,514 basic_logger.py time_end [line:77] INFO Eval Time Cost:               2.6295s
+2023-01-06 15:38:24,515 fedbase.py iterate [line:117] INFO Selected clients : [6, 8, 2, 1, 0]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 15:39:48,482 basic_logger.py time_end [line:77] INFO Time Cost:                    86.5974s
+2023-01-06 15:39:48,483 fedbase.py run [line:63] INFO --------------Round 72--------------
+2023-01-06 15:39:54,243 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7104
+2023-01-06 15:39:54,243 basic_logger.py show_current_output [line:147] INFO test_loss                     1.1604
+2023-01-06 15:39:54,243 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.7605s
+2023-01-06 15:39:54,253 fedbase.py iterate [line:117] INFO Selected clients : [1, 4, 9, 0, 5]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 15:41:15,569 basic_logger.py time_end [line:77] INFO Time Cost:                    87.0863s
+2023-01-06 15:41:15,569 fedbase.py run [line:63] INFO --------------Round 73--------------
+2023-01-06 15:41:19,938 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6701
+2023-01-06 15:41:19,938 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2354
+2023-01-06 15:41:19,939 basic_logger.py time_end [line:77] INFO Eval Time Cost:               4.3689s
+2023-01-06 15:41:19,947 fedbase.py iterate [line:117] INFO Selected clients : [2, 5, 4, 6, 8]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 15:42:42,451 basic_logger.py time_end [line:77] INFO Time Cost:                    86.8812s
+2023-01-06 15:42:42,451 fedbase.py run [line:63] INFO --------------Round 74--------------
+2023-01-06 15:42:47,915 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7325
+2023-01-06 15:42:47,916 basic_logger.py show_current_output [line:147] INFO test_loss                     1.0702
+2023-01-06 15:42:47,916 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.4645s
+2023-01-06 15:42:47,928 fedbase.py iterate [line:117] INFO Selected clients : [9, 3, 4, 8, 1]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 15:44:11,691 basic_logger.py time_end [line:77] INFO Time Cost:                    89.2394s
+2023-01-06 15:44:11,691 fedbase.py run [line:63] INFO --------------Round 75--------------
+2023-01-06 15:44:13,880 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7442
+2023-01-06 15:44:13,880 basic_logger.py show_current_output [line:147] INFO test_loss                     1.0066
+2023-01-06 15:44:13,880 basic_logger.py time_end [line:77] INFO Eval Time Cost:               2.1888s
+2023-01-06 15:44:13,881 fedbase.py iterate [line:117] INFO Selected clients : [1, 8, 3, 7, 4]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 15:45:39,013 basic_logger.py time_end [line:77] INFO Time Cost:                    87.3218s
+2023-01-06 15:45:39,014 fedbase.py run [line:63] INFO --------------Round 76--------------
+2023-01-06 15:45:44,907 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7494
+2023-01-06 15:45:44,907 basic_logger.py show_current_output [line:147] INFO test_loss                     0.9871
+2023-01-06 15:45:44,907 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.8934s
+2023-01-06 15:45:44,920 fedbase.py iterate [line:117] INFO Selected clients : [6, 2, 7, 8, 3]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 15:47:11,798 basic_logger.py time_end [line:77] INFO Time Cost:                    92.7839s
+2023-01-06 15:47:11,798 fedbase.py run [line:63] INFO --------------Round 77--------------
+2023-01-06 15:47:15,186 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7429
+2023-01-06 15:47:15,186 basic_logger.py show_current_output [line:147] INFO test_loss                     0.9808
+2023-01-06 15:47:15,187 basic_logger.py time_end [line:77] INFO Eval Time Cost:               3.3881s
+2023-01-06 15:47:15,187 fedbase.py iterate [line:117] INFO Selected clients : [1, 8, 5, 9, 0]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 15:48:37,000 basic_logger.py time_end [line:77] INFO Time Cost:                    85.2011s
+2023-01-06 15:48:37,002 fedbase.py run [line:63] INFO --------------Round 78--------------
+2023-01-06 15:48:42,821 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7091
+2023-01-06 15:48:42,821 basic_logger.py show_current_output [line:147] INFO test_loss                     1.0994
+2023-01-06 15:48:42,822 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.8192s
+2023-01-06 15:48:42,833 fedbase.py iterate [line:117] INFO Selected clients : [9, 2, 7, 4, 5]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 15:50:19,045 basic_logger.py time_end [line:77] INFO Time Cost:                    102.0424s
+2023-01-06 15:50:19,045 fedbase.py run [line:63] INFO --------------Round 79--------------
+2023-01-06 15:50:21,889 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7442
+2023-01-06 15:50:21,890 basic_logger.py show_current_output [line:147] INFO test_loss                     0.9822
+2023-01-06 15:50:21,890 basic_logger.py time_end [line:77] INFO Eval Time Cost:               2.8447s
+2023-01-06 15:50:21,891 fedbase.py iterate [line:117] INFO Selected clients : [7, 6, 3, 2, 9]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 15:51:58,699 basic_logger.py time_end [line:77] INFO Time Cost:                    99.6532s
+2023-01-06 15:51:58,699 fedbase.py run [line:63] INFO --------------Round 80--------------
+2023-01-06 15:52:04,285 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7481
+2023-01-06 15:52:04,285 basic_logger.py show_current_output [line:147] INFO test_loss                     0.9499
+2023-01-06 15:52:04,286 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.5864s
+2023-01-06 15:52:04,295 fedbase.py iterate [line:117] INFO Selected clients : [2, 1, 5, 6, 7]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 15:53:37,049 basic_logger.py time_end [line:77] INFO Time Cost:                    98.3494s
+2023-01-06 15:53:37,049 fedbase.py run [line:63] INFO --------------Round 81--------------
+2023-01-06 15:53:42,672 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7494
+2023-01-06 15:53:42,675 basic_logger.py show_current_output [line:147] INFO test_loss                     0.9592
+2023-01-06 15:53:42,675 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.6261s
+2023-01-06 15:53:42,682 fedbase.py iterate [line:117] INFO Selected clients : [9, 6, 7, 2, 0]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 15:55:13,717 basic_logger.py time_end [line:77] INFO Time Cost:                    96.6678s
+2023-01-06 15:55:13,718 fedbase.py run [line:63] INFO --------------Round 82--------------
+2023-01-06 15:55:19,315 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6987
+2023-01-06 15:55:19,316 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2051
+2023-01-06 15:55:19,316 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.5983s
+2023-01-06 15:55:19,326 fedbase.py iterate [line:117] INFO Selected clients : [2, 6, 5, 3, 4]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 15:56:53,951 basic_logger.py time_end [line:77] INFO Time Cost:                    100.2336s
+2023-01-06 15:56:53,952 fedbase.py run [line:63] INFO --------------Round 83--------------
+2023-01-06 15:56:58,793 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7351
+2023-01-06 15:56:58,795 basic_logger.py show_current_output [line:147] INFO test_loss                     1.0315
+2023-01-06 15:56:58,796 basic_logger.py time_end [line:77] INFO Eval Time Cost:               4.8438s
+2023-01-06 15:56:58,807 fedbase.py iterate [line:117] INFO Selected clients : [5, 7, 6, 3, 1]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 15:58:19,725 basic_logger.py time_end [line:77] INFO Time Cost:                    85.7732s
+2023-01-06 15:58:19,726 fedbase.py run [line:63] INFO --------------Round 84--------------
+2023-01-06 15:58:25,461 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7403
+2023-01-06 15:58:25,461 basic_logger.py show_current_output [line:147] INFO test_loss                     0.9964
+2023-01-06 15:58:25,461 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.7355s
+2023-01-06 15:58:25,473 fedbase.py iterate [line:117] INFO Selected clients : [2, 4, 0, 3, 6]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 15:59:59,244 basic_logger.py time_end [line:77] INFO Time Cost:                    99.5180s
+2023-01-06 15:59:59,244 fedbase.py run [line:63] INFO --------------Round 85--------------
+2023-01-06 16:00:04,317 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7104
+2023-01-06 16:00:04,318 basic_logger.py show_current_output [line:147] INFO test_loss                     1.1978
+2023-01-06 16:00:04,318 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.0737s
+2023-01-06 16:00:04,327 fedbase.py iterate [line:117] INFO Selected clients : [5, 9, 3, 0, 1]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:01:29,476 basic_logger.py time_end [line:77] INFO Time Cost:                    90.2314s
+2023-01-06 16:01:29,476 fedbase.py run [line:63] INFO --------------Round 86--------------
+2023-01-06 16:01:34,898 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7039
+2023-01-06 16:01:34,900 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2037
+2023-01-06 16:01:34,900 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.4239s
+2023-01-06 16:01:34,910 fedbase.py iterate [line:117] INFO Selected clients : [8, 5, 6, 7, 1]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:02:48,864 basic_logger.py time_end [line:77] INFO Time Cost:                    79.3877s
+2023-01-06 16:02:48,864 fedbase.py run [line:63] INFO --------------Round 87--------------
+2023-01-06 16:02:53,741 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7338
+2023-01-06 16:02:53,742 basic_logger.py show_current_output [line:147] INFO test_loss                     1.0356
+2023-01-06 16:02:53,742 basic_logger.py time_end [line:77] INFO Eval Time Cost:               4.8774s
+2023-01-06 16:02:53,748 fedbase.py iterate [line:117] INFO Selected clients : [4, 5, 1, 7, 6]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:04:15,473 basic_logger.py time_end [line:77] INFO Time Cost:                    86.6085s
+2023-01-06 16:04:15,474 fedbase.py run [line:63] INFO --------------Round 88--------------
+2023-01-06 16:04:21,387 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7481
+2023-01-06 16:04:21,388 basic_logger.py show_current_output [line:147] INFO test_loss                     1.0151
+2023-01-06 16:04:21,388 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.9141s
+2023-01-06 16:04:21,397 fedbase.py iterate [line:117] INFO Selected clients : [5, 1, 7, 4, 9]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:05:46,824 basic_logger.py time_end [line:77] INFO Time Cost:                    91.3497s
+2023-01-06 16:05:46,824 fedbase.py run [line:63] INFO --------------Round 89--------------
+2023-01-06 16:05:49,726 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7468
+2023-01-06 16:05:49,727 basic_logger.py show_current_output [line:147] INFO test_loss                     1.0179
+2023-01-06 16:05:49,727 basic_logger.py time_end [line:77] INFO Eval Time Cost:               2.9027s
+2023-01-06 16:05:49,727 fedbase.py iterate [line:117] INFO Selected clients : [6, 0, 7, 5, 8]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:07:03,096 basic_logger.py time_end [line:77] INFO Time Cost:                    76.2714s
+2023-01-06 16:07:03,096 fedbase.py run [line:63] INFO --------------Round 90--------------
+2023-01-06 16:07:09,010 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6909
+2023-01-06 16:07:09,010 basic_logger.py show_current_output [line:147] INFO test_loss                     1.1922
+2023-01-06 16:07:09,010 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.9138s
+2023-01-06 16:07:09,018 fedbase.py iterate [line:117] INFO Selected clients : [5, 9, 0, 3, 7]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:08:34,190 basic_logger.py time_end [line:77] INFO Time Cost:                    91.0943s
+2023-01-06 16:08:34,191 fedbase.py run [line:63] INFO --------------Round 91--------------
+2023-01-06 16:08:39,916 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6805
+2023-01-06 16:08:39,917 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2328
+2023-01-06 16:08:39,917 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.7263s
+2023-01-06 16:08:39,930 fedbase.py iterate [line:117] INFO Selected clients : [3, 0, 2, 6, 1]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:10:17,053 basic_logger.py time_end [line:77] INFO Time Cost:                    102.8618s
+2023-01-06 16:10:17,053 fedbase.py run [line:63] INFO --------------Round 92--------------
+2023-01-06 16:10:22,682 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6870
+2023-01-06 16:10:22,684 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2433
+2023-01-06 16:10:22,684 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.6309s
+2023-01-06 16:10:22,698 fedbase.py iterate [line:117] INFO Selected clients : [9, 8, 7, 2, 5]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:11:55,847 basic_logger.py time_end [line:77] INFO Time Cost:                    98.7932s
+2023-01-06 16:11:55,847 fedbase.py run [line:63] INFO --------------Round 93--------------
+2023-01-06 16:12:01,457 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7299
+2023-01-06 16:12:01,458 basic_logger.py show_current_output [line:147] INFO test_loss                     1.0898
+2023-01-06 16:12:01,458 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.6109s
+2023-01-06 16:12:01,468 fedbase.py iterate [line:117] INFO Selected clients : [5, 7, 1, 6, 8]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:13:12,837 basic_logger.py time_end [line:77] INFO Time Cost:                    76.9893s
+2023-01-06 16:13:12,837 fedbase.py run [line:63] INFO --------------Round 94--------------
+2023-01-06 16:13:18,098 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7338
+2023-01-06 16:13:18,099 basic_logger.py show_current_output [line:147] INFO test_loss                     1.0490
+2023-01-06 16:13:18,099 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.2615s
+2023-01-06 16:13:18,105 fedbase.py iterate [line:117] INFO Selected clients : [3, 2, 0, 4, 7]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:14:53,997 basic_logger.py time_end [line:77] INFO Time Cost:                    101.1593s
+2023-01-06 16:14:53,997 fedbase.py run [line:63] INFO --------------Round 95--------------
+2023-01-06 16:14:59,570 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7091
+2023-01-06 16:14:59,575 basic_logger.py show_current_output [line:147] INFO test_loss                     1.1623
+2023-01-06 16:14:59,575 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.5778s
+2023-01-06 16:14:59,586 fedbase.py iterate [line:117] INFO Selected clients : [6, 4, 7, 2, 9]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:16:31,813 basic_logger.py time_end [line:77] INFO Time Cost:                    97.8163s
+2023-01-06 16:16:31,814 fedbase.py run [line:63] INFO --------------Round 96--------------
+2023-01-06 16:16:37,409 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7312
+2023-01-06 16:16:37,411 basic_logger.py show_current_output [line:147] INFO test_loss                     1.0907
+2023-01-06 16:16:37,411 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.5974s
+2023-01-06 16:16:37,420 fedbase.py iterate [line:117] INFO Selected clients : [0, 2, 5, 8, 7]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:18:07,943 basic_logger.py time_end [line:77] INFO Time Cost:                    96.1290s
+2023-01-06 16:18:07,944 fedbase.py run [line:63] INFO --------------Round 97--------------
+2023-01-06 16:18:09,984 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6701
+2023-01-06 16:18:09,985 basic_logger.py show_current_output [line:147] INFO test_loss                     1.3811
+2023-01-06 16:18:09,985 basic_logger.py time_end [line:77] INFO Eval Time Cost:               2.0409s
+2023-01-06 16:18:09,985 fedbase.py iterate [line:117] INFO Selected clients : [3, 4, 9, 1, 6]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:19:32,427 basic_logger.py time_end [line:77] INFO Time Cost:                    84.4836s
+2023-01-06 16:19:32,428 fedbase.py run [line:63] INFO --------------Round 98--------------
+2023-01-06 16:19:38,297 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7338
+2023-01-06 16:19:38,297 basic_logger.py show_current_output [line:147] INFO test_loss                     1.1432
+2023-01-06 16:19:38,298 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.8695s
+2023-01-06 16:19:38,314 fedbase.py iterate [line:117] INFO Selected clients : [8, 2, 7, 6, 3]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:21:07,108 basic_logger.py time_end [line:77] INFO Time Cost:                    94.6796s
+2023-01-06 16:21:07,108 fedbase.py run [line:63] INFO --------------Round 99--------------
+2023-01-06 16:21:10,677 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7403
+2023-01-06 16:21:10,678 basic_logger.py show_current_output [line:147] INFO test_loss                     1.0976
+2023-01-06 16:21:10,678 basic_logger.py time_end [line:77] INFO Eval Time Cost:               3.5695s
+2023-01-06 16:21:10,678 fedbase.py iterate [line:117] INFO Selected clients : [6, 5, 1, 4, 2]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:22:44,122 basic_logger.py time_end [line:77] INFO Time Cost:                    97.0140s
+2023-01-06 16:22:44,123 fedbase.py run [line:63] INFO --------------Round 100--------------
+2023-01-06 16:22:49,916 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7494
+2023-01-06 16:22:49,917 basic_logger.py show_current_output [line:147] INFO test_loss                     1.0762
+2023-01-06 16:22:49,917 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.7938s
+2023-01-06 16:22:49,926 fedbase.py iterate [line:117] INFO Selected clients : [6, 5, 4, 9, 0]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:24:03,711 basic_logger.py time_end [line:77] INFO Time Cost:                    79.5885s
+2023-01-06 16:24:03,712 fedbase.py run [line:63] INFO --------------Round 101--------------
+2023-01-06 16:24:08,328 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7182
+2023-01-06 16:24:08,328 basic_logger.py show_current_output [line:147] INFO test_loss                     1.1674
+2023-01-06 16:24:08,329 basic_logger.py time_end [line:77] INFO Eval Time Cost:               4.6165s
+2023-01-06 16:24:08,337 fedbase.py iterate [line:117] INFO Selected clients : [1, 0, 6, 9, 5]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:25:26,619 basic_logger.py time_end [line:77] INFO Time Cost:                    82.9073s
+2023-01-06 16:25:26,620 fedbase.py run [line:63] INFO --------------Round 102--------------
+2023-01-06 16:25:32,500 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6818
+2023-01-06 16:25:32,503 basic_logger.py show_current_output [line:147] INFO test_loss                     1.4183
+2023-01-06 16:25:32,504 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.8838s
+2023-01-06 16:25:32,510 fedbase.py iterate [line:117] INFO Selected clients : [8, 2, 6, 1, 5]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:26:58,495 basic_logger.py time_end [line:77] INFO Time Cost:                    91.8745s
+2023-01-06 16:26:58,495 fedbase.py run [line:63] INFO --------------Round 103--------------
+2023-01-06 16:27:04,034 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7312
+2023-01-06 16:27:04,037 basic_logger.py show_current_output [line:147] INFO test_loss                     1.1350
+2023-01-06 16:27:04,037 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.5421s
+2023-01-06 16:27:04,049 fedbase.py iterate [line:117] INFO Selected clients : [7, 5, 3, 6, 0]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:28:24,263 basic_logger.py time_end [line:77] INFO Time Cost:                    85.7679s
+2023-01-06 16:28:24,263 fedbase.py run [line:63] INFO --------------Round 104--------------
+2023-01-06 16:28:28,966 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6831
+2023-01-06 16:28:28,968 basic_logger.py show_current_output [line:147] INFO test_loss                     1.3351
+2023-01-06 16:28:28,968 basic_logger.py time_end [line:77] INFO Eval Time Cost:               4.7043s
+2023-01-06 16:28:28,972 fedbase.py iterate [line:117] INFO Selected clients : [8, 4, 3, 2, 7]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:30:06,944 basic_logger.py time_end [line:77] INFO Time Cost:                    102.6804s
+2023-01-06 16:30:06,944 fedbase.py run [line:63] INFO --------------Round 105--------------
+2023-01-06 16:30:12,345 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7260
+2023-01-06 16:30:12,345 basic_logger.py show_current_output [line:147] INFO test_loss                     1.1300
+2023-01-06 16:30:12,345 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.4007s
+2023-01-06 16:30:12,357 fedbase.py iterate [line:117] INFO Selected clients : [6, 7, 2, 4, 5]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:31:45,469 basic_logger.py time_end [line:77] INFO Time Cost:                    98.5243s
+2023-01-06 16:31:45,469 fedbase.py run [line:63] INFO --------------Round 106--------------
+2023-01-06 16:31:51,156 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7390
+2023-01-06 16:31:51,159 basic_logger.py show_current_output [line:147] INFO test_loss                     1.1202
+2023-01-06 16:31:51,159 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.6898s
+2023-01-06 16:31:51,173 fedbase.py iterate [line:117] INFO Selected clients : [8, 1, 6, 9, 4]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:33:06,488 basic_logger.py time_end [line:77] INFO Time Cost:                    81.0180s
+2023-01-06 16:33:06,488 fedbase.py run [line:63] INFO --------------Round 107--------------
+2023-01-06 16:33:11,666 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7390
+2023-01-06 16:33:11,666 basic_logger.py show_current_output [line:147] INFO test_loss                     1.0779
+2023-01-06 16:33:11,666 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.1782s
+2023-01-06 16:33:11,677 fedbase.py iterate [line:117] INFO Selected clients : [8, 2, 9, 3, 6]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:34:44,551 basic_logger.py time_end [line:77] INFO Time Cost:                    98.0627s
+2023-01-06 16:34:44,551 fedbase.py run [line:63] INFO --------------Round 108--------------
+2023-01-06 16:34:47,533 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7455
+2023-01-06 16:34:47,533 basic_logger.py show_current_output [line:147] INFO test_loss                     1.0512
+2023-01-06 16:34:47,533 basic_logger.py time_end [line:77] INFO Eval Time Cost:               2.9816s
+2023-01-06 16:34:47,539 fedbase.py iterate [line:117] INFO Selected clients : [5, 4, 9, 7, 8]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:36:04,727 basic_logger.py time_end [line:77] INFO Time Cost:                    80.1750s
+2023-01-06 16:36:04,727 fedbase.py run [line:63] INFO --------------Round 109--------------
+2023-01-06 16:36:10,530 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7494
+2023-01-06 16:36:10,531 basic_logger.py show_current_output [line:147] INFO test_loss                     1.0306
+2023-01-06 16:36:10,531 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.8038s
+2023-01-06 16:36:10,542 fedbase.py iterate [line:117] INFO Selected clients : [9, 7, 4, 3, 8]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:37:31,617 basic_logger.py time_end [line:77] INFO Time Cost:                    86.8898s
+2023-01-06 16:37:31,617 fedbase.py run [line:63] INFO --------------Round 110--------------
+2023-01-06 16:37:36,493 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7519
+2023-01-06 16:37:36,495 basic_logger.py show_current_output [line:147] INFO test_loss                     1.0057
+2023-01-06 16:37:36,496 basic_logger.py time_end [line:77] INFO Eval Time Cost:               4.8780s
+2023-01-06 16:37:36,504 fedbase.py iterate [line:117] INFO Selected clients : [2, 3, 6, 9, 8]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:39:12,413 basic_logger.py time_end [line:77] INFO Time Cost:                    100.7950s
+2023-01-06 16:39:12,413 fedbase.py run [line:63] INFO --------------Round 111--------------
+2023-01-06 16:39:18,075 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7468
+2023-01-06 16:39:18,076 basic_logger.py show_current_output [line:147] INFO test_loss                     1.0193
+2023-01-06 16:39:18,076 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.6629s
+2023-01-06 16:39:18,088 fedbase.py iterate [line:117] INFO Selected clients : [0, 4, 9, 2, 1]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:40:52,517 basic_logger.py time_end [line:77] INFO Time Cost:                    100.1040s
+2023-01-06 16:40:52,517 fedbase.py run [line:63] INFO --------------Round 112--------------
+2023-01-06 16:40:58,177 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7091
+2023-01-06 16:40:58,178 basic_logger.py show_current_output [line:147] INFO test_loss                     1.1858
+2023-01-06 16:40:58,178 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.6602s
+2023-01-06 16:40:58,190 fedbase.py iterate [line:117] INFO Selected clients : [3, 7, 8, 4, 9]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:42:22,597 basic_logger.py time_end [line:77] INFO Time Cost:                    90.0792s
+2023-01-06 16:42:22,597 fedbase.py run [line:63] INFO --------------Round 113--------------
+2023-01-06 16:42:28,179 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7312
+2023-01-06 16:42:28,179 basic_logger.py show_current_output [line:147] INFO test_loss                     1.0937
+2023-01-06 16:42:28,179 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.5821s
+2023-01-06 16:42:28,185 fedbase.py iterate [line:117] INFO Selected clients : [8, 0, 3, 5, 2]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:43:54,361 basic_logger.py time_end [line:77] INFO Time Cost:                    91.7631s
+2023-01-06 16:43:54,361 fedbase.py run [line:63] INFO --------------Round 114--------------
+2023-01-06 16:43:59,843 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6909
+2023-01-06 16:43:59,844 basic_logger.py show_current_output [line:147] INFO test_loss                     1.4150
+2023-01-06 16:43:59,844 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.4826s
+2023-01-06 16:43:59,856 fedbase.py iterate [line:117] INFO Selected clients : [3, 9, 7, 1, 0]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:45:28,362 basic_logger.py time_end [line:77] INFO Time Cost:                    94.0005s
+2023-01-06 16:45:28,362 fedbase.py run [line:63] INFO --------------Round 115--------------
+2023-01-06 16:45:32,371 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7078
+2023-01-06 16:45:32,372 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2609
+2023-01-06 16:45:32,372 basic_logger.py time_end [line:77] INFO Eval Time Cost:               4.0097s
+2023-01-06 16:45:32,379 fedbase.py iterate [line:117] INFO Selected clients : [4, 5, 2, 9, 6]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:47:03,248 basic_logger.py time_end [line:77] INFO Time Cost:                    94.8853s
+2023-01-06 16:47:03,248 fedbase.py run [line:63] INFO --------------Round 116--------------
+2023-01-06 16:47:08,840 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7299
+2023-01-06 16:47:08,842 basic_logger.py show_current_output [line:147] INFO test_loss                     1.1399
+2023-01-06 16:47:08,842 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.5939s
+2023-01-06 16:47:08,855 fedbase.py iterate [line:117] INFO Selected clients : [4, 3, 6, 0, 1]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:48:25,116 basic_logger.py time_end [line:77] INFO Time Cost:                    81.8675s
+2023-01-06 16:48:25,116 fedbase.py run [line:63] INFO --------------Round 117--------------
+2023-01-06 16:48:30,480 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7351
+2023-01-06 16:48:30,481 basic_logger.py show_current_output [line:147] INFO test_loss                     1.0943
+2023-01-06 16:48:30,481 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.3645s
+2023-01-06 16:48:30,497 fedbase.py iterate [line:117] INFO Selected clients : [5, 6, 9, 8, 0]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:49:41,341 basic_logger.py time_end [line:77] INFO Time Cost:                    76.2241s
+2023-01-06 16:49:41,341 fedbase.py run [line:63] INFO --------------Round 118--------------
+2023-01-06 16:49:46,306 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7013
+2023-01-06 16:49:46,307 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2884
+2023-01-06 16:49:46,307 basic_logger.py time_end [line:77] INFO Eval Time Cost:               4.9657s
+2023-01-06 16:49:46,315 fedbase.py iterate [line:117] INFO Selected clients : [8, 3, 1, 6, 9]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:51:02,086 basic_logger.py time_end [line:77] INFO Time Cost:                    80.7448s
+2023-01-06 16:51:02,086 fedbase.py run [line:63] INFO --------------Round 119--------------
+2023-01-06 16:51:07,308 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7156
+2023-01-06 16:51:07,308 basic_logger.py show_current_output [line:147] INFO test_loss                     1.1754
+2023-01-06 16:51:07,309 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.2219s
+2023-01-06 16:51:07,315 fedbase.py iterate [line:117] INFO Selected clients : [8, 0, 4, 3, 5]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:52:27,303 basic_logger.py time_end [line:77] INFO Time Cost:                    85.2160s
+2023-01-06 16:52:27,303 fedbase.py run [line:63] INFO --------------Round 120--------------
+2023-01-06 16:52:33,112 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7169
+2023-01-06 16:52:33,112 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2091
+2023-01-06 16:52:33,113 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.8092s
+2023-01-06 16:52:33,124 fedbase.py iterate [line:117] INFO Selected clients : [8, 4, 2, 0, 9]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:54:00,833 basic_logger.py time_end [line:77] INFO Time Cost:                    93.5291s
+2023-01-06 16:54:00,833 fedbase.py run [line:63] INFO --------------Round 121--------------
+2023-01-06 16:54:06,099 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6896
+2023-01-06 16:54:06,102 basic_logger.py show_current_output [line:147] INFO test_loss                     1.4121
+2023-01-06 16:54:06,102 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.2687s
+2023-01-06 16:54:06,114 fedbase.py iterate [line:117] INFO Selected clients : [5, 1, 9, 0, 3]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:55:32,477 basic_logger.py time_end [line:77] INFO Time Cost:                    91.6442s
+2023-01-06 16:55:32,478 fedbase.py run [line:63] INFO --------------Round 122--------------
+2023-01-06 16:55:37,119 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7065
+2023-01-06 16:55:37,121 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2957
+2023-01-06 16:55:37,121 basic_logger.py time_end [line:77] INFO Eval Time Cost:               4.6434s
+2023-01-06 16:55:37,131 fedbase.py iterate [line:117] INFO Selected clients : [7, 9, 5, 8, 6]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:56:52,298 basic_logger.py time_end [line:77] INFO Time Cost:                    79.8199s
+2023-01-06 16:56:52,298 fedbase.py run [line:63] INFO --------------Round 123--------------
+2023-01-06 16:56:58,148 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7286
+2023-01-06 16:56:58,151 basic_logger.py show_current_output [line:147] INFO test_loss                     1.1605
+2023-01-06 16:56:58,151 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.8527s
+2023-01-06 16:56:58,165 fedbase.py iterate [line:117] INFO Selected clients : [0, 9, 2, 1, 7]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 16:58:31,142 basic_logger.py time_end [line:77] INFO Time Cost:                    98.8435s
+2023-01-06 16:58:31,143 fedbase.py run [line:63] INFO --------------Round 124--------------
+2023-01-06 16:58:35,354 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6857
+2023-01-06 16:58:35,354 basic_logger.py show_current_output [line:147] INFO test_loss                     1.4317
+2023-01-06 16:58:35,354 basic_logger.py time_end [line:77] INFO Eval Time Cost:               4.2114s
+2023-01-06 16:58:35,362 fedbase.py iterate [line:117] INFO Selected clients : [2, 7, 8, 9, 0]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:00:06,932 basic_logger.py time_end [line:77] INFO Time Cost:                    95.7891s
+2023-01-06 17:00:06,932 fedbase.py run [line:63] INFO --------------Round 125--------------
+2023-01-06 17:00:12,352 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7143
+2023-01-06 17:00:12,352 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2505
+2023-01-06 17:00:12,352 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.4199s
+2023-01-06 17:00:12,364 fedbase.py iterate [line:117] INFO Selected clients : [6, 3, 8, 4, 7]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:01:30,290 basic_logger.py time_end [line:77] INFO Time Cost:                    83.3573s
+2023-01-06 17:01:30,290 fedbase.py run [line:63] INFO --------------Round 126--------------
+2023-01-06 17:01:35,966 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7286
+2023-01-06 17:01:35,966 basic_logger.py show_current_output [line:147] INFO test_loss                     1.1387
+2023-01-06 17:01:35,966 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.6755s
+2023-01-06 17:01:35,977 fedbase.py iterate [line:117] INFO Selected clients : [6, 8, 9, 2, 5]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:03:04,255 basic_logger.py time_end [line:77] INFO Time Cost:                    93.9646s
+2023-01-06 17:03:04,256 fedbase.py run [line:63] INFO --------------Round 127--------------
+2023-01-06 17:03:10,124 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7299
+2023-01-06 17:03:10,127 basic_logger.py show_current_output [line:147] INFO test_loss                     1.1296
+2023-01-06 17:03:10,127 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.8714s
+2023-01-06 17:03:10,131 fedbase.py iterate [line:117] INFO Selected clients : [3, 9, 8, 2, 0]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:04:44,937 basic_logger.py time_end [line:77] INFO Time Cost:                    100.6817s
+2023-01-06 17:04:44,938 fedbase.py run [line:63] INFO --------------Round 128--------------
+2023-01-06 17:04:50,369 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6987
+2023-01-06 17:04:50,369 basic_logger.py show_current_output [line:147] INFO test_loss                     1.3161
+2023-01-06 17:04:50,369 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.4311s
+2023-01-06 17:04:50,380 fedbase.py iterate [line:117] INFO Selected clients : [8, 9, 3, 6, 5]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:06:03,640 basic_logger.py time_end [line:77] INFO Time Cost:                    78.7015s
+2023-01-06 17:06:03,640 fedbase.py run [line:63] INFO --------------Round 129--------------
+2023-01-06 17:06:08,366 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7325
+2023-01-06 17:06:08,367 basic_logger.py show_current_output [line:147] INFO test_loss                     1.1867
+2023-01-06 17:06:08,367 basic_logger.py time_end [line:77] INFO Eval Time Cost:               4.7267s
+2023-01-06 17:06:08,374 fedbase.py iterate [line:117] INFO Selected clients : [8, 9, 0, 2, 5]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:07:38,101 basic_logger.py time_end [line:77] INFO Time Cost:                    94.4611s
+2023-01-06 17:07:38,102 fedbase.py run [line:63] INFO --------------Round 130--------------
+2023-01-06 17:07:43,676 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6818
+2023-01-06 17:07:43,677 basic_logger.py show_current_output [line:147] INFO test_loss                     1.4369
+2023-01-06 17:07:43,677 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.5750s
+2023-01-06 17:07:43,689 fedbase.py iterate [line:117] INFO Selected clients : [0, 3, 6, 2, 4]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:09:15,659 basic_logger.py time_end [line:77] INFO Time Cost:                    97.5571s
+2023-01-06 17:09:15,660 fedbase.py run [line:63] INFO --------------Round 131--------------
+2023-01-06 17:09:18,263 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6857
+2023-01-06 17:09:18,263 basic_logger.py show_current_output [line:147] INFO test_loss                     1.4207
+2023-01-06 17:09:18,263 basic_logger.py time_end [line:77] INFO Eval Time Cost:               2.6035s
+2023-01-06 17:09:18,264 fedbase.py iterate [line:117] INFO Selected clients : [4, 2, 7, 0, 6]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:10:45,304 basic_logger.py time_end [line:77] INFO Time Cost:                    89.6441s
+2023-01-06 17:10:45,304 fedbase.py run [line:63] INFO --------------Round 132--------------
+2023-01-06 17:10:51,237 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7078
+2023-01-06 17:10:51,238 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2585
+2023-01-06 17:10:51,238 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.9335s
+2023-01-06 17:10:51,250 fedbase.py iterate [line:117] INFO Selected clients : [1, 2, 5, 0, 8]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:12:18,971 basic_logger.py time_end [line:77] INFO Time Cost:                    93.6666s
+2023-01-06 17:12:18,972 fedbase.py run [line:63] INFO --------------Round 133--------------
+2023-01-06 17:12:21,728 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7104
+2023-01-06 17:12:21,728 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2506
+2023-01-06 17:12:21,729 basic_logger.py time_end [line:77] INFO Eval Time Cost:               2.7569s
+2023-01-06 17:12:21,730 fedbase.py iterate [line:117] INFO Selected clients : [9, 5, 4, 8, 2]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:13:53,107 basic_logger.py time_end [line:77] INFO Time Cost:                    94.1349s
+2023-01-06 17:13:53,107 fedbase.py run [line:63] INFO --------------Round 134--------------
+2023-01-06 17:13:58,764 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7442
+2023-01-06 17:13:58,764 basic_logger.py show_current_output [line:147] INFO test_loss                     1.0828
+2023-01-06 17:13:58,764 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.6570s
+2023-01-06 17:13:58,780 fedbase.py iterate [line:117] INFO Selected clients : [6, 7, 2, 5, 3]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:15:35,523 basic_logger.py time_end [line:77] INFO Time Cost:                    102.4154s
+2023-01-06 17:15:35,523 fedbase.py run [line:63] INFO --------------Round 135--------------
+2023-01-06 17:15:37,642 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7481
+2023-01-06 17:15:37,642 basic_logger.py show_current_output [line:147] INFO test_loss                     1.0750
+2023-01-06 17:15:37,642 basic_logger.py time_end [line:77] INFO Eval Time Cost:               2.1189s
+2023-01-06 17:15:37,645 fedbase.py iterate [line:117] INFO Selected clients : [4, 1, 8, 2, 6]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:17:05,773 basic_logger.py time_end [line:77] INFO Time Cost:                    90.2496s
+2023-01-06 17:17:05,774 fedbase.py run [line:63] INFO --------------Round 136--------------
+2023-01-06 17:17:11,471 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7494
+2023-01-06 17:17:11,471 basic_logger.py show_current_output [line:147] INFO test_loss                     1.0660
+2023-01-06 17:17:11,471 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.6978s
+2023-01-06 17:17:11,479 fedbase.py iterate [line:117] INFO Selected clients : [8, 1, 4, 5, 6]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:18:20,498 basic_logger.py time_end [line:77] INFO Time Cost:                    74.7238s
+2023-01-06 17:18:20,498 fedbase.py run [line:63] INFO --------------Round 137--------------
+2023-01-06 17:18:25,571 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7455
+2023-01-06 17:18:25,574 basic_logger.py show_current_output [line:147] INFO test_loss                     1.0621
+2023-01-06 17:18:25,574 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.0759s
+2023-01-06 17:18:25,594 fedbase.py iterate [line:117] INFO Selected clients : [1, 3, 0, 5, 8]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:19:47,010 basic_logger.py time_end [line:77] INFO Time Cost:                    86.5115s
+2023-01-06 17:19:47,010 fedbase.py run [line:63] INFO --------------Round 138--------------
+2023-01-06 17:19:52,762 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6922
+2023-01-06 17:19:52,763 basic_logger.py show_current_output [line:147] INFO test_loss                     1.4558
+2023-01-06 17:19:52,763 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.7523s
+2023-01-06 17:19:52,770 fedbase.py iterate [line:117] INFO Selected clients : [7, 0, 8, 2, 5]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:21:23,009 basic_logger.py time_end [line:77] INFO Time Cost:                    95.9984s
+2023-01-06 17:21:23,009 fedbase.py run [line:63] INFO --------------Round 139--------------
+2023-01-06 17:21:27,900 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7000
+2023-01-06 17:21:27,902 basic_logger.py show_current_output [line:147] INFO test_loss                     1.4367
+2023-01-06 17:21:27,902 basic_logger.py time_end [line:77] INFO Eval Time Cost:               4.8926s
+2023-01-06 17:21:27,918 fedbase.py iterate [line:117] INFO Selected clients : [8, 3, 4, 5, 6]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:22:45,144 basic_logger.py time_end [line:77] INFO Time Cost:                    82.1338s
+2023-01-06 17:22:45,144 fedbase.py run [line:63] INFO --------------Round 140--------------
+2023-01-06 17:22:50,538 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7182
+2023-01-06 17:22:50,538 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2601
+2023-01-06 17:22:50,539 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.3944s
+2023-01-06 17:22:50,545 fedbase.py iterate [line:117] INFO Selected clients : [1, 3, 4, 6, 9]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:24:12,668 basic_logger.py time_end [line:77] INFO Time Cost:                    87.5235s
+2023-01-06 17:24:12,668 fedbase.py run [line:63] INFO --------------Round 141--------------
+2023-01-06 17:24:15,760 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7312
+2023-01-06 17:24:15,761 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2002
+2023-01-06 17:24:15,761 basic_logger.py time_end [line:77] INFO Eval Time Cost:               3.0926s
+2023-01-06 17:24:15,762 fedbase.py iterate [line:117] INFO Selected clients : [1, 2, 5, 8, 6]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:25:42,002 basic_logger.py time_end [line:77] INFO Time Cost:                    89.3332s
+2023-01-06 17:25:42,002 fedbase.py run [line:63] INFO --------------Round 142--------------
+2023-01-06 17:25:47,749 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7390
+2023-01-06 17:25:47,749 basic_logger.py show_current_output [line:147] INFO test_loss                     1.1689
+2023-01-06 17:25:47,750 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.7472s
+2023-01-06 17:25:47,756 fedbase.py iterate [line:117] INFO Selected clients : [5, 8, 3, 2, 9]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:27:16,755 basic_logger.py time_end [line:77] INFO Time Cost:                    94.7526s
+2023-01-06 17:27:16,755 fedbase.py run [line:63] INFO --------------Round 143--------------
+2023-01-06 17:27:22,042 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7403
+2023-01-06 17:27:22,043 basic_logger.py show_current_output [line:147] INFO test_loss                     1.1394
+2023-01-06 17:27:22,043 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.2873s
+2023-01-06 17:27:22,052 fedbase.py iterate [line:117] INFO Selected clients : [0, 3, 4, 9, 7]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:28:50,686 basic_logger.py time_end [line:77] INFO Time Cost:                    93.9299s
+2023-01-06 17:28:50,686 fedbase.py run [line:63] INFO --------------Round 144--------------
+2023-01-06 17:28:56,608 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7026
+2023-01-06 17:28:56,611 basic_logger.py show_current_output [line:147] INFO test_loss                     1.3455
+2023-01-06 17:28:56,611 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.9249s
+2023-01-06 17:28:56,623 fedbase.py iterate [line:117] INFO Selected clients : [3, 2, 4, 8, 1]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:30:26,212 basic_logger.py time_end [line:77] INFO Time Cost:                    95.5257s
+2023-01-06 17:30:26,212 fedbase.py run [line:63] INFO --------------Round 145--------------
+2023-01-06 17:30:31,888 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7338
+2023-01-06 17:30:31,889 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2091
+2023-01-06 17:30:31,890 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.6773s
+2023-01-06 17:30:31,902 fedbase.py iterate [line:117] INFO Selected clients : [0, 8, 9, 1, 7]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:31:51,698 basic_logger.py time_end [line:77] INFO Time Cost:                    85.4855s
+2023-01-06 17:31:51,698 fedbase.py run [line:63] INFO --------------Round 146--------------
+2023-01-06 17:31:56,888 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6987
+2023-01-06 17:31:56,888 basic_logger.py show_current_output [line:147] INFO test_loss                     1.4539
+2023-01-06 17:31:56,889 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.1900s
+2023-01-06 17:31:56,900 fedbase.py iterate [line:117] INFO Selected clients : [5, 6, 9, 7, 0]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:33:10,939 basic_logger.py time_end [line:77] INFO Time Cost:                    79.2406s
+2023-01-06 17:33:10,940 fedbase.py run [line:63] INFO --------------Round 147--------------
+2023-01-06 17:33:16,325 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7026
+2023-01-06 17:33:16,325 basic_logger.py show_current_output [line:147] INFO test_loss                     1.3542
+2023-01-06 17:33:16,325 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.3857s
+2023-01-06 17:33:16,336 fedbase.py iterate [line:117] INFO Selected clients : [3, 9, 1, 8, 4]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:34:39,191 basic_logger.py time_end [line:77] INFO Time Cost:                    88.2508s
+2023-01-06 17:34:39,191 fedbase.py run [line:63] INFO --------------Round 148--------------
+2023-01-06 17:34:44,333 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7260
+2023-01-06 17:34:44,333 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2396
+2023-01-06 17:34:44,333 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.1422s
+2023-01-06 17:34:44,339 fedbase.py iterate [line:117] INFO Selected clients : [1, 9, 0, 2, 6]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:36:12,320 basic_logger.py time_end [line:77] INFO Time Cost:                    93.1290s
+2023-01-06 17:36:12,321 fedbase.py run [line:63] INFO --------------Round 149--------------
+2023-01-06 17:36:18,120 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7078
+2023-01-06 17:36:18,121 basic_logger.py show_current_output [line:147] INFO test_loss                     1.3243
+2023-01-06 17:36:18,121 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.8001s
+2023-01-06 17:36:18,132 fedbase.py iterate [line:117] INFO Selected clients : [0, 6, 2, 9, 8]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:37:41,048 basic_logger.py time_end [line:77] INFO Time Cost:                    88.7275s
+2023-01-06 17:37:41,049 fedbase.py run [line:63] INFO --------------Round 150--------------
+2023-01-06 17:37:44,988 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6831
+2023-01-06 17:37:44,988 basic_logger.py show_current_output [line:147] INFO test_loss                     1.3864
+2023-01-06 17:37:44,989 basic_logger.py time_end [line:77] INFO Eval Time Cost:               3.9396s
+2023-01-06 17:37:44,997 fedbase.py iterate [line:117] INFO Selected clients : [9, 6, 4, 7, 3]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:39:07,606 basic_logger.py time_end [line:77] INFO Time Cost:                    86.5568s
+2023-01-06 17:39:07,606 fedbase.py run [line:63] INFO --------------Round 151--------------
+2023-01-06 17:39:13,233 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7182
+2023-01-06 17:39:13,234 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2103
+2023-01-06 17:39:13,234 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.6272s
+2023-01-06 17:39:13,244 fedbase.py iterate [line:117] INFO Selected clients : [8, 3, 2, 1, 7]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:40:58,915 basic_logger.py time_end [line:77] INFO Time Cost:                    111.3089s
+2023-01-06 17:40:58,916 fedbase.py run [line:63] INFO --------------Round 152--------------
+2023-01-06 17:41:04,557 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7312
+2023-01-06 17:41:04,558 basic_logger.py show_current_output [line:147] INFO test_loss                     1.1917
+2023-01-06 17:41:04,558 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.6420s
+2023-01-06 17:41:04,568 fedbase.py iterate [line:117] INFO Selected clients : [7, 9, 1, 6, 5]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:42:22,276 basic_logger.py time_end [line:77] INFO Time Cost:                    83.3604s
+2023-01-06 17:42:22,277 fedbase.py run [line:63] INFO --------------Round 153--------------
+2023-01-06 17:42:27,521 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7364
+2023-01-06 17:42:27,522 basic_logger.py show_current_output [line:147] INFO test_loss                     1.1757
+2023-01-06 17:42:27,522 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.2447s
+2023-01-06 17:42:27,533 fedbase.py iterate [line:117] INFO Selected clients : [9, 6, 5, 7, 4]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:43:44,206 basic_logger.py time_end [line:77] INFO Time Cost:                    81.9290s
+2023-01-06 17:43:44,207 fedbase.py run [line:63] INFO --------------Round 154--------------
+2023-01-06 17:43:49,607 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7338
+2023-01-06 17:43:49,608 basic_logger.py show_current_output [line:147] INFO test_loss                     1.1314
+2023-01-06 17:43:49,608 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.4013s
+2023-01-06 17:43:49,624 fedbase.py iterate [line:117] INFO Selected clients : [2, 8, 1, 0, 4]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:45:11,029 basic_logger.py time_end [line:77] INFO Time Cost:                    86.8222s
+2023-01-06 17:45:11,029 fedbase.py run [line:63] INFO --------------Round 155--------------
+2023-01-06 17:45:16,123 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7221
+2023-01-06 17:45:16,124 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2686
+2023-01-06 17:45:16,124 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.0944s
+2023-01-06 17:45:16,130 fedbase.py iterate [line:117] INFO Selected clients : [8, 1, 0, 4, 3]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:46:37,501 basic_logger.py time_end [line:77] INFO Time Cost:                    86.4716s
+2023-01-06 17:46:37,502 fedbase.py run [line:63] INFO --------------Round 156--------------
+2023-01-06 17:46:42,097 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6818
+2023-01-06 17:46:42,097 basic_logger.py show_current_output [line:147] INFO test_loss                     1.4755
+2023-01-06 17:46:42,097 basic_logger.py time_end [line:77] INFO Eval Time Cost:               4.5954s
+2023-01-06 17:46:42,106 fedbase.py iterate [line:117] INFO Selected clients : [8, 6, 0, 4, 9]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:47:58,557 basic_logger.py time_end [line:77] INFO Time Cost:                    81.0548s
+2023-01-06 17:47:58,557 fedbase.py run [line:63] INFO --------------Round 157--------------
+2023-01-06 17:48:04,425 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6286
+2023-01-06 17:48:04,426 basic_logger.py show_current_output [line:147] INFO test_loss                     1.6950
+2023-01-06 17:48:04,426 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.8687s
+2023-01-06 17:48:04,436 fedbase.py iterate [line:117] INFO Selected clients : [8, 6, 3, 1, 9]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:49:20,721 basic_logger.py time_end [line:77] INFO Time Cost:                    82.1634s
+2023-01-06 17:49:20,721 fedbase.py run [line:63] INFO --------------Round 158--------------
+2023-01-06 17:49:26,110 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7260
+2023-01-06 17:49:26,110 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2711
+2023-01-06 17:49:26,110 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.3893s
+2023-01-06 17:49:26,127 fedbase.py iterate [line:117] INFO Selected clients : [2, 6, 8, 3, 0]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:50:52,940 basic_logger.py time_end [line:77] INFO Time Cost:                    92.2192s
+2023-01-06 17:50:52,941 fedbase.py run [line:63] INFO --------------Round 159--------------
+2023-01-06 17:50:57,673 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6922
+2023-01-06 17:50:57,674 basic_logger.py show_current_output [line:147] INFO test_loss                     1.3970
+2023-01-06 17:50:57,674 basic_logger.py time_end [line:77] INFO Eval Time Cost:               4.7329s
+2023-01-06 17:50:57,681 fedbase.py iterate [line:117] INFO Selected clients : [7, 9, 1, 6, 2]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:52:27,887 basic_logger.py time_end [line:77] INFO Time Cost:                    94.9462s
+2023-01-06 17:52:27,888 fedbase.py run [line:63] INFO --------------Round 160--------------
+2023-01-06 17:52:33,352 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7468
+2023-01-06 17:52:33,352 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2459
+2023-01-06 17:52:33,352 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.4646s
+2023-01-06 17:52:33,365 fedbase.py iterate [line:117] INFO Selected clients : [1, 0, 8, 9, 4]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:53:49,975 basic_logger.py time_end [line:77] INFO Time Cost:                    82.0868s
+2023-01-06 17:53:49,975 fedbase.py run [line:63] INFO --------------Round 161--------------
+2023-01-06 17:53:55,573 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7416
+2023-01-06 17:53:55,573 basic_logger.py show_current_output [line:147] INFO test_loss                     1.1908
+2023-01-06 17:53:55,573 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.5984s
+2023-01-06 17:53:55,586 fedbase.py iterate [line:117] INFO Selected clients : [1, 3, 4, 0, 8]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:55:16,030 basic_logger.py time_end [line:77] INFO Time Cost:                    86.0544s
+2023-01-06 17:55:16,030 fedbase.py run [line:63] INFO --------------Round 162--------------
+2023-01-06 17:55:21,888 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6987
+2023-01-06 17:55:21,889 basic_logger.py show_current_output [line:147] INFO test_loss                     1.4146
+2023-01-06 17:55:21,889 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.8587s
+2023-01-06 17:55:21,898 fedbase.py iterate [line:117] INFO Selected clients : [4, 6, 9, 5, 1]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:56:39,523 basic_logger.py time_end [line:77] INFO Time Cost:                    83.4929s
+2023-01-06 17:56:39,523 fedbase.py run [line:63] INFO --------------Round 163--------------
+2023-01-06 17:56:45,617 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7390
+2023-01-06 17:56:45,618 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2436
+2023-01-06 17:56:45,618 basic_logger.py time_end [line:77] INFO Eval Time Cost:               6.0943s
+2023-01-06 17:56:45,629 fedbase.py iterate [line:117] INFO Selected clients : [3, 7, 6, 2, 4]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:58:19,764 basic_logger.py time_end [line:77] INFO Time Cost:                    100.2403s
+2023-01-06 17:58:19,764 fedbase.py run [line:63] INFO --------------Round 164--------------
+2023-01-06 17:58:25,087 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7519
+2023-01-06 17:58:25,090 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2076
+2023-01-06 17:58:25,090 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.3252s
+2023-01-06 17:58:25,095 fedbase.py iterate [line:117] INFO Selected clients : [8, 6, 5, 4, 2]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 17:59:50,758 basic_logger.py time_end [line:77] INFO Time Cost:                    90.9932s
+2023-01-06 17:59:50,758 fedbase.py run [line:63] INFO --------------Round 165--------------
+2023-01-06 17:59:56,841 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7468
+2023-01-06 17:59:56,850 basic_logger.py show_current_output [line:147] INFO test_loss                     1.1933
+2023-01-06 17:59:56,850 basic_logger.py time_end [line:77] INFO Eval Time Cost:               6.0919s
+2023-01-06 17:59:56,862 fedbase.py iterate [line:117] INFO Selected clients : [0, 2, 7, 8, 5]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:01:24,246 basic_logger.py time_end [line:77] INFO Time Cost:                    93.4879s
+2023-01-06 18:01:24,247 fedbase.py run [line:63] INFO --------------Round 166--------------
+2023-01-06 18:01:26,959 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7078
+2023-01-06 18:01:26,960 basic_logger.py show_current_output [line:147] INFO test_loss                     1.3134
+2023-01-06 18:01:26,960 basic_logger.py time_end [line:77] INFO Eval Time Cost:               2.7130s
+2023-01-06 18:01:26,963 fedbase.py iterate [line:117] INFO Selected clients : [0, 9, 3, 4, 7]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:02:52,380 basic_logger.py time_end [line:77] INFO Time Cost:                    88.1326s
+2023-01-06 18:02:52,380 fedbase.py run [line:63] INFO --------------Round 167--------------
+2023-01-06 18:02:57,912 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6753
+2023-01-06 18:02:57,913 basic_logger.py show_current_output [line:147] INFO test_loss                     1.4402
+2023-01-06 18:02:57,913 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.5329s
+2023-01-06 18:02:57,929 fedbase.py iterate [line:117] INFO Selected clients : [8, 9, 3, 1, 0]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:04:17,786 basic_logger.py time_end [line:77] INFO Time Cost:                    85.4061s
+2023-01-06 18:04:17,787 fedbase.py run [line:63] INFO --------------Round 168--------------
+2023-01-06 18:04:22,486 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7052
+2023-01-06 18:04:22,487 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2850
+2023-01-06 18:04:22,487 basic_logger.py time_end [line:77] INFO Eval Time Cost:               4.6996s
+2023-01-06 18:04:22,500 fedbase.py iterate [line:117] INFO Selected clients : [9, 1, 2, 4, 8]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:05:50,875 basic_logger.py time_end [line:77] INFO Time Cost:                    93.0874s
+2023-01-06 18:05:50,875 fedbase.py run [line:63] INFO --------------Round 169--------------
+2023-01-06 18:05:56,687 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7195
+2023-01-06 18:05:56,687 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2762
+2023-01-06 18:05:56,687 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.8123s
+2023-01-06 18:05:56,698 fedbase.py iterate [line:117] INFO Selected clients : [8, 9, 2, 4, 5]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:07:23,662 basic_logger.py time_end [line:77] INFO Time Cost:                    92.7864s
+2023-01-06 18:07:23,662 fedbase.py run [line:63] INFO --------------Round 170--------------
+2023-01-06 18:07:29,247 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7299
+2023-01-06 18:07:29,248 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2470
+2023-01-06 18:07:29,248 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.5856s
+2023-01-06 18:07:29,254 fedbase.py iterate [line:117] INFO Selected clients : [3, 2, 6, 4, 0]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:08:59,798 basic_logger.py time_end [line:77] INFO Time Cost:                    96.1362s
+2023-01-06 18:08:59,799 fedbase.py run [line:63] INFO --------------Round 171--------------
+2023-01-06 18:09:05,586 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7078
+2023-01-06 18:09:05,586 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2719
+2023-01-06 18:09:05,587 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.7875s
+2023-01-06 18:09:05,594 fedbase.py iterate [line:117] INFO Selected clients : [9, 8, 5, 3, 6]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:10:20,933 basic_logger.py time_end [line:77] INFO Time Cost:                    81.1340s
+2023-01-06 18:10:20,933 fedbase.py run [line:63] INFO --------------Round 172--------------
+2023-01-06 18:10:25,922 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7273
+2023-01-06 18:10:25,923 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2510
+2023-01-06 18:10:25,923 basic_logger.py time_end [line:77] INFO Eval Time Cost:               4.9892s
+2023-01-06 18:10:25,933 fedbase.py iterate [line:117] INFO Selected clients : [6, 2, 5, 1, 3]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:11:56,813 basic_logger.py time_end [line:77] INFO Time Cost:                    95.8798s
+2023-01-06 18:11:56,814 fedbase.py run [line:63] INFO --------------Round 173--------------
+2023-01-06 18:12:02,152 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7312
+2023-01-06 18:12:02,152 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2125
+2023-01-06 18:12:02,152 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.3385s
+2023-01-06 18:12:02,165 fedbase.py iterate [line:117] INFO Selected clients : [4, 8, 3, 1, 9]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:13:23,934 basic_logger.py time_end [line:77] INFO Time Cost:                    87.1196s
+2023-01-06 18:13:23,934 fedbase.py run [line:63] INFO --------------Round 174--------------
+2023-01-06 18:13:29,733 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7351
+2023-01-06 18:13:29,733 basic_logger.py show_current_output [line:147] INFO test_loss                     1.1984
+2023-01-06 18:13:29,734 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.7995s
+2023-01-06 18:13:29,748 fedbase.py iterate [line:117] INFO Selected clients : [0, 1, 2, 4, 6]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:14:58,477 basic_logger.py time_end [line:77] INFO Time Cost:                    94.5432s
+2023-01-06 18:14:58,478 fedbase.py run [line:63] INFO --------------Round 175--------------
+2023-01-06 18:15:04,149 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7208
+2023-01-06 18:15:04,149 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2205
+2023-01-06 18:15:04,149 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.6712s
+2023-01-06 18:15:04,158 fedbase.py iterate [line:117] INFO Selected clients : [2, 1, 6, 7, 0]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:16:28,619 basic_logger.py time_end [line:77] INFO Time Cost:                    90.1407s
+2023-01-06 18:16:28,619 fedbase.py run [line:63] INFO --------------Round 176--------------
+2023-01-06 18:16:34,535 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6870
+2023-01-06 18:16:34,537 basic_logger.py show_current_output [line:147] INFO test_loss                     1.4879
+2023-01-06 18:16:34,537 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.9174s
+2023-01-06 18:16:34,547 fedbase.py iterate [line:117] INFO Selected clients : [1, 9, 7, 8, 3]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:17:58,573 basic_logger.py time_end [line:77] INFO Time Cost:                    89.9532s
+2023-01-06 18:17:58,573 fedbase.py run [line:63] INFO --------------Round 177--------------
+2023-01-06 18:18:04,475 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7156
+2023-01-06 18:18:04,476 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2993
+2023-01-06 18:18:04,476 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.9025s
+2023-01-06 18:18:04,481 fedbase.py iterate [line:117] INFO Selected clients : [6, 4, 7, 0, 9]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:19:20,932 basic_logger.py time_end [line:77] INFO Time Cost:                    82.3584s
+2023-01-06 18:19:20,932 fedbase.py run [line:63] INFO --------------Round 178--------------
+2023-01-06 18:19:25,881 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6818
+2023-01-06 18:19:25,881 basic_logger.py show_current_output [line:147] INFO test_loss                     1.5833
+2023-01-06 18:19:25,881 basic_logger.py time_end [line:77] INFO Eval Time Cost:               4.9488s
+2023-01-06 18:19:25,893 fedbase.py iterate [line:117] INFO Selected clients : [8, 4, 9, 7, 6]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:20:39,502 basic_logger.py time_end [line:77] INFO Time Cost:                    78.5700s
+2023-01-06 18:20:39,503 fedbase.py run [line:63] INFO --------------Round 179--------------
+2023-01-06 18:20:42,081 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7234
+2023-01-06 18:20:42,081 basic_logger.py show_current_output [line:147] INFO test_loss                     1.3390
+2023-01-06 18:20:42,082 basic_logger.py time_end [line:77] INFO Eval Time Cost:               2.5785s
+2023-01-06 18:20:42,088 fedbase.py iterate [line:117] INFO Selected clients : [5, 9, 6, 7, 4]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:21:58,980 basic_logger.py time_end [line:77] INFO Time Cost:                    79.4773s
+2023-01-06 18:21:58,981 fedbase.py run [line:63] INFO --------------Round 180--------------
+2023-01-06 18:22:04,282 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7260
+2023-01-06 18:22:04,283 basic_logger.py show_current_output [line:147] INFO test_loss                     1.3067
+2023-01-06 18:22:04,283 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.3017s
+2023-01-06 18:22:04,299 fedbase.py iterate [line:117] INFO Selected clients : [8, 7, 3, 0, 1]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:23:20,937 basic_logger.py time_end [line:77] INFO Time Cost:                    81.9555s
+2023-01-06 18:23:20,937 fedbase.py run [line:63] INFO --------------Round 181--------------
+2023-01-06 18:23:24,589 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6857
+2023-01-06 18:23:24,589 basic_logger.py show_current_output [line:147] INFO test_loss                     1.3760
+2023-01-06 18:23:24,590 basic_logger.py time_end [line:77] INFO Eval Time Cost:               3.6524s
+2023-01-06 18:23:24,590 fedbase.py iterate [line:117] INFO Selected clients : [1, 0, 2, 5, 9]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:25:01,959 basic_logger.py time_end [line:77] INFO Time Cost:                    101.0215s
+2023-01-06 18:25:01,959 fedbase.py run [line:63] INFO --------------Round 182--------------
+2023-01-06 18:25:08,009 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7052
+2023-01-06 18:25:08,009 basic_logger.py show_current_output [line:147] INFO test_loss                     1.3426
+2023-01-06 18:25:08,010 basic_logger.py time_end [line:77] INFO Eval Time Cost:               6.0502s
+2023-01-06 18:25:08,023 fedbase.py iterate [line:117] INFO Selected clients : [9, 5, 1, 7, 2]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:26:36,601 basic_logger.py time_end [line:77] INFO Time Cost:                    94.6418s
+2023-01-06 18:26:36,602 fedbase.py run [line:63] INFO --------------Round 183--------------
+2023-01-06 18:26:41,797 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7247
+2023-01-06 18:26:41,797 basic_logger.py show_current_output [line:147] INFO test_loss                     1.3033
+2023-01-06 18:26:41,797 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.1956s
+2023-01-06 18:26:41,810 fedbase.py iterate [line:117] INFO Selected clients : [7, 5, 8, 1, 9]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:28:05,618 basic_logger.py time_end [line:77] INFO Time Cost:                    89.0162s
+2023-01-06 18:28:05,619 fedbase.py run [line:63] INFO --------------Round 184--------------
+2023-01-06 18:28:11,188 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7390
+2023-01-06 18:28:11,188 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2563
+2023-01-06 18:28:11,189 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.5698s
+2023-01-06 18:28:11,197 fedbase.py iterate [line:117] INFO Selected clients : [0, 7, 5, 4, 9]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:29:30,509 basic_logger.py time_end [line:77] INFO Time Cost:                    84.8900s
+2023-01-06 18:29:30,509 fedbase.py run [line:63] INFO --------------Round 185--------------
+2023-01-06 18:29:36,008 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7351
+2023-01-06 18:29:36,008 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2201
+2023-01-06 18:29:36,008 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.4991s
+2023-01-06 18:29:36,018 fedbase.py iterate [line:117] INFO Selected clients : [2, 7, 6, 8, 4]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:31:01,267 basic_logger.py time_end [line:77] INFO Time Cost:                    90.7576s
+2023-01-06 18:31:01,267 fedbase.py run [line:63] INFO --------------Round 186--------------
+2023-01-06 18:31:05,769 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7455
+2023-01-06 18:31:05,770 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2071
+2023-01-06 18:31:05,770 basic_logger.py time_end [line:77] INFO Eval Time Cost:               4.5024s
+2023-01-06 18:31:05,774 fedbase.py iterate [line:117] INFO Selected clients : [7, 2, 4, 9, 3]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:32:46,790 basic_logger.py time_end [line:77] INFO Time Cost:                    105.5220s
+2023-01-06 18:32:46,790 fedbase.py run [line:63] INFO --------------Round 187--------------
+2023-01-06 18:32:52,878 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7506
+2023-01-06 18:32:52,878 basic_logger.py show_current_output [line:147] INFO test_loss                     1.1782
+2023-01-06 18:32:52,879 basic_logger.py time_end [line:77] INFO Eval Time Cost:               6.0885s
+2023-01-06 18:32:52,889 fedbase.py iterate [line:117] INFO Selected clients : [5, 4, 6, 9, 2]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:34:21,496 basic_logger.py time_end [line:77] INFO Time Cost:                    94.7062s
+2023-01-06 18:34:21,497 fedbase.py run [line:63] INFO --------------Round 188--------------
+2023-01-06 18:34:23,637 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7506
+2023-01-06 18:34:23,637 basic_logger.py show_current_output [line:147] INFO test_loss                     1.1810
+2023-01-06 18:34:23,637 basic_logger.py time_end [line:77] INFO Eval Time Cost:               2.1402s
+2023-01-06 18:34:23,638 fedbase.py iterate [line:117] INFO Selected clients : [3, 1, 9, 0, 4]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:35:49,154 basic_logger.py time_end [line:77] INFO Time Cost:                    87.6575s
+2023-01-06 18:35:49,155 fedbase.py run [line:63] INFO --------------Round 189--------------
+2023-01-06 18:35:55,170 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6935
+2023-01-06 18:35:55,171 basic_logger.py show_current_output [line:147] INFO test_loss                     1.5473
+2023-01-06 18:35:55,171 basic_logger.py time_end [line:77] INFO Eval Time Cost:               6.0160s
+2023-01-06 18:35:55,183 fedbase.py iterate [line:117] INFO Selected clients : [6, 7, 5, 8, 1]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:37:02,122 basic_logger.py time_end [line:77] INFO Time Cost:                    72.9668s
+2023-01-06 18:37:02,122 fedbase.py run [line:63] INFO --------------Round 190--------------
+2023-01-06 18:37:06,069 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7286
+2023-01-06 18:37:06,070 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2534
+2023-01-06 18:37:06,070 basic_logger.py time_end [line:77] INFO Eval Time Cost:               3.9475s
+2023-01-06 18:37:06,080 fedbase.py iterate [line:117] INFO Selected clients : [9, 8, 6, 1, 0]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:38:21,169 basic_logger.py time_end [line:77] INFO Time Cost:                    79.0463s
+2023-01-06 18:38:21,169 fedbase.py run [line:63] INFO --------------Round 191--------------
+2023-01-06 18:38:26,947 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7156
+2023-01-06 18:38:26,951 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2358
+2023-01-06 18:38:26,951 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.7815s
+2023-01-06 18:38:26,958 fedbase.py iterate [line:117] INFO Selected clients : [2, 6, 4, 0, 3]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:39:54,420 basic_logger.py time_end [line:77] INFO Time Cost:                    93.2501s
+2023-01-06 18:39:54,420 fedbase.py run [line:63] INFO --------------Round 192--------------
+2023-01-06 18:39:59,507 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7078
+2023-01-06 18:39:59,507 basic_logger.py show_current_output [line:147] INFO test_loss                     1.3728
+2023-01-06 18:39:59,508 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.0875s
+2023-01-06 18:39:59,517 fedbase.py iterate [line:117] INFO Selected clients : [9, 1, 7, 8, 2]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:41:34,604 basic_logger.py time_end [line:77] INFO Time Cost:                    100.1839s
+2023-01-06 18:41:34,604 fedbase.py run [line:63] INFO --------------Round 193--------------
+2023-01-06 18:41:39,856 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7299
+2023-01-06 18:41:39,857 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2695
+2023-01-06 18:41:39,857 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.2522s
+2023-01-06 18:41:39,862 fedbase.py iterate [line:117] INFO Selected clients : [3, 9, 8, 6, 1]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:42:58,878 basic_logger.py time_end [line:77] INFO Time Cost:                    84.2733s
+2023-01-06 18:42:58,878 fedbase.py run [line:63] INFO --------------Round 194--------------
+2023-01-06 18:43:04,615 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7325
+2023-01-06 18:43:04,615 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2308
+2023-01-06 18:43:04,616 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.7370s
+2023-01-06 18:43:04,627 fedbase.py iterate [line:117] INFO Selected clients : [8, 7, 3, 1, 0]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:44:24,661 basic_logger.py time_end [line:77] INFO Time Cost:                    85.7824s
+2023-01-06 18:44:24,661 fedbase.py run [line:63] INFO --------------Round 195--------------
+2023-01-06 18:44:30,140 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.6974
+2023-01-06 18:44:30,140 basic_logger.py show_current_output [line:147] INFO test_loss                     1.3995
+2023-01-06 18:44:30,140 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.4788s
+2023-01-06 18:44:30,146 fedbase.py iterate [line:117] INFO Selected clients : [8, 9, 5, 1, 7]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:45:53,396 basic_logger.py time_end [line:77] INFO Time Cost:                    88.7348s
+2023-01-06 18:45:53,397 fedbase.py run [line:63] INFO --------------Round 196--------------
+2023-01-06 18:45:59,637 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7117
+2023-01-06 18:45:59,638 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2659
+2023-01-06 18:45:59,638 basic_logger.py time_end [line:77] INFO Eval Time Cost:               6.2409s
+2023-01-06 18:45:59,650 fedbase.py iterate [line:117] INFO Selected clients : [8, 3, 7, 6, 4]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:47:18,965 basic_logger.py time_end [line:77] INFO Time Cost:                    85.5678s
+2023-01-06 18:47:18,965 fedbase.py run [line:63] INFO --------------Round 197--------------
+2023-01-06 18:47:24,534 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7247
+2023-01-06 18:47:24,535 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2337
+2023-01-06 18:47:24,535 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.5697s
+2023-01-06 18:47:24,547 fedbase.py iterate [line:117] INFO Selected clients : [8, 2, 6, 9, 1]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:48:52,358 basic_logger.py time_end [line:77] INFO Time Cost:                    93.3926s
+2023-01-06 18:48:52,359 fedbase.py run [line:63] INFO --------------Round 198--------------
+2023-01-06 18:48:56,769 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7247
+2023-01-06 18:48:56,770 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2158
+2023-01-06 18:48:56,770 basic_logger.py time_end [line:77] INFO Eval Time Cost:               4.4109s
+2023-01-06 18:48:56,785 fedbase.py iterate [line:117] INFO Selected clients : [2, 8, 0, 6, 9]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:50:20,438 basic_logger.py time_end [line:77] INFO Time Cost:                    88.0787s
+2023-01-06 18:50:20,438 fedbase.py run [line:63] INFO --------------Round 199--------------
+2023-01-06 18:50:27,118 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7169
+2023-01-06 18:50:27,119 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2089
+2023-01-06 18:50:27,119 basic_logger.py time_end [line:77] INFO Eval Time Cost:               6.6808s
+2023-01-06 18:50:27,132 fedbase.py iterate [line:117] INFO Selected clients : [2, 4, 9, 7, 6]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:51:59,978 basic_logger.py time_end [line:77] INFO Time Cost:                    99.5397s
+2023-01-06 18:51:59,978 fedbase.py run [line:63] INFO --------------Round 200--------------
+2023-01-06 18:52:03,991 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7273
+2023-01-06 18:52:03,992 basic_logger.py show_current_output [line:147] INFO test_loss                     1.2144
+2023-01-06 18:52:03,992 basic_logger.py time_end [line:77] INFO Eval Time Cost:               4.0136s
+2023-01-06 18:52:03,994 fedbase.py iterate [line:117] INFO Selected clients : [4, 0, 8, 6, 3]
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-06 18:53:20,494 basic_logger.py time_end [line:77] INFO Time Cost:                    80.5155s
+2023-01-06 18:53:20,494 fedbase.py run [line:97] INFO --------------Final Evaluation--------------
+2023-01-06 18:53:26,410 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.7013
+2023-01-06 18:53:26,411 basic_logger.py show_current_output [line:147] INFO test_loss                     1.3959
+2023-01-06 18:53:26,411 basic_logger.py time_end [line:77] INFO Eval Time Cost:               5.9164s
+2023-01-06 18:53:26,411 fedbase.py run [line:101] INFO =================End==================
+2023-01-06 18:53:26,411 basic_logger.py time_end [line:77] INFO Total Time Cost:              18232.6098s
+2023-01-06 18:53:26,411 main.py main [line:27] ERROR Exception Logged
+Traceback (most recent call last):
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/main.py", line 24, in main
+    server.run()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedbase.py", line 104, in run
+    flw.logger.save_output_as_json()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/utils/logger/basic_logger.py", line 86, in save_output_as_json
+    filepath = os.path.join(self.get_output_path(), self.get_output_name())
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/utils/logger/basic_logger.py", line 180, in get_output_name
+    self.meta["availability"],
+KeyError: 'availability'
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Init dataloader
+Traceback (most recent call last):
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/main.py", line 24, in main
+    server.run()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedbase.py", line 104, in run
+    flw.logger.save_output_as_json()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/utils/logger/basic_logger.py", line 86, in save_output_as_json
+    filepath = os.path.join(self.get_output_path(), self.get_output_name())
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/utils/logger/basic_logger.py", line 180, in get_output_name
+    self.meta["availability"],
+KeyError: 'availability'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/main.py", line 33, in <module>
+    main()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/main.py", line 28, in main
+    raise RuntimeError
+RuntimeError
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: 
+wandb: Run history:
+wandb: Accuracy/Testing Accuracy ▁▆▇▇▇▇███▇█▇▇█▇▇▇█▇█▇█▇▇▇▇█▇▇████▇█▇████
+wandb:         Loss/Testing Loss █▃▁▁▁▁▁▁▁▂▁▂▂▂▂▂▂▁▂▂▂▁▂▂▂▂▂▃▂▂▂▂▂▂▂▃▂▂▂▂
+wandb: 
+wandb: Run summary:
+wandb: Accuracy/Testing Accuracy 0.72727
+wandb:         Loss/Testing Loss 1.21436
+wandb: 
+wandb: Synced fedprox_ratio_1.0_C_0.5_: https://wandb.ai/aiotlab/Abnormal_Data_FL/runs/21pj14z0
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20230106_134929-21pj14z0/logs

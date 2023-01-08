@@ -29,6 +29,7 @@ def read_option():
         type=str,
         default="pill_classification",
     )
+    parser.add_argument("--fuzzy_config_path", type=str, default="fuzzylogic_config/config1")
     parser.add_argument(
         "--idx_path",
         help="path of the idx data for each client",
@@ -242,9 +243,13 @@ def setup_seed(seed):
     torch.backends.cudnn.enabled = False
     torch.backends.cudnn.deterministic = True
 
-
+import yaml
 def initialize(option):
     # init logger from 1) Logger in algorithm/fedxxx.py, 2) Logger in utils/logger/logger_name.py 3) Logger in utils/logger/basic_logger.py
+    with open(f"{option['fuzzy_config_path']}/case.yaml") as c:
+        fuzzy_config = list(yaml.load_all(c, Loader=yaml.FullLoader))
+        fuzzy_config[0]["path"] = option['fuzzy_config_path']
+    option["fuzzy_config"] = fuzzy_config
     logger_order = {
         "{}Logger".format(option["algorithm"]): "%s.%s"
         % ("algorithm", option["algorithm"]),

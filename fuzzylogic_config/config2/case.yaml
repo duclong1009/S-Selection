@@ -1,0 +1,14 @@
+round:
+  low: 5
+  middle: 15
+
+history_sampled: 
+  low: 0.3
+  middle: 0.5
+  high: 0.7
+
+median:
+  low: 1
+  middle: 30
+  high: 50
+

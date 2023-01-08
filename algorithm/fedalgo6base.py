@@ -26,40 +26,6 @@ class Server(BasicServer):
         self.score_range = 0
         self.max_score = 0
 
-    def f_goodness(self,):
-        list_goodness = [self.goodness_cached[i] for i in self.selected_clients]
-        utils.fmodule.LOG_DICT["list_goodness"] = list_goodness
-        mean_goodness = sum(list_goodness)/len(list_goodness)
-        if mean_goodness == 0 :
-            return 0
-        return 1.0/ mean_goodness
-
-    def f_round(
-        self,
-    ):
-        if self.current_round == 1:
-            return 0
-        probability = (
-            1.0
-            / (self.current_round * self.option['o'] * math.sqrt(2 * math.pi))
-            * (math.exp(-0.5 * ((math.log(self.current_round) - self.option['u']) / self.option['o']) ** 2))
-        )
-        return probability
-            
-    def modify_ratio(self,):
-        if self.current_round == 1:
-            return 
-        # have_c = len([cid for cid in self.selected_clients if cid in self.have_cache])
-        f_round = self.f_round()
-        f_goodness = self.f_goodness()
-        utils.fmodule.LOG_DICT["f_round"] = f_round
-        utils.fmodule.LOG_DICT["f_goodness"] = f_goodness
-        f_total = 6.0 * f_round + 0.3 * f_goodness
-        extra_ignored_rate = min(f_total, 0.3)
-        sample_ratio = self.option["ratio"] - extra_ignored_rate 
-        utils.fmodule.LOG_DICT["sampler_rate"] = sample_ratio
-        utils.fmodule.Sampler.set_ratio(sample_ratio)
-        print(f"Update ratio round {self.current_round}: {self.option['ratio']} >>>>  {sample_ratio}")
     
     def cal_threshold(self, aggregated_histogram):
         # breakpoint()
@@ -77,13 +43,10 @@ class Server(BasicServer):
         
         aggregated_histogram = self.communicate_score(self.selected_clients)
         self.aggregated_histogram = aggregated_histogram
-        self.modify_ratio()
         self.threshold_score = self.cal_threshold(self.aggregated_histogram)
-
         received_information = self.communicate(self.selected_clients)
         n_samples = received_information["n_samples"]
         utils.fmodule.LOG_DICT["selected_samples"] = n_samples
-        print("Number samples of this round: ",n_samples)
         models = received_information["model"]
         list_vols = copy.deepcopy(self.local_data_vols)
         for i, cid in enumerate(self.selected_clients):

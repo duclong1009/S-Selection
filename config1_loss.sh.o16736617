@@ -1,0 +1,22 @@
+wandb: Currently logged in as: longnd (aiotlab). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.13.7 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.13.5
+wandb: Run data is saved locally in /home/ace15032jo/Projects/repo2/SampleSelection_easyFL/wandb/run-20230110_042604-3f3tkmcl
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run fedalgo6base_ratio_0.8_C_0.3_loss
+wandb: ⭐️ View project at https://wandb.ai/aiotlab/Abnormal_Data_FL
+wandb: 🚀 View run at https://wandb.ai/aiotlab/Abnormal_Data_FL/runs/3f3tkmcl
+2023-01-10 04:26:05,316 fflow.py initialize [line:267] INFO Using Logger in `utils.logger.basic_logger`
+2023-01-10 04:26:05,316 fflow.py initialize [line:268] INFO Initializing fedtask: pill_classification
+2023-01-10 04:26:05,735 fflow.py initialize [line:284] INFO Using model `resnet18` in `benchmark.pill_classification.model.resnet18` as the globally shared model.
+2023-01-10 04:26:05,740 fflow.py initialize [line:312] INFO Using sampler `threshold_sampler` in `sampler.threshold_sampler` as the globally shared model.
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-10 04:26:11,827 fflow.py initialize [line:332] INFO Initializing Clients: 10 clients of `algorithm.fedalgo6base.Client` being created.
+2023-01-10 04:26:11,828 fflow.py initialize [line:353] INFO Initializing Server: 1 server of `algorithm.fedalgo6base.Server` being created.
+2023-01-10 04:26:11,828 fflow.py initialize [line:366] INFO Ready to start.
+2023-01-10 04:26:11,829 fedbase.py run [line:63] INFO --------------Round 1--------------
+2023-01-10 04:26:16,598 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.0130
+2023-01-10 04:26:16,599 basic_logger.py show_current_output [line:147] INFO test_loss                     4.5173
+2023-01-10 04:26:16,599 basic_logger.py time_end [line:77] INFO Eval Time Cost:               4.7705s
+2023-01-10 04:26:16,604 fedalgo6base.py iterate [line:42] INFO Selected clients : [1, 2, 7]

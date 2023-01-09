@@ -14,4 +14,4 @@
 # python3 -m venv ~/venv/pytorch+horovod
 # source ~/venv/pytorch+horovod/bin/activate
 
-CUDA_VISIBLE_DEVICES=1 python main.py --session_name "config2_inverse_test_threshold" --group_name "NIID_10Client_test" --idx_path Dataset_scenarios/NIID_10clients_random.json --proportion 0.3 --algorithm fedalgo6base --score loss --ratio 1 --aggregate "weighted_com" --fuzzy_config_path "fuzzylogic_config/config2_inverse" --log_wandb 
+python main.py --session_name "config2_inverse_test_threshold" --group_name "NIID_10Client_test" --idx_path Dataset_scenarios/NIID_10clients_random.json --proportion 0.3 --algorithm fedalgo6base --score loss --ratio 1 --aggregate "weighted_com" --fuzzy_config_path "fuzzylogic_config/config2_inverse" --log_wandb 

@@ -1,0 +1,23 @@
+wandb: Currently logged in as: longnd (aiotlab). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.13.7 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.13.5
+wandb: Run data is saved locally in /home/ace15032jo/Projects/repo2/SampleSelection_easyFL/wandb/run-20230110_042019-1ysrt19j
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run fedalgo7_ratio_1.0_C_0.3_config4
+wandb: ⭐️ View project at https://wandb.ai/aiotlab/Abnormal_Data_FL
+wandb: 🚀 View run at https://wandb.ai/aiotlab/Abnormal_Data_FL/runs/1ysrt19j
+2023-01-10 04:20:21,032 fflow.py initialize [line:267] INFO Using Logger in `utils.logger.basic_logger`
+2023-01-10 04:20:21,033 fflow.py initialize [line:268] INFO Initializing fedtask: pill_classification
+2023-01-10 04:20:21,519 fflow.py initialize [line:284] INFO Using model `resnet18` in `benchmark.pill_classification.model.resnet18` as the globally shared model.
+2023-01-10 04:20:21,524 fflow.py initialize [line:312] INFO Using sampler `threshold_sampler` in `sampler.threshold_sampler` as the globally shared model.
+Using cache found in /home/ace15032jo/.cache/torch/hub/pytorch_vision_v0.10.0
+2023-01-10 04:20:27,330 fflow.py initialize [line:332] INFO Initializing Clients: 10 clients of `algorithm.fedalgo7.Client` being created.
+2023-01-10 04:20:27,330 fflow.py initialize [line:353] INFO Initializing Server: 1 server of `algorithm.fedalgo7.Server` being created.
+2023-01-10 04:20:27,353 fflow.py initialize [line:366] INFO Ready to start.
+2023-01-10 04:20:27,353 fedbase.py run [line:63] INFO --------------Round 1--------------
+2023-01-10 04:20:32,044 basic_logger.py show_current_output [line:147] INFO test_accuracy                 0.0130
+2023-01-10 04:20:32,045 basic_logger.py show_current_output [line:147] INFO test_loss                     4.5173
+2023-01-10 04:20:32,046 basic_logger.py time_end [line:77] INFO Eval Time Cost:               4.6926s
+2023-01-10 04:20:32,051 fedalgo7.py iterate [line:111] INFO Selected clients : [1, 2, 7]
+wandb: ERROR Failed to sample metric: process no longer exists (pid=11684)

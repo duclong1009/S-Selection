@@ -1,0 +1,16 @@
+round:
+  low: 5
+  middle: 40
+
+history_sampled: 
+  n_rounds: 3
+  low: 0.3
+  middle: 0.5
+  high: 0.7
+
+median:
+  low: 5
+  middle: 30
+  high: 50
+
+upper_threshold: 115

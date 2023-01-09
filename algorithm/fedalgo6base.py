@@ -201,9 +201,9 @@ class Client(BasicClient):
         self.model = model
         histogram=None
         self.calculate_importance(copy.deepcopy(model))
-        # if not "score_list" in utils.fmodule.LOG_DICT.keys():
-        #     utils.fmodule.LOG_DICT["score_list"] = {}
-        # utils.fmodule.LOG_DICT["score_list"][f"client_{self.id}"] = list(self.score_cached)
+        if not "score_list" in utils.fmodule.LOG_DICT.keys():
+            utils.fmodule.LOG_DICT["score_list"] = {}
+        utils.fmodule.LOG_DICT["score_list"][f"client_{self.id}"] = list(self.score_cached)
         if score_range !=0 :
             histogram = self.build_histogram(self.score_cached, score_range)
         cpkg = self.pack_score(histogram)

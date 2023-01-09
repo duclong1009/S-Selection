@@ -135,16 +135,14 @@ class Server(BasicServer):
         if self.current_round == 1:
             return 0
         cared_round = self.option["fuzzy_config"]["history_sampled"]["n_rounds"]
-        cared_round = max(cared_round, self.current_round - 1)
+        cared_round = min(cared_round, self.current_round - 1)
         # breakpoint
         # cared_list = self.history_selected_clients[:-cared_round]
         set_ = set()
-        breakpoint()
         for i in range(1, cared_round + 1):
             set_.update(self.history_selected_clients[-i])
-        breakpoint()
         list_ = list(set_)
-        clients = [i for i in self.selected_clients if i in list_]
+        clients = len([i for i in self.selected_clients if i in list_])
         return clients * 1.0 / len(self.selected_clients)
 
     def communicate_with(self, client_id):
@@ -299,9 +297,9 @@ class Client(BasicClient):
         self.model = model
         histogram = None
         self.calculate_importance(copy.deepcopy(model))
-        # if not "score_list" in utils.fmodule.LOG_DICT.keys():
-        #     utils.fmodule.LOG_DICT["score_list"] = {}
-        # utils.fmodule.LOG_DICT["score_list"][f"client_{self.id}"] = list(self.score_cached)
+        if not "score_list" in utils.fmodule.LOG_DICT.keys():
+            utils.fmodule.LOG_DICT["score_list"] = {}
+        utils.fmodule.LOG_DICT["score_list"][f"client_{self.id}"] = list(self.score_cached)
         if score_range != 0:
             histogram = self.build_histogram(self.score_cached, score_range)
         cpkg = self.pack_score(histogram)

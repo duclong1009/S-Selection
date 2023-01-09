@@ -3,6 +3,7 @@ round:
   middle: 15
 
 history_sampled: 
+  n_rounds: 3
   low: 0.3
   middle: 0.5
   high: 0.7

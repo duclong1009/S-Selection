@@ -27,6 +27,25 @@ class _BaseSampler(object):
         return total_norm
     def cal_gnorm_score_batch(self,batch,model,criteria,deivce):
         pass
+    
+    def cal_loss(self, dataset, model, criteria, device):
+        # device = torch.device(device)
+        # device = "cuda"
+        optimizer = torch.optim.SGD(model.parameters(),lr=1e-5)
+        list_score = []
+        list_idx = []
+        model = model.to(device)
+        with torch.no_grad():
+            for idx, data in enumerate(dataset):
+                # breakpoint()
+                optimizer.zero_grad()
+                x, y = data[0].unsqueeze(0).to(device), torch.tensor(
+                    data[1]).unsqueeze(0).to(device)
+                y_pred = model(x)
+                loss = criteria(y_pred, y)
+                list_score.append(loss)
+                list_idx.append(idx)
+        return list_score, list_idx
     def cal_gnorm_model_weight(self, dataset, model, criteria, device):
         # device = torch.device(device)
         # device = "cuda"

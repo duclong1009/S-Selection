@@ -13,3 +13,4 @@ median:
   middle: 30
   high: 50
 
+upper_threshold: 120

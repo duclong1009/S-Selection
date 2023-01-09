@@ -75,7 +75,8 @@ class Sampler(_BaseSampler):
         list_n_ , value_list = histogram
         total_samples = sum(list_n_)
         thresh_list = value_list[:-1]
-        
+        if self.sampler_config["ratio"] == 1:
+            return 0
         thresh_to_keep = int(self.sampler_config["ratio"] * total_samples)
         check_ = 0
         # list_n_increase = 

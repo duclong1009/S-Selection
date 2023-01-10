@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import os
 dict_path = f"Saved_Results/NIID_middlebias_10clients"
 saved_path = f"NIID_middlebias_10clients"
-session_name = f"fedalgo7_ratio_1.0_C_0.3_config2"
+session_name = f"fedalgo9_ratio_1.0_C_0.3_config4"
 path_ = f"{dict_path}/{session_name}.json"
 
 def check_dir(dict_path):
@@ -21,7 +21,7 @@ n_cols = 5
 
 start_r = 81
 
-for start_r in range(1,181,10):
+for start_r in range(1,200,10):
     end_round = start_r + n_cols * n_rows - 1
     fig, ax = plt.subplots(nrows=n_rows, ncols=n_cols,figsize=(20,8), sharey=True)
     for i,round in enumerate(range(start_r,end_round+1)):

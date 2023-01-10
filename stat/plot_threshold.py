@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import os
 dict_path = f"Saved_Results/NIID_middlebias_10clients"
 saved_path = f"NIID_middlebias_10clients"
-session_name = f"fedalgo7_ratio_1.0_C_0.3_config2"
+session_name = f"fedalgo9_ratio_1.0_C_0.3_config4"
 path_ = f"{dict_path}/{session_name}.json"
 
 def check_dir(dict_path):
@@ -18,7 +18,7 @@ with open(path_, "r") as f:
 import matplotlib.pyplot as plt
 
 list_ = []
-end_round = 147
+end_round = 124
 for round in range(1,end_round):
     list_.append(result_dict[f"Round {round}"]["selected_ratio"])
 plt.plot(list_)

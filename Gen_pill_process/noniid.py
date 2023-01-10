@@ -94,15 +94,15 @@ def gen_niid_random_samples2(n_clients,clean_dict, noisy_dict  ,noisy_rate):
     clean_chunks= int(len(clean_dict)/chunk_size)
     noisy_chunks = int(len(noisy_dict)/noisy_size)
     # n_chunks = 1232
-    total_chunks = clean_chunks + noisy_chunks
-    min_c = 15
-    max_c = 30
+    total_chunks = clean_chunks
+    min_c = 10
+    max_c = 25
    
     key= True
     print(f"Len clean chunks: {clean_chunks}")
     print(f"Len noisy chunks: {noisy_chunks}")
     while(key):
-        try:
+        # try:
             key1 = True
             while(key1):
                 assigned_samples_list = []
@@ -129,7 +129,7 @@ def gen_niid_random_samples2(n_clients,clean_dict, noisy_dict  ,noisy_rate):
             for client in range(n_clients):
                 noisy_chunks_per_client.append(int(noisy_chunks * noisy_rate[client]))
                 idx_4client_dict[client] = []
-            # print(noisy_chunks_per_client, assigned_samples_list)
+            print(noisy_chunks_per_client, assigned_samples_list)
             for client in range(n_clients):
                 clean_chunks_per_client[client] = assigned_samples_list[client] - noisy_chunks_per_client[client]
                 
@@ -145,8 +145,8 @@ def gen_niid_random_samples2(n_clients,clean_dict, noisy_dict  ,noisy_rate):
                 for id_c in chunk_idx:
                     idx_4client_dict[client] += [kd[1] for kd in  noisy_list_chunks[id_c]]
             key = False
-        except:
-            pass
+        # except:
+        #     pass
     return idx_4client_dict
 
 
@@ -164,9 +164,9 @@ if __name__ == '__main__':
     # -------CONFIG------------------
     seed = 10
     n_clinets = 10
-    noisy_rate = [0.3, 0.3, 0.2, 0.2, 0, 0, 0, 0 , 0 , 0]
+    noisy_rate = [0.1, 0.1, 0.1, 0, 0, 0, 0, 0 , 0 , 0]
     # noisy_rate = [0.2, 0.2, 0.15, 0.15, 0.15, 0.15, 0, 0 , 0 , 0]
-    file_name = f"NIID_highestbias_{n_clinets}clients.json"
+    file_name = f"NIID_lowbias_{n_clinets}clients.json"
     idx_4client = gen_niid_random_samples2(n_clinets,clean_dict, noisy_dict, noisy_rate)
     import os
     save_path = f"Dataset_scenarios"

@@ -8,8 +8,8 @@ import copy
 from utils import fmodule
 
 class Server(BasicServer):
-    def __init__(self, option, model, clients, test_data=None):
-        super(Server, self).__init__(option, model, clients, test_data)
+    def __init__(self, option, model, clients, test_data=None,device="cpu"):
+        super(Server, self).__init__(option, model, clients, test_data,device)
         self.init_algo_para({'eta':1.0})
         self.cg = self.model.zeros_like()
 
@@ -40,8 +40,8 @@ class Server(BasicServer):
 
 
 class Client(BasicClient):
-    def __init__(self, option, name='', train_data=None, valid_data=None):
-        super(Client, self).__init__(option, name, train_data, valid_data)
+    def __init__(self, option, name='', train_data=None, valid_data=None,device="cpu"):
+        super(Client, self).__init__(option, name, train_data, valid_data,device)
         self.c = None
 
     @fmodule.with_multi_gpus

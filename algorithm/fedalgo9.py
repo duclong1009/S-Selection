@@ -74,7 +74,7 @@ class FuzzyLogicBase:
         elif fuzzied_set["round"] == 1:
             table_inffer = self.config["middle_table"]
         else:
-            if fuzzied_set["median"] == 2:
+            if fuzzied_set["median"] == 0:
                 self.use_upperbound_score = True
             table_inffer = self.config["high_table"]
         return table_inffer[fuzzied_set["history_cached"], fuzzied_set["median"]]

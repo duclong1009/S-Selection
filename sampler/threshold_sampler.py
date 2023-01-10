@@ -52,13 +52,14 @@ class Sampler(_BaseSampler):
 
     def sample_upperbound(self, cached_score, threshold, upperbound_score):
         list_idx = range(len(cached_score))
+        # breakpoint()
         if threshold > 0:
             selected_idx = np.array(list_idx)[
-                np.where(np.array(cached_score) >= threshold)
-                & np.where(np.array(cached_score) <= upperbound_score)
+                np.where((np.array(cached_score) >= threshold)
+                & (np.array(cached_score) <= upperbound_score))
             ]
         else:
-            selected_idx = np.array(list_idx)
+            selected_idx = np.array(list_idx)[np.where(np.array(cached_score) <= upperbound_score)]
         return selected_idx
 
     def sample_lower_using_cached(self, cached_score, threshold):

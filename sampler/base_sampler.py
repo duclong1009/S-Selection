@@ -43,7 +43,7 @@ class _BaseSampler(object):
                     data[1]).unsqueeze(0).to(device)
                 y_pred = model(x)
                 loss = criteria(y_pred, y)
-                list_score.append(loss.item())
+                list_score.append(loss.cpu().item())
                 list_idx.append(idx)
         return list_score, list_idx
     def cal_gnorm_model_weight(self, dataset, model, criteria, device):

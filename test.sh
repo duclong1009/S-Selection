@@ -14,4 +14,4 @@ module load python/3.10/3.10.4
 python3 -m venv ~/venv/pytorch+horovod
 source ~/venv/pytorch+horovod/bin/activate
 
-python main.py --session_name "" --group_name "NIID_middlebias_10clients" --idx_path Dataset_scenarios/NIID_middlebias_10clients.json --proportion 0.3 --algorithm scaffold --score all_gnorm_threshold --ratio 1 --aggregate "weighted_com" --fuzzy_config_path "fuzzylogic_config/test_config"
+python main.py --session_name "" --group_name "NIID_middlebias_10clients" --idx_path Dataset_scenarios/NIID_middlebias_10clients.json --proportion 0.3 --algorithm scaffold --score all_gnorm_threshold --ratio 1 --aggregate "weighted_com" --fuzzy_config_path "fuzzylogic_config/test_config" --noisy_rate 0.3 

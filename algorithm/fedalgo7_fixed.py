@@ -86,7 +86,7 @@ class Server(BasicServer):
         super(Server, self).__init__(option, model, clients, test_data, device)
         self.sampler = utils.fmodule.Sampler
         self.threshold_score = 0
-        self.noisy_rate = option["noisy_rate"]
+        self.noisy_rate = option["noisy_rate_clients"]
         option["fuzzy_config"] = option["fuzzy_config"][0]
         self.fuzzy_algo = FuzzyLogicBase(option["fuzzy_config"])
         # init goodness_cached

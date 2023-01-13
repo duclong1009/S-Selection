@@ -14,4 +14,4 @@
 # python3 -m venv ~/venv/pytorch+horovod
 # source ~/venv/pytorch+horovod/bin/activate
 
-python main.py --session_name "config2_inverse_test_threshold" --group_name "NIID_10Client_test" --idx_path Dataset_scenarios/NIID_10clients_random.json --proportion 0.3 --algorithm fedalgo6base --score loss --ratio 1 --aggregate "weighted_com" --fuzzy_config_path "fuzzylogic_config/config2_inverse" --log_wandb 
+python main.py --session_name "config2_inverse_test_threshold" --group_name "NIID_10Client_test" --idx_path Dataset_scenarios/NIID_10clients_random.json --proportion 0.3 --algorithm fedalgo7_fixed --score loss --ratio 1 --aggregate "weighted_com" --fuzzy_config_path "fuzzylogic_config/config4_noisyrate" --log_wandb --noisy_rate_clients 0.3 0.25 0.25 0.2 0.1 0.1 0 0 0 0

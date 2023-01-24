@@ -184,6 +184,7 @@ def read_option():
         default=512,
     )
     #algorthim config
+    parser.add_argument("--data_path",type=str, default="mnist/MNIST-noniid-fedavg_pareto_1")
     parser.add_argument("--type_of_goodness", default='mean', type=str)
     parser.add_argument("--o", default = 1, type=float,)
     parser.add_argument("--u", default = 1, type=float)
@@ -272,7 +273,7 @@ def initialize(option):
     bmk_core_path = ".".join(["benchmark", bmk_name, "core"])
     # read federated task by TaskPipe
     # init partitioned dataset
-    taskreader_config = {"idx_path": option["idx_path"]}
+    taskreader_config = {"idx_path": option["idx_path"],"data_path":option["data_path"]}
     TaskReader = getattr(importlib.import_module(bmk_core_path), "TaskReader")(
         taskreader_config
     )

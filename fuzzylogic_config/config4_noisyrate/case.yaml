@@ -1,0 +1,16 @@
+round:
+  low: 5
+  middle: 40
+
+noisy_rate: 
+  n_rounds: 3
+  low: 0.1
+  middle: 0.2
+  high: 0.3
+
+median:
+  low: 5
+  middle: 30
+  high: 50
+
+upper_threshold: 115

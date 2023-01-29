@@ -1,0 +1,6 @@
+**/__pycache__
+wandb/
+**.npy
+stat/
+data/
+Saved_Results/

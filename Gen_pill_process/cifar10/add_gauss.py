@@ -19,7 +19,7 @@ def seed_everything(seed: int):
     torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = True
     
-data_path = "Dataset_scenarios/cifar10/CIFAR10_pareto_10clients_10class.json"
+data_path = "Dataset_scenarios/cifar10/cifar10_iid_100client_1000data.json"
 blurry_radius = 7
 mean = 0
 var = 0.4
@@ -43,11 +43,14 @@ with open("cifar10/origin/Y_train.npy","rb") as f:
 
 with open(data_path, "r") as f:
     data_idx = json.load(f)
-blurry_rate = [0.3,0.3,0.3,0.25,0.25,0.25,0.2,0.2,0.2,0.1,0.1,0.1,0,0,0,0,0,0,0,0]
+# blurry_rate = [0,7] * n_clients
+# blurry_rate = [0.3,0.3,0.3,0.25,0.25,0.25,0.2,0.2,0.2,0.1,0.1,0.1,0,0,0,0,0,0,0,0]
 config_dict = {}
+n_clients = len(data_idx)
+blurry_rate = [0.5] * n_clients
 config_dict["blurry_rate"] = [float(i) for i in blurry_rate]
 config_dict["blurry_id"] = {}
-n_clients = len(data_idx)
+
 for client in range(n_clients):
     idx_ = data_idx[str(client)]
     n_samples = len(idx_)
@@ -65,7 +68,7 @@ for client in range(n_clients):
         copy_x[idx] = t
         
 
-saved_path = f"cifar10/gauss_{folder_name}"
+saved_path = f"cifar10/gauss_{folder_name}_2"
 if not os.path.exists(saved_path):
     os.makedirs(saved_path)
 # breakpoint()

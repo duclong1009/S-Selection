@@ -39,6 +39,7 @@ def read_option():
     parser.add_argument(
         "--algorithm", help="name of algorithm;", type=str, default="fedavg"
     )
+    parser.add_argument("--warmup_rounds",type=int, default=1)
     parser.add_argument("--model", help="name of model;", type=str, default="resnet18")
     parser.add_argument("--use_pretrained", action="store_false")
     parser.add_argument('--noisy_rate_clients', nargs='+', type=float)

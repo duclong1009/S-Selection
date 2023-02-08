@@ -46,6 +46,7 @@ class _BaseSampler(object):
                 list_score.append(loss.cpu().item())
                 list_idx.append(idx)
         return list_score, list_idx
+        
     def cal_gnorm_model_weight(self, dataset, model, criteria, device):
         # device = torch.device(device)
         # device = "cuda"

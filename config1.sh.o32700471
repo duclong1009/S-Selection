@@ -1,0 +1,88 @@
+wandb: Currently logged in as: longnd (aiotlab). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.13.10 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.13.5
+wandb: Run data is saved locally in /home/ace15032jo/Projects/repo2/SampleSelection_easyFL/wandb/run-20230222_021945-2h27ses4
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run fedalgo6base_weighted_ratio_0.8_C_0.3_
+wandb: ⭐️ View project at https://wandb.ai/aiotlab/Abnormal_Data_FL
+wandb: 🚀 View run at https://wandb.ai/aiotlab/Abnormal_Data_FL/runs/2h27ses4
+2023-02-22 02:19:47,072 fflow.py initialize [line:269] INFO Using Logger in `utils.logger.basic_logger`
+2023-02-22 02:19:47,072 fflow.py initialize [line:270] INFO Initializing fedtask: cifar10_classification
+2023-02-22 02:19:48,103 fflow.py initialize [line:286] INFO Using model `resnet18` in `benchmark.cifar10_classification.model.resnet18` as the globally shared model.
+2023-02-22 02:19:48,109 fflow.py initialize [line:314] INFO Using sampler `threshold_sampler` in `sampler.threshold_sampler` as the globally shared model.
+2023-02-22 02:19:53,895 fflow.py initialize [line:334] INFO Initializing Clients: 100 clients of `algorithm.fedalgo6base_weighted.Client` being created.
+2023-02-22 02:20:20,234 fflow.py initialize [line:355] INFO Initializing Server: 1 server of `algorithm.fedalgo6base_weighted.Server` being created.
+2023-02-22 02:20:20,235 fflow.py initialize [line:368] INFO Ready to start.
+2023-02-22 02:20:20,235 fedbase.py run [line:64] INFO --------------Round 1--------------
+2023-02-22 02:20:28,171 basic_logger.py show_current_output [line:148] INFO test_accuracy                 0.0939
+2023-02-22 02:20:28,171 basic_logger.py show_current_output [line:148] INFO test_loss                     2.3042
+2023-02-22 02:20:28,171 basic_logger.py time_end [line:78] INFO Eval Time Cost:               7.9366s
+2023-02-22 02:20:28,174 fedalgo6base_weighted.py iterate [line:54] INFO Selected clients : [23, 81, 85, 34, 62, 46, 42, 31, 93, 11, 22, 77, 66, 13, 10, 68, 27, 36, 86, 40, 19, 1, 3, 16, 17, 29, 49, 45, 58, 37]
+2023-02-22 02:25:24,778 basic_logger.py time_end [line:78] INFO Time Cost:                    304.5431s
+2023-02-22 02:25:24,778 fedbase.py run [line:64] INFO --------------Round 2--------------
+2023-02-22 02:25:30,743 basic_logger.py show_current_output [line:148] INFO test_accuracy                 0.1003
+2023-02-22 02:25:30,743 basic_logger.py show_current_output [line:148] INFO test_loss                     2.2978
+2023-02-22 02:25:30,744 basic_logger.py time_end [line:78] INFO Eval Time Cost:               5.9651s
+2023-02-22 02:25:30,744 fedalgo6base_weighted.py iterate [line:54] INFO Selected clients : [21, 9, 42, 76, 74, 6, 20, 45, 70, 27, 79, 8, 40, 99, 33, 50, 17, 13, 78, 49, 63, 4, 62, 67, 57, 71, 2, 64, 19, 11]
+2023-02-22 02:29:56,252 basic_logger.py time_end [line:78] INFO Time Cost:                    271.4739s
+2023-02-22 02:29:56,253 fedbase.py run [line:64] INFO --------------Round 3--------------
+2023-02-22 02:30:02,206 basic_logger.py show_current_output [line:148] INFO test_accuracy                 0.1111
+2023-02-22 02:30:02,206 basic_logger.py show_current_output [line:148] INFO test_loss                     2.3105
+2023-02-22 02:30:02,207 basic_logger.py time_end [line:78] INFO Eval Time Cost:               5.9537s
+2023-02-22 02:30:02,207 fedalgo6base_weighted.py iterate [line:54] INFO Selected clients : [52, 29, 99, 16, 70, 8, 44, 4, 27, 53, 14, 96, 75, 80, 55, 47, 24, 61, 59, 58, 2, 71, 43, 65, 41, 49, 87, 79, 35, 57]
+2023-02-22 02:32:35,267 main.py main [line:27] ERROR Exception Logged
+Traceback (most recent call last):
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/main.py", line 24, in main
+    server.run()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedbase.py", line 77, in run
+    self.iterate()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedalgo6base_weighted.py", line 59, in iterate
+    received_information = self.communicate(self.selected_clients)
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedalgo6base_weighted.py", line 115, in communicate
+    response_from_client_id = self.communicate_with(client_id)
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedalgo6base_weighted.py", line 84, in communicate_with
+    return self.clients[client_id].reply(svr_pkg)
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedalgo6base_weighted.py", line 263, in reply
+    if stat_current_round[i] ==0 :
+KeyError: 3
+>>>>>> Using cifar10 dataset
+Files already downloaded and verified
+Total samples which participate training : 15000/15000 samples
+Total samples which participate training : 12007/15000 samples
+Traceback (most recent call last):
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/main.py", line 24, in main
+    server.run()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedbase.py", line 77, in run
+    self.iterate()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedalgo6base_weighted.py", line 59, in iterate
+    received_information = self.communicate(self.selected_clients)
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedalgo6base_weighted.py", line 115, in communicate
+    response_from_client_id = self.communicate_with(client_id)
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedalgo6base_weighted.py", line 84, in communicate_with
+    return self.clients[client_id].reply(svr_pkg)
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/algorithm/fedalgo6base_weighted.py", line 263, in reply
+    if stat_current_round[i] ==0 :
+KeyError: 3
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/main.py", line 33, in <module>
+    main()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/main.py", line 28, in main
+    raise RuntimeError
+RuntimeError
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: 
+wandb: Run history:
+wandb: Accuracy/Testing Accuracy ▁▄█
+wandb:         Loss/Testing Loss ▅▁█
+wandb: 
+wandb: Run summary:
+wandb: Accuracy/Testing Accuracy 0.1111
+wandb:         Loss/Testing Loss 2.31047
+wandb: 
+wandb: Synced fedalgo6base_weighted_ratio_0.8_C_0.3_: https://wandb.ai/aiotlab/Abnormal_Data_FL/runs/2h27ses4
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20230222_021945-2h27ses4/logs

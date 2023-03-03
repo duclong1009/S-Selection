@@ -1,0 +1,8 @@
+**/__pycache__
+wandb/
+**.npy
+data/
+**.json
+Saved_Results/
+**.pt
+**.png

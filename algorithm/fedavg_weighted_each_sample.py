@@ -20,6 +20,7 @@ class Client(BasicClient):
     def __init__(self, option, name='', train_data=None, valid_data=None,device='cpu'):
         super(Client, self).__init__(option, name, train_data, valid_data,device)
         self.criterion = nn.CrossEntropyLoss(reduction="none")
+        self.noisy_id = option["noisy_id"][str(name)]
 
     def train(self, model):
         """

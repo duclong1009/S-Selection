@@ -6,7 +6,7 @@ import copy
 import os
 #### Config
 data_path = "Dataset_scenarios/cifar10/cifar10_iid_100client_1000data.json"
-blurry_radius = 4
+
 def seed_everything(seed: int):
     import random
     import os
@@ -36,27 +36,31 @@ with open("cifar10/origin/Y_train.npy","rb") as f:
 with open(data_path, "r") as f:
     data_idx = json.load(f)
 
-n_clients = len(data_idx)
+import math
+noise_degree_rate = [0.25, 0.25, 0.25, 0.25]
+noise_degree_list = [1,2,3,4]
 config_dict = {}
-blr_rate_per_client = 0.3
-blurry_rate = [blr_rate_per_client] * n_clients
+n_clients = len(data_idx)
+blurry_rate = [0.5] * n_clients
 config_dict["blurry_rate"] = [float(i) for i in blurry_rate]
-config_dict["blurry_id"] = {}
+config_dict["blurry_id_degree"] = {}
 
 for client in range(n_clients):
     idx_ = data_idx[str(client)]
     n_samples = len(idx_)
     n_blur_imgs = int(blurry_rate[client] * n_samples)
-    selected_samples = np.random.choice(idx_,n_blur_imgs,replace=False)
-    config_dict["blurry_id"][client] = [int(i) for i in selected_samples]
+    n_noise_rate = [math.floor(noise_degree_rate[0] * n_blur_imgs), len(noise_degree_rate)]
+    selected_samples = np.random.choice(idx_,n_noise_rate,replace=False)
+    config_dict["blurry_id_degree"][client] = {}
+    for i,noise_d in enumerate(noise_degree_list):
+        selected_idx = selected_samples[:,i]
+        config_dict["blurry_id_degree"][client][i] = [int(i) for i in selected_idx]
+        for idx in  selected_idx:
+            image = Image.fromarray(np.array(copy_x[idx]))
+            filtered = image.filter(ImageFilter.GaussianBlur(radius=i))
+            copy_x[idx] = np.array(filtered)
 
-    for idx in  selected_samples:
-        image = Image.fromarray(np.array(copy_x[idx]))
-        filtered = image.filter(ImageFilter.GaussianBlur(radius=blurry_radius))
-        copy_x[idx] = np.array(filtered)
-
-
-saved_path = f"cifar10/blurry_{blr_rate_per_client}_{n_clients}_{blurry_radius}"
+saved_path = f"cifar10_combine_noise/blurry_{folder_name}_combine1"
 if not os.path.exists(saved_path):
     os.makedirs(saved_path)
 # 

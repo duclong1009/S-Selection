@@ -325,8 +325,9 @@ def initialize(option):
 
     # The Model is defined in bmk_model_path as default, whose filename is option['model'] and the classname is 'Model'
     # If an algorithm change the backbone for a task, a modified model should be defined in the path 'algorithm/method_name.py', whose classname is option['model']
-    with open(f"{taskreader_config['data_path']}/config.json","r") as f:
-            noisy_id = json.load(f)["blurry_id"]
+    # with open(f"{taskreader_config['data_path']}/config.json","r") as f:
+    #         noisy_id = json.load(f)["blurry_id"]
+    noisy_id = {}
     option["noisy_id"] = noisy_id
     if option["server_with_cpu"]:
         model = utils.fmodule.Model().to("cpu")

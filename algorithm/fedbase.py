@@ -361,7 +361,7 @@ class BasicClient:
         self.train_data = train_data
         self.valid_data = valid_data
         self.option = option
-        self.noisy_id = option["noisy_id"][str(name)]
+        
         if option["train_on_all"]:
             self.train_data = self.train_data + self.valid_data
         self.datavol = len(self.train_data)
@@ -440,7 +440,6 @@ class BasicClient:
                 )
                 optimizer.zero_grad()
                 outputs = model(data)
-                breakpoint()
                 torch.nn.CrossEntropyLoss(reduction="none")(outputs, labels)
                 loss = self.calculator.criterion(outputs, labels)
                 loss.backward()

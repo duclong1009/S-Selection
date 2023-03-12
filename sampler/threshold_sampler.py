@@ -70,7 +70,37 @@ class Sampler(_BaseSampler):
                 list_conf +=torch.softmax(y_pred,1).max(1)[0].tolist()
         return  list_idx,list_conf
 
-
+    def cal_gnorm_loss_cof_model(self, dataset, model, criteria, device):
+        model.eval()
+        optimizer = torch.optim.SGD(model.parameters(),lr=1e-5)
+        list_score = []
+        list_idx = []
+        model = model.to(device)
+        list_output = []
+        loss_list = []
+        for idx, data in enumerate(dataset): 
+            optimizer.zero_grad()
+            x, y = data[0].unsqueeze(0).to(device), torch.tensor(
+                data[1]).unsqueeze(0).to(device)
+            y_pred = model(x)
+            list_output.append(y_pred.cpu().detach().numpy())
+            loss = criteria(y_pred, y)
+            loss_list.append(loss.item())
+            loss.backward()
+            score_ = self.cal_gnorm(model)
+            list_score.append(score_)
+            list_idx.append(idx)
+        conf_array = np.concatenate(list_output,0)
+        return list_score, list_idx, conf_array, loss_list
+    
+    def cal_score_loss_a_conf(self, dataset, model, criteria, device):
+        list_score, list_idx, conf_arr, loss_list = self.cal_gnorm_loss_cof_model(
+            dataset, model, criteria, device
+        )
+        sorted_idx = np.array(list_idx)
+        sorted_score = np.array(list_score)
+        return sorted_idx, sorted_score, conf_arr, loss_list
+    
     def cal_score(self, dataset, model, criteria, device):
         if self.use_sampler:
             if self.score == "all_gnorm_threshold":

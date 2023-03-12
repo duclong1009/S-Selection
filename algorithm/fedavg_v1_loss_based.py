@@ -41,9 +41,21 @@ class Server(BasicServer):
         global current_round
         current_round = self.current_round
         # training
-        models = self.communicate(self.selected_clients)["model"]
+        received_information = self.communicate(self.selected_clients)
+        
+        n_samples = received_information["n_samples"]
+        utils.fmodule.LOG_DICT["selected_samples"] = n_samples
+        models = received_information["model"]
+        list_vols = copy.deepcopy(self.local_data_vols)
+        for i, cid in enumerate(self.selected_clients):
+            list_vols[cid] = n_samples[i]
+        # self.total_data_vol = sum(self.local_data_vols)
+        breakpoint()
+        print(
+            f"Total samples which participate training : {sum(n_samples)}/{sum([self.local_data_vols[i] for i in self.selected_clients])} samples"
+        )
         # aggregate: pk = 1/K as default where K=len(selected_clients)
-        self.model = self.aggregate(models, self.local_data_vols)
+        self.model = self.aggregate(models,list_vols)
         return
 
 class Client(BasicClient):
@@ -60,10 +72,14 @@ class Client(BasicClient):
         """
         self.calculate_importance(copy.deepcopy(model))
         
+        selected_size = int(self.option["ratio"] * len(self.train_data))
+        sorted_idx = np.argsort(self.loss_list)
+        selected_idx = sorted_idx[-selected_size:]
+        self.current_dataset = CustomDataset(self.train_data, selected_idx)
         if self.data_loader == None:
             print(f"Client {self.id} init its dataloader")
             self.data_loader = DataLoader(
-                self.train_data,
+                self.current_dataset,
                 batch_size=self.batch_size,
                 num_workers=self.loader_num_workers,
                 shuffle=True,
@@ -103,9 +119,10 @@ class Client(BasicClient):
 
     def calculate_importance(self, model):
         criteria = nn.CrossEntropyLoss()
-        _, score_list_on_cl, conf_arr = utils.fmodule.Sampler.cal_score_a_conf(
+        _, score_list_on_cl, conf_arr, loss_list = utils.fmodule.Sampler.cal_score_loss_a_conf(
             self.train_data, model, criteria, self.device
         )
+        self.loss_list = loss_list
         self.score_cached = score_list_on_cl
         self.conf_arr = conf_arr
         # f'{self.option["log_result_path"]}/{self.option["group_name"]}/{self.option["session_name"]}'
@@ -113,4 +130,17 @@ class Client(BasicClient):
             os.makedirs(f'{self.option["log_result_path"]}/{self.option["group_name"]}/{self.option["session_name"]}/round_{current_round}')
         with open(f'{self.option["log_result_path"]}/{self.option["group_name"]}/{self.option["session_name"]}/round_{current_round}/confarr_{self.name}.npy',"wb") as f:
             np.save(f,conf_arr)
-
+        
+    def pack(self, model):
+        """
+        Packing the package to be send to the server. The operations of compression
+        of encryption of the package should be done here.
+        :param
+            model: the locally trained model
+        :return
+            package: a dict that contains the necessary information for the server
+        """
+        return {
+            "model": model,
+            "n_samples": len(self.current_dataset),
+        }

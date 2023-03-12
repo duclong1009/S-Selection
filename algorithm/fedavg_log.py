@@ -225,8 +225,7 @@ class Client(BasicClient):
         if self.score_range ==0 :
             return {
                 "score": [],
-                # "max_score": max(self.score_cached),
-                # "goodness": self.cal_goodness(self.score_cached)
+
                 "max_score":0,
                 "goodness":0
             }

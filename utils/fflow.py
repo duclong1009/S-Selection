@@ -307,11 +307,11 @@ def initialize(option):
             "use_sampler": option["use_sampler"],
             "ratio": option["ratio"],
         }
-
         bmk_sampler_path = ".".join(["sampler", option["sampler"]])
         utils.fmodule.Sampler = getattr(
             importlib.import_module(bmk_sampler_path), "Sampler"
         )(sampler_config)
+
         logger.info(
             "Using sampler `{}` in `{}` as the globally shared model.".format(
                 option["sampler"], bmk_sampler_path

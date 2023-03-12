@@ -85,17 +85,17 @@ class BasicServer:
             if round % self.option["log_interval"] == 0:
                 utils.fmodule.save_json(
                     self.log_file,
-                    f'{self.option["log_result_path"]}/{self.option["group_name"]}',
-                    self.option["session_name"],
+                    f'{self.option["log_result_path"]}/{self.option["group_name"]}/{self.option["session_name"]}',
+                    "log_file",
                 )
                 utils.fmodule.save_json(
                     self.wandb_file,
-                    f'{self.option["log_result_path"]}/{self.option["group_name"]}',
-                    f'{self.option["session_name"]}_wandb',
+                    f'{self.option["log_result_path"]}/{self.option["group_name"]}/{self.option["session_name"]}',
+                    "log_wandb",
                 )
                 
             flw.logger.time_end("Time Cost")
-            torch.save(self.model.state_dict(),f'{self.option["log_result_path"]}/{self.option["group_name"]}/{self.option["session_name"]}.pt')
+            torch.save(self.model.state_dict(),f'{self.option["log_result_path"]}/{self.option["group_name"]}/{self.option["session_name"]}/model.pt')
         flw.logger.info("--------------Final Evaluation--------------")
         flw.logger.time_start("Eval Time Cost")
         flw.logger.log_once()

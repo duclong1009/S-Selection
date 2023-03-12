@@ -90,6 +90,14 @@ class Sampler(_BaseSampler):
                 raise "Not correct score type"
         return sorted_idx, sorted_score
 
+    def cal_score_a_conf(self, dataset, model, criteria, device):
+        list_score, list_idx, conf_arr = self.cal_gnorm_cof_model(
+            dataset, model, criteria, device
+        )
+        sorted_idx = np.array(list_idx)
+        sorted_score = np.array(list_score)
+        return sorted_idx, sorted_score, conf_arr
+
     def sample(self, dataset, model, criteria, device):
         if self.use_sampler:
             if self.score == "all_gnorm_threshold":

@@ -70,6 +70,27 @@ class _BaseSampler(object):
 
         return list_score, list_idx
     
+    def cal_gnorm_cof_model(self, dataset, model, criteria, device):
+        model.eval()
+        optimizer = torch.optim.SGD(model.parameters(),lr=1e-5)
+        list_score = []
+        list_idx = []
+        model = model.to(device)
+        list_output = []
+        for idx, data in enumerate(dataset): 
+            optimizer.zero_grad()
+            x, y = data[0].unsqueeze(0).to(device), torch.tensor(
+                data[1]).unsqueeze(0).to(device)
+            y_pred = model(x)
+            list_output.append(y_pred.cpu().detach().numpy())
+            loss = criteria(y_pred, y)
+            loss.backward()
+            score_ = self.cal_gnorm(model)
+            list_score.append(score_)
+            list_idx.append(idx)
+        conf_array = np.concatenate(list_output,0)
+        return list_score, list_idx, conf_array
+    
     def __cal_gnorm_last_layer(self, dataset, model, criteria, device):
         # device = torch.device(device)
         # device = "cuda"

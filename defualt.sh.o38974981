@@ -1,0 +1,32 @@
+wandb: Currently logged in as: longnd (aiotlab). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.13.11 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.13.5
+wandb: Run data is saved locally in /home/ace15032jo/Projects/repo2/SampleSelection_easyFL/wandb/run-20230313_021725-34tz5mgp
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run fedavg_v1_ratio_1.0_C_0.3_default
+wandb: ⭐️ View project at https://wandb.ai/aiotlab/Abnormal_Data_FL
+wandb: 🚀 View run at https://wandb.ai/aiotlab/Abnormal_Data_FL/runs/34tz5mgp
+2023-03-13 02:17:26,388 fflow.py initialize [line:270] INFO Using Logger in `utils.logger.basic_logger`
+2023-03-13 02:17:26,388 fflow.py initialize [line:271] INFO Initializing fedtask: cifar10_classification
+>>>>>> Using cifar10 dataset
+Traceback (most recent call last):
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/main.py", line 33, in <module>
+    main()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/main.py", line 21, in main
+    server = flw.initialize(option)
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/utils/fflow.py", line 282, in initialize
+    train_datas, test_data, num_clients = TaskReader.setup_clients()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/benchmark/cifar10_classification/core.py", line 58, in setup_clients
+    train_dataset, test_dataset = self.load_data()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/benchmark/cifar10_classification/core.py", line 52, in load_data
+    train_dataset = Specific_dataset(root= self.reader_config["data_path"],train=True,transform=transforms_cifar10)
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/benchmark/cifar10_classification/core.py", line 22, in __init__
+    self.data = np.load(f"{root}/X_train.npy")
+  File "/home/ace15032jo/venv/pytorch+horovod/lib/python3.10/site-packages/numpy/lib/npyio.py", line 405, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: 'cifar10_unequal/blurry_cifar10_iid_100client_1000data_combine1/X_train.npy'
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: Synced fedavg_v1_ratio_1.0_C_0.3_default: https://wandb.ai/aiotlab/Abnormal_Data_FL/runs/34tz5mgp
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20230313_021725-34tz5mgp/logs

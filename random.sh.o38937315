@@ -1,0 +1,33 @@
+wandb: Currently logged in as: longnd (aiotlab). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.13.11 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.13.5
+wandb: Run data is saved locally in /home/ace15032jo/Projects/repo2/SampleSelection_easyFL/wandb/run-20230312_192303-3j1px1pp
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run fedavg_v1_random_ratio_1.0_C_0.3_baseline_random
+wandb: ⭐️ View project at https://wandb.ai/aiotlab/Abnormal_Data_FL
+wandb: 🚀 View run at https://wandb.ai/aiotlab/Abnormal_Data_FL/runs/3j1px1pp
+2023-03-12 19:23:04,171 fflow.py initialize [line:270] INFO Using Logger in `utils.logger.basic_logger`
+2023-03-12 19:23:04,171 fflow.py initialize [line:271] INFO Initializing fedtask: cifar10_classification
+2023-03-12 19:23:05,757 fflow.py initialize [line:287] INFO Using model `resnet18` in `benchmark.cifar10_classification.model.resnet18` as the globally shared model.
+2023-03-12 19:23:05,767 fflow.py initialize [line:315] INFO Using sampler `threshold_sampler` in `sampler.threshold_sampler` as the globally shared model.
+2023-03-12 19:23:11,693 fflow.py initialize [line:339] INFO Initializing Clients: 100 clients of `algorithm.fedavg_v1_random.Client` being created.
+>>>>>> Using cifar10 dataset
+Files already downloaded and verified
+Traceback (most recent call last):
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/main.py", line 33, in <module>
+    main()
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/main.py", line 21, in main
+    server = flw.initialize(option)
+  File "/home/ace15032jo/Projects/repo2/SampleSelection_easyFL/utils/fflow.py", line 345, in initialize
+    Client = getattr(importlib.import_module(client_path), "Client")
+  File "/apps/centos7/python/3.10.4_gcc11.2.0/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'algorithm.fedavg_v1_random'
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: - 0.010 MB of 0.016 MB uploaded (0.000 MB deduped)wandb: \ 0.016 MB of 0.016 MB uploaded (0.000 MB deduped)wandb: Synced fedavg_v1_random_ratio_1.0_C_0.3_baseline_random: https://wandb.ai/aiotlab/Abnormal_Data_FL/runs/3j1px1pp
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20230312_192303-3j1px1pp/logs

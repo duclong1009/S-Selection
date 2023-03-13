@@ -4,15 +4,15 @@ import numpy as np
 import os
 
 # remove_rate = [0.1,0.3,0.5,0.7]
-remove_rate = [1,0.5,0.1,0]
-saved_folder_path = f"cifar10_combine_noise/config6"
+remove_rate =  [0, 0, 1, 0]
+saved_folder_path = f"cifar10_unequal/config1"
 
 config_new ={}
 config_new["removed_rate"] = remove_rate
-with open(f"cifar10_combine_noise/blurry_cifar10_iid_100client_1000data_combine1/config.json","r") as f:
+with open(f"cifar10_unequal/blurry_CIFAR-noniid-fedavg_unequal_1_combine1/config.json","r") as f:
     config = json.load(f)
 
-with open(f"cifar10_combine_noise/blurry_cifar10_iid_100client_1000data_combine1/data_idx.json","r") as f:
+with open(f"cifar10_unequal/blurry_CIFAR-noniid-fedavg_unequal_1_combine1/data_idx.json","r") as f:
     data_idx = json.load(f)
 
 import shutil
@@ -43,5 +43,5 @@ with open(f"{saved_folder_path}/config.json","w") as f:
     json.dump(config_new,f)
 
 
-shutil.copy("cifar10_combine_noise/blurry_cifar10_iid_100client_1000data_combine1/X_train.npy",f"{saved_folder_path}/X_train.npy")
-shutil.copy("cifar10_combine_noise/blurry_cifar10_iid_100client_1000data_combine1/Y_train.npy",f"{saved_folder_path}/Y_train.npy")
+shutil.copy("cifar10_unequal/blurry_CIFAR-noniid-fedavg_unequal_1_combine1/X_train.npy",f"{saved_folder_path}/X_train.npy")
+shutil.copy("cifar10_unequal/blurry_CIFAR-noniid-fedavg_unequal_1_combine1/Y_train.npy",f"{saved_folder_path}/Y_train.npy")

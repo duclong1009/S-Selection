@@ -5,7 +5,7 @@ import json
 import copy
 import os
 #### Config
-data_path = "Dataset_scenarios/cifar10/cifar10_iid_100client_1000data.json"
+data_path = "Dataset_scenarios/cifar10/100client/CIFAR-noniid-fedavg_unequal_1.json"
 
 def seed_everything(seed: int):
     import random
@@ -60,7 +60,7 @@ for client in range(n_clients):
             filtered = image.filter(ImageFilter.GaussianBlur(radius=i))
             copy_x[idx] = np.array(filtered)
 
-saved_path = f"cifar10_combine_noise/blurry_{folder_name}_combine1"
+saved_path = f"cifar10_unequal/blurry_{folder_name}_combine1"
 if not os.path.exists(saved_path):
     os.makedirs(saved_path)
 # 

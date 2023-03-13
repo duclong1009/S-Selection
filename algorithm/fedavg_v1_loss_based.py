@@ -50,7 +50,6 @@ class Server(BasicServer):
         for i, cid in enumerate(self.selected_clients):
             list_vols[cid] = n_samples[i]
         # self.total_data_vol = sum(self.local_data_vols)
-        breakpoint()
         print(
             f"Total samples which participate training : {sum(n_samples)}/{sum([self.local_data_vols[i] for i in self.selected_clients])} samples"
         )

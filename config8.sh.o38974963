@@ -2479,3 +2479,15 @@ wandb: 🚀 View run at https://wandb.ai/aiotlab/Abnormal_Data_FL/runs/30y7svcx
 2023-03-14 01:57:53,832 basic_logger.py show_current_output [line:148] INFO test_loss                     1.4677
 2023-03-14 01:57:53,832 basic_logger.py time_end [line:78] INFO Eval Time Cost:               5.9531s
 2023-03-14 01:57:53,832 fedavg_v1.py iterate [line:39] INFO Selected clients : [21, 17, 75, 42, 28, 74, 27, 69, 90, 43, 81, 97, 47, 70, 77, 66, 20, 87, 16, 80, 53, 85, 55, 88, 57, 93, 73, 96, 4, 89]
+2023-03-14 02:01:14,128 basic_logger.py time_end [line:78] INFO Time Cost:                    206.2496s
+2023-03-14 02:01:14,221 fedbase.py run [line:64] INFO --------------Round 412--------------
+2023-03-14 02:01:20,186 basic_logger.py show_current_output [line:148] INFO test_accuracy                 0.7091
+2023-03-14 02:01:20,186 basic_logger.py show_current_output [line:148] INFO test_loss                     1.4689
+2023-03-14 02:01:20,186 basic_logger.py time_end [line:78] INFO Eval Time Cost:               5.9647s
+2023-03-14 02:01:20,186 fedavg_v1.py iterate [line:39] INFO Selected clients : [60, 73, 23, 10, 74, 16, 52, 83, 33, 58, 46, 91, 31, 45, 61, 21, 35, 96, 12, 1, 38, 4, 40, 49, 51, 71, 72, 77, 29, 8]
+2023-03-14 02:04:42,350 basic_logger.py time_end [line:78] INFO Time Cost:                    208.1283s
+2023-03-14 02:04:42,442 fedbase.py run [line:64] INFO --------------Round 413--------------
+2023-03-14 02:04:48,366 basic_logger.py show_current_output [line:148] INFO test_accuracy                 0.7092
+2023-03-14 02:04:48,366 basic_logger.py show_current_output [line:148] INFO test_loss                     1.4686
+2023-03-14 02:04:48,366 basic_logger.py time_end [line:78] INFO Eval Time Cost:               5.9235s
+2023-03-14 02:04:48,367 fedavg_v1.py iterate [line:39] INFO Selected clients : [63, 38, 67, 62, 24, 37, 99, 53, 72, 22, 28, 36, 97, 81, 93, 54, 2, 91, 42, 0, 33, 64, 27, 46, 79, 29, 84, 10, 70, 87]

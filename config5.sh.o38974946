@@ -2299,3 +2299,9 @@ wandb: 🚀 View run at https://wandb.ai/aiotlab/Abnormal_Data_FL/runs/szflmpzm
 2023-03-14 01:59:14,151 basic_logger.py show_current_output [line:148] INFO test_loss                     1.3308
 2023-03-14 01:59:14,151 basic_logger.py time_end [line:78] INFO Eval Time Cost:               5.8796s
 2023-03-14 01:59:14,153 fedavg_v1.py iterate [line:39] INFO Selected clients : [22, 81, 20, 82, 2, 47, 95, 52, 54, 39, 71, 97, 88, 61, 10, 90, 38, 84, 33, 17, 92, 89, 91, 1, 49, 79, 31, 68, 98, 18]
+2023-03-14 02:02:35,238 basic_logger.py time_end [line:78] INFO Time Cost:                    206.9665s
+2023-03-14 02:02:35,331 fedbase.py run [line:64] INFO --------------Round 382--------------
+2023-03-14 02:02:41,258 basic_logger.py show_current_output [line:148] INFO test_accuracy                 0.7109
+2023-03-14 02:02:41,258 basic_logger.py show_current_output [line:148] INFO test_loss                     1.3363
+2023-03-14 02:02:41,258 basic_logger.py time_end [line:78] INFO Eval Time Cost:               5.9268s
+2023-03-14 02:02:41,258 fedavg_v1.py iterate [line:39] INFO Selected clients : [19, 96, 61, 49, 72, 66, 28, 76, 77, 4, 65, 60, 36, 47, 87, 41, 10, 45, 56, 99, 40, 38, 15, 98, 64, 71, 93, 27, 24, 83]

@@ -146,7 +146,7 @@ class Server(BasicServer):
         return aggregated_his
 
 import statistics
-
+import os
 class Client(BasicClient):
     def __init__(self, option, name="", train_data=None, valid_data=None, device="cpu"):
         super(Client, self).__init__(option, name, train_data, valid_data, device)
@@ -160,7 +160,10 @@ class Client(BasicClient):
         self.list_loss = list_loss
         self.conf_arr = conf_arr
         self.list_idx = list_idx
-
+        if not os.path.exists(f'{self.option["log_result_path"]}/{self.option["group_name"]}/{self.option["session_name"]}/round_{current_round}'):
+            os.makedirs(f'{self.option["log_result_path"]}/{self.option["group_name"]}/{self.option["session_name"]}/round_{current_round}')
+        with open(f'{self.option["log_result_path"]}/{self.option["group_name"]}/{self.option["session_name"]}/round_{current_round}/confarr_{self.name}.npy',"wb") as f:
+            np.save(f,conf_arr)
     def unpack_model_range(self,svr_pkg):
         return svr_pkg["model"], svr_pkg["score_range"]
 
@@ -174,13 +177,11 @@ class Client(BasicClient):
         model,score_range = self.unpack_model_range(svr_pkg)
         self.score_range = score_range
         self.model = model
-        histogram=None
+
         self.calculate_importance(copy.deepcopy(model))
-        # if not "score_list" in utils.fmodule.LOG_DICT.keys():
-        #     utils.fmodule.LOG_DICT["score_list"] = {}
-        # utils.fmodule.LOG_DICT["score_list"][f"client_{self.id}"] = list(self.score_cached)
-        if score_range !=0 :
-            histogram = self.build_histogram(self.score_cached, score_range)
+        if not "score_list" in utils.fmodule.LOG_DICT.keys():
+            utils.fmodule.LOG_DICT["score_list"] = {}
+        utils.fmodule.LOG_DICT["score_list"][f"client_{self.id}"] = list(self.score_cached)
         cpkg = self.pack_score(self.score_cached)
 
         return cpkg

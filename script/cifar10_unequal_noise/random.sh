@@ -14,4 +14,4 @@ module load python/3.10/3.10.4
 python3 -m venv ~/venv/pytorch+horovod
 source ~/venv/pytorch+horovod/bin/activate
 
-python main.py --session_name "baseline_random" --group_name "Cifar10_combine_unequal" --data_path cifar10_unequal/blurry_cifar10_iid_100client_1000data_combine1 --proportion 0.3 --algorithm fedavg_v1_random_choice --score all_gnorm_threshold --ratio 1 --aggregate "weighted_com" --model resnet18 --task cifar10_classification --num_rounds 500
+python main.py --session_name "baseline_random" --group_name "Cifar10_combine_unequal" --data_path cifar10_unequal/blurry_CIFAR-noniid-fedavg_unequal_1_combine1 --proportion 0.3 --algorithm fedavg_v1_random_choice --score all_gnorm_threshold --ratio 1 --aggregate "weighted_com" --model resnet18 --task cifar10_classification --num_rounds 500

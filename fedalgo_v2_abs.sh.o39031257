@@ -1,0 +1,111 @@
+wandb: Currently logged in as: longnd (aiotlab). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.13.11 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.13.5
+wandb: Run data is saved locally in /home/ace15032jo/Projects/repo2/SampleSelection_easyFL/wandb/run-20230314_231850-16gczslk
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run fedalgo_p2_abs_ratio_0.8_C_0.3_fedalgo_p2_abs
+wandb: ⭐️ View project at https://wandb.ai/aiotlab/Abnormal_Data_FL
+wandb: 🚀 View run at https://wandb.ai/aiotlab/Abnormal_Data_FL/runs/16gczslk
+2023-03-14 23:18:51,324 fflow.py initialize [line:270] INFO Using Logger in `utils.logger.basic_logger`
+2023-03-14 23:18:51,325 fflow.py initialize [line:271] INFO Initializing fedtask: cifar10_classification
+2023-03-14 23:18:52,444 fflow.py initialize [line:287] INFO Using model `resnet18` in `benchmark.cifar10_classification.model.resnet18` as the globally shared model.
+2023-03-14 23:18:52,463 fflow.py initialize [line:315] INFO Using sampler `lastlayer_sampler` in `sampler.lastlayer_sampler` as the globally shared model.
+2023-03-14 23:18:58,212 fflow.py initialize [line:339] INFO Initializing Clients: 100 clients of `algorithm.fedalgo_p2_abs.Client` being created.
+2023-03-14 23:18:58,215 fflow.py initialize [line:360] INFO Initializing Server: 1 server of `algorithm.fedalgo_p2_abs.Server` being created.
+2023-03-14 23:18:58,216 fflow.py initialize [line:373] INFO Ready to start.
+2023-03-14 23:18:58,216 fedbase.py run [line:64] INFO --------------Round 1--------------
+2023-03-14 23:19:06,651 basic_logger.py show_current_output [line:148] INFO test_accuracy                 0.0939
+2023-03-14 23:19:06,651 basic_logger.py show_current_output [line:148] INFO test_loss                     2.3042
+2023-03-14 23:19:06,651 basic_logger.py time_end [line:78] INFO Eval Time Cost:               8.4353s
+2023-03-14 23:19:06,654 fedalgo_p2_abs.py iterate [line:42] INFO Selected clients : [23, 81, 85, 34, 62, 46, 42, 31, 93, 11, 22, 77, 66, 13, 10, 68, 27, 36, 86, 40, 19, 1, 3, 16, 17, 29, 49, 45, 58, 37]
+2023-03-14 23:23:32,003 basic_logger.py time_end [line:78] INFO Time Cost:                    273.7865s
+2023-03-14 23:23:32,090 fedbase.py run [line:64] INFO --------------Round 2--------------
+2023-03-14 23:23:38,298 basic_logger.py show_current_output [line:148] INFO test_accuracy                 0.1169
+2023-03-14 23:23:38,299 basic_logger.py show_current_output [line:148] INFO test_loss                     2.3077
+2023-03-14 23:23:38,299 basic_logger.py time_end [line:78] INFO Eval Time Cost:               6.2085s
+2023-03-14 23:23:38,300 fedalgo_p2_abs.py iterate [line:42] INFO Selected clients : [21, 9, 42, 76, 74, 6, 20, 45, 70, 27, 79, 8, 40, 99, 33, 50, 17, 13, 78, 49, 63, 4, 62, 67, 57, 71, 2, 64, 19, 11]
+2023-03-14 23:28:00,980 basic_logger.py time_end [line:78] INFO Time Cost:                    268.8891s
+2023-03-14 23:28:01,074 fedbase.py run [line:64] INFO --------------Round 3--------------
+2023-03-14 23:28:07,309 basic_logger.py show_current_output [line:148] INFO test_accuracy                 0.1399
+2023-03-14 23:28:07,309 basic_logger.py show_current_output [line:148] INFO test_loss                     2.3304
+2023-03-14 23:28:07,310 basic_logger.py time_end [line:78] INFO Eval Time Cost:               6.2357s
+2023-03-14 23:28:07,310 fedalgo_p2_abs.py iterate [line:42] INFO Selected clients : [52, 29, 99, 16, 70, 8, 44, 4, 27, 53, 14, 96, 75, 80, 55, 47, 24, 61, 59, 58, 2, 71, 43, 65, 41, 49, 87, 79, 35, 57]
+2023-03-14 23:32:30,800 basic_logger.py time_end [line:78] INFO Time Cost:                    269.7259s
+2023-03-14 23:32:31,026 fedbase.py run [line:64] INFO --------------Round 4--------------
+2023-03-14 23:32:37,304 basic_logger.py show_current_output [line:148] INFO test_accuracy                 0.1384
+2023-03-14 23:32:37,305 basic_logger.py show_current_output [line:148] INFO test_loss                     2.3966
+2023-03-14 23:32:37,305 basic_logger.py time_end [line:78] INFO Eval Time Cost:               6.2785s
+2023-03-14 23:32:37,305 fedalgo_p2_abs.py iterate [line:42] INFO Selected clients : [51, 33, 74, 72, 13, 99, 94, 9, 57, 65, 43, 66, 86, 71, 89, 30, 92, 40, 85, 37, 28, 16, 82, 52, 27, 60, 3, 21, 61, 19]
+2023-03-14 23:37:02,770 basic_logger.py time_end [line:78] INFO Time Cost:                    271.7432s
+2023-03-14 23:37:02,867 fedbase.py run [line:64] INFO --------------Round 5--------------
+2023-03-14 23:37:09,125 basic_logger.py show_current_output [line:148] INFO test_accuracy                 0.1366
+2023-03-14 23:37:09,126 basic_logger.py show_current_output [line:148] INFO test_loss                     2.4916
+2023-03-14 23:37:09,126 basic_logger.py time_end [line:78] INFO Eval Time Cost:               6.2588s
+2023-03-14 23:37:09,127 fedalgo_p2_abs.py iterate [line:42] INFO Selected clients : [61, 55, 80, 85, 38, 76, 0, 68, 20, 70, 97, 14, 16, 94, 92, 32, 27, 28, 67, 19, 72, 98, 44, 52, 1, 66, 56, 8, 59, 49]
+2023-03-14 23:41:34,840 basic_logger.py time_end [line:78] INFO Time Cost:                    271.9731s
+2023-03-14 23:41:34,938 fedbase.py run [line:64] INFO --------------Round 6--------------
+2023-03-14 23:41:41,236 basic_logger.py show_current_output [line:148] INFO test_accuracy                 0.1486
+2023-03-14 23:41:41,236 basic_logger.py show_current_output [line:148] INFO test_loss                     2.5865
+2023-03-14 23:41:41,236 basic_logger.py time_end [line:78] INFO Eval Time Cost:               6.2978s
+2023-03-14 23:41:41,237 fedalgo_p2_abs.py iterate [line:42] INFO Selected clients : [52, 98, 81, 34, 50, 12, 96, 39, 55, 38, 19, 83, 68, 87, 4, 20, 72, 95, 89, 97, 0, 26, 21, 63, 16, 1, 73, 70, 78, 80]
+2023-03-14 23:46:08,165 basic_logger.py time_end [line:78] INFO Time Cost:                    273.2262s
+2023-03-14 23:46:08,263 fedbase.py run [line:64] INFO --------------Round 7--------------
+2023-03-14 23:46:14,478 basic_logger.py show_current_output [line:148] INFO test_accuracy                 0.1507
+2023-03-14 23:46:14,478 basic_logger.py show_current_output [line:148] INFO test_loss                     2.6451
+2023-03-14 23:46:14,478 basic_logger.py time_end [line:78] INFO Eval Time Cost:               6.2148s
+2023-03-14 23:46:14,479 fedalgo_p2_abs.py iterate [line:42] INFO Selected clients : [71, 64, 3, 79, 29, 51, 55, 35, 30, 86, 59, 56, 95, 58, 4, 72, 9, 74, 85, 65, 21, 53, 43, 7, 66, 81, 93, 17, 78, 60]
+2023-03-14 23:50:38,845 basic_logger.py time_end [line:78] INFO Time Cost:                    270.5814s
+2023-03-14 23:50:38,942 fedbase.py run [line:64] INFO --------------Round 8--------------
+2023-03-14 23:50:45,182 basic_logger.py show_current_output [line:148] INFO test_accuracy                 0.1587
+2023-03-14 23:50:45,182 basic_logger.py show_current_output [line:148] INFO test_loss                     2.6119
+2023-03-14 23:50:45,182 basic_logger.py time_end [line:78] INFO Eval Time Cost:               6.2400s
+2023-03-14 23:50:45,183 fedalgo_p2_abs.py iterate [line:42] INFO Selected clients : [55, 95, 93, 30, 5, 81, 45, 34, 82, 0, 31, 69, 44, 11, 21, 94, 29, 52, 53, 67, 48, 96, 22, 84, 36, 71, 63, 80, 16, 40]
+2023-03-14 23:55:10,549 basic_logger.py time_end [line:78] INFO Time Cost:                    271.6067s
+2023-03-14 23:55:10,648 fedbase.py run [line:64] INFO --------------Round 9--------------
+2023-03-14 23:55:16,929 basic_logger.py show_current_output [line:148] INFO test_accuracy                 0.1861
+2023-03-14 23:55:16,930 basic_logger.py show_current_output [line:148] INFO test_loss                     2.5597
+2023-03-14 23:55:16,930 basic_logger.py time_end [line:78] INFO Eval Time Cost:               6.2811s
+2023-03-14 23:55:16,930 fedalgo_p2_abs.py iterate [line:42] INFO Selected clients : [38, 18, 9, 46, 85, 75, 98, 29, 91, 93, 4, 72, 49, 13, 41, 42, 71, 39, 60, 21, 69, 66, 17, 34, 44, 53, 89, 45, 25, 90]
+2023-03-14 23:59:45,870 basic_logger.py time_end [line:78] INFO Time Cost:                    275.2216s
+2023-03-14 23:59:45,968 fedbase.py run [line:64] INFO --------------Round 10--------------
+2023-03-14 23:59:52,263 basic_logger.py show_current_output [line:148] INFO test_accuracy                 0.2175
+2023-03-14 23:59:52,263 basic_logger.py show_current_output [line:148] INFO test_loss                     2.4947
+2023-03-14 23:59:52,264 basic_logger.py time_end [line:78] INFO Eval Time Cost:               6.2952s
+2023-03-14 23:59:52,264 fedalgo_p2_abs.py iterate [line:42] INFO Selected clients : [59, 58, 69, 63, 27, 28, 81, 56, 67, 74, 90, 36, 24, 3, 76, 53, 25, 52, 51, 99, 94, 75, 50, 5, 93, 72, 2, 41, 21, 46]
+2023-03-15 00:04:17,232 basic_logger.py time_end [line:78] INFO Time Cost:                    271.2637s
+2023-03-15 00:04:17,330 fedbase.py run [line:64] INFO --------------Round 11--------------
+2023-03-15 00:04:23,513 basic_logger.py show_current_output [line:148] INFO test_accuracy                 0.2445
+2023-03-15 00:04:23,513 basic_logger.py show_current_output [line:148] INFO test_loss                     2.4204
+2023-03-15 00:04:23,513 basic_logger.py time_end [line:78] INFO Eval Time Cost:               6.1831s
+2023-03-15 00:04:23,514 fedalgo_p2_abs.py iterate [line:42] INFO Selected clients : [40, 93, 15, 23, 76, 75, 58, 81, 91, 41, 26, 47, 43, 64, 6, 56, 78, 42, 39, 24, 0, 62, 90, 20, 36, 97, 29, 9, 59, 34]
+2023-03-15 00:08:50,566 basic_logger.py time_end [line:78] INFO Time Cost:                    273.2363s
+2023-03-15 00:08:50,665 fedbase.py run [line:64] INFO --------------Round 12--------------
+2023-03-15 00:08:56,930 basic_logger.py show_current_output [line:148] INFO test_accuracy                 0.2632
+2023-03-15 00:08:56,931 basic_logger.py show_current_output [line:148] INFO test_loss                     2.3215
+2023-03-15 00:08:56,931 basic_logger.py time_end [line:78] INFO Eval Time Cost:               6.2656s
+2023-03-15 00:08:56,932 fedalgo_p2_abs.py iterate [line:42] INFO Selected clients : [79, 45, 13, 76, 73, 37, 41, 27, 43, 4, 12, 48, 2, 8, 1, 24, 75, 21, 63, 35, 32, 17, 70, 72, 62, 97, 91, 46, 80, 92]
+2023-03-15 00:13:23,883 basic_logger.py time_end [line:78] INFO Time Cost:                    273.2177s
+2023-03-15 00:13:23,981 fedbase.py run [line:64] INFO --------------Round 13--------------
+2023-03-15 00:13:30,238 basic_logger.py show_current_output [line:148] INFO test_accuracy                 0.2781
+2023-03-15 00:13:30,238 basic_logger.py show_current_output [line:148] INFO test_loss                     2.2144
+2023-03-15 00:13:30,238 basic_logger.py time_end [line:78] INFO Eval Time Cost:               6.2566s
+2023-03-15 00:13:30,239 fedalgo_p2_abs.py iterate [line:42] INFO Selected clients : [60, 92, 58, 48, 46, 64, 50, 99, 19, 22, 74, 32, 9, 23, 62, 30, 18, 49, 39, 86, 28, 17, 53, 79, 97, 78, 68, 1, 10, 42]
+2023-03-15 00:17:59,243 basic_logger.py time_end [line:78] INFO Time Cost:                    275.2610s
+2023-03-15 00:17:59,326 fedbase.py run [line:64] INFO --------------Round 14--------------
+2023-03-15 00:18:05,645 basic_logger.py show_current_output [line:148] INFO test_accuracy                 0.2979
+2023-03-15 00:18:05,645 basic_logger.py show_current_output [line:148] INFO test_loss                     2.0975
+2023-03-15 00:18:05,646 basic_logger.py time_end [line:78] INFO Eval Time Cost:               6.3191s
+2023-03-15 00:18:05,646 fedalgo_p2_abs.py iterate [line:42] INFO Selected clients : [61, 65, 66, 28, 55, 14, 97, 41, 32, 86, 39, 72, 52, 11, 42, 51, 88, 93, 85, 59, 22, 50, 73, 24, 30, 68, 29, 71, 84, 57]
+2023-03-15 00:22:30,891 basic_logger.py time_end [line:78] INFO Time Cost:                    271.5648s
+2023-03-15 00:22:30,988 fedbase.py run [line:64] INFO --------------Round 15--------------
+2023-03-15 00:22:37,180 basic_logger.py show_current_output [line:148] INFO test_accuracy                 0.3038
+2023-03-15 00:22:37,181 basic_logger.py show_current_output [line:148] INFO test_loss                     2.0525
+2023-03-15 00:22:37,181 basic_logger.py time_end [line:78] INFO Eval Time Cost:               6.1928s
+2023-03-15 00:22:37,182 fedalgo_p2_abs.py iterate [line:42] INFO Selected clients : [11, 79, 1, 20, 44, 53, 71, 26, 10, 34, 41, 89, 31, 36, 97, 37, 3, 48, 91, 29, 38, 67, 68, 85, 42, 19, 83, 98, 8, 28]
+2023-03-15 00:27:05,320 basic_logger.py time_end [line:78] INFO Time Cost:                    274.3318s
+2023-03-15 00:27:05,424 fedbase.py run [line:64] INFO --------------Round 16--------------
+2023-03-15 00:27:11,745 basic_logger.py show_current_output [line:148] INFO test_accuracy                 0.3194
+2023-03-15 00:27:11,745 basic_logger.py show_current_output [line:148] INFO test_loss                     1.9674
+2023-03-15 00:27:11,745 basic_logger.py time_end [line:78] INFO Eval Time Cost:               6.3213s
+2023-03-15 00:27:11,746 fedalgo_p2_abs.py iterate [line:42] INFO Selected clients : [67, 30, 25, 45, 51, 92, 33, 73, 66, 12, 28, 87, 9, 74, 46, 70, 68, 94, 17, 60, 36, 39, 88, 77, 48, 75, 95, 10, 1, 24]

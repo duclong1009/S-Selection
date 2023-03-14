@@ -1,7 +1,7 @@
 from .threshold_sampler import Sampler as sl
 import numpy as np
 import torch
-
+import math
 
 class Sampler(sl):
     def __init__(self, sampler_config):
@@ -28,6 +28,31 @@ class Sampler(sl):
 
             list_idx[y.item()].append(idx)
             list_score[y.item()].append(grad)
+        conf_array = np.concatenate(list_output,0)
+        print(f"Data len {len(dataset)}")
+        return list_score, list_idx, conf_array, list_loss
+    
+    def cal_score_lastlayer_abs(self, dataset, model, criteria, device):
+        model.eval()
+        list_score = [[] for i in range(10)] 
+        list_idx = [[] for i in range(10)] 
+        optimizer = torch.optim.SGD(model.parameters(),lr=1e-5)
+        model = model.to(device)
+        list_loss = []
+        list_output = []
+        for idx, data in enumerate(dataset): 
+            optimizer.zero_grad()
+            x, y = data[0].unsqueeze(0).to(device), torch.tensor(
+                data[1]).unsqueeze(0).to(device)
+            y_pred = model(x)
+            list_output.append(y_pred.cpu().detach().numpy())
+            loss = criteria(y_pred, y)
+            list_loss.append(loss.item())
+            loss.backward()
+            grad = model.fc.weight.grad.sum(-1)[y].item()
+
+            list_idx[y.item()].append(idx)
+            list_score[y.item()].append(abs(grad))
         conf_array = np.concatenate(list_output,0)
         print(f"Data len {len(dataset)}")
         return list_score, list_idx, conf_array, list_loss

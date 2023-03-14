@@ -74,11 +74,11 @@ class Client(BasicClient):
         selected_size = int(self.option["ratio"] * len(self.train_data))
         selected_idx = np.random.choice(len(self.train_data),selected_size, replace=False)
         # selected_idx = range(len(self.train_data))
-        current_dataset = CustomDataset(self.train_data, selected_idx)
+        self.current_dataset = CustomDataset(self.train_data, selected_idx)
         if self.data_loader == None:
             print(f"Client {self.id} init its dataloader")
             self.data_loader = DataLoader(
-                current_dataset,
+                self.current_dataset,
                 batch_size=self.batch_size,
                 num_workers=self.loader_num_workers,
                 shuffle=True,

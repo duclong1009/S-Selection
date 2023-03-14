@@ -2317,3 +2317,22 @@ wandb: 🚀 View run at https://wandb.ai/aiotlab/Abnormal_Data_FL/runs/1cux82ol
 2023-03-14 02:05:43,347 basic_logger.py show_current_output [line:148] INFO test_loss                     1.3324
 2023-03-14 02:05:43,347 basic_logger.py time_end [line:78] INFO Eval Time Cost:               5.9181s
 2023-03-14 02:05:43,348 fedavg_v1.py iterate [line:39] INFO Selected clients : [3, 22, 21, 99, 51, 39, 34, 71, 7, 94, 85, 63, 70, 37, 59, 88, 76, 19, 38, 1, 30, 96, 23, 50, 10, 62, 83, 89, 60, 80]
+2023-03-14 02:09:19,740 basic_logger.py time_end [line:78] INFO Time Cost:                    222.3108s
+2023-03-14 02:09:19,837 fedbase.py run [line:64] INFO --------------Round 385--------------
+2023-03-14 02:09:25,740 basic_logger.py show_current_output [line:148] INFO test_accuracy                 0.6981
+2023-03-14 02:09:25,740 basic_logger.py show_current_output [line:148] INFO test_loss                     1.3286
+2023-03-14 02:09:25,741 basic_logger.py time_end [line:78] INFO Eval Time Cost:               5.9029s
+2023-03-14 02:09:25,741 fedavg_v1.py iterate [line:39] INFO Selected clients : [79, 42, 50, 58, 8, 80, 2, 53, 16, 11, 4, 23, 32, 76, 51, 0, 75, 66, 97, 65, 12, 68, 77, 9, 67, 91, 87, 13, 43, 30]
+2023-03-14 02:12:50,600 basic_logger.py time_end [line:78] INFO Time Cost:                    210.7625s
+2023-03-14 02:12:50,704 fedbase.py run [line:64] INFO --------------Round 386--------------
+2023-03-14 02:12:56,641 basic_logger.py show_current_output [line:148] INFO test_accuracy                 0.6985
+2023-03-14 02:12:56,642 basic_logger.py show_current_output [line:148] INFO test_loss                     1.3234
+2023-03-14 02:12:56,642 basic_logger.py time_end [line:78] INFO Eval Time Cost:               5.9376s
+2023-03-14 02:12:56,642 fedavg_v1.py iterate [line:39] INFO Selected clients : [25, 70, 48, 78, 24, 94, 77, 47, 58, 10, 42, 72, 45, 21, 16, 80, 6, 98, 13, 4, 35, 32, 93, 7, 71, 43, 26, 91, 20, 64]
+2023-03-14 02:16:31,394 basic_logger.py time_end [line:78] INFO Time Cost:                    220.6898s
+2023-03-14 02:16:31,491 fedbase.py run [line:64] INFO --------------Round 387--------------
+2023-03-14 02:16:37,402 basic_logger.py show_current_output [line:148] INFO test_accuracy                 0.6994
+2023-03-14 02:16:37,402 basic_logger.py show_current_output [line:148] INFO test_loss                     1.3188
+2023-03-14 02:16:37,402 basic_logger.py time_end [line:78] INFO Eval Time Cost:               5.9106s
+2023-03-14 02:16:37,403 fedavg_v1.py iterate [line:39] INFO Selected clients : [72, 32, 62, 21, 89, 85, 6, 15, 87, 84, 66, 79, 3, 40, 52, 81, 90, 24, 67, 88, 83, 31, 43, 76, 74, 34, 58, 48, 4, 82]
+wandb: ERROR Failed to sample metric: process no longer exists (pid=81630)

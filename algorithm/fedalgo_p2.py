@@ -40,7 +40,8 @@ class Server(BasicServer):
         self.selected_clients = self.sample()
         utils.fmodule.LOG_DICT["selectd_client"] = self.selected_clients
         flw.logger.info(f"Selected clients : {self.selected_clients}")
-        
+        global current_round
+        current_round = self.current_round
         aggregated_histogram = self.communicate_score(self.selected_clients)
         self.aggregated_histogram = aggregated_histogram
         self.threshold_score = self.cal_threshold(self.aggregated_histogram)

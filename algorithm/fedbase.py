@@ -9,7 +9,7 @@ import math
 import collections
 import wandb
 
-
+import time
 class BasicServer:
     def __init__(self, option, model, clients, test_data=None, device="cpu"):
         self.device = device
@@ -51,13 +51,17 @@ class BasicServer:
         self.option = option
         self.log_file = {}
         self.wandb_file = {}
+        self.acc_list = {}
 
     def run(self):
         """
         Start the federated learning symtem where the global model is trained iteratively.
         """
         flw.logger.time_start("Total Time Cost")
+
         for round in range(1, self.num_rounds + 1):
+
+
             self.current_round = round
             # using logger to evaluate the model
             flw.logger.info("--------------Round {}--------------".format(round))
@@ -72,23 +76,27 @@ class BasicServer:
                 # utils.fmodule.LOG_WANDB = {}
             if flw.logger.early_stop():
                 break
+            start_time = time.time()
             # federated train
             self.iterate()
+            training_time = time.time() - start_time
             # decay learning rate
             self.global_lr_scheduler(round)
             self.log_file[f"Round {round}"] = utils.fmodule.LOG_DICT
             self.wandb_file[f"Round {round}"] = utils.fmodule.LOG_WANDB
             utils.fmodule.LOG_DICT = {}
             utils.fmodule.LOG_WANDB = {}
+            utils.fmodule.LOG_WANDB['training_time'] = training_time
+            utils.fmodule.LOG_WANDB['max test accuracy'] = flw.logger.max_acc
             if round % self.option["log_interval"] == 0:
                 utils.fmodule.save_json(
                     self.log_file,
-                    f'{self.option["log_result_path"]}/{self.option["group_name"]}',
+                    f'{self.option["save_folder_path"]}/{self.option["group_name"]}',
                     self.option["session_name"],
                 )
                 utils.fmodule.save_json(
                     self.wandb_file,
-                    f'{self.option["log_result_path"]}/{self.option["group_name"]}',
+                    f'{self.option["save_folder_path"]}/{self.option["group_name"]}',
                     f'{self.option["session_name"]}_wandb',
                 )
                 

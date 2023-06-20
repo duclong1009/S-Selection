@@ -10,17 +10,17 @@ class TaskReader(object):
         self.reader_config = reader_config
         
     def load_data(self,):
-        with open("pill_dataset/medium_pilldataset/train_dataset_samples.json", "r") as fp:
+        with open(f"{self.reader_config['data_path']}/train_dataset_samples.json", "r") as fp:
             import json
             read_samples = json.load(fp)['samples']
         train_dataset = PillImageFolder(
-            "pill_dataset/medium_pilldataset/train",
+            f"{self.reader_config['data_path']}/train",
             transform=transforms.Compose([transforms.ToTensor()]),
             samples=read_samples,
         )
         
         test_dataset = ImageFolder(
-            "pill_dataset/medium_pilldataset/test",
+            f"{self.reader_config['data_path']}/test",
             transform=transforms.Compose([transforms.ToTensor()]),
         )
         return train_dataset, test_dataset

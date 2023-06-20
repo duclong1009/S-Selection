@@ -1,0 +1,1 @@
+python main.py --session_name "add_nosie4" --group_name "NII_medium_pilldataset" --proportion 0.3 --algorithm fedavg --ratio 1 --aggregate "weighted_com" --task medium_pilldataset --num_classes 150 --data_path pill_dataset/medium_pilldataset --save_folder_path 'Save_folder' --idx_path pill_dataset/medium_pilldataset/100client/clean_unequal_1_remove_4.json

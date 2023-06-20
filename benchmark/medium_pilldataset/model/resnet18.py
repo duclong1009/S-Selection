@@ -131,26 +131,11 @@ class BottleNeck(nn.Module):
 
 from torchvision import models
 
-# class Model(nn.Module):
-#     def __init__(
-#         self, num_classes,pre_trained
-#     ):
-#         super().__init__()
-#         self.model = models.resnet18(pretrained=pre_trained)
-#         input_lastLayer = self.model.fc.in_features
-#         self.model.fc = nn.Linear(input_lastLayer, num_classes)
-
-#     def forward(self, x):
-#         # breakpoint()
-#         x = self.model(x)
-#         # x = self.linear(x)
-#         return x
-
 import torch
 class Model(FModule):
     def __init__(self):
         super().__init__()
-        self.model = torch.hub.load('pytorch/vision:v0.10.0', 'resnet18', pretrained=True)
+        self.model = models.resnet18(pretrained=True)
         in_fts = self.model.fc.in_features        
         self.model.fc = nn.Linear(in_fts, 150)
 

@@ -7,7 +7,7 @@ import copy
 import torch.nn as nn
 import numpy as np
 from torch.utils.data import DataLoader
-
+import time 
 
 class Server(BasicServer):
     def __init__(self, option, model, clients, test_data=None, device="cpu"):

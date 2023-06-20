@@ -14,5 +14,5 @@
 # python3 -m venv ~/venv/pytorch+horovod
 # source ~/venv/pytorch+horovod/bin/activate
 
-python main.py --session_name "config2_inverse_test_threshold" --group_name "NIID_10Client_test" --idx_path Dataset_scenarios/pills/NIID_miidlerate_10clients.json --proportion 0.3 --algorithm fedalgo1 --score loss --ratio 1 --aggregate "weighted_com" --log_wandb --task medium_pilldataset --num_classes 150
+CUDA_VISIBLE_DEVICES=1 python main.py --session_name "config2_inverse_test_threshold" --group_name "NIID_10Client_test" --idx_path Dataset_scenarios/pills/NIID_miidlerate_10clients.json --proportion 0.3 --algorithm fedalgo1 --score loss --ratio 1 --aggregate "weighted_com" --task medium_pilldataset --num_classes 150 --data_path pill_dataset/medium_pilldataset --save_folder_path 'test'
 # python main.py --session_name "config2_inverse_test_threshold" --group_name "NIID_10Client_test" --idx_path Dataset_scenarios/pills/NIID_miidlerate_10clients.json --proportion 0.3 --algorithm fedalgo1 --score loss --ratio 1 --aggregate "weighted_com" --log_wandb --task pill_classification --num_classes 77

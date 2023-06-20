@@ -50,7 +50,8 @@ class Logger(logging.Logger):
             self.filehandler.setFormatter(self.formatter)
             self.filehandler.setLevel(self._LEVEL[self.meta["log_level"].upper()])
             self.addHandler(self.filehandler)
-        # options of early stopping
+        # options of early stoppin
+        self.max_acc = -1
         self._es_key = "valid_loss"
         self._es_patience = 20
         self._es_counter = 0
@@ -233,6 +234,9 @@ class Logger(logging.Logger):
         test_metric = self.server.test()
         for met_name, met_val in test_metric.items():
             self.output["test_" + met_name].append(met_val)
+        if test_metric['accuracy'] > self.max_acc:
+            self.max_acc = test_metric['accuracy']
+            
         utils.fmodule.LOG_WANDB["Accuracy/Testing Accuracy"] = test_metric["accuracy"]
         utils.fmodule.LOG_WANDB["Loss/Testing Loss"] = test_metric["loss"]
 

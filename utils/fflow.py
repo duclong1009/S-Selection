@@ -205,7 +205,7 @@ def read_option():
     )
     parser.add_argument("--group_name", type=str)
     parser.add_argument("--session_name", type=str)
-    parser.add_argument("--log_result_path", type=str, default="Saved_Results")
+    parser.add_argument("--save_folder_path", type=str, default="Saved_Results")
     parser.add_argument(
         "--log_level", help="the level of logger", type=str, default="INFO"
     )

@@ -71,7 +71,7 @@ def read_option():
 
     # hyper-parameters of training in server side
     parser.add_argument(
-        "--num_rounds", help="number of communication rounds", type=int, default=200
+        "--num_rounds", help="number of communication rounds", type=int, default=500
     )
     parser.add_argument(
         "--proportion",
@@ -188,6 +188,7 @@ def read_option():
     parser.add_argument("--type_of_goodness", default='mean', type=str)
     parser.add_argument("--o", default = 1, type=float,)
     parser.add_argument("--u", default = 1, type=float)
+    parser.add_argument("--interval_histogram", type=float, default=0.05)
     # algorithm-dependent hyper-parameters
     parser.add_argument(
         "--algo_para",

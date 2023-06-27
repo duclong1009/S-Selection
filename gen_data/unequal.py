@@ -15,7 +15,7 @@ def noniid_unequal(labels, num_users, idxs=None):
     # breakpoint()
     # 60,000 training imgs --> 50 imgs/shard X 1200 shards
 
-    num_shards, num_imgs = 600, 10 
+    num_shards, num_imgs = 352, 30 
     idx_shard = [i for i in range(num_shards)]
     dict_users = {i: np.array([]) for i in range(num_users)}
     # idxs = np.arange(num_shards*num_imgs)
@@ -27,8 +27,8 @@ def noniid_unequal(labels, num_users, idxs=None):
     # idxs = idxs_labels[0, :]
 
     # Minimum and maximum shards assigned per client:
-    min_shard = 3
-    max_shard = 8
+    min_shard = 1
+    max_shard = 4
 
     # Divide the shards into random chunks for every client
     # s.t the sum of these chunks = num_shards
@@ -104,7 +104,6 @@ import pandas as pd
 def sta(client_dict,labels):
     rs = []
     for client in range(100):
-        print(client)
         tmp = []
         for i in range(150):
             tmp.append(sum(labels[j] == i for j in client_dict[client]))
@@ -125,16 +124,17 @@ if __name__ == '__main__':
     for key in image_categories.keys():
         if isinstance(image_categories[key], dict):
             # breakpoint()
-            idxs += image_categories[key]['1']
+            for k in image_categories[key].keys():
+                idxs += image_categories[key][k]
 
     print(f"Len dataset {len(idxs)}")
-    num_clients = 100
+    num_clients = 200
     client_dict = noniid_unequal(image_categories['labels'],num_clients,idxs)
-    index = 1
+    index = 3
     import os 
-    saved_dict_path = f"{path}/100client"
+    saved_dict_path = f"{path}/{num_clients}client/unequal"
     if not os.path.exists(f"{saved_dict_path}"):
         os.makedirs(f"{saved_dict_path}")
-    save_dataset_idx(client_dict, f"{saved_dict_path}/clean_unequal_{index}.json")
+    save_dataset_idx(client_dict, f"{saved_dict_path}/data_scenario_{index}.json")
     df = sta(client_dict,image_categories['labels'])
-    df.to_csv(f"{saved_dict_path}/clean_unequal_{index}.csv")
+    df.to_csv(f"{saved_dict_path}/data_scenario_{index}.csv")

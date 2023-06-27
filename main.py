@@ -9,7 +9,7 @@ def main():
     # set random seed
     if option["log_wandb"]:
         wandb.init(
-            project="Abnormal_Data_FL",
+            project="Pill_Sample_Selection_FL",
             entity="aiotlab",
             group= option["group_name"],
             name=f"{ss_name}",

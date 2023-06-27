@@ -33,6 +33,4 @@ DATA_DIR="$SGE_LOCALDIR/$JOB_ID/"
 cp -r /home/aaa10078nj/Federated_Learning/Long_SampleSelection/SampleSelection_easyFL/pill_dataset/medium_pilldataset ${DATA_DIR}
 
 cd SampleSelection_easyFL
-
-
-python main.py --num_rounds 500 --session_name "add_nosie2" --group_name "Impact_Noise" --proportion 0.3 --algorithm fedavg --ratio 1 --aggregate "weighted_com" --task medium_pilldataset --num_classes 150 --data_path ${DATA_DIR}  --save_folder_path ${LOG_DIR}--idx_path pill_dataset/medium_pilldataset/100client/clean_unequal_1_remove_2.json
+python main.py --num_rounds 500 --session_name "scenario_2" --group_name "NII_medium_pilldataset_200client_unequal" --proportion 0.3 --algorithm fedavg --ratio 1 --aggregate "weighted_com" --task medium_pilldataset --num_classes 150 --data_path ${DATA_DIR} --save_folder_path ${LOG_DIR} --idx_path pill_dataset/medium_pilldataset/200client/unequal/data_scenario_2.json --score all_gnorm_threshold

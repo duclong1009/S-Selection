@@ -14,4 +14,4 @@
 # python3 -m venv ~/venv/pytorch+horovod
 # source ~/venv/pytorch+horovod/bin/activate
 
-python main.py --session_name "clean_dataset" --group_name "NII_medium_pilldataset" --proportion 0.3 --algorithm fedavg --ratio 1 --aggregate "weighted_com" --task medium_pilldataset --num_classes 150 --data_path pill_dataset/medium_pilldataset --save_folder_path 'Save_folder' --idx_path pill_dataset/medium_pilldataset/100client/clean_unequal_1.json
+python main.py --num_rounds 500 --session_name "clean_dataset" --group_name "Impact_Noise" --proportion 0.3 --algorithm fedavg --ratio 1 --aggregate "weighted_com" --task medium_pilldataset --num_classes 150 --data_path ${DATA_DIR}  --save_folder_path ${LOG_DIR}--idx_path pill_dataset/medium_pilldataset/100client/clean_unequal_1.json

@@ -132,7 +132,7 @@ def sta(client_dict,labels):
     return df  
 
 n_client =100
-n_cluster = 20
+n_cluster = 30
 n_class = 150
 alpha = 0.1
 seed = 1234

@@ -1096,7 +1096,8 @@ class PillImageFolder(ImageFolder):
     def __init__(self, root, transform: None, samples: None) -> None:
         super().__init__(root, transform=transform)
         samples = samples
-
+        self.samples = samples
+        self.imgs = self.samples
 
 def load_dataset_idx(path="client_idx.json"):
     import json

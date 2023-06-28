@@ -58,50 +58,106 @@ def by_labels_non_iid_split(dataset, n_classes, n_clients, n_clusters, alpha, fr
     :param seed:
     :return: list (size n_clients) of subgroups, each subgroup is a list of indices.
     """
-    if n_clusters == -1:
-        n_clusters = n_classes
-
+    key = True
     rng_seed = (seed if (seed is not None and seed >= 0) else int(time.time()))
     rng = random.Random(rng_seed)
     np.random.seed(rng_seed)
-
-    all_labels = list(range(n_classes))
-    rng.shuffle(all_labels)
-    clusters_labels = iid_divide(all_labels, n_clusters)
-
-    label2cluster = dict()  # maps label to its cluster
-    for group_idx, labels in enumerate(clusters_labels):
-        for label in labels:
-            label2cluster[label] = group_idx
     # get subset
     n_samples = int(len(dataset) * frac)
+    print("Number samples: ", n_samples)
     selected_indices = np.random.randint(0, len(dataset), n_samples)
+    while(key):
 
-    clusters_sizes = np.zeros(n_clusters, dtype=int)
-    clusters = {k: [] for k in range(n_clusters)}
-    for idx in selected_indices:
-        label = dataset[idx]
-        group_id = label2cluster[label]
-        clusters_sizes[group_id] += 1
-        clusters[group_id].append(idx)
+        if n_clusters == -1:
+            n_clusters = n_classes
 
-    for _, cluster in clusters.items():
-        rng.shuffle(cluster)
+        
+        all_labels = list(range(n_classes))
+        rng.shuffle(all_labels)
+        clusters_labels = iid_divide(all_labels, n_clusters)
 
-    clients_indices = [[] for _ in range(n_clients)]    
-    clients_counts = np.zeros((n_clusters, n_clients), dtype=np.int64)  # number of samples by client from each cluster
-    
-    for cluster_id in range(n_clusters):
-            weights = np.random.dirichlet(alpha=alpha * np.ones(n_clients))
-            clients_counts[cluster_id] = np.random.multinomial(clusters_sizes[cluster_id], weights)
+        label2cluster = dict()  # maps label to its cluster
+        for group_idx, labels in enumerate(clusters_labels):
+            for label in labels:
+                label2cluster[label] = group_idx
+        
 
-    
-    clients_counts = np.cumsum(clients_counts, axis=1)
+        clusters_sizes = np.zeros(n_clusters, dtype=int)
+        clusters = {k: [] for k in range(n_clusters)}
+        for idx in selected_indices:
+            label = dataset[idx][1]
+            group_id = label2cluster[label]
+            clusters_sizes[group_id] += 1
+            clusters[group_id].append(idx)
 
-    for cluster_id in range(n_clusters):
-        cluster_split = split_list_by_indices(clusters[cluster_id], clients_counts[cluster_id])
+        for _, cluster in clusters.items():
+            rng.shuffle(cluster)
 
-        for client_id, indices in enumerate(cluster_split):
-            clients_indices[client_id] += indices
+        clients_indices = [[] for _ in range(n_clients)]    
+        clients_counts = np.zeros((n_clusters, n_clients), dtype=np.int64)  # number of samples by client from each cluster
+        
+        for cluster_id in range(n_clusters):
+                weights = np.random.dirichlet(alpha=alpha * np.ones(n_clients))
+                clients_counts[cluster_id] = np.random.multinomial(clusters_sizes[cluster_id], weights)
+        # breakpoint()
+        if np.where( clients_counts.sum(0) ==0)[0].shape[0] == 0:
+            key = False
+        else: 
+            # print("Re run")
+            continue
+        clients_counts = np.cumsum(clients_counts, axis=1)
 
-    return clients_indices
+        for cluster_id in range(n_clusters):
+            cluster_split = split_list_by_indices(clusters[cluster_id], clients_counts[cluster_id])
+
+            for client_id, indices in enumerate(cluster_split):
+                clients_indices[client_id] += indices
+
+        return clients_indices
+
+import json
+with open("pill_dataset/medium_pilldataset/train_dataset_samples.json", "r") as f:
+    samples = json.load(f)['samples']
+
+
+import pandas as pd
+def sta(client_dict,labels):
+    rs = []
+    for client in range(100):
+        tmp = []
+        for i in range(150):
+            tmp.append(sum(labels[j][1] == i for j in client_dict[client]))
+        rs.append(tmp)
+    df = pd.DataFrame(rs,columns=[f"Label_{i}" for i in range(150)])
+    return df  
+
+n_client =100
+n_cluster = 20
+n_class = 150
+alpha = 0.1
+seed = 1234
+fraction = 1
+client_idx = by_labels_non_iid_split(samples, n_class, n_client, n_cluster, alpha,fraction,seed)
+client_samples_idx = {}
+for i in range(n_client):
+    client_samples_idx[i] = [int(tmp) for tmp in client_idx[i]]
+
+foloder_path = f"pill_dataset/medium_pilldataset/{n_client}client/dirichlet"
+import os
+if not os.path.exists(foloder_path):
+    os.makedirs(foloder_path)
+with open(f"{foloder_path}/data_idx_alpha_{alpha}_cluster_{n_cluster}.json","w") as f:
+    json.dump(client_samples_idx,f)
+
+config = {"n_clients":n_client,
+          "n_clusters":n_cluster,
+          "alpha": alpha,
+          "seed": seed,
+          "fraction": fraction}
+
+with open(f"{foloder_path}/data_idx_alpha_{alpha}_cluster_{n_cluster}_config.json","w") as f:
+    json.dump(config,f)
+
+df = sta(client_samples_idx,samples)
+df.to_csv(f"{foloder_path}/data_idx_alpha_{alpha}_cluster_{n_cluster}_stat.csv")
+# by_labels_non_iid_split()

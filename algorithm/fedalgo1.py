@@ -161,16 +161,17 @@ class Client(BasicClient):
         """
         threshold = self.unpack_threshold(svr_pkg)
         selected_idx = utils.fmodule.Sampler.sample_using_cached(self.score_cached,threshold)
+        if len(selected_idx) != 0 :
         # selected_idx = range(len(self.train_data))
-        current_dataset = CustomDataset(self.train_data, selected_idx)
-        self.data_loader = DataLoader(
-            current_dataset,
-            batch_size=self.batch_size,
-            num_workers=self.loader_num_workers,
-            shuffle=True,
-        )
-        self.threshold = threshold
-        self.train(self.model)
+            current_dataset = CustomDataset(self.train_data, selected_idx)
+            self.data_loader = DataLoader(
+                current_dataset,
+                batch_size=self.batch_size,
+                num_workers=self.loader_num_workers,
+                shuffle=True,
+            )
+            self.threshold = threshold
+            self.train(self.model)
         cpkg = self.pack(self.model, len(selected_idx))
         return cpkg
 

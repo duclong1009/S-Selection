@@ -65,7 +65,8 @@ def by_labels_non_iid_split(dataset, n_classes, n_clients, n_clusters, alpha, fr
     # get subset
     n_samples = int(len(dataset) * frac)
     print("Number samples: ", n_samples)
-    selected_indices = np.random.randint(0, len(dataset), n_samples)
+    # selected_indices = np.random.randint(0, len(dataset), n_samples)
+    selected_indices = np.random.choice(range(len(dataset)), n_samples, replace=False)
     while(key):
 
         if n_clusters == -1:
@@ -81,7 +82,6 @@ def by_labels_non_iid_split(dataset, n_classes, n_clients, n_clusters, alpha, fr
             for label in labels:
                 label2cluster[label] = group_idx
         
-
         clusters_sizes = np.zeros(n_clusters, dtype=int)
         clusters = {k: [] for k in range(n_clusters)}
         for idx in selected_indices:
@@ -132,16 +132,34 @@ def sta(client_dict,labels):
     return df  
 
 n_client =100
-n_cluster = 30
+n_cluster = 20
 n_class = 150
-alpha = 0.1
+alpha = 0.2
 seed = 1234
 fraction = 1
-client_idx = by_labels_non_iid_split(samples, n_class, n_client, n_cluster, alpha,fraction,seed)
+
+# with open("pill_dataset/medium_pilldataset/categories.json", "r") as f:
+#     categories = json.load(f)
+
+# hash_dict = {}
+# count = 0
+# clean_data = []
+# for key in categories.keys():
+#     label = int(key)
+#     list_clean = categories[key]['clean']
+#     for id in list_clean:
+#         hash_dict[count] = id
+#         count +=1 
+#         clean_data.append([count, label])
+with open("pill_dataset/medium_pilldataset/train_dataset_samples.json", "r") as f:
+    data = json.load(f)['samples']
+
+client_idx = by_labels_non_iid_split(data, n_class, n_client, n_cluster, alpha,fraction,seed)
 client_samples_idx = {}
+# for i in range(n_client):
+#     client_samples_idx[i] = [int(hash_dict[tmp]) for tmp in client_idx[i]]
 for i in range(n_client):
     client_samples_idx[i] = [int(tmp) for tmp in client_idx[i]]
-
 foloder_path = f"pill_dataset/medium_pilldataset/{n_client}client/dirichlet"
 import os
 if not os.path.exists(foloder_path):
@@ -160,4 +178,5 @@ with open(f"{foloder_path}/data_idx_alpha_{alpha}_cluster_{n_cluster}_config.jso
 
 df = sta(client_samples_idx,samples)
 df.to_csv(f"{foloder_path}/data_idx_alpha_{alpha}_cluster_{n_cluster}_stat.csv")
+# breakpoint()
 # by_labels_non_iid_split()

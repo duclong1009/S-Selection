@@ -2,7 +2,7 @@
 #$ -cwd
 #$ -l rt_G.small=1
 #$ -l h_rt=72:00:00
-#$ -o /home/aaa10078nj/Federated_Learning/Long_SampleSelection/logs/fedavg/$JOB_NAME_$JOB_ID.log
+#$ -o /home/aaa10078nj/Federated_Learning/Long_SampleSelection/logs/experiment2/$JOB_NAME_$JOB_ID.log
 #$ -j y
 
 source /etc/profile.d/modules.sh
@@ -24,7 +24,7 @@ PATH=/apps/centos7/python/3.10.4/bin:${PATH}
 ​
 source ~/venv/pytorch1.11+horovod/bin/activate
 python --version
-LOG_DIR="/home/aaa10078nj/Federated_Learning/Long_SampleSelection/logs/fedavg/$JOB_NAME_$JOB_ID"
+LOG_DIR="/home/aaa10078nj/Federated_Learning/Long_SampleSelection/logs/experiment2/$JOB_NAME_$JOB_ID"
 rm -r ${LOG_DIR}
 mkdir ${LOG_DIR}
 
@@ -33,4 +33,4 @@ DATA_DIR="$SGE_LOCALDIR/$JOB_ID/"
 cp -r /home/aaa10078nj/Federated_Learning/Long_SampleSelection/SampleSelection_easyFL/pill_dataset/medium_pilldataset ${DATA_DIR}
 
 cd SampleSelection_easyFL
-python main.py --num_rounds 500 --session_name "scenario_1" --group_name "NII_medium_pilldataset_100client_unequal" --proportion 0.3 --algorithm fedalgo1 --ratio 0.7 --aggregate "weighted_com" --task medium_pilldataset --num_classes 150 --data_path ${DATA_DIR} --save_folder_path ${LOG_DIR} --idx_path pill_dataset/medium_pilldataset/100client/unequal/data_scenario_1.json --score all_gnorm_threshold
+python main.py --num_rounds 1000 --session_name "mixed_noise_cluster_20_alpha_0_1_" --group_name "experiment2" --proportion 0.3 --algorithm fedavg --ratio 1 --aggregate "weighted_com" --task medium_pilldataset --num_classes 150 --data_path ${DATA_DIR} --save_folder_path ${LOG_DIR} --idx_path pill_dataset/medium_pilldataset/100client/dirichlet/mixed_noise_data_idx_alpha_0.1_cluster_20.json --score all_gnorm_threshold

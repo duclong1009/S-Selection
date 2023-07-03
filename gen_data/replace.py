@@ -6,7 +6,7 @@ random.seed(43)
 with open("pill_dataset/medium_pilldataset/categories.json", "r") as f:
     categories = json.load(f)
 
-with open("pill_dataset/medium_pilldataset/100client/dirichlet/clean_data_idx_alpha_0.1_cluster_30.json", "r") as f:
+with open("pill_dataset/medium_pilldataset/100client/dirichlet/clean_data_idx_alpha_0.1_cluster_20.json", "r") as f:
     data_idx = json.load(f)
 
 noise_type = "bright"
@@ -16,15 +16,19 @@ replace_list = []
 
 for label in categories.keys():
     list_noise_id = categories[label][noise_type]
+    list_mixed_noise = categories[label]['bright'] + categories[label]['zoom'] + categories[label]['cover']
     list_clean = categories[label]['clean']
     n_noise_imgs = len(list_noise_id)
     random.shuffle(list_clean)
+    random.shuffle(list_mixed_noise)
     selected_clean = np.random.choice(list_clean, n_noise_imgs, replace=False)
+    selected_noise = np.random.choice(list_mixed_noise, n_noise_imgs, replace=False)
+
     # breakpoint()
     assert len(original_list) == len(set(original_list))
     assert len(replace_list) == len(set(replace_list))
     original_list += list(selected_clean)
-    replace_list += list(list_noise_id)
+    replace_list += list(selected_noise)
 
 hash_dict = {}
 for i,j in zip(original_list, replace_list):
@@ -36,7 +40,7 @@ for client_id in data_idx.keys():
     for img in original_list:
         if img in client_id_list:
             client_id_list.remove(img)
-            client_id_list.append(hash_dict[img])
+            client_id_list.append(int(hash_dict[img]))
     data_idx[client_id] = client_id_list
 # for i, clean_img_id in enumerate(original_list):
 #     for client_id in data_idx.keys():
@@ -44,9 +48,10 @@ for client_id in data_idx.keys():
 #             data_idx[client_id].remove(clean_img_id)
 #             data_idx[client_id].append(replace_list[i])
             # break
-
-with open(f"pill_dataset/medium_pilldataset/100client/dirichlet/{noise_type}_data_idx_alpha_0.1_cluster_30.json", "w") as f:
-    json.dump(data_idx, f)
+breakpoint()
+with open(f"pill_dataset/medium_pilldataset/100client/dirichlet/mixed_noise_data_idx_alpha_0.1_cluster_20.json", "w") as f:
+    json.dump(data_idx,f)
+    # json.dump(data_idx, f)
 
 
 

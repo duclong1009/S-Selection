@@ -2,7 +2,9 @@
 This is a non-official implementation of Scaffold proposed in 'Stochastic
 Controlled Averaging for Federated Learning' (ICML 2020).
 """
+from torch.utils.data import DataLoader
 
+import utils
 from .fedbase import BasicServer, BasicClient
 import copy
 from utils import fmodule
@@ -26,7 +28,9 @@ class Server(BasicServer):
         res = self.communicate(self.selected_clients)
         dys, dcs = res['dy'], res['dc']
         # aggregate
+        # breakpoint()
         self.model, self.cg = self.aggregate(dys, dcs)
+
         return
 
     def aggregate(self, dys, dcs):
@@ -57,6 +61,15 @@ class Client(BasicClient):
           ci <-- ci+ = ci + dc
           communicate (dy, dc)
         """
+        if self.data_loader == None:
+            print(f"Client {self.id} init its dataloader")
+            self.data_loader = DataLoader(
+                self.train_data,
+                batch_size=self.batch_size,
+                num_workers=self.loader_num_workers,
+                shuffle=True,
+            )
+
         model.train()
         # global parameters
         src_model = copy.deepcopy(model)
@@ -64,16 +77,40 @@ class Client(BasicClient):
         cg.freeze_grad()
         if self.c is None: self.c = model.zeros_like()
         self.c.freeze_grad()
-        optimizer = self.calculator.get_optimizer(model, lr = self.learning_rate, weight_decay=self.weight_decay, momentum=self.momentum)
-        for iter in range(self.num_steps):
-            batch_data = self.get_batch_data()
-            model.zero_grad()
-            loss = self.calculator.train_one_step(model, batch_data)['loss']
-            loss.backward()
-            # y_i <-- y_i - eta_l ( g_i(y_i)-c_i+c )  =>  g_i(y_i)' <-- g_i(y_i)-c_i+c
-            for pm, pcg, pc in zip(model.parameters(), cg.parameters(), self.c.parameters()):
-                pm.grad = pm.grad - pc + pcg
-            optimizer.step()
+
+        optimizer = self.calculator.get_optimizer(
+            model,
+            lr=self.learning_rate,
+            weight_decay=self.weight_decay,
+            momentum=self.momentum,
+        )
+
+        list_training_loss = []
+        for epoch in range(self.epochs):
+            training_loss = 0
+            for data, labels, idxs in self.data_loader:
+                data, labels = data.float().to(self.device), labels.long().to(
+                    self.device
+                )
+                optimizer.zero_grad()
+                outputs = model(data)
+                loss = self.calculator.criterion(outputs, labels)
+                loss.backward()
+                for pm, pcg, pc in zip(model.parameters(), cg.parameters(), self.c.parameters()):
+                    pm.grad = pm.grad - pc + pcg
+                optimizer.step()
+                training_loss += loss.item()
+            # training_loss.append(training_loss / len(current_dataloader))
+            list_training_loss.append(training_loss / len(self.data_loader))
+        if not "training_loss" in utils.fmodule.LOG_DICT.keys():
+            utils.fmodule.LOG_DICT["training_loss"] = {}
+        utils.fmodule.LOG_DICT["training_loss"][
+            f"client_{self.id}"
+        ] = list_training_loss
+        utils.fmodule.LOG_WANDB["mean_training_loss"] = sum(list_training_loss) / len(
+            list_training_loss
+        )
+        
         dy = model - src_model
         dc = -1.0 / (self.num_steps * self.learning_rate) * dy - cg
         self.c = self.c + dc

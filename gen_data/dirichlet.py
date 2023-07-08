@@ -134,7 +134,7 @@ def sta(client_dict,labels):
 n_client =100
 n_cluster = 20
 n_class = 150
-alpha = 0.2
+alpha = 0.01
 seed = 1234
 fraction = 1
 
@@ -162,8 +162,10 @@ for i in range(n_client):
     client_samples_idx[i] = [int(tmp) for tmp in client_idx[i]]
 foloder_path = f"pill_dataset/medium_pilldataset/{n_client}client/dirichlet"
 import os
+
 if not os.path.exists(foloder_path):
     os.makedirs(foloder_path)
+
 with open(f"{foloder_path}/data_idx_alpha_{alpha}_cluster_{n_cluster}.json","w") as f:
     json.dump(client_samples_idx,f)
 

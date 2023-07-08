@@ -92,7 +92,11 @@ class Server(BasicServer):
             (list_n_, interval_histogram)
         )
         return threshold_value
- 
+    
+    def aggregate_hist(self):
+        max_len = max([len(x) for x in self.received_score])
+        new_hist = [np.concatenate((x, np.zeros((max_len - len(x))))) for x in self.received_score]
+        return np.sum(new_hist,0), [i * self.option['interval_histogram'] for i in range(max_len + 1)]
 from benchmark.toolkits import CustomDataset
 
 class Client(BasicClient):

@@ -229,7 +229,7 @@ def read_option():
         default=False,
     )
     parser.add_argument("--gamma", type=float, default= 0.05)
-    
+    parser.add_argument("--alpha", default= 0.01, type=float)
     try:
         option = vars(parser.parse_args())
     except IOError as msg:

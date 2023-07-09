@@ -98,6 +98,7 @@ def by_labels_non_iid_split(dataset, n_classes, n_clients, n_clusters, alpha, fr
         
         for cluster_id in range(n_clusters):
                 weights = np.random.dirichlet(alpha=alpha * np.ones(n_clients))
+                # breakpoint()
                 clients_counts[cluster_id] = np.random.multinomial(clusters_sizes[cluster_id], weights)
         # breakpoint()
         if np.where( clients_counts.sum(0) ==0)[0].shape[0] == 0:
@@ -132,7 +133,7 @@ def sta(client_dict,labels):
     return df  
 
 n_client =100
-n_cluster = 20
+n_cluster = 40
 n_class = 150
 alpha = 0.01
 seed = 1234

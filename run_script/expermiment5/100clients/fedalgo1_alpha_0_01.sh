@@ -33,4 +33,4 @@ DATA_DIR="$SGE_LOCALDIR/$JOB_ID/"
 cp -r /home/aaa10078nj/Federated_Learning/Long_SampleSelection/SampleSelection_easyFL/pill_dataset/medium_pilldataset ${DATA_DIR}
 
 cd SampleSelection_easyFL
-python main.py --num_rounds 1000 --session_name "cluster_20_alpha_0_2" --group_name "experiment5" --proportion 0.3 --algorithm fedfa_algo1 --ratio 0.8 --aggregate "weighted_com" --task medium_pilldataset --num_classes 150 --data_path ${DATA_DIR} --save_folder_path ${LOG_DIR} --idx_path pill_dataset/medium_pilldataset/100client/dirichlet/data_idx_alpha_0.01_cluster_40.json --score all_gnorm_threshold
+python main.py --num_rounds 1000 --session_name "cluster_40_alpha_0_01" --group_name "experiment5" --proportion 0.3 --algorithm fedavg_algo1 --ratio 0.8 --aggregate "weighted_com" --task medium_pilldataset --num_classes 150 --data_path ${DATA_DIR} --save_folder_path ${LOG_DIR} --idx_path pill_dataset/medium_pilldataset/100client/dirichlet/data_idx_alpha_0.01_cluster_40.json --score all_gnorm_threshold

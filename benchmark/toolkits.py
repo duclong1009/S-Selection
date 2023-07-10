@@ -680,6 +680,7 @@ class ClassificationCalculator(BasicTaskCalculator):
         :return: [mean_accuracy, mean_loss]
         """
         model.eval()
+        breakpoint()
         if batch_size == -1:
             batch_size = len(dataset)
         data_loader = self.get_data_loader(

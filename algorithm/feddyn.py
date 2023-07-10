@@ -23,10 +23,11 @@ from torch.utils.data import DataLoader
 class Server(BasicServer):
     def __init__(self, option, model, clients, test_data=None,device='cpu'):
         super(Server, self).__init__(option, model, clients, test_data, device)
-        self.init_algo_para({'alpha': 0.1})
+        self.init_algo_para({'alpha': option['alpha']})
         self.h = self.model.zeros_like()
 
     def aggregate(self, models, list_vols=None):
+        # breakpoint()
         self.h = self.h - self.alpha * (1.0 / self.num_clients * fmodule._model_sum(models) - self.model)
         new_model = fmodule._model_average(models) - 1.0 / self.alpha * self.h
         return new_model

@@ -136,7 +136,7 @@ class Client(BasicClient):
         n_selected_samples = int(self.ratio * n_samples)
         sort_idx = np.argsort(self.score_cached)
         selected_idx = sort_idx[-n_selected_samples:]
-        print
+        print(f"{len(selected_idx)}/ {n_samples}")
         return selected_idx
         
     def reply(self, svr_pkg):
@@ -169,7 +169,6 @@ class Client(BasicClient):
                 num_workers=self.loader_num_workers,
                 shuffle=True,
             )
-            self.threshold = threshold
             self.train(self.model)
         cpkg = self.pack(self.model, len(selected_idx))
         return cpkg

@@ -58,9 +58,8 @@ class BasicServer:
         Start the federated learning symtem where the global model is trained iteratively.
         """
         flw.logger.time_start("Total Time Cost")
-
+        self.train_irreducible_model()
         for round in range(1, self.num_rounds + 1):
-
 
             self.current_round = round
             # using logger to evaluate the model
@@ -112,6 +111,13 @@ class BasicServer:
         flw.logger.save_output_as_json()
         return
 
+    def train_irreducible_model(self):
+        for client_id in range(self.num_clients):
+            self.train_irreducible_model_client(client_id)
+            
+    def train_irreducible_model_client(self, client_id):
+        self.clients[client_id].train_irreducible_loss_model()
+        
     def iterate(self):
         """
         The standard iteration of each federated round that contains three
@@ -414,6 +420,53 @@ class BasicClient:
         # server
         self.server = None
 
+    def train_irreducible_loss_model(self,):
+        ## init model
+        from ..benchmark.medium_pilldataset.model.resnet18 import Model
+        import torch.nn as nn
+        import torch
+        model = Model().to(self.device)
+        model.train()
+        data_loader = DataLoader(self.valid_data, batch_size= self.batch_size, shuffle=True)
+        valid_dataloader = DataLoader(self.train_data, batch_size= self.batch_size, shuffle=False)
+        
+        optimizer = torch.optim.Adam(model.parameters(), lr= 0.001) 
+        ce_loss = nn.CrossEntropyLoss()
+        best_valid_loss = 10000
+        count = 0 
+        for epoch in range(100):
+            model.train()
+            for data, labels, idxs in data_loader:
+                data, labels = data.float().to(self.device), labels.long().to(
+                    self.device
+                )
+                optimizer.zero_grad()
+                output = model(data)
+                loss = ce_loss(labels, output)
+                loss.backward()
+                optimizer.step()
+            
+            valid_loss = 0
+            model.eval()
+            with torch.no_grad():
+                for data, labels, idxs in valid_dataloader:
+                    data, labels = data.float().to(self.device), labels.long().to(
+                        self.device
+                    )
+                    output = model(data)
+                    loss = ce_loss(labels, output)
+                    valid_loss += loss.item()
+            if valid_loss < best_valid_loss:
+                valid_loss = best_valid_loss
+                count = 0
+            else:
+                count += 1
+                
+            if count == 5:
+                break
+        self.irreducible_loss_model = model
+        
+        
     def train(self, model):
         """
         Standard local training procedure. Train the transmitted model with local training dataset.

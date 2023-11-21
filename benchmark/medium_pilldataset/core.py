@@ -27,7 +27,9 @@ class TaskReader(object):
     
     def setup_clients(self,):
         train_dataset, test_dataset = self.load_data()
+        valid_idx = load_dataset_idx("pill_dataset/medium_pilldataset/100client/dirichlet/mixed_noise_data_idx_alpha_0.1_cluster_20_holdout.json")
         data_idx = load_dataset_idx(self.reader_config["idx_path"])
         n_clients = len(data_idx)
         train_data = [CustomDataset(train_dataset, data_idx[idx]) for idx in range(n_clients)]
-        return train_data, test_dataset, n_clients
+        valid_data = [CustomDataset(train_dataset, valid_idx[idx]) for idx in range(n_clients)]
+        return train_data, valid_data,test_dataset, n_clients

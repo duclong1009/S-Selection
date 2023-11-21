@@ -15,7 +15,7 @@ def main():
             name=f"{ss_name}",
             config=option,
         )
-        
+
     flw.setup_seed(option['seed'])
     # initialize server, clients and fedtask
     server = flw.initialize(option)

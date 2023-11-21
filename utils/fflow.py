@@ -279,7 +279,7 @@ def initialize(option):
     TaskReader = getattr(importlib.import_module(bmk_core_path), "TaskReader")(
         taskreader_config
     )
-    train_datas, test_data, num_clients = TaskReader.setup_clients()
+    train_datas,valid_datas,  test_data, num_clients = TaskReader.setup_clients()
 
     # init model
     try:
@@ -344,7 +344,7 @@ def initialize(option):
             option,
             name=cid,
             train_data=train_datas[cid],
-            valid_data=test_data,
+            valid_data=valid_datas[cid],
             device=device,
         )
         for cid in range(num_clients)

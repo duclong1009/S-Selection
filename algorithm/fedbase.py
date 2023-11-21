@@ -422,7 +422,7 @@ class BasicClient:
 
     def train_irreducible_loss_model(self,):
         ## init model
-        from ..benchmark.medium_pilldataset.model.resnet18 import Model
+        from benchmark.medium_pilldataset.model.resnet18 import Model
         import torch.nn as nn
         import torch
         model = Model().to(self.device)
@@ -436,16 +436,18 @@ class BasicClient:
         count = 0 
         for epoch in range(100):
             model.train()
+            training_loss =0 
             for data, labels, idxs in data_loader:
                 data, labels = data.float().to(self.device), labels.long().to(
                     self.device
                 )
                 optimizer.zero_grad()
-                output = model(data)
-                loss = ce_loss(labels, output)
+                outputs = model(data)
+                loss = self.calculator.criterion(outputs, labels)
                 loss.backward()
                 optimizer.step()
-            
+                training_loss += loss.item()
+            training_loss = training_loss / len(data_loader)
             valid_loss = 0
             model.eval()
             with torch.no_grad():
@@ -453,18 +455,32 @@ class BasicClient:
                     data, labels = data.float().to(self.device), labels.long().to(
                         self.device
                     )
-                    output = model(data)
-                    loss = ce_loss(labels, output)
+                    outputs = model(data)
+                    
+                    loss = self.calculator.criterion(outputs, labels)
                     valid_loss += loss.item()
+                valid_loss = valid_loss / len(valid_dataloader)
             if valid_loss < best_valid_loss:
-                valid_loss = best_valid_loss
+                best_valid_loss = valid_loss
                 count = 0
             else:
                 count += 1
                 
             if count == 5:
                 break
-        self.irreducible_loss_model = model
+            print(f"Epochs {epoch} valid loss / best valid loss {valid_loss} / {best_valid_loss} training loss {training_loss}")
+        # self.irreducible_loss_model = model
+        
+        with torch.no_grad():
+            for data, labels, idxs  in DataLoader(self.train_data, batch_size=len(self.train_data), shuffle=False):
+                data, labels = data.float().to(self.device), labels.long().to(
+                        self.device
+                    )
+                criterion= nn.CrossEntropyLoss(reduction='none')
+                outputs = model(data)
+                self.ic_loss_list = criterion(outputs, labels).cpu().numpy()
+
+
         
         
     def train(self, model):

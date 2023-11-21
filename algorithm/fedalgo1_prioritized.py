@@ -35,11 +35,6 @@ class Server(BasicServer):
         # aggregate: pk = 1/K as default where K=len(selected_clients)
         self.model = self.aggregate(models,list_vols)
 
-    def aggregate_hist(self):
-        max_len = max([len(x) for x in self.received_score])
-        new_hist = [np.concatenate((x, np.zeros((max_len - len(x))))) for x in self.received_score]
-        return np.sum(new_hist,0), [i * self.option['interval_histogram'] for i in range(max_len + 1)]
-    
     def communicate(self, selected_clients):
         """
         The whole simulating communication procedure with the selected clients.
@@ -81,17 +76,6 @@ class Server(BasicServer):
         # listen for the client's response
         return self.clients[client_id].reply(svr_pkg)
 
-    def pack_threshold(self, client_id):
-        utils.fmodule.LOG_DICT["threshold_score"] = self.threshold_score 
-        return {"threshold": self.threshold_score}
-
-
-    def unpack_score(self, cpkqs):
-        list_ = []
-        for l in cpkqs:
-            list_.append(l["score"])
-        return list_
-
 
 class Client(BasicClient):
     def __init__(self, option, name="", train_data=None, valid_data=None, device="cpu"):
@@ -100,42 +84,25 @@ class Client(BasicClient):
         self.option = option
         self.ratio = option['ratio']
         
-    def calculate_importance(self, model):
-        criteria = nn.CrossEntropyLoss()
-        _, score_list_on_cl = utils.fmodule.Sampler.cal_score(
-            self.train_data, model, criteria, self.device
-        )
-        self.score_cached = score_list_on_cl
 
-    def cal_histogram(self,):
-        import copy, math
-        score_list = copy.deepcopy(self.score_cached)
-        n_bins = math.ceil(max(score_list) / self.interval_histogram)
-        return np.histogram(score_list, bins= [self.interval_histogram * i for i in range(n_bins +1)])[0]
-    
-    def reply_score(self, svr_pkg):
-        model = self.unpack_model(svr_pkg)
-        self.model = copy.deepcopy(model)
-        self.calculate_importance(copy.deepcopy(model))
-        value_hist = self.cal_histogram()
-        if not "score_list" in utils.fmodule.LOG_DICT.keys():
-            utils.fmodule.LOG_DICT["score_list"] = {}
-        utils.fmodule.LOG_DICT["score_list"][f"client_{self.id}"] = list(self.score_cached)
-
-
-        cpkg = self.pack_histogram(value_hist)
-        return cpkg
-
-    def pack_histogram(self, score_list):
-        return {"score": score_list}
-
-    def unpack_threshold(self, svr_pkg):
-        return svr_pkg["threshold"]
-    
     def select_sample(self,):
-        n_samples = len(self.score_cached)
+        breakpoint()
+        n_samples = len(self.train_data)
+        batch = 1000
+        if batch > n_samples:
+            batch = n_samples
+        
         n_selected_samples = int(self.ratio * n_samples)
-        sort_idx = np.argsort(self.score_cached)
+        list_score = []
+        
+        for i in range(n_samples):
+            data, label, idx = self.train_data[i]
+            data, label = data.to(self.device), label.to(self.device)
+            output = self.model(data)
+            train_loss = self.calculator.criterion[output, label]
+            list_score.append(train_loss - self.ic_loss_list[i])
+        
+        sort_idx = np.argsort(self.list_score)
         selected_idx = sort_idx[-n_selected_samples:]
         print(f"{len(selected_idx)}/ {n_samples}")
         return selected_idx
@@ -155,9 +122,7 @@ class Client(BasicClient):
         """
         model = self.unpack_model(svr_pkg)
         self.model = copy.deepcopy(model)
-        ## Calculate gradnorm
-        self.calculate_importance(copy.deepcopy(model))
-        
+        ## Calculate gradnorm        
         ## Select data
         selected_idx = self.select_sample()
         # selected_idx = utils.fmodule.Sampler.sample_using_cached(self.score_cached,threshold)

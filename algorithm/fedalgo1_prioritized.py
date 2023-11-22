@@ -86,7 +86,6 @@ class Client(BasicClient):
         
 
     def select_sample(self,):
-        breakpoint()
         n_samples = len(self.train_data)
         batch = 1000
         if batch > n_samples:
@@ -94,17 +93,24 @@ class Client(BasicClient):
         
         n_selected_samples = int(self.ratio * n_samples)
         list_score = []
+        for data, labels, idxs  in DataLoader(self.train_data, batch_size=len(self.train_data), shuffle=False):
+            data, labels = data.float().to(self.device), labels.long().to(
+                    self.device
+                )
+            criterion= nn.CrossEntropyLoss(reduction='none')
+            outputs = self.model(data)
+            train_loss = criterion(outputs, labels).detach().cpu().numpy()
+            score = train_loss - self.ic_loss_list
+
+        # for i in range(n_samples):
+        #     data, label, idx = self.train_data[i]
+        #     data, label = data.to(self.device), label.to(self.device)
+        #     output = self.model(data)
+        #     train_loss = self.calculator.criterion[output, label]
+        #     list_score.append(train_loss - self.ic_loss_list[i])
         
-        for i in range(n_samples):
-            data, label, idx = self.train_data[i]
-            data, label = data.to(self.device), label.to(self.device)
-            output = self.model(data)
-            train_loss = self.calculator.criterion[output, label]
-            list_score.append(train_loss - self.ic_loss_list[i])
-        
-        sort_idx = np.argsort(self.list_score)
+        sort_idx = np.argsort(score)
         selected_idx = sort_idx[-n_selected_samples:]
-        print(f"{len(selected_idx)}/ {n_samples}")
         return selected_idx
         
     def reply(self, svr_pkg):

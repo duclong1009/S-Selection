@@ -1,0 +1,1 @@
+{"Round 1": {"Accuracy/Testing Accuracy": 0.005333333333333333, "Loss/Testing Loss": 5.147876879374186, "mean_training_loss": 2.4422493517398833}, "Round 2": {"training_time": 85.8437397480011, "max test accuracy": 0.005333333333333333, "Accuracy/Testing Accuracy": 0.006, "Loss/Testing Loss": 5.114288485209147, "mean_training_loss": 2.455318361520767}}

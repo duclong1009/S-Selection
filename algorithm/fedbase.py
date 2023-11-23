@@ -62,6 +62,7 @@ class BasicServer:
         for client in self.clients:
             client.ratio = self.ratio
         print(f"Reduce ratio {old_ratio} -> {self.ratio}")
+        
     def run(self):
         """
         Start the federated learning symtem where the global model is trained iteratively.

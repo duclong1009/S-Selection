@@ -255,7 +255,7 @@ def initialize(option):
     #     fuzzy_config = list(yaml.load_all(c, Loader=yaml.FullLoader))
     #     fuzzy_config[0]["path"] = option['fuzzy_config_path']
     # option["fuzzy_config"] = fuzzy_config
-    adapt_dict = {3: 0.8,
+    adapt_dict = {100: 0.8,
                     250: 0.8,
                     500: 0.8,
                     750: 0.8}

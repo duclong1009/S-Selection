@@ -64,7 +64,11 @@ class _BaseSampler(object):
                     PA = (y_pred.argmax(-1) == labels).cpu().numpy()
                     PC = torch.nn.Softmax(-1)(y_pred).max(-1)[0]
             import numpy as np
-            loss = np.float64(loss)
+            if loss.shape[0] == 1:
+                loss = np.array([np.float64(loss)])
+            else:
+                loss = np.float64(loss)
+            
             return loss, PA, PC
             # return list_score, list_idx
 

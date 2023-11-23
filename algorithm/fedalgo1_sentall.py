@@ -127,6 +127,7 @@ class Client(BasicClient):
         self.calculate_importance(copy.deepcopy(model))
         if not "score_list" in utils.fmodule.LOG_DICT.keys():
             utils.fmodule.LOG_DICT["score_list"] = {}
+        # if self.score_cached 
         utils.fmodule.LOG_DICT["score_list"][f"client_{self.id}"] = list(self.score_cached)
 
 

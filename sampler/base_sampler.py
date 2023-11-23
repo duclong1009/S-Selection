@@ -46,6 +46,28 @@ class _BaseSampler(object):
                 list_score.append(loss.cpu().item())
                 list_idx.append(idx)
         return list_score, list_idx
+    
+    def cal_loss_kakurenbo(self, dataset, model, criteria, device):
+        # device = torch.device(device)
+        # device = "cuda"
+        with torch.no_grad():
+            list_score = []
+            list_idx = []
+            model = model.to(device)
+            data_loader = DataLoader(dataset, batch_size = len(dataset), shuffle= False)
+            with torch.no_grad():
+                for data, labels, idxs in data_loader:
+                    data, labels = data.to(device), labels.to(device)
+                    y_pred = model(data)
+                    ce_loss = torch.nn.CrossEntropyLoss(reduction="none")
+                    loss = ce_loss(y_pred, labels).cpu().numpy()
+                    PA = (y_pred.argmax(-1) == labels).cpu().numpy()
+                    PC = torch.nn.Softmax(-1)(y_pred).max(-1)[0]
+            import numpy as np
+            loss = np.float64(loss)
+            return loss, PA, PC
+            # return list_score, list_idx
+
     def cal_gnorm_model_weight(self, dataset, model, criteria, device):
         # device = torch.device(device)
         # device = "cuda"

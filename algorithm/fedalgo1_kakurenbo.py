@@ -13,8 +13,7 @@ class Server(BasicServer):
     def __init__(self, option, model, clients, test_data=None, device="cpu"):
         super(Server, self).__init__(option, model, clients, test_data, device)
         self.sampler = utils.fmodule.Sampler
-        self.ratio = option['ratio']
-        
+
     def iterate(self):
         self.selected_clients = self.sample()
         utils.fmodule.LOG_DICT["selectd_client"] = self.selected_clients
@@ -37,6 +36,11 @@ class Server(BasicServer):
         # aggregate: pk = 1/K as default where K=len(selected_clients)
         self.model = self.aggregate(models,list_vols)
 
+    def aggregate_hist(self):
+        max_len = max([len(x) for x in self.received_score])
+        new_hist = [np.concatenate((x, np.zeros((max_len - len(x))))) for x in self.received_score]
+        return np.sum(new_hist,0), [i * self.option['interval_histogram'] for i in range(max_len + 1)]
+    
     def communicate(self, selected_clients):
         """
         The whole simulating communication procedure with the selected clients.
@@ -96,48 +100,72 @@ class Server(BasicServer):
         svr_pkg = self.pack_model(client_id)
         return self.clients[client_id].reply_score(svr_pkg)
 
-    def get_threshold(self, list_score):
-        n_samples = len(list_score)
-        n_selected_samples = int(self.ratio * n_samples)
-        idxs = np.argsort(list_score)
-        threshold_idxs = idxs[-n_selected_samples]
-        threshold_value = list_score[threshold_idxs]
-        return threshold_value
-    
     def cal_threshold(self, selected_clinets):
         self.calculate_importance(selected_clinets)
-        list_score = np.concatenate(self.received_score)
-        threshold_value = self.get_threshold(list_score)
+        list_n_, interval_histogram = self.aggregate_hist()
+        threshold_value = utils.fmodule.Sampler.cal_threshold(
+            (list_n_, interval_histogram)
+        )
         return threshold_value
  
+
 class Client(BasicClient):
     def __init__(self, option, name="", train_data=None, valid_data=None, device="cpu"):
         super(Client, self).__init__(option, name, train_data, valid_data, device)
+        self.interval_histogram = option['interval_histogram']
+        self.pc_threshold = option['pc_threshold']
 
     def calculate_importance(self, model):
         criteria = nn.CrossEntropyLoss()
-        _, score_list_on_cl = utils.fmodule.Sampler.cal_score(
+        loss_list, PA, PC = utils.fmodule.Sampler.cal_loss_kakurenbo(
             self.train_data, model, criteria, self.device
         )
-        self.score_cached = score_list_on_cl
+        self.score_cached = loss_list
+        self.PA = PA
+        self.PC = PC
 
+    def cal_histogram(self,):
+        import copy, math
+        score_list = copy.deepcopy(self.score_cached)
+        n_bins = math.ceil(max(score_list) / self.interval_histogram)
+        return np.histogram(score_list, bins= [self.interval_histogram * i for i in range(n_bins +1)])[0]
+    
     def reply_score(self, svr_pkg):
         model = self.unpack_model(svr_pkg)
         self.model = copy.deepcopy(model)
         self.calculate_importance(copy.deepcopy(model))
+        value_hist = self.cal_histogram()
         if not "score_list" in utils.fmodule.LOG_DICT.keys():
             utils.fmodule.LOG_DICT["score_list"] = {}
         utils.fmodule.LOG_DICT["score_list"][f"client_{self.id}"] = list(self.score_cached)
 
 
-        cpkg = self.pack_score_list(self.score_cached)
+        cpkg = self.pack_histogram(value_hist)
         return cpkg
 
-    def pack_score_list(self, score_list):
+    def pack_histogram(self, score_list):
         return {"score": score_list}
 
     def unpack_threshold(self, svr_pkg):
         return svr_pkg["threshold"]
+
+    def select_samples(self,threshold):
+        list_idx = range(len(self.train_data))
+        if threshold > 0:
+            selected_idx = np.array(list_idx)[
+                np.where(np.array(self.score_cached) > threshold)
+            ]
+            selected_idx = list(selected_idx)
+            hidden_idx = np.array(list_idx)[
+                np.where(np.array(self.score_cached) <= threshold)
+            ]
+            for id in hidden_idx:
+                if self.PA[id] == False or self.PC[id] < self.pc_threshold:
+                    selected_idx.append(id)
+            selected_idx = np.array(selected_idx)
+        else:
+            selected_idx = np.array(list_idx)
+        return selected_idx
 
     def reply(self, svr_pkg):
         """
@@ -153,7 +181,7 @@ class Client(BasicClient):
             client_pkg: the package to be send to the server
         """
         threshold = self.unpack_threshold(svr_pkg)
-        selected_idx = utils.fmodule.Sampler.sample_using_cached(self.score_cached,threshold)
+        selected_idx = self.select_samples(threshold)
         if len(selected_idx) != 0 :
         # selected_idx = range(len(self.train_data))
             current_dataset = CustomDataset(self.train_data, selected_idx)

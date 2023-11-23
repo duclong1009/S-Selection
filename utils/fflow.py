@@ -228,8 +228,10 @@ def read_option():
         action="store_true",
         default=False,
     )
+    parser.add_argument("--pc_threshold", type=float, default = 0.2)
     parser.add_argument("--gamma", type=float, default= 0.05)
     parser.add_argument("--alpha", default= 0.01, type=float)
+    parser.add_argument("--adapt_ratio", default= False, action="store_true")
     try:
         option = vars(parser.parse_args())
     except IOError as msg:
@@ -253,12 +255,17 @@ def initialize(option):
     #     fuzzy_config = list(yaml.load_all(c, Loader=yaml.FullLoader))
     #     fuzzy_config[0]["path"] = option['fuzzy_config_path']
     # option["fuzzy_config"] = fuzzy_config
+    adapt_dict = {3: 0.8,
+                    250: 0.8,
+                    500: 0.8,
+                    750: 0.8}
     logger_order = {
         "{}Logger".format(option["algorithm"]): "%s.%s"
         % ("algorithm", option["algorithm"]),
         option["logger"]: ".".join(["utils", "logger", option["logger"]]),
         "basic_logger": ".".join(["utils", "logger", "basic_logger"]),
     }
+    option['adapt_dict'] = adapt_dict
     global logger
     for log_name, log_path in logger_order.items():
         try:

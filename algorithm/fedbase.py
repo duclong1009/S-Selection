@@ -19,7 +19,7 @@ class BasicServer:
         self.model = model
         self.test_data = test_data
         self.eval_interval = option["eval_interval"]
-
+        self.ratio = option['ratio']
         # server calculator
         self.calculator = fmodule.TaskCalculator(
             self.device, optimizer_name=option["optimizer"]
@@ -52,7 +52,16 @@ class BasicServer:
         self.log_file = {}
         self.wandb_file = {}
         self.acc_list = {}
+        self.adapt_ratio = option['adapt_ratio']
+        self.adapt_dict = option['adapt_dict']
 
+    def adapt_threshold(self,x):
+        old_ratio = self.ratio
+        self.ratio = self.ratio * x
+        utils.fmodule.Sampler.ratio = self.ratio
+        for client in self.clients:
+            client.ratio = self.ratio
+        print(f"Reduce ratio {old_ratio} -> {self.ratio}")
     def run(self):
         """
         Start the federated learning symtem where the global model is trained iteratively.
@@ -60,7 +69,9 @@ class BasicServer:
         flw.logger.time_start("Total Time Cost")
 
         for round in range(1, self.num_rounds + 1):
-
+            if self.adapt_ratio:
+                if round in self.adapt_dict.keys():
+                    self.adapt_threshold(self.adapt_dict[round])
 
             self.current_round = round
             # using logger to evaluate the model

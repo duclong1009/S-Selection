@@ -113,13 +113,17 @@ class Server(BasicServer):
 class Client(BasicClient):
     def __init__(self, option, name="", train_data=None, valid_data=None, device="cpu"):
         super(Client, self).__init__(option, name, train_data, valid_data, device)
+        self.pc_threshold = option['pc_threshold']
 
     def calculate_importance(self, model):
         criteria = nn.CrossEntropyLoss()
-        _, score_list_on_cl = utils.fmodule.Sampler.cal_score(
+        loss_list, PA, PC = utils.fmodule.Sampler.cal_loss_kakurenbo(
             self.train_data, model, criteria, self.device
         )
-        self.score_cached = score_list_on_cl
+        self.score_cached = loss_list
+        self.PA = PA
+        self.PC = PC
+
 
     def reply_score(self, svr_pkg):
         model = self.unpack_model(svr_pkg)
@@ -129,7 +133,6 @@ class Client(BasicClient):
             utils.fmodule.LOG_DICT["score_list"] = {}
         utils.fmodule.LOG_DICT["score_list"][f"client_{self.id}"] = list(self.score_cached)
 
-
         cpkg = self.pack_score_list(self.score_cached)
         return cpkg
 
@@ -138,6 +141,24 @@ class Client(BasicClient):
 
     def unpack_threshold(self, svr_pkg):
         return svr_pkg["threshold"]
+
+    def select_samples(self,threshold):
+        list_idx = range(len(self.train_data))
+        if threshold > 0:
+            selected_idx = np.array(list_idx)[
+                np.where(np.array(self.score_cached) > threshold)
+            ]
+            selected_idx = list(selected_idx)
+            hidden_idx = np.array(list_idx)[
+                np.where(np.array(self.score_cached) <= threshold)
+            ]
+            for id in hidden_idx:
+                if self.PA[id] == False or self.PC[id] < self.pc_threshold:
+                    selected_idx.append(id)
+            selected_idx = np.array(selected_idx)
+        else:
+            selected_idx = np.array(list_idx)
+        return selected_idx
 
     def reply(self, svr_pkg):
         """
@@ -153,7 +174,8 @@ class Client(BasicClient):
             client_pkg: the package to be send to the server
         """
         threshold = self.unpack_threshold(svr_pkg)
-        selected_idx = utils.fmodule.Sampler.sample_using_cached(self.score_cached,threshold)
+        selected_idx = self.select_samples(threshold)
+
         if len(selected_idx) != 0 :
         # selected_idx = range(len(self.train_data))
             current_dataset = CustomDataset(self.train_data, selected_idx)

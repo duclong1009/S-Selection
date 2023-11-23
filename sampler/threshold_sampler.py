@@ -22,6 +22,9 @@ class Sampler(_BaseSampler):
                 )
                 sorted_idx = np.array(list_idx)
                 sorted_score = np.array(list_score)
+            elif self.score == "kakurenbo":
+                loss, PA, PC = self.cal_loss_kakurenbo(dataset, model, criteria, device)
+                return loss, PA, PC
             else:
                 raise "Not correct score type"
         return sorted_idx, sorted_score

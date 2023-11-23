@@ -13,15 +13,14 @@ class Server(BasicServer):
     def __init__(self, option, model, clients, test_data=None, device="cpu"):
         super(Server, self).__init__(option, model, clients, test_data, device)
         self.sampler = utils.fmodule.Sampler
-        self.ratio = option['ratio']
-        
+        # self.cutting_rate = option['']
+    
+    
     def iterate(self):
         self.selected_clients = self.sample()
         utils.fmodule.LOG_DICT["selectd_client"] = self.selected_clients
         flw.logger.info(f"Selected clients : {self.selected_clients}")
 
-        threshold_score = self.cal_threshold(self.selected_clients)
-        self.threshold_score = threshold_score
         received_information = self.communicate(self.selected_clients)
         n_samples = received_information["n_samples"]
         utils.fmodule.LOG_DICT["selected_samples"] = n_samples
@@ -37,6 +36,11 @@ class Server(BasicServer):
         # aggregate: pk = 1/K as default where K=len(selected_clients)
         self.model = self.aggregate(models,list_vols)
 
+    def aggregate_hist(self):
+        max_len = max([len(x) for x in self.received_score])
+        new_hist = [np.concatenate((x, np.zeros((max_len - len(x))))) for x in self.received_score]
+        return np.sum(new_hist,0), [i * self.option['interval_histogram'] for i in range(max_len + 1)]
+    
     def communicate(self, selected_clients):
         """
         The whole simulating communication procedure with the selected clients.
@@ -74,7 +78,7 @@ class Server(BasicServer):
             client_package: the reply from the client and will be 'None' if losing connection
         """
         # package the necessary information
-        svr_pkg = self.pack_threshold(client_id)
+        svr_pkg = self.pack_model(client_id)
         # listen for the client's response
         return self.clients[client_id].reply(svr_pkg)
 
@@ -82,9 +86,6 @@ class Server(BasicServer):
         utils.fmodule.LOG_DICT["threshold_score"] = self.threshold_score 
         return {"threshold": self.threshold_score}
 
-    def calculate_importance(self, selected_clients):
-        cpkqs = [self.communicate_score_with(cid) for id, cid in enumerate(selected_clients)]
-        self.received_score = self.unpack_score(cpkqs)
 
     def unpack_score(self, cpkqs):
         list_ = []
@@ -92,53 +93,46 @@ class Server(BasicServer):
             list_.append(l["score"])
         return list_
 
-    def communicate_score_with(self, client_id):
-        svr_pkg = self.pack_model(client_id)
-        return self.clients[client_id].reply_score(svr_pkg)
 
-    def get_threshold(self, list_score):
-        n_samples = len(list_score)
-        n_selected_samples = int(self.ratio * n_samples)
-        idxs = np.argsort(list_score)
-        threshold_idxs = idxs[-n_selected_samples]
-        threshold_value = list_score[threshold_idxs]
-        return threshold_value
-    
-    def cal_threshold(self, selected_clinets):
-        self.calculate_importance(selected_clinets)
-        list_score = np.concatenate(self.received_score)
-        threshold_value = self.get_threshold(list_score)
-        return threshold_value
- 
 class Client(BasicClient):
     def __init__(self, option, name="", train_data=None, valid_data=None, device="cpu"):
         super(Client, self).__init__(option, name, train_data, valid_data, device)
+        self.interval_histogram = option['interval_histogram']
+        self.option = option
+        self.ratio = option['ratio']
+        self.pc_threshold = option['pc_threshold']
 
     def calculate_importance(self, model):
         criteria = nn.CrossEntropyLoss()
-        _, score_list_on_cl = utils.fmodule.Sampler.cal_score(
+        loss_list, PA, PC = utils.fmodule.Sampler.cal_loss_kakurenbo(
             self.train_data, model, criteria, self.device
         )
-        self.score_cached = score_list_on_cl
-
-    def reply_score(self, svr_pkg):
-        model = self.unpack_model(svr_pkg)
-        self.model = copy.deepcopy(model)
-        self.calculate_importance(copy.deepcopy(model))
-        if not "score_list" in utils.fmodule.LOG_DICT.keys():
-            utils.fmodule.LOG_DICT["score_list"] = {}
-        utils.fmodule.LOG_DICT["score_list"][f"client_{self.id}"] = list(self.score_cached)
+        self.score_cached = loss_list
+        self.PA = PA
+        self.PC = PC
 
 
-        cpkg = self.pack_score_list(self.score_cached)
-        return cpkg
 
-    def pack_score_list(self, score_list):
+    def pack_histogram(self, score_list):
         return {"score": score_list}
 
     def unpack_threshold(self, svr_pkg):
         return svr_pkg["threshold"]
-
+    
+    def select_sample(self,):
+        n_samples = len(self.train_data)
+        n_selected_samples = int(self.ratio * n_samples)
+        sort_idx = np.argsort(self.score_cached)
+        selected_idx = sort_idx[-n_selected_samples:]
+        selected_idx = list(selected_idx)
+        for id in range(n_samples):
+            if id not in selected_idx:
+                if self.PA[id] == False or self.PC[id] < self.pc_threshold:
+                    selected_idx.append(id)
+        selected_idx = np.array(selected_idx)
+        print(f"{len(selected_idx)}/ {n_samples}")
+        return selected_idx
+        
     def reply(self, svr_pkg):
         """
         Reply to server with the transmitted package.
@@ -152,8 +146,14 @@ class Client(BasicClient):
         :return:
             client_pkg: the package to be send to the server
         """
-        threshold = self.unpack_threshold(svr_pkg)
-        selected_idx = utils.fmodule.Sampler.sample_using_cached(self.score_cached,threshold)
+        model = self.unpack_model(svr_pkg)
+        self.model = copy.deepcopy(model)
+        ## Calculate gradnorm
+        self.calculate_importance(copy.deepcopy(model))
+        
+        ## Select data
+        selected_idx = self.select_sample()
+        # selected_idx = utils.fmodule.Sampler.sample_using_cached(self.score_cached,threshold)
         if len(selected_idx) != 0 :
         # selected_idx = range(len(self.train_data))
             current_dataset = CustomDataset(self.train_data, selected_idx)
@@ -163,7 +163,6 @@ class Client(BasicClient):
                 num_workers=self.loader_num_workers,
                 shuffle=True,
             )
-            self.threshold = threshold
             self.train(self.model)
         cpkg = self.pack(self.model, len(selected_idx))
         return cpkg

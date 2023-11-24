@@ -4,3 +4,4 @@ stat/
 **.pyc
 **.ipynb
 **/log_dir_me
+**/cifar100

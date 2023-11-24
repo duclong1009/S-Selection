@@ -110,7 +110,7 @@ class BasicServer:
                     self.wandb_file,
                     f'{self.option["save_folder_path"]}/{self.option["group_name"]}',
                     f'{self.option["session_name"]}_wandb',
-                )
+                ) 
                 
             flw.logger.time_end("Time Cost")
 

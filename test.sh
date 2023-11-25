@@ -22,3 +22,6 @@ CUDA_VISIBLE_DEVICES=0 python main.py --num_rounds 1000 --session_name cluster_2
 
 CUDA_VISIBLE_DEVICES=0 python main.py --num_rounds 1000 --session_name cluster_20_alpha_0_1_ --group_name NII_medium_pilldataset_100client_dirichlet --proportion 0.03 --algorithm fedalgo1 --ratio 0.7 --aggregate weighted_com --task cifar100_classification --num_classes 100 --data_path cifar100/data_idx --save_folder_path log_dir_me --idx_path cifar100/data_idx/dirichlet_0.1.json --score all_gnorm_threshold --log_wandb 
 CUDA_VISIBLE_DEVICES=0 python main.py --num_rounds 1000 --session_name cluster_20_alpha_0_1_ --group_name NII_medium_pilldataset_100client_dirichlet --proportion 0.03 --algorithm fedalgo1 --ratio 0.7 --aggregate weighted_com --task cifar100noise_classification --num_classes 100 --data_path cifar100/data_idx --save_folder_path log_dir_me --idx_path cifar100/data_idx/dirichlet_0.1.json --score all_gnorm_threshold --log_wandb 
+
+
+CUDA_VISIBLE_DEVICES=0 python main.py --num_rounds 1000 --session_name cluster_20_alpha_0_1_ --group_name NII_medium_pilldataset_100client_dirichlet --proportion 0.3 --algorithm fedavg --ratio 0.7 --aggregate weighted_com --task cifar100_classification --num_classes 100 --data_path cifar100/data_idx --save_folder_path log_dir_me --idx_path cifar100/data_idx/dirichlet_0.1.json --score all_gnorm_threshold --log_wandb 

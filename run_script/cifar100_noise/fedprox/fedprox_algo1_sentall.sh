@@ -30,7 +30,7 @@ mkdir ${LOG_DIR}
 
 #Dataset
 DATA_DIR="$SGE_LOCALDIR/$JOB_ID/"
-cp -r /home/aaa10078nj/Federated_Learning/Long_SampleSelection/SampleSelection_easyFL/cifar100_bright ${DATA_DIR}
+cp -r /home/aaa10078nj/Federated_Learning/Long_SampleSelection/SampleSelection_easyFL2/cifar100_bright ${DATA_DIR}
 
-cd SampleSelection_easyFL
+cd SampleSelection_easyFL2
 python main.py --num_rounds 1000 --session_name "alpha_0_1_" --group_name "NII_cifar100_noise_100client_dirichlet0.1" --proportion 0.3 --algorithm fedprox_algo1_sentall --ratio 0.8 --aggregate "weighted_com" --task cifar100_classification --num_classes 100 --data_path ${DATA_DIR} --save_folder_path ${LOG_DIR} --idx_path cifar100/data_idx/dirichlet_0.1.json --score all_gnorm_threshold

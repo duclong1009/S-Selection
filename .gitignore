@@ -1,0 +1,8 @@
+**/__pycache__
+wandb/
+stat/
+**.pyc
+**.ipynb
+**/log_dir_me
+/cifar100
+/cifar100_bright

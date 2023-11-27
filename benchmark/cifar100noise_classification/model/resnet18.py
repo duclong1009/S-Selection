@@ -76,7 +76,7 @@ class BottleNeck(nn.Module):
     def forward(self, x):
         return nn.ReLU(inplace=True)(self.residual_function(x) + self.shortcut(x))
 
-
+import torchvision
 class Model(FModule):
     def __init__(self):
         super().__init__()

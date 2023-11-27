@@ -77,6 +77,7 @@ class Server(BasicServer):
         :return
             client_package: the reply from the client and will be 'None' if losing connection
         """
+        
         # package the necessary information
         svr_pkg = self.pack_threshold(client_id)
         # listen for the client's response
@@ -128,15 +129,19 @@ class Client(BasicClient):
         return np.histogram(score_list, bins= [self.interval_histogram * i for i in range(n_bins +1)])[0]
     
     def reply_score(self, svr_pkg):
+        import time
+        start_time = time.time()
         model = self.unpack_model(svr_pkg)
         self.model = copy.deepcopy(model)
         self.calculate_importance(copy.deepcopy(model))
         value_hist = self.cal_histogram()
         if not "score_list" in utils.fmodule.LOG_DICT.keys():
             utils.fmodule.LOG_DICT["score_list"] = {}
+        if not "assess_importance_time" in utils.fmodule.LOG_DICT.keys():
+            utils.fmodule.LOG_DICT["assess_importance_time"] = {}
         utils.fmodule.LOG_DICT["score_list"][f"client_{self.id}"] = list(self.score_cached)
-
-
+        utils.fmodule.LOG_DICT["assess_importance_time"][f"client_{self.id}"] = time.time() - start_time
+        
         cpkg = self.pack_histogram(value_hist)
         return cpkg
 
@@ -159,8 +164,11 @@ class Client(BasicClient):
         :return:
             client_pkg: the package to be send to the server
         """
+        import time
         threshold = self.unpack_threshold(svr_pkg)
+        start_time = time.time()
         selected_idx = utils.fmodule.Sampler.sample_using_cached(self.score_cached,threshold)
+        selected_time = time.time() - start_time
         if len(selected_idx) != 0 :
         # selected_idx = range(len(self.train_data))
             current_dataset = CustomDataset(self.train_data, selected_idx)
@@ -171,7 +179,18 @@ class Client(BasicClient):
                 shuffle=True,
             )
             self.threshold = threshold
+            start_time = time.time()
             self.train(self.model)
+            local_training_time = time.time() - start_time
+            
+            
+            if not "local_training_time" in utils.fmodule.LOG_DICT.keys():
+                utils.fmodule.LOG_DICT["local_training_time"] = {}
+            utils.fmodule.LOG_DICT["local_training_time"][f"client_{self.id}"] = local_training_time
+            
+        if not "selected_time" in utils.fmodule.LOG_DICT.keys():
+            utils.fmodule.LOG_DICT["selected_time"] = {}
+        utils.fmodule.LOG_DICT["selected_time"][f"client_{self.id}"] = selected_time
         cpkg = self.pack(self.model, len(selected_idx))
         return cpkg
 

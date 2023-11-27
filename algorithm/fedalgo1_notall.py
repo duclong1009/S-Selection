@@ -105,31 +105,6 @@ class Client(BasicClient):
             self.train_data, model, criteria, self.device
         )
         self.score_cached = score_list_on_cl
-
-    def cal_histogram(self,):
-        import copy, math
-        score_list = copy.deepcopy(self.score_cached)
-        n_bins = math.ceil(max(score_list) / self.interval_histogram)
-        return np.histogram(score_list, bins= [self.interval_histogram * i for i in range(n_bins +1)])[0]
-    
-    def reply_score(self, svr_pkg):
-        model = self.unpack_model(svr_pkg)
-        self.model = copy.deepcopy(model)
-        self.calculate_importance(copy.deepcopy(model))
-        value_hist = self.cal_histogram()
-        if not "score_list" in utils.fmodule.LOG_DICT.keys():
-            utils.fmodule.LOG_DICT["score_list"] = {}
-        utils.fmodule.LOG_DICT["score_list"][f"client_{self.id}"] = list(self.score_cached)
-
-
-        cpkg = self.pack_histogram(value_hist)
-        return cpkg
-
-    def pack_histogram(self, score_list):
-        return {"score": score_list}
-
-    def unpack_threshold(self, svr_pkg):
-        return svr_pkg["threshold"]
     
     def select_sample(self,):
         n_samples = len(self.score_cached)
@@ -155,11 +130,20 @@ class Client(BasicClient):
         model = self.unpack_model(svr_pkg)
         self.model = copy.deepcopy(model)
         ## Calculate gradnorm
+        import time
+        start_time = time.time()
         self.calculate_importance(copy.deepcopy(model))
+        assess_importance_time = time.time() - start_time
         
+        if not "assess_importance_time" in utils.fmodule.LOG_DICT.keys():
+            utils.fmodule.LOG_DICT["assess_importance_time"] = {}
+        utils.fmodule.LOG_DICT["assess_importance_time"][f"client_{self.id}"] = time.time() - start_time
+
         ## Select data
+        start_time = time.time()
         selected_idx = self.select_sample()
-        # selected_idx = utils.fmodule.Sampler.sample_using_cached(self.score_cached,threshold)
+        selected_time = time.time() - start_time
+        
         if len(selected_idx) != 0 :
         # selected_idx = range(len(self.train_data))
             current_dataset = CustomDataset(self.train_data, selected_idx)
@@ -169,7 +153,17 @@ class Client(BasicClient):
                 num_workers=self.loader_num_workers,
                 shuffle=True,
             )
+            start_time = time.time()
             self.train(self.model)
+            local_training_time = time.time() - start_time
+            if not "local_training_time" in utils.fmodule.LOG_DICT.keys():
+                utils.fmodule.LOG_DICT["local_training_time"] = {}
+            utils.fmodule.LOG_DICT["local_training_time"][f"client_{self.id}"] = local_training_time
+            
+        if not "selected_time" in utils.fmodule.LOG_DICT.keys():
+            utils.fmodule.LOG_DICT["selected_time"] = {}
+        utils.fmodule.LOG_DICT["selected_time"][f"client_{self.id}"] = selected_time
+        
         cpkg = self.pack(self.model, len(selected_idx))
         return cpkg
 
